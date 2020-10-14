@@ -21,8 +21,5 @@
     "@storybook/react": "^6.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.intuit.com/"
   }
 }

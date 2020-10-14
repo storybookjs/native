@@ -35,5 +35,6 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
     "@types/lodash": "^4.14.159"
-  }
+  },
+  "gitHead": "cff98aa18c557270187ba3832e8abb16ccd881c8"
 }
