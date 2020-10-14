@@ -1,0 +1,21 @@
+{
+  "name": "@storybook/native-flutter-example",
+  "version": "0.1.1",
+  "private": true,
+  "description": "A flutter demo app for storybook native",
+  "repository": "",
+  "author": "Thomas Baker <thomas_baker@intuit.com>",
+  "license": "MIT",
+  "contributors": [
+    "Thomas Baker <thomas_baker@intuit.com>"
+  ],
+  "scripts": {
+    "start": "node ./generate.js && yarn start-storybook",
+    "build:storybook": "yarn build-storybook"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@storybook/native": "link:../../packages/native",
+    "@storybook/native-addon": "link:../../packages/native-addon"
+  }
+}

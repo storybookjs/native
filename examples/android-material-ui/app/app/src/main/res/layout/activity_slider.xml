@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".SliderActivity">
+
+	<!-- Continuous slider -->
+
+	<!-- Discrete slider -->
+
+	<com.google.android.material.slider.Slider
+		android:id="@+id/rangeSlider"
+		android:layout_width="294dp"
+		android:layout_height="50dp"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="16dp"
+		android:valueFrom="0.0"
+		android:valueTo="100.0"
+		app:layout_constraintStart_toStartOf="@+id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+	<com.google.android.material.slider.Slider
+		android:id="@+id/discreteSlider"
+		android:layout_width="280dp"
+		android:layout_height="33dp"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="16dp"
+		android:stepSize="10.0"
+		android:valueFrom="0.0"
+		android:valueTo="100.0"
+		app:layout_constraintStart_toStartOf="@+id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="48dp"
+		android:text="Range Slider"
+		app:layout_constraintStart_toStartOf="@+id/guideline2"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="44dp"
+		android:text="Discrete Slider"
+		app:layout_constraintStart_toStartOf="@+id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/rangeSlider" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

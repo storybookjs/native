@@ -1,0 +1,28 @@
+<resources>
+	<string name="app_name">Storybook Demo App</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="fab_content_desc">FabContent</string>
+	<string name="action_1">Action 1</string>
+	<string name="action_2">Action 2</string>
+	<string name="content_description_media">card_media</string>
+	<string name="title">Card Title</string>
+	<string name="secondary_text">Card Subtitle</string>
+	<string name="supporting_text">Card Supporting Text</string>
+	<string name="dialogCancel">Cancel</string>
+	<string name="dialogOk">Ok</string>
+	<string name="radio_label_1">Radio Button 1</string>
+	<string name="radio_label_2">Radio Button 2</string>
+	<string name="radio_label_3">Radio Button 3</string>
+	<string name="radio_label_4">Radio Button 4</string>
+	<string name="radio_label_5">Radio Button 5</string>
+	<string name="switch_label_1">Switch 1</string>
+	<string name="switch_label_2">Switch 2</string>
+	<string name="switch_label_3">Switch 3</string>
+	<string name="switch_label_4">Switch 4</string>
+	<string name="switch_label_5">Switch 5</string>
+	<string name="tab_label_1">Tab 1</string>
+	<string name="tab_label_2">Tab 2</string>
+	<string name="tab_label_3">Tab 3</string>
+	<string name="error">Error</string>
+</resources>

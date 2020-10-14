@@ -1,0 +1,26 @@
+import React from 'react';
+import { Description } from '@storybook/addon-docs/blocks';
+
+export default { 
+    title: '<%= category %>',
+    argTypes: {
+        device: { control: {
+            type: 'select',
+            options: <%= devices %>
+        }}
+    }
+};
+
+const getAppetizeUrl = (args, props, apiKey) => {
+    const options = Object.assign({
+        params: JSON.stringify(args),
+        xdocMsg: true,
+        autoplay: true
+    }, props);
+    const urlWithoutParams = 'https://appetize.io/embed/' + apiKey;
+    const qsParams = new URLSearchParams(options).toString()
+
+    return urlWithoutParams + '?' + qsParams;
+};
+
+<%= stories %>

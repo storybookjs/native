@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".SwitchActivity">
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:id="@+id/switchMaterial"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:checked="true"
+		android:text="@string/switch_label_1"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="@+id/guideline"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:id="@+id/switchMaterial2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:text="@string/switch_label_2"
+		app:layout_constraintStart_toStartOf="@+id/guideline"
+		app:layout_constraintTop_toBottomOf="@+id/switchMaterial" />
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:id="@+id/switchMaterial3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:text="@string/switch_label_3"
+		app:layout_constraintStart_toStartOf="@+id/guideline"
+		app:layout_constraintTop_toBottomOf="@+id/switchMaterial2" />
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:id="@+id/switchMaterial4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:text="@string/switch_label_4"
+		app:layout_constraintStart_toStartOf="@+id/guideline"
+		app:layout_constraintTop_toBottomOf="@+id/switchMaterial3" />
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:enabled="false"
+		android:text="@string/switch_label_5"
+		app:layout_constraintStart_toStartOf="@+id/guideline"
+		app:layout_constraintTop_toBottomOf="@+id/switchMaterial4" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_begin="48dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

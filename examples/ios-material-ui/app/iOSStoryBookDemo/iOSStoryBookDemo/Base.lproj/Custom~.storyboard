@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MJq-Ve-jC6">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StoryBook-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="iOSStoryBookDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Home  View" customClass="SBView" customModule="iOSStoryBook">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="EK6-ZG-Ugg" userLabel="Main Stack View">
+                                <rect key="frame" x="16" y="330" width="382" height="236.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-rO-Ab6" userLabel="TextField Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="144.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoryBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-U9-bKu" customClass="SBLabel" customModule="iOSStoryBook">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="headingSize">
+                                                        <real key="value" value="48"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="po4-xS-902" userLabel="Login View">
+                                                <rect key="frame" x="0.0" y="52.333333333333314" width="382" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Jh-ut-ie8" customClass="SBTextField" customModule="iOSStoryBook">
+                                                        <rect key="frame" x="8" y="-2" width="366" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="DIn-0b-U6w"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="5Jh-ut-ie8" firstAttribute="leading" secondItem="po4-xS-902" secondAttribute="leading" constant="8" id="26d-B8-aOm"/>
+                                                    <constraint firstItem="5Jh-ut-ie8" firstAttribute="centerX" secondItem="po4-xS-902" secondAttribute="centerX" id="EaQ-9p-pn3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5Jh-ut-ie8" secondAttribute="trailing" constant="8" id="cJs-AM-7UU"/>
+                                                    <constraint firstAttribute="height" constant="30" id="j3N-Kp-zXg"/>
+                                                    <constraint firstItem="5Jh-ut-ie8" firstAttribute="centerY" secondItem="po4-xS-902" secondAttribute="centerY" id="xpQ-sk-qN2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-z0-Kdm" userLabel="Password View">
+                                                <rect key="frame" x="0.0" y="114.33333333333331" width="382" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJF-Fy-Gh8" customClass="SBTextField" customModule="iOSStoryBook">
+                                                        <rect key="frame" x="8" y="-2" width="366" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="khx-TX-luU"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="MJF-Fy-Gh8" firstAttribute="centerY" secondItem="8fg-z0-Kdm" secondAttribute="centerY" id="0BE-5i-qdU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MJF-Fy-Gh8" secondAttribute="trailing" constant="8" id="FAg-Wn-iRR"/>
+                                                    <constraint firstAttribute="height" constant="30" id="YFe-Eg-jrf"/>
+                                                    <constraint firstItem="MJF-Fy-Gh8" firstAttribute="centerX" secondItem="8fg-z0-Kdm" secondAttribute="centerX" id="mTM-4y-taz"/>
+                                                    <constraint firstItem="MJF-Fy-Gh8" firstAttribute="leading" secondItem="8fg-z0-Kdm" secondAttribute="leading" constant="8" id="tHT-fB-wKZ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8fg-z0-Kdm" firstAttribute="width" secondItem="Ddh-rO-Ab6" secondAttribute="width" id="0fQ-5a-gTc"/>
+                                            <constraint firstItem="po4-xS-902" firstAttribute="width" secondItem="Ddh-rO-Ab6" secondAttribute="width" id="cbl-Re-r9g"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrJ-Ml-EEC" userLabel="ButtonView">
+                                        <rect key="frame" x="0.0" y="176.33333333333331" width="382" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqA-XV-Ttj" customClass="SBButton" customModule="iOSStoryBook">
+                                                <rect key="frame" x="170" y="15.000000000000057" width="42" height="30"/>
+                                                <state key="normal" title="Login "/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="8oi-QB-8PK" kind="show" id="LGV-s1-tC8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0Zv-8e-ROb"/>
+                                            <constraint firstItem="FqA-XV-Ttj" firstAttribute="centerX" secondItem="lrJ-Ml-EEC" secondAttribute="centerX" id="OdA-J3-UBp"/>
+                                            <constraint firstItem="FqA-XV-Ttj" firstAttribute="centerY" secondItem="lrJ-Ml-EEC" secondAttribute="centerY" id="l8J-GC-XpF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EK6-ZG-Ugg" secondAttribute="trailing" constant="16" id="1FH-18-t7A"/>
+                            <constraint firstItem="EK6-ZG-Ugg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ZD-jj-JQD"/>
+                            <constraint firstItem="EK6-ZG-Ugg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7ab-17-JVI"/>
+                            <constraint firstItem="EK6-ZG-Ugg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vz6-pu-h0t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBackgroundColor">
+                                <color key="value" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="StoryBook" id="gaA-0Q-Owy"/>
+                    <connections>
+                        <outlet property="loginButton" destination="FqA-XV-Ttj" id="MGV-bQ-U6c"/>
+                        <outlet property="passwordTextField" destination="MJF-Fy-Gh8" id="wrm-Qm-L8x"/>
+                        <outlet property="titleLabel" destination="BEn-U9-bKu" id="qe7-V0-bqN"/>
+                        <outlet property="userNameTextField" destination="5Jh-ut-ie8" id="NlU-6g-uRc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="37.5"/>
+        </scene>
+        <!--Profile View-->
+        <scene sceneID="v6v-w9-HpX">
+            <objects>
+                <viewController id="8oi-QB-8PK" customClass="DetailViewController" customModule="iOSStoryBookDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ra-UN-EeN" customClass="SBView" customModule="iOSStoryBook">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tnr-aE-zt5" customClass="SBImageView" customModule="iOSStoryBook">
+                                <rect key="frame" x="147" y="174.33333333333334" width="120" height="116.6666666666667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="aAn-YT-4Ii"/>
+                                    <constraint firstAttribute="height" constant="120" id="ih4-qg-yr6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="93f-Ga-vbG" userLabel="Profile Stack">
+                                <rect key="frame" x="8" y="340.33333333333331" width="398" height="72.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvM-1J-7Mm" customClass="SBTextLabel" customModule="iOSStoryBook">
+                                        <rect key="frame" x="174.66666666666666" y="0.0" width="49" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBoldText" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-zi-70e" userLabel="Profile Detail Stack">
+                                        <rect key="frame" x="112.00000000000001" y="52.333333333333371" width="174.33333333333337" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhn-qo-7Vq" customClass="SBTextLabel" customModule="iOSStoryBook">
+                                                <rect key="frame" x="0.0" y="0.0" width="81" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
+                                                        <real key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmi-li-4DC" customClass="SBTextLabel" customModule="iOSStoryBook">
+                                                <rect key="frame" x="131" y="0.0" width="43.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
+                                                        <real key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To StoryBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBd-5l-4cm" customClass="SBTextLabel" customModule="iOSStoryBook">
+                                <rect key="frame" x="16" y="119.99999999999999" width="382" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBoldText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fBd-5l-4cm" firstAttribute="leading" secondItem="IRl-Hf-ehK" secondAttribute="leading" constant="16" id="5Yd-cV-fsb"/>
+                            <constraint firstItem="fBd-5l-4cm" firstAttribute="top" secondItem="IRl-Hf-ehK" secondAttribute="top" constant="32" id="Bwi-tc-7Lm"/>
+                            <constraint firstItem="tnr-aE-zt5" firstAttribute="centerX" secondItem="4Ra-UN-EeN" secondAttribute="centerX" id="Ci7-oQ-LAp"/>
+                            <constraint firstItem="93f-Ga-vbG" firstAttribute="leading" secondItem="IRl-Hf-ehK" secondAttribute="leading" constant="8" id="Nmd-ke-NiJ"/>
+                            <constraint firstItem="93f-Ga-vbG" firstAttribute="top" secondItem="tnr-aE-zt5" secondAttribute="bottom" constant="48" id="NpB-aX-x7n"/>
+                            <constraint firstItem="IRl-Hf-ehK" firstAttribute="trailing" secondItem="93f-Ga-vbG" secondAttribute="trailing" constant="8" id="ZW1-nq-DZy"/>
+                            <constraint firstItem="IRl-Hf-ehK" firstAttribute="trailing" secondItem="fBd-5l-4cm" secondAttribute="trailing" constant="16" id="btt-Jg-Hrr"/>
+                            <constraint firstItem="tnr-aE-zt5" firstAttribute="top" secondItem="fBd-5l-4cm" secondAttribute="bottom" constant="32" id="m9r-Rr-2Cz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IRl-Hf-ehK"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBackgroundColor">
+                                <color key="value" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile View" id="dcn-hz-gCK"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="tnr-aE-zt5" id="Mnl-TN-pGC"/>
+                        <outlet property="subtitleLabel" destination="CvM-1J-7Mm" id="wPC-5S-Bf9"/>
+                        <outlet property="titleLabel" destination="fBd-5l-4cm" id="BHM-Es-gd2"/>
+                        <outlet property="userLabel" destination="Qhn-qo-7Vq" id="1ea-J7-fBR"/>
+                        <outlet property="userNameLabel" destination="dmi-li-4DC" id="nFD-lT-VqW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbi-3c-A5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592.753623188406" y="37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Moc-iP-v8R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ftX-RH-MHj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jmh-US-8S8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XeG-8h-DWw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfA-AS-VvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jzj-eF-Wdc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MJq-Ve-jC6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TQ3-wa-lg6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l7k-9q-cBo" kind="relationship" relationship="rootViewController" id="J1q-Xb-3fh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btz-lo-7nB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252.17391304347828" y="687.72321428571422"/>
+        </scene>
+        <!--Gallery Menu-->
+        <scene sceneID="9GC-X8-JxF">
+            <objects>
+                <tableViewController storyboardIdentifier="gallery_menu" title="UI Components" id="l7k-9q-cBo" userLabel="Gallery Menu" customClass="MenuViewController" customModule="iOSStoryBookDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fMK-et-TUg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gvL-Cc-knE">
+                            <rect key="frame" x="0.0" y="100" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Default" id="0dd-Lr-skp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0dd-Lr-skp" id="egm-ew-yeQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="l7k-9q-cBo" id="mOe-XT-m8q"/>
+                            <outlet property="delegate" destination="l7k-9q-cBo" id="47K-y4-qQ9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xSm-CC-08G">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Gnu-Qe-25Y">
+                            <color key="tintColor" red="0.41960784309999999" green="0.42352941179999998" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHs-Hr-mku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JUa-iR-0mE"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="688"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sAq-lD-s8a">
+            <objects>
+                <viewController id="K6M-MT-Qr5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qE7-qT-jax">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Qx5-cP-UgR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zi-hW-WBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="993"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
+</document>

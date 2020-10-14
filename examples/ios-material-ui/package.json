@@ -1,0 +1,21 @@
+{
+  "name": "@storybook/native-ios-example",
+  "version": "0.1.1",
+  "private": true,
+  "description": "An iOS demo app for storybook native",
+  "repository": "",
+  "author": "Jay Unnikrishn <Jayakrishnan_Unnikrishnan@intuit.com>",
+  "license": "MIT",
+  "contributors": [
+    "Jay Unnikrishn <Jayakrishnan_Unnikrishnan@intuit.com>"
+  ],
+  "scripts": {
+    "start": "node ./generate.js && yarn start-storybook",
+    "build:storybook": "yarn build-storybook"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@storybook/native": "link:../../packages/native",
+    "@storybook/native-addon": "link:../../packages/native-addon"
+  }
+}

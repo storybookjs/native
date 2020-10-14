@@ -1,0 +1,28 @@
+{
+  "name": "@storybook/native-addon",
+  "version": "0.1.1",
+  "main": "./dist",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/storybookjs/native.git",
+  "author": "Adil Malik <adil_malik@intuit.com>",
+  "license": "MIT",
+  "contributors": [
+    "Raj Vasikarla <raj_vasikarla@intuit.com>",
+    "Adil Malik <adil_malik@intuit.com>"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@storybook/addons": "^6.0.6",
+    "@storybook/components": "^6.0.6",
+    "@storybook/react": "^6.0.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.intuit.com/"
+  }
+}
