@@ -36,5 +36,5 @@
     "@types/fs-extra": "^9.0.1",
     "@types/lodash": "^4.14.159"
   },
-  "gitHead": "cff98aa18c557270187ba3832e8abb16ccd881c8"
+  "gitHead": "d8e4444ddd5ddab13f359b1f03372352a65eba66"
 }
