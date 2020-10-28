@@ -27,3 +27,12 @@ executors:
         environment:
           NODE_OPTIONS: --max_old_space_size=4096
     resource_class: <<parameters.class>>
+
+    jobs:
+  build:
+    executor:
+      class: large
+      name: sb_node
+    steps:
+      - checkout
+  
