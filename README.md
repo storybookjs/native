@@ -26,10 +26,12 @@ Examples of parsing launch arguments:
  - [Flutter](examples/flutter/app/lib/main.dart#L73)
  - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L66)
 
+More details about these arguments can be found in the [appetize.io docs](https://docs.appetize.io/core-features/playback-options)
+
 After you have modified your application to support these launch arguments, you must upload your application to appetize.io. After the upload, you will receive a public key that can be used with Storybook Native to view your application directly in storybook.
 
 ## Usage
-To use this module, you must create a node script [such as this example one](examples/ios-simple/generate.js) that imports `generateStories` from this module. Pass in details about stories that you want this module to generate. Each call to `generateStories` generates a file that contains stories generated from the information you pass in. Run `yarn start-storybook` to view those stories in a local storybook instance, or run `yarn build-storybook` to build a static storybook that can be uploaded as a web page.
+To use this module, you must create a node script [such as this example one](examples/ios-material-ui/generate.js) that imports `generateStories` from this module. Pass in details about stories that you want this module to generate. Each call to `generateStories` generates a file that contains stories generated from the information you pass in. Run `yarn start-storybook` to view those stories in a local storybook instance, or run `yarn build-storybook` to build a static storybook that can be uploaded as a web page.
 
 You must also have a `.storybook` folder with a `main.js` file inside of it, where you must configure the path to your stories, as well as any addons you want to use. The `@storybook/addon-docs` and `@storybook/addon-controls` addons must always be included. The `@storybook/native-addon` addon is required if you want to be able to rotate the emulator, or capture screenshots. [Here](examples/ios-simple/.storybook/main.js) is an example of a valid `main.js` file.
 

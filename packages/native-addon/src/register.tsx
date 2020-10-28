@@ -31,6 +31,9 @@ const captureScreenshot = () => {
     sendMessage('saveScreenshot');
 };
 
+// TODO: deep linking
+//sendMessage({type: 'url', value: 'https://intuit.com'});
+
 addons.register(ADDON_ID, () => {
   addons.add(`${ADDON_ID}/rotateLeft`, {
     type: types.TOOL,

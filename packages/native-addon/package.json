@@ -22,7 +22,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "gitHead": "5f0fc26b3112acd252da27a608788801ebefa0c9",
+  "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {
     "access": "public"
   }
