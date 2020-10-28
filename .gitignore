@@ -76,3 +76,4 @@ fastlane/screenshots
 
 storybook-static/
 *.lock
+*.log

@@ -38,6 +38,10 @@ You must also have a `.storybook` folder with a `main.js` file inside of it, whe
 ### Examples
 Examples of how to use this module can be found [in this folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 
+- [Android storybook](https://5f99b8bcfe88ac0022fcf70e-uqmnpmxiue.chromatic.com/)
+- [Flutter storybook](https://5f99b8bcfe88ac0022fcf70e-zkykyigdhc.chromatic.com/)
+- [iOS storybook](https://5f99b8bcfe88ac0022fcf70e-bkrwusstqb.chromatic.com/)
+
 ### Parameters for `generateStories`
  - category: The group/category that the specified stories will fall under
  - filePath: The path to write the file that contains the generated stories
