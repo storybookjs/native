@@ -35,11 +35,6 @@ jobs:
       name: sb_node
     steps:
       - checkout
-      - restore_cache:
-          name: Restore Yarn cache
-          keys:
-            - build-yarn-cache-v1--{{ checksum "yarn.lock" }}
-            - build-yarn-cache-v1--
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
