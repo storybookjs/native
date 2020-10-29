@@ -29,7 +29,7 @@ executors:
     resource_class: <<parameters.class>>
 
 jobs:
-  build:
+  install:
     executor:
       class: large
       name: sb_node
@@ -38,7 +38,15 @@ jobs:
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
-
+  build:
+    executor:
+      class: large
+      name: sb_node
+    steps:
+      - checkout
+      - run:
+          name: Build dependencies
+          command: yarn build
   test:
     executor: sb_node
     steps:
@@ -61,10 +69,13 @@ jobs:
 workflows:
   test:
     jobs:
+      - install
       - build
       - lint:
           requires:
+            - install
             - build            
       - test:
           requires:
+            - install
             - build
