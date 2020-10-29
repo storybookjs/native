@@ -25,7 +25,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "auto": "9.50.11",
     "lerna": "3.20.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
