@@ -29,7 +29,7 @@ executors:
     resource_class: <<parameters.class>>
 
 jobs:
-  install:
+  build:
     executor:
       class: large
       name: sb_node
@@ -38,24 +38,7 @@ jobs:
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
-      - save_cache:
-          name: Save Yarn cache
-          key: build-yarn-cache-v1--{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn     
-      - persist_to_workspace:
-          root: .     
-          paths:
-            - native            
-  build:
-    executor:
-      class: large
-      name: sb_node
-    steps:
-      - checkout
-      - run:
-          name: Build dependencies
-          command: yarn build
+
   test:
     executor: sb_node
     steps:
@@ -74,24 +57,11 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
-  publish:
-    executor:
-      class: large
-      name: sb_node
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-      - run:
-          name: running local registry
-          command: yarn local-registry --publish
+
 workflows:
   test:
     jobs:
-      - install
-      - build:
-          requires:
-            - install
+      - build
       - lint:
           requires:
             - build            
