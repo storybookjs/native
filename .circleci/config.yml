@@ -1,37 +1,42 @@
-version: 2
+version: 2.1
+
+executors:
+  sb_node:
+    parameters:
+      class:
+        description: The Resource class
+        type: enum
+        enum: ['small', 'medium', 'large', 'xlarge']
+        default: 'medium'
+    working_directory: /tmp/storybook-native
+    docker:
+      - image: circleci/node:10-browsers
+        environment:
+          NODE_OPTIONS: --max_old_space_size=4096
+    resource_class: <<parameters.class>>
+  sb_node_12:
+    parameters:
+      class:
+        description: The Resource class
+        type: enum
+        enum: ['small', 'medium', 'large', 'xlarge']
+        default: 'medium'
+    working_directory: /tmp/storybook-native
+    docker:
+      - image: circleci/node:12-browsers
+        environment:
+          NODE_OPTIONS: --max_old_space_size=4096
+    resource_class: <<parameters.class>>
 
 jobs:
-  lint:
-    docker:
-      - image: circleci/node:12
-    working_directory: ~//tmp/storybook-native
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: yarn install
-      - run: yarn lint
   build:
-    docker:
-      - image: circleci/node:12
-    working_directory: ~//tmp/storybook-native
+    executor:
+      class: large
+      name: sb_node
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn build
-
-workflows:
-  version: 2
-  lint-build:
-    jobs:
-      - build
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+      - persist_to_workspace:
+          root: .
