@@ -67,7 +67,7 @@ jobs:
           at: .
       - run:
           name: Publish
-          command: lerna publish
+          command: yarn && yarn build && lerna publish
 workflows:
   test:
     jobs:
