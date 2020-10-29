@@ -8,7 +8,7 @@ executors:
         type: enum
         enum: ['small', 'medium', 'large', 'xlarge']
         default: 'medium'
-    working_directory: /tmp/storybook-native
+    working_directory: /tmp/storybook
     docker:
       - image: circleci/node:10-browsers
         environment:
@@ -21,14 +21,20 @@ executors:
         type: enum
         enum: ['small', 'medium', 'large', 'xlarge']
         default: 'medium'
-    working_directory: /tmp/storybook-native
+    working_directory: /tmp/storybook
     docker:
       - image: circleci/node:12-browsers
         environment:
           NODE_OPTIONS: --max_old_space_size=4096
     resource_class: <<parameters.class>>
 
-    jobs:
+jobs:
+  build:
+    executor:
+      class: large
+      name: sb_node
     steps:
       - checkout
-  
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
