@@ -38,6 +38,13 @@ jobs:
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+      - save_cache:
+          name: Save Yarn cache
+          key: build-yarn-cache-v1--{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn          
+      - persist_to_workspace:
+          root: .          
   build:
     executor:
       class: large
@@ -65,7 +72,17 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
-
+  publish:
+    executor:
+      class: large
+      name: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: running local registry
+          command: yarn local-registry --publish
 workflows:
   test:
     jobs:
