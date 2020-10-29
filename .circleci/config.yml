@@ -67,7 +67,7 @@ jobs:
           at: .
       - run:
           name: Publish
-          command: yarn && yarn build && yarn publish
+          command: yarn && yarn build && yarn run publish
 workflows:
   test:
     jobs:
