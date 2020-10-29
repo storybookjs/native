@@ -29,10 +29,6 @@ executors:
     resource_class: <<parameters.class>>
 
     jobs:
-  build:
-    executor:
-      class: large
-      name: sb_node
     steps:
       - checkout
   
