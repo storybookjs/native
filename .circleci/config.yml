@@ -28,11 +28,13 @@ executors:
           NODE_OPTIONS: --max_old_space_size=4096
     resource_class: <<parameters.class>>
 
-    jobs:
+jobs:
   build:
     executor:
       class: large
       name: sb_node
     steps:
       - checkout
-  
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
