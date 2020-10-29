@@ -1,6 +1,7 @@
 {
   "name": "@storybook/native-root",
   "version": "0.0.1",
+  "private": true,
   "description": "The mono-repo for storybook native packages",
   "repository": "https://github.com/storybookjs/native.git",
   "license": "MIT",
