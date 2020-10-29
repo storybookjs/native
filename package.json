@@ -22,12 +22,24 @@
     "build": "lerna run build --stream",
     "lint": "echo Linting",
     "test": "echo Test",
-    "publish": "lerna publish --canary"
+    "publish-canary": "lerna publish --canary",
+    "release": "auto shipit -v"
   },
-  "dependencies": {},
+  "dependencies": {
+    "auto": "^10.0.0"
+  },
   "devDependencies": {
     "lerna": "3.20.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
   }
 }
