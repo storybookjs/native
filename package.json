@@ -4,8 +4,8 @@
   "private": true,
   "description": "The mono-repo for storybook native packages",
   "repository": "https://github.com/storybookjs/native.git",
-  "author": "Adil Malik <adil_malik@intuit.com>",
   "license": "MIT",
+  "author": "Adil Malik <adil_malik@intuit.com>",
   "contributors": [
     "Raj Vasikarla <raj_vasikarla@intuit.com>",
     "Adil Malik <adil_malik@intuit.com>",
@@ -14,16 +14,19 @@
     "Jay Unnikrishn <jayakrishnan_unnikrishnan@intuit.com>",
     "Thomas Baker <thomas_baker@intuit.com>"
   ],
-  "scripts": {
-    "build": "lerna run build --stream"
-  },
   "workspaces": [
     "packages/*",
     "examples/*"
   ],
+  "scripts": {
+    "build": "lerna run build --stream",
+    "lint": "echo Linting",
+    "test": "echo Test"
+  },
+  "dependencies": {},
   "devDependencies": {
     "lerna": "3.20.2",
+    "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
-  },
-  "dependencies": {}
+  }
 }
