@@ -15,7 +15,8 @@
     "Thomas Baker <thomas_baker@intuit.com>"
   ],
   "scripts": {
-    "build": "lerna run build --stream"
+    "build": "lerna run build --stream",
+    "test": "echo Test"
   },
   "workspaces": [
     "packages/*",
