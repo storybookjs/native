@@ -84,7 +84,8 @@ workflows:
             - build
       - publish:
           requires:
-            - build        
+            - test
+            - lint        
           filters:
             branches:
               only:
