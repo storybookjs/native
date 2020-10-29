@@ -21,7 +21,8 @@
   "scripts": {
     "build": "lerna run build --stream",
     "lint": "echo Linting",
-    "test": "echo Test"
+    "test": "echo Test",
+    "publish": "lerna publish"
   },
   "dependencies": {},
   "devDependencies": {

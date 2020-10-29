@@ -66,7 +66,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: running local registry
+          name: Publish
           command: yarn --publish
 workflows:
   test:
