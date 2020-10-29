@@ -35,6 +35,11 @@ jobs:
       name: sb_node
     steps:
       - checkout
+      - restore_cache:
+          name: Restore Yarn cache
+          keys:
+            - build-yarn-cache-v1--{{ checksum "yarn.lock" }}
+            - build-yarn-cache-v1--
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
@@ -42,4 +47,16 @@ jobs:
           name: Save Yarn cache
           key: build-yarn-cache-v1--{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache/yarn          
+            - ~/.cache/yarn
+  smoke-tests:
+    executor:
+      class: medium
+      name: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Placeholder for Smoke Test
+          command: |
+            echo "Smoke Test"               
