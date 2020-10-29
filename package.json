@@ -22,6 +22,8 @@
     "examples/*"
   ],
   "devDependencies": {
+    "@auto-it/conventional-commits": "9.50.11",
+    "auto": "9.50.11",
     "lerna": "3.20.2",
     "typescript": "3.9.7"
   },

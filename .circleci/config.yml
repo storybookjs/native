@@ -36,4 +36,3 @@ workflows:
   lint-build:
     jobs:
       - build
-      - lint
