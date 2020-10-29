@@ -57,7 +57,17 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
-
+  publish:
+    executor:
+      class: large
+      name: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: running local registry
+          command: yarn local-registry --publish
 workflows:
   test:
     jobs:
@@ -68,3 +78,8 @@ workflows:
       - test:
           requires:
             - build
+      - publish:
+          filters:
+            branches:
+              only:
+                - master            
