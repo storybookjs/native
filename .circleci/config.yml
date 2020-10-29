@@ -70,12 +70,12 @@ workflows:
   test:
     jobs:
       - install
-      - build
-      - lint:
+      - build:
           requires:
             - install
+      - lint:
+          requires:
             - build            
       - test:
           requires:
-            - install
             - build
