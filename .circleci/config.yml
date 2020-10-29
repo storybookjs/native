@@ -48,6 +48,15 @@ jobs:
       - run:
           name: Test
           command: yarn test
+  lint:
+    executor: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Lint
+          command: yarn lint
 
 workflows:
   test:
