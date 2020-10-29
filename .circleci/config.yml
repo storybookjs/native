@@ -48,3 +48,11 @@ jobs:
       - run:
           name: Test
           command: yarn test
+
+workflows:
+  test:
+    jobs:
+      - build
+      - test:
+        requires:
+          - build 
