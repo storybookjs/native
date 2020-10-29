@@ -66,12 +66,8 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: Running local registry
-          command: yarn local-registry --port 6000 --open
-          background: true          
-      - run:
           name: running local registry
-          command: yarn local-registry --publish
+          command: yarn --publish
 workflows:
   test:
     jobs:
