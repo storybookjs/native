@@ -1,44 +1,89 @@
 version: 2.1
 
-defaults: &defaults
-  working_directory: ~/storybook-native
-  docker:
-    - image: circleci/node:10-browsers
-  environment:
-    TZ: "/usr/share/zoneinfo/America/Los_Angeles"
-
-    aliases:
-  # Circle related commands
-  - &restore-cache
-    keys:
-      # Find a cache corresponding to this specific package.json checksum
-      # when this file is changed, this key will fail
-      - storybook-native-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
-      - storybook-native-{{ checksum "yarn.lock" }}
-      # Find the most recent cache used from any branch
-      - storybook-native-
-  - &save-cache
-    key: storybook-native-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
-    paths:
-      - ~/.cache/yarn
-      - node_modules
-  # Yarn commands
-  - &yarn
-    name: Install Dependencies
-    command: yarn install --frozen-lockfile --non-interactive
-  - &build
-    name: Build
-    command: yarn build
+executors:
+  sb_node:
+    parameters:
+      class:
+        description: The Resource class
+        type: enum
+        enum: ['small', 'medium', 'large', 'xlarge']
+        default: 'medium'
+    working_directory: /tmp/storybook
+    docker:
+      - image: circleci/node:10-browsers
+        environment:
+          NODE_OPTIONS: --max_old_space_size=4096
+    resource_class: <<parameters.class>>
+  sb_node_12:
+    parameters:
+      class:
+        description: The Resource class
+        type: enum
+        enum: ['small', 'medium', 'large', 'xlarge']
+        default: 'medium'
+    working_directory: /tmp/storybook
+    docker:
+      - image: circleci/node:12-browsers
+        environment:
+          NODE_OPTIONS: --max_old_space_size=4096
+    resource_class: <<parameters.class>>
 
 jobs:
-  install:
-    <<: *defaults
+  build:
+    executor:
+      class: large
+      name: sb_node
     steps:
       - checkout
-      - restore_cache: *restore-cache
-      - run: *yarn
-      - save_cache: *save-cache
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .    
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+
+  test:
+    executor: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Test
+          command: yarn test
+  lint:
+    executor: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Lint
+          command: yarn lint
+  release:
+    steps:
+    executor:
+      class: large
+      name: sb_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Release
+          command: yarn && yarrn build && yarn release          
+workflows:
+  test:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build            
+      - test:
+          requires:
+            - build
+      - release:
+          requires:
+            - test
+            - lint        
+          filters:
+            branches:
+              only:
+                - master            
