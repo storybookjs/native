@@ -1,19 +1,11 @@
 version: 2.1
 
 executors:
-  sb_node:
-    parameters:
-      class:
-        description: The Resource class
-        type: enum
-        enum: ['small', 'medium', 'large', 'xlarge']
-        default: 'medium'
     working_directory: /tmp/storybook-native
     docker:
       - image: circleci/node:10-browsers
         environment:
           NODE_OPTIONS: --max_old_space_size=4096
-    resource_class: <<parameters.class>>
   sb_node_12:
     parameters:
       class:
@@ -26,7 +18,6 @@ executors:
       - image: circleci/node:12-browsers
         environment:
           NODE_OPTIONS: --max_old_space_size=4096
-    resource_class: <<parameters.class>>
 
 jobs:
   build:
