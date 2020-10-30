@@ -1,4 +1,7 @@
 # Storybook Native
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This module is a build tool that allows creation of stories to view components inside of Android and iOS native applications easily inside of storybook. The intended purpose is for native developers to be able to quickly get started with storybook without having to learn how to write extensive amounts of JavaScript, and without having to learn how to use storybook.
 
@@ -57,3 +60,16 @@ Examples of how to use this module can be found [in this folder](examples/). The
  - Run yarn to install dependencies
  - `yarn build && cd examples/ios-material-ui && yarn start`  
 Anytime changes are made, yarn build and start must be re-run
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
