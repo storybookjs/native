@@ -35,9 +35,17 @@ jobs:
       name: sb_node
     steps:
       - checkout
+      - restore_cache:
+          key: v1-storybookjs-native-{{ arch }}-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
           command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+      - save_cache:
+          paths:
+            - "node_modules"
+            - "packages/native-addon/node_modules"
+            - "packages/native/node_modules"
+          key: v1-storybookjs-native-{{ arch }}-{{ checksum "yarn.lock" }}
 
   test:
     executor: sb_node
@@ -58,9 +66,7 @@ jobs:
           name: Lint
           command: yarn lint
   release:
-    executor:
-      class: large
-      name: sb_node
+    executor: sb_node
     steps:
       - checkout
       - attach_workspace:
