@@ -10,7 +10,7 @@ const promises = components.map((component) => {
     platform: 'ios',
     stories: [{
       name: 'Example',
-      appLaunchArgs: {
+      appParams: {
         'launch_option': component.toLowerCase()
       }
     }]

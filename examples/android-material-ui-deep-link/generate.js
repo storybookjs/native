@@ -50,7 +50,8 @@ const promises = components.map(async (component) => {
         component: component.name
       },
       docs: docsRequest.data
-    }]
+    }],
+    deepLinkUrl: 'sb-native://deep.link'
   });
 });
 

@@ -1,3 +1,7 @@
+import path from 'path';
+import fs from 'fs-extra';
+import _ from 'lodash';
+
 type DefaultDevice = Record<Platform, string>;
 
 const defaultDevices: DefaultDevice = {
@@ -5,31 +9,20 @@ const defaultDevices: DefaultDevice = {
     ios: 'iphone9'
 };
 
-export const generateStory = ({ name, appLaunchArgs, docs }: StoryParams, platform: Platform, apiKey: string) => {
-    const storyName = name;
-    const notesContent = docs ? `\`${docs.replace(/`/g, "\\`")}\`` : null;
-    const params = `${storyName}.parameters = {
-    docs: {
-        page: () => <Description markdown={${notesContent}} />
-    }
-}`;
-    return `
-export const ${storyName} = (props) => {
-    const url = getAppetizeUrl(${JSON.stringify(appLaunchArgs)}, props, '${apiKey}');
+export const generateStory = async ({ name, appParams, docs }: StoryParams, config: Config) => {
+    const templatePath = path.join(__dirname, '..', 'story.template');
+    const template = await fs.readFile(templatePath, 'utf8');
+    const compiled = _.template(template);
 
-    return (
-        <iframe
-            title="${name} appetize-embed"
-            src={url}
-            width="1400px" 
-            height="888px" 
-            scrolling="no"
-            id="appetize-iframe"
-            frameBorder="0" />
-    );
-};
-${storyName}.args = {
-    device: '${defaultDevices[platform]}'
-}
-${params}`;
+    const docsContent = docs ? docs.replace(/`/g, "\\`") : undefined;
+    const appetizeUrl = `getAppetizeUrl(${config.deepLinkUrl ? '{}' : JSON.stringify(appParams)}, props, '${config.apiKey}');`;
+
+    return compiled({
+        storyName: name,
+        appetizeUrl,
+        deepLinkParams: JSON.stringify(config.deepLinkUrl ? appParams : {}),
+        deepLinkUrl: config.deepLinkUrl,
+        docsContent: docsContent ? `\`${docsContent}\`` : 'undefined',
+        defaultDevice: defaultDevices[config.platform]
+    });
 };

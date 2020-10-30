@@ -4,7 +4,8 @@
   "main": "./dist/index.js",
   "files": [
     "dist",
-    "story.template"
+    "story.template",
+    "category.template"
   ],
   "repository": "https://github.com/storybookjs/native.git",
   "author": "Adil Malik <adil_malik@intuit.com>",
@@ -23,6 +24,7 @@
     "@storybook/addon-docs": "6.0.6",
     "@storybook/addon-toolbars": "6.0.6",
     "@storybook/addons": "6.0.6",
+    "@storybook/appetize-utils": "link:../appetize-utils",
     "@storybook/components": "6.0.6",
     "@storybook/react": "6.0.6",
     "babel-loader": "^8.1.0",

@@ -14,15 +14,18 @@ const getDevices = (platform: Platform): string[] => {
 };
 
 export const generateStories = async (config: Config) => {
-    const templatePath = path.join(__dirname, '..', 'story.template');
+    const templatePath = path.join(__dirname, '..', 'category.template');
     const template = await fs.readFile(templatePath, 'utf8');
     const compiled = _.template(template);
 
+    const storiesContent = await Promise.all(
+        config.stories.map(async (story) => {
+            return await generateStory(story, config);
+        })
+    );
     const storyFileData = compiled({
         category: config.category,
-        stories: config.stories.map((story) => {
-            return generateStory(story, config.platform, config.apiKey);
-        }).join('\n'),
+        stories: storiesContent.join('\n'),
         devices: JSON.stringify(getDevices(config.platform))
     });
 
