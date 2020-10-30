@@ -1,6 +1,6 @@
 {
   "name": "@storybook/appetize-urls",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "main": "./dist",
   "files": [
     "dist"
@@ -14,7 +14,6 @@
   "scripts": {
     "build": "tsc -b"
   },
-  "dependencies": {},
   "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {
     "access": "public"
