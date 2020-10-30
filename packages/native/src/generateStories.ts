@@ -10,7 +10,7 @@ const getDevices = (platform: Platform): string[] => {
     } else if (platform === 'ios') {
         return ['ipadair', 'iphone6s', 'iphone6splus', 'ipadair2', 'iphone9'];
     }
-    throw new Error(`No devices for platform: ${platform}`);
+    throw new Error(`No device(s) for platform: ${platform}`);
 };
 
 export const generateStories = async (config: Config) => {
