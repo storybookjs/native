@@ -57,7 +57,7 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
-  publish:
+  release:
     executor:
       class: large
       name: sb_node
@@ -82,11 +82,7 @@ workflows:
       - test:
           requires:
             - build
-      - publish:
+      - release:
           requires:
             - test
-            - lint        
-          filters:
-            branches:
-              only:
-                - master            
+            - lint          
