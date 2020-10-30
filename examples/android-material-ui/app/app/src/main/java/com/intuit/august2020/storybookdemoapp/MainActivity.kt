@@ -24,7 +24,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 
-		val i = getIntent().getStringExtra("component");
+		val intent = getIntent();
+		// launch arguments example
+		var component = intent.getStringExtra("component");
+
+		// deep linking example
+		if (intent.data != null && intent.data.getQueryParameter("component") != null) {
+			component = intent.data.getQueryParameter("component");
+		}
 
 		val buttonIntent = Intent(this, ButtonActivity::class.java).apply {
 			putExtra(BUTTON, "button")
@@ -70,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 
 		startActivity(chipsIntent)
 
-		when (i) {
+		when (component) {
 			BUTTON -> startActivity(buttonIntent)
 			FLOATING_BUTTON -> startActivity(floatingButtonIntent)
 			CARD -> startActivity(cardIntent)

@@ -1,6 +1,6 @@
 interface StoryParams {
-    name: string;
-    appLaunchArgs: Record<string, unknown>;
+    name: String;
+    appParams?: Record<string, unknown>;
     docs?: string;
 }
 
@@ -10,6 +10,7 @@ interface Config {
     apiKey: string;
     platform: Platform;
     stories: StoryParams[];
+    deepLinkUrl?: string;
 }
 
 type Platform = 'android' | 'ios';

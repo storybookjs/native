@@ -1,0 +1,34 @@
+import React from 'react';
+import { Description } from '@storybook/addon-docs/blocks';
+import { sendMessage, loadUrl } from '@storybook/appetize-utils';
+
+export default { 
+    title: '<%= category %>',
+    argTypes: {
+        device: { control: {
+            type: 'select',
+            options: <%= devices %>
+        }}
+    }
+};
+
+const getAppetizeUrl = (args, props, apiKey) => {
+    const options = Object.assign({
+        params: JSON.stringify(args),
+        xdocMsg: true,
+        autoplay: true
+    }, props);
+    const urlWithoutParams = 'https://appetize.io/embed/' + apiKey;
+    const qsParams = new URLSearchParams(options).toString();
+
+    return urlWithoutParams + '?' + qsParams;
+};
+
+const openDeepLink = (appetizeUrl, deepLinkUrl, deepLinkParams) => {
+    loadUrl(appetizeUrl);
+    const qsParams = new URLSearchParams(deepLinkParams).toString();
+    const newAppUrl = deepLinkUrl + '?' + qsParams;
+    sendMessage({type: 'url', value: newAppUrl}, true);
+};
+
+<%= stories %>

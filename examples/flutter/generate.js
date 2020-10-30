@@ -10,7 +10,7 @@ generateStories({
   stories: components.map((component) => {
     return {
       name: component,
-      appLaunchArgs: {
+      appParams: {
         page: component.toLowerCase()
       }
     };
