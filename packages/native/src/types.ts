@@ -1,6 +1,6 @@
 interface StoryParams {
-    name: String;
-    appLaunchArgs: object;
+    name: string;
+    appLaunchArgs: Record<string, unknown>;
     docs?: string;
 }
 

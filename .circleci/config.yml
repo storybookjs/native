@@ -81,7 +81,8 @@ jobs:
       - run: *yarn
       - run:
           name: Lint
-          command: yarn lint
+          command: yarn lint --cache
+      - save_cache: *cache-modules
   release:
     executor: sb_node
     steps:
