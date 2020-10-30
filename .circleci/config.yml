@@ -1,5 +1,23 @@
 version: 2.1
 
+cache-defaults: &cache-defaults
+  keys:
+    - oid-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+
+aliases: 
+  - &cache-modules
+    key: oid-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    paths: &cache-modules-paths
+      - ~/.cache/yarn
+      - node_modules
+      - packages/native/node_modules
+      - packages/native-addon/node_modules
+      # Necessary so that linting is faster on CI
+      - .eslintcache
+  - &yarn
+    name: Installing Dependencies
+    command: yarn install --non-interactive --frozen-lockfile --cache-folder ~/.cache/yarn
+
 executors:
   sb_node:
     parameters:
@@ -36,16 +54,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-storybookjs-native-{{ arch }}-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install dependencies
-          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
-      - save_cache:
-          paths:
-            - "node_modules"
-            - "packages/native-addon/node_modules"
-            - "packages/native/node_modules"
-          key: v1-storybookjs-native-{{ arch }}-{{ checksum "yarn.lock" }}
+          <<: *cache-defaults
+      - run: *yarn
+      - save_cache: *cache-modules
 
   test:
     executor: sb_node
@@ -53,6 +64,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - restore_cache:
+          <<: *cache-defaults
+      - run: *yarn
       - run:
           name: Test
           command: yarn test
@@ -62,6 +76,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - restore_cache:
+          <<: *cache-defaults
+      - run: *yarn
       - run:
           name: Lint
           command: yarn lint
@@ -71,6 +88,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - restore_cache:
+          <<: *cache-defaults
+      - run: *yarn
       - run:
           name: Assume Github Role
           command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
