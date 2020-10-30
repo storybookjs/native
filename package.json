@@ -11,7 +11,8 @@
     "Adil Malik <adil_malik@intuit.com>",
     "Vanya Sehgal <vanya_sehgal@intuit.com>",
     "Jay Unnikrishn <jayakrishnan_unnikrishnan@intuit.com>",
-    "Thomas Baker <thomas_baker@intuit.com>"
+    "Thomas Baker <thomas_baker@intuit.com>",
+    "Lucas Shadler <lshadler13@gmail.com>"
   ],
   "workspaces": [
     "packages/*",
@@ -21,10 +22,18 @@
     "build": "lerna run build --stream",
     "lint": "echo Linting",
     "test": "echo Test",
-    "publish": "lerna publish --canary --yes"
+    "release": "auto shipit"
   },
   "dependencies": {},
   "devDependencies": {
+    "@auto-it/all-contributors": "10.0.2",
+    "@auto-it/conventional-commits": "10.0.2",
+    "@auto-it/first-time-contributor": "10.0.2",
+    "@auto-it/released": "10.0.2",
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "auto": "10.0.2",
+    "husky": "4.3.0",
     "lerna": "3.20.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"

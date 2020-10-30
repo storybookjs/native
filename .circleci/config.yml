@@ -66,8 +66,12 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: Publish
-          command: yarn && yarn build && yarn run publish
+          name: Assume Github Role
+          command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
+      - run:
+          name: Auto Shipit
+          command: |
+            yarn release
 workflows:
   test:
     jobs:
