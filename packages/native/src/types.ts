@@ -1,6 +1,6 @@
 interface StoryParams {
-    name: String;
-    appParams?: object;
+    name: string;
+    appParams?: Record<string, unknown>;
     docs?: string;
 }
 
