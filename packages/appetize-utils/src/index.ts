@@ -6,7 +6,7 @@ interface IncomingMessage {
 }
 
 let lastMessage: Message | null = null;
-let connected: boolean = false;
+let connected = false;
 
 const messageEventHandler = (event: IncomingMessage) => {
   if (event.data == "firstFrameReceived") {

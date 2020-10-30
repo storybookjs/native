@@ -1,5 +1,5 @@
 interface StoryParams {
-    name: String;
+    name: string;
     appParams?: Record<string, unknown>;
     docs?: string;
 }
