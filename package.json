@@ -22,7 +22,7 @@
     "build": "lerna run build --stream",
     "lint": "echo Linting",
     "test": "echo Test",
-    "publish": "lerna publish --canary"
+    "publish": "lerna publish --yes"
   },
   "dependencies": {},
   "devDependencies": {
