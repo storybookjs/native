@@ -18,6 +18,10 @@
     "packages/*",
     "examples/*"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "build": "lerna run build --stream",
     "lint": "eslint --ext .ts --ext .tsx .",
