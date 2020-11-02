@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-ios-example",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "private": true,
   "description": "An iOS demo app for storybook native",
   "repository": "",
