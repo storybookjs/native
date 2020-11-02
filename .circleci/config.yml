@@ -12,6 +12,7 @@ aliases:
       - node_modules
       - packages/native/node_modules
       - packages/native-addon/node_modules
+      - packages/appetize-utils/node_modules
       # Necessary so that linting is faster on CI
       - .eslintcache
   - &yarn
