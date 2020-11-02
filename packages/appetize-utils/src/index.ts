@@ -38,4 +38,3 @@ export const sendMessage = (message: Message, requireConnection?: boolean) => {
 };
 
 window.addEventListener("message", messageEventHandler, false);
-

@@ -94,9 +94,6 @@ jobs:
           <<: *cache-defaults
       - run: *yarn
       - run:
-          name: Build
-          command: yarn build
-      - run:
           name: Assume Github Role
           command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
       - run:
