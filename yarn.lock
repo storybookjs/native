@@ -2675,6 +2675,9 @@
     ts-dedent "^1.1.1"
     util-deprecate "^1.0.2"
 
+"@storybook/appetize-utils@link:packages/appetize-utils":
+  version "0.2.4"
+
 "@storybook/channel-postmessage@6.0.28":
   version "6.0.28"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-6.0.28.tgz#82028e368d440d49e3c4ad4e6d0166d044f0a35b"
@@ -3065,21 +3068,23 @@
     lodash "^4.17.15"
 
 "@storybook/native-addon@link:packages/native-addon":
-  version "0.1.6"
+  version "0.2.4"
   dependencies:
     "@storybook/addons" "^6.0.6"
+    "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/components" "^6.0.6"
     "@storybook/react" "^6.0.6"
     react "^16.13.1"
     react-dom "^16.13.1"
 
 "@storybook/native@link:packages/native":
-  version "0.1.6"
+  version "0.2.4"
   dependencies:
     "@storybook/addon-controls" "6.0.6"
     "@storybook/addon-docs" "6.0.6"
     "@storybook/addon-toolbars" "6.0.6"
     "@storybook/addons" "6.0.6"
+    "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/components" "6.0.6"
     "@storybook/react" "6.0.6"
     babel-loader "^8.1.0"
