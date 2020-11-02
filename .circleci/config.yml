@@ -17,7 +17,7 @@ aliases:
       - .eslintcache
   - &yarn
     name: Installing Dependencies
-    command: yarn install --non-interactive --frozen-lockfile --cache-folder ~/.cache/yarn
+    command: yarn install
 
 executors:
   sb_node:
