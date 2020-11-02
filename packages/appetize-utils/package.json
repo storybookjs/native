@@ -1,6 +1,6 @@
 {
   "name": "@storybook/appetize-urls",
-  "version": "0.2.1-alpha.0",
+  "version": "0.2.3",
   "main": "./dist/index.js",
   "files": [
     "dist"
