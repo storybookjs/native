@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc -b"
   },
-  "gitHead": "70790c2ef0b5d6dc987460bd9833e31e13812366",
+  "gitHead": "0f52a30495259d2b515e3a23cd516553894a4b30",
   "publishConfig": {
     "access": "public"
   }
