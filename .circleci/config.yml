@@ -57,9 +57,6 @@ jobs:
       - restore_cache:
           <<: *cache-defaults
       - run: *yarn
-      - run:
-          name: Build
-          command: yarn build
       - save_cache: *cache-modules
 
   test:
@@ -96,6 +93,9 @@ jobs:
       - restore_cache:
           <<: *cache-defaults
       - run: *yarn
+      - run:
+          name: Build
+          command: yarn build
       - run:
           name: Assume Github Role
           command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
