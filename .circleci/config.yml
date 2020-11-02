@@ -97,9 +97,6 @@ jobs:
           name: Assume Github Role
           command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
       - run:
-          name: whoami
-          command: npm whoami
-      - run:
           name: Auto Shipit
           command: |
             yarn release
