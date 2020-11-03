@@ -98,7 +98,7 @@ jobs:
           command: yarn build
       - run:
           name: Assume Github Role
-          command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
+          command: 'git config --global user.email "vasikarla.raj@gmail.com" && git config --global user.name "vasikarla"'
       - run:
           name: Auto Shipit
           command: |
