@@ -1,3 +1,15 @@
+# v0.2.7 (Tue Nov 03 2020)
+
+#### ⚠️ Pushed to `master`
+
+- Update config.yml ([@vasikarla](https://github.com/vasikarla))
+
+#### Authors: 1
+
+- Raj Vasikarla ([@vasikarla](https://github.com/vasikarla))
+
+---
+
 # v0.2.1 (Mon Nov 02 2020)
 
 #### 🐛 Bug Fix
