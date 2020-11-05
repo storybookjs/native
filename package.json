@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "lerna run build --stream",
-    "lint": "eslint --ext .ts --ext .tsx .",
+    "lint": "eslint --ext .ts --ext .tsx . --cache",
     "test": "echo Test",
     "release": "auto shipit"
   },
