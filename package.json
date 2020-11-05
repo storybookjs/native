@@ -49,6 +49,11 @@
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,json,css,md}": [
       "prettier --write"
