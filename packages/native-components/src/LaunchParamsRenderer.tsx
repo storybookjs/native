@@ -1,14 +1,16 @@
 import React from "react";
 import { getAppetizeUrl } from "@storybook/appetize-utils";
-import { getDeviceForPlatform } from "./deviceUtil";
+import { useDevice } from "@storybook/native-devices";
+import { RendererProps } from "./types";
 
-export default (props: RendererProps) => {
+export default (props: RendererProps): React.ReactElement => {
   const { apiKey, platform, knobs, storyParams } = props;
-  const device = getDeviceForPlatform(platform);
-  const storyParamsWithKnobs = { ...storyParams, ...knobs };
 
+  const device = useDevice(platform);
+  const storyParamsWithKnobs = { ...storyParams, ...knobs };
   const baseParams = knobs || {};
   const appetizeParams = { ...baseParams, device };
+
   const url = getAppetizeUrl(storyParamsWithKnobs, appetizeParams, apiKey);
   return (
     <iframe

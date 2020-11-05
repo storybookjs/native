@@ -1,3 +1,5 @@
+import { Platform } from '@storybook/native-types';
+
 export interface StoryParams {
     name: string;
     appParams?: Record<string, unknown>;
@@ -12,5 +14,3 @@ export interface Config {
     stories: StoryParams[];
     deepLinkUrl?: string;
 }
-
-export type Platform = 'android' | 'ios';

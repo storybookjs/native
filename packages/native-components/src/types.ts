@@ -1,6 +1,6 @@
-type Platform = 'android' | 'ios';
+import { Platform } from '@storybook/native-types';
 
-interface RendererProps {
+export interface RendererProps {
   apiKey: string;
   platform: Platform;
   storyParams: Record<string, any>;

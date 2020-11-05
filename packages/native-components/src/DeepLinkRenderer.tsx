@@ -1,14 +1,15 @@
 import React from "react";
 import { getAppetizeUrl, openDeepLink } from "@storybook/appetize-utils";
-import { getDeviceForPlatform } from "./deviceUtil";
+import { useDevice } from "@storybook/native-devices";
+import { RendererProps } from "./types";
 
-export default (props: RendererProps) => {
+export default (props: RendererProps): React.ReactElement => {
   const { apiKey, platform, knobs, storyParams, deepLinkBaseUrl } = props;
   if (!deepLinkBaseUrl) {
     throw new Error('No deep link base url was specified');
   }
 
-  const device = getDeviceForPlatform(platform);
+  const device = useDevice(platform);
   const storyParamsWithKnobs = { ...storyParams, ...knobs };
 
   React.useEffect(() => {
@@ -17,7 +18,7 @@ export default (props: RendererProps) => {
     }, apiKey);
 
     openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithKnobs);
-  }, []);
+  });
 
   return <div />;
 };

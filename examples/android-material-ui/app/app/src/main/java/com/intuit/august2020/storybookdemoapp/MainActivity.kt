@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
 		val buttonIntent = Intent(this, ButtonActivity::class.java).apply {
 			putExtra(BUTTON, "button")
+
+			if (intent.data != null && intent.data.getQueryParameter("label") != null) {
+				putExtra("label", intent.data.getQueryParameter("label"));
+			}
 		}
 		val floatingButtonIntent = Intent(this, FloatingButtonActivity::class.java).apply {
 			putExtra(FLOATING_BUTTON, "floatingButton")

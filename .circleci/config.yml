@@ -57,6 +57,12 @@ jobs:
       - restore_cache:
           <<: *cache-defaults
       - run: *yarn
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Build storybooks
+          command: yarn build:storybook
       - save_cache: *cache-modules
 
   test:

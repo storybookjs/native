@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import _ from 'lodash';
 
-import { StoryParams } from './types';
+import { Config, StoryParams } from './types';
 
 export const generateStory = async ({ name, appParams, docs }: StoryParams, config: Config): Promise<string> => {
     const templatePath = path.join(__dirname, '..', 'story.template');
