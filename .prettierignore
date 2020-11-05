@@ -1,0 +1,5 @@
+packages/native/dist/
+packages/appetize-utils/dist/
+examples/android-material-ui-deep-link/.storybook
+examples/ios-material-ui/
+examples/flutter/
