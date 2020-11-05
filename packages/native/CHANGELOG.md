@@ -1,3 +1,28 @@
+# v0.2.8 (Tue Nov 03 2020)
+
+#### 🐛 Bug Fix
+
+- Update package.json [#14](https://github.com/storybookjs/native/pull/14) ([@vasikarla](https://github.com/vasikarla))
+- Update package.json ([@vasikarla](https://github.com/vasikarla))
+
+#### Authors: 1
+
+- Raj Vasikarla ([@vasikarla](https://github.com/vasikarla))
+
+---
+
+# v0.2.6 (Mon Nov 02 2020)
+
+#### 🐛 Bug Fix
+
+- fix: testing fix CI [#12](https://github.com/storybookjs/native/pull/12) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.0 (Fri Oct 30 2020)
 
 :tada: This release contains work from new contributors! :tada:

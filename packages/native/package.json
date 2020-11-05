@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native",
-  "version": "0.2.0",
+  "version": "0.2.8",
   "main": "./dist/index.js",
   "files": [
     "dist",
@@ -11,7 +11,7 @@
   "author": "Adil Malik <adil_malik@intuit.com>",
   "license": "MIT",
   "contributors": [
-    "Raj Vasikarla <raj_vasikarla@intuit.com>",
+    "Raj Vasikarla <vasikarla.raj@gmail.com>",
     "Adil Malik <adil_malik@intuit.com>"
   ],
   "scripts": {

@@ -18,6 +18,25 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "amalik2",
+      "name": "Adil Malik",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/25858348?v=4",
+      "profile": "https://github.com/amalik2",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vasikarla",
+      "name": "Raj Vasikarla",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1945958?v=4",
+      "profile": "https://github.com/vasikarla",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

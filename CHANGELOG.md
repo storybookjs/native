@@ -1,3 +1,46 @@
+# v0.2.8 (Tue Nov 03 2020)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native`
+  - Update package.json [#14](https://github.com/storybookjs/native/pull/14) ([@vasikarla](https://github.com/vasikarla))
+
+#### Authors: 1
+
+- Raj Vasikarla ([@vasikarla](https://github.com/vasikarla))
+
+---
+
+# v0.2.7 (Tue Nov 03 2020)
+
+#### ⚠️ Pushed to `master`
+
+- Update config.yml ([@vasikarla](https://github.com/vasikarla))
+
+#### Authors: 1
+
+- Raj Vasikarla ([@vasikarla](https://github.com/vasikarla))
+
+---
+
+# v0.2.1 (Mon Nov 02 2020)
+
+#### 🐛 Bug Fix
+
+- fix: testing fix publish 404 error [#13](https://github.com/storybookjs/native/pull/13) ([@amalik2](https://github.com/amalik2))
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example`, `@storybook/appetize-utils`, `@storybook/native-addon`, `@storybook/native`
+  - fix: testing fix CI [#12](https://github.com/storybookjs/native/pull/12) ([@amalik2](https://github.com/amalik2))
+
+#### ⚠️ Pushed to `master`
+
+- Build before release ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.0 (Fri Oct 30 2020)
 
 :tada: This release contains work from new contributors! :tada:

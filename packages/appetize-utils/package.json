@@ -1,7 +1,7 @@
 {
   "name": "@storybook/appetize-utils",
-  "version": "0.2.0",
-  "main": "./dist",
+  "version": "0.2.8",
+  "main": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc -b"
   },
-  "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
+  "gitHead": "0f52a30495259d2b515e3a23cd516553894a4b30",
   "publishConfig": {
     "access": "public"
   }

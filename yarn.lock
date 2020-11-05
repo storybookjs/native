@@ -2676,7 +2676,7 @@
     util-deprecate "^1.0.2"
 
 "@storybook/appetize-utils@link:packages/appetize-utils":
-  version "0.2.0"
+  version "0.2.4"
 
 "@storybook/channel-postmessage@6.0.28":
   version "6.0.28"
@@ -3068,7 +3068,7 @@
     lodash "^4.17.15"
 
 "@storybook/native-addon@link:packages/native-addon":
-  version "0.2.0"
+  version "0.2.4"
   dependencies:
     "@storybook/addons" "^6.0.6"
     "@storybook/appetize-utils" "link:packages/appetize-utils"
@@ -3085,7 +3085,7 @@
     react-dom "^16.13.1"
 
 "@storybook/native@link:packages/native":
-  version "0.2.0"
+  version "0.2.4"
   dependencies:
     "@storybook/addon-controls" "6.0.6"
     "@storybook/addon-docs" "6.0.6"
