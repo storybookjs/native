@@ -1,10 +1,10 @@
-interface StoryParams {
+export interface StoryParams {
     name: string;
     appParams?: Record<string, unknown>;
     docs?: string;
 }
 
-interface Config {
+export interface Config {
     category: string;
     filePath: string;
     apiKey: string;
@@ -13,4 +13,4 @@ interface Config {
     deepLinkUrl?: string;
 }
 
-type Platform = 'android' | 'ios';
+export type Platform = 'android' | 'ios';

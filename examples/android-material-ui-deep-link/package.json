@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "start": "node ./generate.js && yarn start-storybook",
-    "build:storybook": "yarn build-storybook"
+    "build:storybook": "node ./generate.js && yarn build-storybook"
   },
   "keywords": [],
   "dependencies": {

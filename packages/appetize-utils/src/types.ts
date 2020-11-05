@@ -1,5 +1,5 @@
 export interface MessageWithParam {
-  name: string;
+  type: string;
   value: string;
 }
 

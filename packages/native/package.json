@@ -26,6 +26,7 @@
     "@storybook/addons": "6.0.6",
     "@storybook/appetize-utils": "link:../appetize-utils",
     "@storybook/components": "6.0.6",
+    "@storybook/native-components": "link:../native-components",
     "@storybook/react": "6.0.6",
     "babel-loader": "^8.1.0",
     "change-case": "4.1.1",
