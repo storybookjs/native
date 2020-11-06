@@ -52,7 +52,7 @@
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
   },
-  "test-staged": {
+  "test": {
     "*.{js,ts,tsx}": "yarn prettier",
     "*.{ts,tsx}": "yarn lint"
   },
