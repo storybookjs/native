@@ -1,4 +1,4 @@
-export interface State {
+export interface DeviceSelections {
   androidSelection: string;
   iosSelection: string;
 }

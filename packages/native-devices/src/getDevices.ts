@@ -9,11 +9,11 @@ export const getDefaultDevice = (platform: Platform): string => {
 };
 
 export const getDevices = (platform: Platform): string[] => {
-  // TODO: test new devices
   if (platform === 'android') {
       return ['nexus5', 'nexus7', 'nexus9', 'pixel4', 'pixel4xl', 'galaxytabs7'];
   } else if (platform === 'ios') {
       return ['ipadair', 'iphone6s', 'iphone6splus', 'ipadair2', 'iphone9', 'iphone11pro', 'iphone11promax'];
   }
+
   throw new Error(`No devices for platform: ${platform}`);
 };

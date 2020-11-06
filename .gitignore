@@ -36,7 +36,7 @@ proof-junit.xml
 proof-a11y.json
 .snapshots/local/actual
 .snapshots/local/diff
-*.stories.jsx
+stories/
 
 # Android
 *.iml

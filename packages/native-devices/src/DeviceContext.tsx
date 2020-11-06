@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { State } from './types';
+import { DeviceSelections } from './types';
 import { getDefaultDevice } from './getDevices';
 
-export const DeviceContext = React.createContext<State>({
+export const DeviceContext = React.createContext<DeviceSelections>({
   androidSelection: getDefaultDevice("android"),
   iosSelection: getDefaultDevice("ios")
 });

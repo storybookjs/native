@@ -3,7 +3,7 @@ export const <%= storyName %> = (props) => {
         apiKey="<%= apiKey %>"
         platform="<%= platform %>"
         storyParams={<%= storyParams %>}
-        deepLinkBaseUrl="<%= deepLinkBaseUrl %>"
+        deepLinkBaseUrl={<%= deepLinkBaseUrl %>}
         knobs={props}
     />;
 };

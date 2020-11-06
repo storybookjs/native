@@ -16,7 +16,7 @@ export const generateStory = async ({ name, appParams, docs }: StoryParams, conf
         apiKey: config.apiKey,
         platform: config.platform,
         storyParams: JSON.stringify(appParams),
-        deepLinkBaseUrl: config.deepLinkUrl,
+        deepLinkBaseUrl: config.deepLinkUrl ? `"${config.deepLinkUrl}"` : 'undefined',
         docsContent: docsContent ? `\`${docsContent}\`` : 'undefined'
     });
 };

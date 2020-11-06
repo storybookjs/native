@@ -1,19 +1,17 @@
 import React from "react";
-import { useAddonState as useClientAddonState } from "@storybook/client-api";
-import { State, DeviceWrapper } from "@storybook/native-devices";
+import { useAddonState } from "@storybook/client-api";
+import { DeviceSelections, DeviceWrapper } from "@storybook/native-devices";
 
 import { ADDON_ID } from "./constants";
-import { restoreLocalStorage } from "./utils/localStorageUtil";
+import { restoreFromLocalStorage } from "./utils/localStorageUtil";
 
-export const DeviceDecorator = (
-  storyFn: (storyParams: Record<string, any>) => React.ReactNode
-): React.ReactElement => {
-  const [state] = useClientAddonState<State>(ADDON_ID);
-  const loadedState = state || restoreLocalStorage();
+export const DeviceDecorator = (storyFn: () => any): React.ReactElement => {
+  const [state] = useAddonState<DeviceSelections>(ADDON_ID);
+  const selections = state || restoreFromLocalStorage();
   
   return (
-    <DeviceWrapper {...loadedState}>
-      {storyFn(loadedState)}
+    <DeviceWrapper {...selections}>
+      {storyFn()}
     </DeviceWrapper>
   );
 };

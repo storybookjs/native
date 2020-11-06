@@ -1,15 +1,15 @@
 import React from "react";
 import { DeviceContext } from "./DeviceContext";
-import { State } from "./types";
+import { DeviceSelections } from "./types";
 
 export const DeviceWrapper = ({
   children,
   ...value
-}: React.PropsWithChildren<State>) => {
-  const wrappedDevices = React.useContext(DeviceContext);
+}: React.PropsWithChildren<DeviceSelections>) => {
+  const context = React.useContext(DeviceContext);
 
   return (
-    <DeviceContext.Provider value={{ ...wrappedDevices, ...value }}>
+    <DeviceContext.Provider value={{ ...context, ...value }}>
       {children}
     </DeviceContext.Provider>
   );

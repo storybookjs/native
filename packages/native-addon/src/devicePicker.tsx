@@ -1,29 +1,29 @@
+// this file is based upon similar code by https://github.com/hipstersmoothie
+
 import React from "react";
-import { useAddonState, useParameter } from "@storybook/api";
+import { useAddonState } from "@storybook/api";
 import {
   IconButton,
   WithTooltip,
   TooltipLinkList,
-  Icons,
+  Icons
 } from "@storybook/components";
 import { getDevices } from "@storybook/native-devices";
-import { State } from "@storybook/native-devices";
+import { DeviceSelections } from "@storybook/native-devices";
 
 import { ADDON_ID } from "./constants";
-import { DEFAULT_STATE, restoreLocalStorage, saveLocalStorage } from "./utils/localStorageUtil";
-
-const PARAMETER_NAME = 'DEVICE_PICKER';
+import { DEFAULT_STATE, restoreFromLocalStorage, saveToLocalStorage } from "./utils/localStorageUtil";
 
 export const DeviceSelectorTool = (): React.ReactElement => {
-  const defaultState = useParameter<Partial<State>>(PARAMETER_NAME, DEFAULT_STATE);
-  const initial = restoreLocalStorage(defaultState);
-  const [state, setState] = useAddonState<State>(ADDON_ID, initial);
+  const savedState = restoreFromLocalStorage(DEFAULT_STATE);
+
+  const [state, setState] = useAddonState<DeviceSelections>(ADDON_ID, savedState);
   const androidDevices = getDevices("android");
   const iosDevices = getDevices("ios");
 
-  const saveState = (s: State) => {
+  const saveState = (s: DeviceSelections) => {
     setState(s);
-    saveLocalStorage(s);
+    saveToLocalStorage(s);
   };
 
   return (
@@ -32,8 +32,6 @@ export const DeviceSelectorTool = (): React.ReactElement => {
       placement="top"
       trigger="click"
       tooltip={(props) => {
-        const { onHide } = props;
-
         return (
           <TooltipLinkList
             links={androidDevices.map((device) => {
@@ -42,7 +40,7 @@ export const DeviceSelectorTool = (): React.ReactElement => {
                   androidSelection: device,
                   iosSelection: state.iosSelection
                 });
-                onHide();
+                props.onHide();
               };
               return {
                 id: device,
@@ -59,7 +57,7 @@ export const DeviceSelectorTool = (): React.ReactElement => {
                     androidSelection: state.androidSelection,
                     iosSelection: device
                   });
-                  onHide();
+                  props.onHide();
                 };
                 return {
                   id: device,

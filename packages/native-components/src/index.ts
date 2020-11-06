@@ -1,1 +1,1 @@
-export { default as EmulatorRenderer } from './DeepLinkRenderer';
+export { default as EmulatorRenderer } from './EmulatorRenderer';

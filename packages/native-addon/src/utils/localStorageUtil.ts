@@ -1,39 +1,40 @@
+// this file is based upon similar code by https://github.com/hipstersmoothie
+
 import { getDefaultDevice, getDevices } from "@storybook/native-devices";
-import { State } from "@storybook/native-devices";
+import { DeviceSelections } from "@storybook/native-devices";
 
-import { ADDON_ID } from "../constants";
+import { LOCAL_STORAGE_KEY } from "../constants";
 
-const LOCAL_STORAGE_NAME = `${ADDON_ID}-storage`;
-export const DEFAULT_STATE: State = {
+export const DEFAULT_STATE: DeviceSelections = {
   androidSelection: getDefaultDevice("android"),
   iosSelection: getDefaultDevice("ios")
 };
 
-export const saveLocalStorage = (data: State) => {
-  window.localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(data));
+export const saveToLocalStorage = (data: DeviceSelections) => {
+  window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
 };
 
-export const restoreLocalStorage = (state?: Partial<State>): State => {
-  const data = window.localStorage.getItem(LOCAL_STORAGE_NAME);
-  const androidDevices = getDevices("android");
-  const iosDevices = getDevices("ios");
+export const restoreFromLocalStorage = (state?: Partial<DeviceSelections>): DeviceSelections => {
+  const data = window.localStorage.getItem(LOCAL_STORAGE_KEY);
 
-  if (data) {
-    const storedSelections = JSON.parse(data) as State;
-
-    if (!androidDevices.includes(storedSelections.androidSelection)) {
-      storedSelections.androidSelection = getDefaultDevice("android");
-    }
-
-    if (!iosDevices.includes(storedSelections.iosSelection)) {
-      storedSelections.iosSelection = getDefaultDevice("ios");
-    }
-
-    return storedSelections;
+  if (!data) {
+    return {
+      ...DEFAULT_STATE,
+      ...state
+    };
   }
 
-  return {
-    ...DEFAULT_STATE,
-    ...state
-  };
+  const androidDevices = getDevices("android");
+  const iosDevices = getDevices("ios");
+  const storedSelections = JSON.parse(data) as DeviceSelections;
+
+  if (!androidDevices.includes(storedSelections.androidSelection)) {
+    storedSelections.androidSelection = getDefaultDevice("android");
+  }
+
+  if (!iosDevices.includes(storedSelections.iosSelection)) {
+    storedSelections.iosSelection = getDefaultDevice("ios");
+  }
+
+  return storedSelections;
 };
