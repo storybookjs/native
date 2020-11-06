@@ -12,5 +12,6 @@
     { "releaseType": "patch", "name": "auto-patch", overwrite: true }
   ],
   "prereleaseBranches": ["next", "alpha", "beta"],
-  "name": "lshadler"
+  "name": "lshadler",
+  "email": "lshadler13@gmail.com"
 }
