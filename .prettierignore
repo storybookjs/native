@@ -6,3 +6,4 @@ commitlint.config.js
 husky.config.js
 LICENSE.md
 README.md
+package.json
