@@ -2676,7 +2676,7 @@
     util-deprecate "^1.0.2"
 
 "@storybook/appetize-utils@link:packages/appetize-utils":
-  version "0.2.8"
+  version "0.2.9"
 
 "@storybook/channel-postmessage@6.0.28":
   version "6.0.28"
@@ -3068,7 +3068,7 @@
     lodash "^4.17.15"
 
 "@storybook/native-addon@link:packages/native-addon":
-  version "0.2.8"
+  version "0.2.9"
   dependencies:
     "@storybook/addons" "^6.0.6"
     "@storybook/api" "^6.0.28"
@@ -3081,11 +3081,27 @@
     react "^16.13.1"
     react-dom "^16.13.1"
 
+"@storybook/native-components@link:packages/native-components":
+  version "0.2.9"
+  dependencies:
+    "@storybook/appetize-utils" "link:packages/appetize-utils"
+    "@storybook/native-devices" "link:packages/native-devices"
+    "@storybook/native-types" "link:packages/native-types"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+
+"@storybook/native-devices@link:packages/native-devices":
+  version "0.2.9"
+  dependencies:
+    "@storybook/native-types" "link:packages/native-types"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+
 "@storybook/native-types@link:packages/native-types":
-  version "0.2.8"
+  version "0.2.9"
 
 "@storybook/native@link:packages/native":
-  version "0.2.8"
+  version "0.2.9"
   dependencies:
     "@storybook/addon-controls" "6.0.6"
     "@storybook/addon-docs" "6.0.6"
@@ -3093,6 +3109,7 @@
     "@storybook/addons" "6.0.6"
     "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/components" "6.0.6"
+    "@storybook/native-addon" "link:packages/native-addon"
     "@storybook/native-components" "link:packages/native-components"
     "@storybook/native-types" "link:packages/native-types"
     "@storybook/react" "6.0.6"
@@ -9445,7 +9462,7 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^10.5.1:
+lint-staged@>=10:
   version "10.5.1"
   resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.5.1.tgz#901e915c2360072dded0e7d752a0d9a49e079daa"
   integrity sha512-fTkTGFtwFIJJzn/PbUO3RXyEBHIhbfYBE7+rJyLcOXabViaO/h6OslgeK6zpeUtzkDrzkgyAYDTLAwx6JzDTHw==

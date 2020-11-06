@@ -7,6 +7,6 @@ or
 `yarn add @storybook/native-components`
 
 ## Usage
-`import { EmulatorRenderer } from '@storybook/native-coomponents';`
+`import { EmulatorRenderer } from '@storybook/native-components';`
 
 An example usage can be found [here](../../examples/knobs/src/button.stories.jsx)

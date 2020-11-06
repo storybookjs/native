@@ -1,68 +1,65 @@
 {
-  "name": "@storybook/native-root",
-  "version": "0.0.1",
-  "private": true,
-  "description": "The mono-repo for storybook native packages",
-  "repository": "https://github.com/storybookjs/native.git",
-  "license": "MIT",
-  "author": "Adil Malik <adil_malik@intuit.com>",
-  "contributors": [
-    "Raj Vasikarla <raj_vasikarla@intuit.com>",
-    "Adil Malik <adil_malik@intuit.com>",
-    "Vanya Sehgal <vanya_sehgal@intuit.com>",
-    "Jay Unnikrishn <jayakrishnan_unnikrishnan@intuit.com>",
-    "Thomas Baker <thomas_baker@intuit.com>",
-    "Lucas Shadler <lshadler13@gmail.com>"
-  ],
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.com/",
-    "access": "public"
-  },
-  "scripts": {
-    "build": "lerna run build --stream",
-    "build:storybook": "lerna run build:storybook --stream",
-    "lint": "eslint --ext .ts --ext .tsx .",
-    "test": "echo Test",
-    "release": "auto shipit"
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "lint-staged": "^10.5.1",
-    "prettier": "^2.1.2"
-  },
-  "devDependencies": {
-    "@auto-it/all-contributors": "10.0.2",
-    "@auto-it/conventional-commits": "10.0.2",
-    "@auto-it/first-time-contributor": "10.0.2",
-    "@auto-it/released": "10.0.2",
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@typescript-eslint/eslint-plugin": "4.6.0",
-    "@typescript-eslint/parser": "4.6.0",
-    "auto": "10.0.2",
-    "eslint": "7.12.1",
-    "husky": "4.3.0",
-    "lerna": "3.20.2",
-    "sort-package-json": "^1.42.1",
-    "typescript": "3.9.7"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write"
+    "name": "@storybook/native-root",
+    "version": "0.0.1",
+    "private": true,
+    "description": "The mono-repo for storybook native packages",
+    "repository": "https://github.com/storybookjs/native.git",
+    "license": "MIT",
+    "author": "Adil Malik <adil_malik@intuit.com>",
+    "contributors": [
+        "Raj Vasikarla <raj_vasikarla@intuit.com>",
+        "Adil Malik <adil_malik@intuit.com>",
+        "Vanya Sehgal <vanya_sehgal@intuit.com>",
+        "Jay Unnikrishn <jayakrishnan_unnikrishnan@intuit.com>",
+        "Thomas Baker <thomas_baker@intuit.com>",
+        "Lucas Shadler <lshadler13@gmail.com>"
     ],
-    "*.{ts,tsx}": [
-      "prettier --parser typescript --write",
-      "yarn lint --fix"
-    ]
-  }
+    "workspaces": [
+        "packages/*",
+        "examples/*"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.com/",
+        "access": "public"
+    },
+    "scripts": {
+        "build": "lerna run build --stream",
+        "build:storybook": "lerna run build:storybook --stream",
+        "lint": "eslint --ext .ts --ext .tsx .",
+        "test": "echo Test",
+        "release": "auto shipit"
+    },
+    "dependencies": {
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "lint-staged": ">=10",
+        "prettier": "^2.1.2"
+    },
+    "devDependencies": {
+        "@auto-it/all-contributors": "10.0.2",
+        "@auto-it/conventional-commits": "10.0.2",
+        "@auto-it/first-time-contributor": "10.0.2",
+        "@auto-it/released": "10.0.2",
+        "@commitlint/cli": "11.0.0",
+        "@commitlint/config-conventional": "11.0.0",
+        "@typescript-eslint/eslint-plugin": "4.6.0",
+        "@typescript-eslint/parser": "4.6.0",
+        "auto": "10.0.2",
+        "eslint": "7.12.1",
+        "husky": "4.3.0",
+        "lerna": "3.20.2",
+        "sort-package-json": "^1.42.1",
+        "typescript": "3.9.7"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,json,css,md}": [
+            "prettier --write"
+        ],
+        "*.{ts,tsx}": "eslint --cache --fix"
+    }
 }

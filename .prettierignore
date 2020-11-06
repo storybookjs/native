@@ -1,5 +1,4 @@
-packages/native/dist/*
-packages/appetize-utils/dist/
+dist/*
 examples/*
 .circleci/config.yml
 .eslintrc.js
