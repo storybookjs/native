@@ -56,6 +56,11 @@
     "*.{js,ts,tsx}": "yarn prettier",
     "*.{ts,tsx}": "yarn lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,json,css,md,jsx}": [
       "prettier --write"
