@@ -1,26 +1,15 @@
 export const <%= storyName %> = (props) => {
-    const url = <%= appetizeUrl %>;
-    <% if (deepLinkUrl) {
-    %>openDeepLink(url, '<%= deepLinkUrl %>', <%= deepLinkParams %>);
-    return <div />;
-    <% }%>
-    <% if (!deepLinkUrl) {
-     %>return (
-        <iframe
-            title="<%= storyName %> appetize-embed"
-            src={url}
-            width="1400px" 
-            height="888px" 
-            scrolling="no"
-            id="appetize-iframe"
-            frameBorder="0" />
-    );<% } %>
+    return <EmulatorRenderer
+        apiKey="<%= apiKey %>"
+        platform="<%= platform %>"
+        storyParams={<%= storyParams %>}
+        deepLinkBaseUrl={<%= deepLinkBaseUrl %>}
+        knobs={props}
+    />;
 };
-<%= storyName %>.args = {
-    device: '<%= defaultDevice %>'
-}
+
 <%= storyName %>.parameters = {
     docs: {
         page: () => <Description markdown={<%= docsContent %>} />
     }
-}
+};

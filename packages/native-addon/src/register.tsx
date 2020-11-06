@@ -2,8 +2,8 @@ import React from 'react';
 import { addons, types } from '@storybook/addons';
 import { Icons, IconButton } from '@storybook/components';
 import { sendMessage } from '@storybook/appetize-utils';
-
-const ADDON_ID = 'native';
+import { ADDON_ID } from './constants';
+import { DeviceSelectorTool } from './devicePicker';
 
 const rotateLeft = () => {
     sendMessage('rotateLeft');
@@ -46,5 +46,11 @@ addons.register(ADDON_ID, () => {
         <Icons icon="camera" />
       </IconButton>
     )
+  });
+
+  addons.add(`${ADDON_ID}/devicePicker`, {
+    type: types.TOOL,
+    title: 'Select device',
+    render: () => <DeviceSelectorTool />
   });
 });

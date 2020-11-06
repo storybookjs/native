@@ -10,8 +10,8 @@
     "Vanya Sehgal <vanya_sehgal@intuit.com>"
   ],
   "scripts": {
-    "start": "node ./generate.js && yarn start-storybook",
-    "build:storybook": "yarn build-storybook"
+    "start": "node ./generate.js && yarn start-storybook -p 53743",
+    "build:storybook": "node ./generate.js && yarn build-storybook"
   },
   "keywords": [],
   "dependencies": {
