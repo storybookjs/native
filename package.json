@@ -50,7 +50,7 @@
     "typescript": "3.9.7"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,json,css,md,ts}": [
       "prettier 'packages/**/*.ts' --write"
     ],
     "*.{ts,tsx}": "eslint --cache --fix"
