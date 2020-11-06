@@ -1,16 +1,18 @@
-import React from 'react';
-import { EmulatorRenderer } from '@storybook/native-components';
+import React from "react";
+import { EmulatorRenderer } from "@storybook/native-components";
 
-export default { 
-    title: 'Card'
+export default {
+    title: "Card"
 };
 
 export const Example = (props) => {
-    return <EmulatorRenderer
-        apiKey="zv034bdme9je7c9d43chzmc2yg"
-        platform="android"
-        storyParams={{"component":"card"}}
-        deepLinkBaseUrl={"sb-native://deep.link"}
-        knobs={props}
-    />;
+    return (
+        <EmulatorRenderer
+            apiKey="zv034bdme9je7c9d43chzmc2yg"
+            platform="android"
+            storyParams={{ component: "card" }}
+            deepLinkBaseUrl={"sb-native://deep.link"}
+            knobs={props}
+        />
+    );
 };

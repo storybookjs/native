@@ -1,23 +1,31 @@
-const { generateStories } = require('@storybook/native')
+const { generateStories } = require("@storybook/native");
 
-const components = ['Button', 'FloatingButton', 'TextField', 'Slider', 'Spinner'];
+const components = [
+    "Button",
+    "FloatingButton",
+    "TextField",
+    "Slider",
+    "Spinner"
+];
 
 const promises = components.map((component) => {
-  return generateStories({
-    category: component,
-    filePath: `./stories/${component.toLowerCase()}.stories.jsx`,
-    apiKey: 'yc0e33432655wbjnnnemyghhxm',
-    platform: 'ios',
-    stories: [{
-      name: 'Example',
-      appParams: {
-        'launch_option': component.toLowerCase()
-      }
-    }]
-  })
+    return generateStories({
+        category: component,
+        filePath: `./stories/${component.toLowerCase()}.stories.jsx`,
+        apiKey: "yc0e33432655wbjnnnemyghhxm",
+        platform: "ios",
+        stories: [
+            {
+                name: "Example",
+                appParams: {
+                    launch_option: component.toLowerCase()
+                }
+            }
+        ]
+    });
 });
 
 Promise.all(promises).catch((err) => {
-  console.error(err)
-  process.exit(1)
+    console.error(err);
+    process.exit(1);
 });

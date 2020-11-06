@@ -26,7 +26,7 @@
     "build": "lerna run build --stream",
     "build:storybook": "lerna run build:storybook --stream",
     "lint": "eslint --ext .ts --ext .tsx .",
-    "prettier": "prettier 'packages/**/*.(ts|tsx)' --write",
+    "prettier": "prettier './**/*.(ts|tsx|js|jsx)' --write",
     "test": "echo Test",
     "release": "auto shipit"
   },
@@ -47,27 +47,13 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "4.3.0",
     "lerna": "3.20.2",
-    "lint-staged": ">=10",
     "prettier": "^2.1.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
   },
-  "test": {
-    "*.{js,ts,tsx}": "yarn prettier",
-    "*.{ts,tsx}": "yarn lint"
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier"
+      "pre-commit": "yarn prettier && yarn lint --fix"
     }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md,jsx}": [
-      "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "prettier --parser typescript --write",
-      "eslint --cache --fix"
-    ]
   }
 }

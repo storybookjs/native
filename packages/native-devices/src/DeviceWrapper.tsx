@@ -9,7 +9,7 @@ export const DeviceWrapper = ({
     const context = React.useContext(DeviceContext);
 
     return (
-<DeviceContext.Provider value={{ ...context, ...value }}>
+        <DeviceContext.Provider value={{ ...context, ...value }}>
             {children}
         </DeviceContext.Provider>
     );

@@ -1,5 +1,7 @@
 dist/
-examples/*
+app/
+storybook-static/
+stories/
 .circleci/config.yml
 LICENSE.md
 README.md
