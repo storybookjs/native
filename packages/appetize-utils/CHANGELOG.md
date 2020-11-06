@@ -1,3 +1,19 @@
+# v0.2.9 (Fri Nov 06 2020)
+
+#### 🐛 Bug Fix
+
+- Merge branch 'master' into prettier [#15](https://github.com/storybookjs/native/pull/15) ([@vasikarla](https://github.com/vasikarla))
+- Device selection addon, support for controls, refactoring + reorganization [#16](https://github.com/storybookjs/native/pull/16) ([@amalik2](https://github.com/amalik2))
+- merged ([@amalik2](https://github.com/amalik2))
+- WIP: react componnents ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 2
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+- Raj Vasikarla ([@vasikarla](https://github.com/vasikarla))
+
+---
+
 # v0.2.6 (Mon Nov 02 2020)
 
 #### 🐛 Bug Fix

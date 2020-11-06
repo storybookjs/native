@@ -1,3 +1,19 @@
+# v0.2.9 (Fri Nov 06 2020)
+
+#### 🐛 Bug Fix
+
+- fix: prettier [#15](https://github.com/storybookjs/native/pull/15) (raj_vasikarla@intuit.com)
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example`, `@storybook/native-knobs-example`, `@storybook/appetize-utils`, `@storybook/native-addon`, `@storybook/native-components`, `@storybook/native-devices`, `@storybook/native-types`, `@storybook/native`
+  - Merge branch 'master' into prettier [#15](https://github.com/storybookjs/native/pull/15) (raj_vasikarla@intuit.com)
+  - Device selection addon, support for controls, refactoring + reorganization [#16](https://github.com/storybookjs/native/pull/16) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 2
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+- Raj Vasikarla ([@vasikarla](https://github.com/vasikarla))
+
+---
+
 # v0.2.8 (Tue Nov 03 2020)
 
 #### 🐛 Bug Fix
