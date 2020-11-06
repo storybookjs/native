@@ -29,7 +29,12 @@
     "test": "echo Test",
     "release": "auto shipit"
   },
-  "dependencies": {},
+  "dependencies": {
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2"
+  },
   "devDependencies": {
     "@auto-it/all-contributors": "10.0.2",
     "@auto-it/conventional-commits": "10.0.2",
@@ -45,5 +50,19 @@
     "lerna": "3.20.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser typescript --write",
+      "yarn lint --fix"
+    ]
   }
 }

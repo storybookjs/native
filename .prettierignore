@@ -1,0 +1,9 @@
+packages/native/dist/*
+packages/appetize-utils/dist/
+examples/*
+.circleci/config.yml
+.eslintrc.js
+commitlint.config.js
+husky.config.js
+LICENSE.md
+README.md
