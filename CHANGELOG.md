@@ -1,3 +1,16 @@
+# v0.2.10 (Fri Nov 06 2020)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-controls-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example`, `@storybook/appetize-utils`, `@storybook/native-addon`, `@storybook/native-components`, `@storybook/native-devices`, `@storybook/native-types`, `@storybook/native`
+  - More consistent code, fix prettier + linting + husky [#17](https://github.com/storybookjs/native/pull/17) (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.9 (Fri Nov 06 2020)
 
 #### 🐛 Bug Fix

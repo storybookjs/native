@@ -1,3 +1,15 @@
+# v0.2.10 (Fri Nov 06 2020)
+
+#### 🐛 Bug Fix
+
+- More consistent code, fix prettier + linting + husky [#17](https://github.com/storybookjs/native/pull/17) (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.1 (Fri Nov 06 2020)
 
 #### 🐛 Bug Fix
