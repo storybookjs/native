@@ -26,6 +26,7 @@
     "build": "lerna run build --stream",
     "build:storybook": "lerna run build:storybook --stream",
     "lint": "eslint --ext .ts --ext .tsx .",
+    "prettier": "prettier 'packages/**/*.ts' --write",
     "test": "echo Test",
     "release": "auto shipit"
   },
@@ -50,9 +51,7 @@
     "typescript": "3.9.7"
   },
   "lint-staged": {
-    "*.{js,json,css,md,ts}": [
-      "prettier 'packages/**/*.ts' --write"
-    ],
-    "*.{ts,tsx}": "eslint --cache --fix"
+    "*.{js,json,css,md,ts}": "yarn prettier",
+    "*.{ts,tsx}": "yarn lint"
   }
 }
