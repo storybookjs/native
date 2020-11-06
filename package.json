@@ -52,8 +52,17 @@
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
   },
-  "lint-staged": {
+  "test-staged": {
     "*.{js,ts,tsx}": "yarn prettier",
     "*.{ts,tsx}": "yarn lint"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,jsx}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser typescript --write",
+      "yarn lint --fix"
+    ]
   }
 }
