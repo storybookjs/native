@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-android-material-example",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "private": true,
   "description": "An android demo app for storybook native",
   "repository": "",
