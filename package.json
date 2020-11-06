@@ -25,7 +25,7 @@
   "scripts": {
     "build": "lerna run build --stream",
     "build:storybook": "lerna run build:storybook --stream",
-    "lint": "eslint --ext .ts --ext .tsx .",
+    "lint": "eslint --ext .ts --ext .tsx --fix .",
     "prettier": "prettier './**/*.(ts|tsx|js|jsx)' --write",
     "test": "echo Test",
     "release": "auto shipit"
@@ -53,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier && yarn lint --fix"
+      "pre-commit": "yarn prettier && yarn lint"
     }
   }
 }
