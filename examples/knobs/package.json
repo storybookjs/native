@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-knobs-example",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "private": true,
   "description": "A demo app for storybook native with knobs",
   "repository": "",
