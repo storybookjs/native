@@ -8,6 +8,6 @@ export const openDeepLink = (
 ) => {
     loadUrl(appetizeUrl);
     const qsParams = new URLSearchParams(storyParams).toString();
-    const newAppUrl = deepLinkUrl + "?" + qsParams;
+    const newAppUrl = `${deepLinkUrl}?${qsParams}`;
     sendMessage({ type: "url", value: newAppUrl }, true);
 };

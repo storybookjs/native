@@ -75,6 +75,4 @@ fastlane/Preview.html
 fastlane/screenshots
 
 storybook-static/
-*.lock
-!yarn.lock
 *.log

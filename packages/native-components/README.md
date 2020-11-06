@@ -9,4 +9,4 @@ or
 ## Usage
 `import { EmulatorRenderer } from '@storybook/native-components';`
 
-An example usage can be found [here](../../examples/knobs/src/button.stories.jsx)
+An example usage can be found [here](../../examples/controls/src/button.stories.jsx)

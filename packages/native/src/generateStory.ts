@@ -22,6 +22,6 @@ export const generateStory = async (
         deepLinkBaseUrl: config.deepLinkUrl
             ? `"${config.deepLinkUrl}"`
             : "undefined",
-        docsContent: docsContent ? `\`${docsContent}\`` : "undefined",
+        docsContent: docsContent ? `\`${docsContent}\`` : "undefined"
     });
 };

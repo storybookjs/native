@@ -4,9 +4,9 @@ import LaunchParamsRenderer from "./LaunchParamsRenderer";
 import { RendererProps } from "./types";
 
 export default (props: RendererProps): React.ReactElement => {
-  if (props.deepLinkBaseUrl) {
-    return <DeepLinkRenderer {...props} />;
-  }
-  
-  return <LaunchParamsRenderer {...props} />;
+    if (props.deepLinkBaseUrl) {
+        return <DeepLinkRenderer {...props} />;
+    }
+
+    return <LaunchParamsRenderer {...props} />;
 };

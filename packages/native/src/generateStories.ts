@@ -11,13 +11,11 @@ export const generateStories = async (config: Config): Promise<void> => {
     const compiled = _.template(template);
 
     const storiesContent = await Promise.all(
-        config.stories.map(async (story) => {
-            return await generateStory(story, config);
-        })
+        config.stories.map(async (story) => generateStory(story, config))
     );
     const storyFileData = compiled({
         category: config.category,
-        stories: storiesContent.join("\n"),
+        stories: storiesContent.join("\n")
     });
 
     await fs.ensureDir(path.dirname(config.filePath));

@@ -1,13 +1,16 @@
 // this file is based upon similar code by https://github.com/hipstersmoothie
 
-import { getDefaultDevice, getDevices } from "@storybook/native-devices";
-import { DeviceSelections } from "@storybook/native-devices";
+import {
+    getDefaultDevice,
+    getDevices,
+    DeviceSelections
+} from "@storybook/native-devices";
 
 import { LOCAL_STORAGE_KEY } from "../constants";
 
 export const DEFAULT_STATE: DeviceSelections = {
     androidSelection: getDefaultDevice("android"),
-    iosSelection: getDefaultDevice("ios"),
+    iosSelection: getDefaultDevice("ios")
 };
 
 export const saveToLocalStorage = (data: DeviceSelections) => {
@@ -22,7 +25,7 @@ export const restoreFromLocalStorage = (
     if (!data) {
         return {
             ...DEFAULT_STATE,
-            ...state,
+            ...state
         };
     }
 
