@@ -62,7 +62,7 @@
     ],
     "*.{ts,tsx}": [
       "prettier --parser typescript --write",
-      "yarn lint --fix"
+      "eslint --cache --fix"
     ]
   }
 }
