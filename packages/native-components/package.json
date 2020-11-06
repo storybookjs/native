@@ -1,0 +1,28 @@
+{
+  "name": "@storybook/native-components",
+  "version": "0.2.0",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/storybookjs/native.git",
+  "author": "Adil Malik <adil_malik@intuit.com>",
+  "license": "MIT",
+  "contributors": [
+    "Adil Malik <adil_malik@intuit.com>"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@storybook/appetize-utils": "link:../appetize-utils",
+    "@storybook/native-devices": "link:../native-devices",
+    "@storybook/native-types": "link:../native-types",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
+  "publishConfig": {
+    "access": "public"
+  }
+}

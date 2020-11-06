@@ -15,3 +15,10 @@ export const getAppetizeIframe = (): HTMLIFrameElement | null => {
 
   return appetizeFrame;
 };
+
+export const loadUrl = (url: string) => {
+  const iframe = getAppetizeIframe();
+  if (iframe && iframe.src !== url) {
+    iframe.src = url;
+  }
+};

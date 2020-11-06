@@ -1,7 +1,7 @@
 {
   "name": "@storybook/native-addon",
   "version": "0.2.8",
-  "main": "./dist",
+  "main": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -17,8 +17,12 @@
   },
   "dependencies": {
     "@storybook/addons": "^6.0.6",
+    "@storybook/api": "^6.0.28",
     "@storybook/appetize-utils": "link:../appetize-utils",
+    "@storybook/client-api": "^6.0.28",
     "@storybook/components": "^6.0.6",
+    "@storybook/native-devices": "link:../native-devices",
+    "@storybook/native-types": "link:../native-types",
     "@storybook/react": "^6.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
