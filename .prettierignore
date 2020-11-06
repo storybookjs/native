@@ -1,8 +1,6 @@
-packages/native/dist/
+packages/native/dist/*
 packages/appetize-utils/dist/
-examples/android-material-ui-deep-link/.storybook
-examples/ios-material-ui/
-examples/flutter/
+examples/*
 .circleci/config.yml
 .eslintrc.js
 commitlint.config.js
