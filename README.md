@@ -71,7 +71,7 @@ If you are using deep linking, your `.storybook` folder MUST also have a `previe
 Examples of how to use this module as both a build tool and as a component library can be found [in this folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 
 - [Android storybook with deep linking](TODO)
-- [Android storybook with deep linking and controls](https://5f99b8bcfe88ac0022fcf70e-xjyrunjvpo.chromatic.com/)
+- [Android storybook with controls](https://5f99b8bcfe88ac0022fcf70e-xjyrunjvpo.chromatic.com/)
 - [Android storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-uqmnpmxiue.chromatic.com/)
 - [Flutter storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-zkykyigdhc.chromatic.com/)
 - [iOS storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-bkrwusstqb.chromatic.com/)
