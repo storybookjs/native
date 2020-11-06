@@ -25,44 +25,35 @@
   "scripts": {
     "build": "lerna run build --stream",
     "build:storybook": "lerna run build:storybook --stream",
-    "lint": "eslint --ext .ts --ext .tsx .",
+    "lint": "eslint --ext .ts --ext .tsx --fix .",
+    "prettier": "prettier './**/*.(ts|tsx|js|jsx)' --write",
     "test": "echo Test",
     "release": "auto shipit"
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "lint-staged": "^10.5.1",
-    "prettier": "^2.1.2"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.0.2",
     "@auto-it/conventional-commits": "10.0.2",
     "@auto-it/first-time-contributor": "10.0.2",
     "@auto-it/released": "10.0.2",
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
     "auto": "10.0.2",
     "eslint": "7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "4.3.0",
     "lerna": "3.20.2",
+    "prettier": "^2.1.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn prettier && yarn lint"
     }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "prettier --parser typescript --write",
-      "yarn lint --fix"
-    ]
   }
 }

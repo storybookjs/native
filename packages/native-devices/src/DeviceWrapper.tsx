@@ -3,14 +3,14 @@ import { DeviceContext } from "./DeviceContext";
 import { DeviceSelections } from "./types";
 
 export const DeviceWrapper = ({
-  children,
-  ...value
+    children,
+    ...value
 }: React.PropsWithChildren<DeviceSelections>) => {
-  const context = React.useContext(DeviceContext);
+    const context = React.useContext(DeviceContext);
 
-  return (
-    <DeviceContext.Provider value={{ ...context, ...value }}>
-      {children}
-    </DeviceContext.Provider>
-  );
+    return (
+        <DeviceContext.Provider value={{ ...context, ...value }}>
+            {children}
+        </DeviceContext.Provider>
+    );
 };

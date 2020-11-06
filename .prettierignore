@@ -1,9 +1,8 @@
-packages/native/dist/*
-packages/appetize-utils/dist/
-examples/*
+dist/
+app/
+storybook-static/
+stories/
 .circleci/config.yml
-.eslintrc.js
-commitlint.config.js
-husky.config.js
 LICENSE.md
 README.md
+package.json

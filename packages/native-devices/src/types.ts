@@ -1,4 +1,4 @@
 export interface DeviceSelections {
-  androidSelection: string;
-  iosSelection: string;
+    androidSelection: string;
+    iosSelection: string;
 }

@@ -4,21 +4,24 @@ import { useDevice } from "@storybook/native-devices";
 import { RendererProps } from "./types";
 
 export default (props: RendererProps): React.ReactElement => {
-  const { apiKey, platform, knobs, storyParams, deepLinkBaseUrl } = props;
-  if (!deepLinkBaseUrl) {
-    throw new Error('No deep link base url was specified');
-  }
+    const { apiKey, platform, knobs, storyParams, deepLinkBaseUrl } = props;
+    if (!deepLinkBaseUrl) {
+        throw new Error("No deep link base url was specified");
+    }
 
-  const device = useDevice(platform);
-  const storyParamsWithKnobs = { ...storyParams, ...knobs };
+    const device = useDevice(platform);
+    React.useEffect(() => {
+        const appetizeUrl = getAppetizeUrl(
+            {},
+            {
+                device
+            },
+            apiKey
+        );
 
-  React.useEffect(() => {
-    const appetizeUrl = getAppetizeUrl({}, {
-      device
-    }, apiKey);
+        const storyParamsWithKnobs = { ...storyParams, ...knobs };
+        openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithKnobs);
+    }, [device, storyParams, knobs, deepLinkBaseUrl, apiKey]);
 
-    openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithKnobs);
-  });
-
-  return <div />;
+    return <div />;
 };

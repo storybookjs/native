@@ -1,4 +1,4 @@
-import { Platform } from '@storybook/native-types';
+import { Platform } from "@storybook/native-types";
 
 export interface StoryParams {
     name: string;

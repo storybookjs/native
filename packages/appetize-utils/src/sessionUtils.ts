@@ -2,32 +2,36 @@ import { getAppetizeIframe } from "./iframeUtils";
 import { Message } from "./types";
 
 interface IncomingMessage {
-  data: string;
+    data: string;
 }
 
 let lastMessage: Message | null = null;
 let connected = false;
 
-const messageEventHandler = (event: IncomingMessage) => {
-  if (event.data == "firstFrameReceived") {
-    connected = true;
-    if (lastMessage) {
-      sendMessage(lastMessage);
-      lastMessage = null;
+export const sendMessage = (message: Message, requireConnection?: boolean) => {
+    const appetizeFrame = getAppetizeIframe();
+    if (
+        !appetizeFrame ||
+        !appetizeFrame.contentWindow ||
+        (!connected && requireConnection)
+    ) {
+        lastMessage = message;
+        return;
     }
-  } else if (event.data == "sessionEnded") {
-    connected = false;
-  }
+
+    appetizeFrame.contentWindow.postMessage(message, "*");
 };
 
-export const sendMessage = (message: Message, requireConnection?: boolean) => {
-  const appetizeFrame = getAppetizeIframe();
-  if (!appetizeFrame || !appetizeFrame.contentWindow || (!connected && requireConnection)) {
-    lastMessage = message;
-    return;
-  }
-
-  appetizeFrame.contentWindow.postMessage(message, "*");
+const messageEventHandler = (event: IncomingMessage) => {
+    if (event.data === "firstFrameReceived") {
+        connected = true;
+        if (lastMessage) {
+            sendMessage(lastMessage);
+            lastMessage = null;
+        }
+    } else if (event.data === "sessionEnded") {
+        connected = false;
+    }
 };
 
 window.addEventListener("message", messageEventHandler, false);
