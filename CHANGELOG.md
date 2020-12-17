@@ -1,3 +1,16 @@
+# v0.2.11 (Thu Dec 17 2020)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-addon`, `@storybook/native`
+  - Update dependencies + instructions [#19](https://github.com/storybookjs/native/pull/19) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.10 (Fri Nov 06 2020)
 
 #### 🐛 Bug Fix
