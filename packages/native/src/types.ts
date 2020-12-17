@@ -2,7 +2,7 @@ import { Platform } from "@storybook/native-types";
 
 export interface StoryParams {
     name: string;
-    appParams?: Record<string, unknown>;
+    appParams: Record<string, unknown>;
     docs?: string;
 }
 

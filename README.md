@@ -5,7 +5,14 @@
 
 Storybook Native uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. 
 
-There are 2 ways to handle switching between stories:
+### Installation
+If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md)
+
+If you just want to use this module to render an emulator as a 
+lightweight React component, [follow the instructions here](packages/native-components/README.md)
+
+## Your mobile application
+Your android or iOS app needs to be modified to handle switching between stories. There are 2 ways to handle this:
 
 ### 1. Deep Linking
 If your application is set to open up when the user requests a certain URL, you can use deep linking with storybook native. This approach is recommended over launch parameters, because you do not have to wait for the appetize.io session to reload when switching between stories.
