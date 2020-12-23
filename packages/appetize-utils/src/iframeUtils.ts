@@ -5,8 +5,8 @@ const getInnerDocument = (): HTMLDocument => {
         "storybook-preview-iframe"
     ) as HTMLIFrameElement;
     const innerDoc = storybookFrame
-        ? (storybookFrame.contentDocument ||
-          storybookFrame.contentWindow?.document)
+        ? storybookFrame.contentDocument ||
+          storybookFrame.contentWindow?.document
         : document;
     if (!innerDoc) {
         throw new Error("The inner document was not found");

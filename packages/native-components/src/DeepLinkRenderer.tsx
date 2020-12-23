@@ -23,7 +23,5 @@ export default (props: RendererProps): React.ReactElement => {
         openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithKnobs);
     }, [device, JSON.stringify(storyParamsWithKnobs), deepLinkBaseUrl, apiKey]);
 
-    return (
-        <div />
-    );
+    return <div />;
 };
