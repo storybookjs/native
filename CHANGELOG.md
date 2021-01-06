@@ -1,3 +1,16 @@
+# v0.2.12 (Wed Jan 06 2021)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-controls-example`, `@storybook/appetize-utils`, `@storybook/native-components`
+  - Create iframe automatically if needed when deep linking [#22](https://github.com/storybookjs/native/pull/22) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.11 (Thu Dec 17 2020)
 
 #### 🐛 Bug Fix
