@@ -10,6 +10,7 @@ export default (props: RendererProps): React.ReactElement => {
     }
 
     const device = useDevice(platform);
+    const storyParamsWithKnobs = { ...storyParams, ...knobs };
     React.useEffect(() => {
         const appetizeUrl = getAppetizeUrl(
             {},
@@ -19,9 +20,8 @@ export default (props: RendererProps): React.ReactElement => {
             apiKey
         );
 
-        const storyParamsWithKnobs = { ...storyParams, ...knobs };
         openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithKnobs);
-    }, [device, storyParams, knobs, deepLinkBaseUrl, apiKey]);
+    }, [device, JSON.stringify(storyParamsWithKnobs), deepLinkBaseUrl, apiKey]);
 
     return <div />;
 };

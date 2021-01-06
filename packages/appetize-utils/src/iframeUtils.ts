@@ -1,4 +1,6 @@
-export const getAppetizeIframe = (): HTMLIFrameElement | null => {
+import { APPETIZE_IFRAME_ID } from "./constants";
+
+const getInnerDocument = (): HTMLDocument => {
     const storybookFrame = document.getElementById(
         "storybook-preview-iframe"
     ) as HTMLIFrameElement;
@@ -7,16 +9,34 @@ export const getAppetizeIframe = (): HTMLIFrameElement | null => {
           storybookFrame.contentWindow?.document
         : document;
     if (!innerDoc) {
-        console.warn("The inner document was not found");
-        return null;
+        throw new Error("The inner document was not found");
     }
 
+    return innerDoc;
+};
+
+export const createAppetizeIframe = (): HTMLIFrameElement => {
+    const innerDoc = getInnerDocument();
+    const iframe = innerDoc.createElement("iframe");
+    iframe.id = APPETIZE_IFRAME_ID;
+    iframe.style.border = "0";
+    iframe.style.overflow = "hidden";
+    iframe.style.width = "800px";
+    iframe.style.height = "1400px";
+    iframe.src = "about:blank";
+    iframe.title = "appetize-embed";
+    innerDoc.body.appendChild(iframe);
+    return iframe;
+};
+
+export const getAppetizeIframe = (): HTMLIFrameElement | null => {
+    const innerDoc = getInnerDocument();
     const appetizeFrame = innerDoc.getElementById(
-        "appetize-iframe"
+        APPETIZE_IFRAME_ID
     ) as HTMLIFrameElement;
     if (!appetizeFrame) {
-        console.warn("The appetize.io iframe was not found");
-        return null;
+        console.warn("The appetize.io iframe was not found. Creating one");
+        return createAppetizeIframe();
     }
 
     return appetizeFrame;

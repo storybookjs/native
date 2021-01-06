@@ -63,13 +63,11 @@ You must create a `.storybook` folder with a `main.js` file inside of it, where 
 
 To enable switching between devices, you must also create a `preview.js` file in your `.storybook` folder, with the [contents found here](examples/android-material-ui/.storybook/preview.js)
 
-If you are using deep linking, your `.storybook` folder MUST also have a `preview-body.html` that declares an iframe element with the id `appetize-iframe`. One example of this file [can be found here](examples/android-material-ui-deep-link/.storybook/preview-body.html). There is currently an issue where the appetize iframe still gets displayed when in the `docs` panel. A temporary workaround is to create a `preview-head.html` file in your `.storybook` folder with the following contents:
+If you are using deep linking, your `.storybook` folder should also have a `preview-body.html` that declares the following contents:
 ```html
 <style>
-  #docs-root {
-    position: absolute;
-    z-index: 1;
-    top: 0;
+  #root[hidden="true"] ~ #appetize-iframe {
+    display: none;
   }
 </style>
 ```
