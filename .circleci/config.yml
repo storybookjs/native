@@ -10,9 +10,12 @@ aliases:
     paths: &cache-modules-paths
       - ~/.cache/yarn
       - node_modules
+      - packages/appetize-utils/node_modules
       - packages/native/node_modules
       - packages/native-addon/node_modules
-      - packages/appetize-utils/node_modules
+      - packages/native-components/node_modules
+      - packages/native-devices/node_modules
+      - packages/native-types/node_modules
       # Necessary so that linting is faster on CI
       - .eslintcache
   - &yarn
@@ -89,6 +92,9 @@ jobs:
       - run:
           name: Lint
           command: yarn lint --cache
+      - run:
+          name: Prettier
+          command: yarn prettier
       - save_cache: *cache-modules
   release:
     executor: sb_node
