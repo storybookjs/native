@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-controls-example",
-  "version": "0.2.12",
+  "version": "1.0.0",
   "private": true,
   "description": "A demo app for storybook native with controls",
   "repository": "",
