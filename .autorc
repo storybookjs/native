@@ -6,7 +6,7 @@
     "released",
     "first-time-contributor",
   ],
-  "labels": [,
+  "labels": [
     {
       "name": "dependency-update",
       "changelogTitle": "🔩 Dependency Updates",
