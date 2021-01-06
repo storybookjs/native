@@ -7,9 +7,11 @@
     "first-time-contributor",
   ],
   "labels": [
-    { "releaseType": "major", "name": "auto-major", overwrite: true },
-    { "releaseType": "minor", "name": "auto-minor", overwrite: true },
-    { "releaseType": "patch", "name": "auto-patch", overwrite: true }
+    {
+      "name": "dependency-update",
+      "changelogTitle": "🔩 Dependency Updates",
+      "releaseType": "none"
+    }
   ],
   "prereleaseBranches": ["next", "alpha", "beta"],
   "name": "lshadler",
