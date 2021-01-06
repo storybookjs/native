@@ -1,3 +1,16 @@
+# v1.0.0 (Wed Jan 06 2021)
+
+#### 💥 Breaking Change
+
+- `@storybook/native-addon`
+  - Use major/minor/patch labels + addon docs + test major [#23](https://github.com/storybookjs/native/pull/23) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v0.2.12 (Wed Jan 06 2021)
 
 #### 🐛 Bug Fix
