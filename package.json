@@ -28,13 +28,15 @@
     "lint": "eslint --ext .ts --ext .tsx .",
     "prettier": "prettier './**/*.(ts|tsx|js|jsx)'",
     "test": "echo Test",
-    "release": "auto shipit"
+    "release": "auto shipit && yarn release:storybook",
+    "release:storybook": "storybook-to-ghpages -- --packages examples"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.0.2",
     "@auto-it/conventional-commits": "10.0.2",
     "@auto-it/first-time-contributor": "10.0.2",
     "@auto-it/released": "10.0.2",
+    "@storybook/storybook-deployer": "^2.8.7",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
     "auto": "10.0.2",

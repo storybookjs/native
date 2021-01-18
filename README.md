@@ -29,9 +29,14 @@ If you wanted to use those query parameters, your application would need to pars
 *You do not need to exactly follow the above example for your query parameters! Your query parameters can have any information that you want.*
 
 Examples of parsing query parameters:
- - [Android - parsing intents](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L32)
+ - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L32)
+ - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L83)
 
-You can read more about how to setup deep linking for Android [here](https://developer.android.com/training/app-links/deep-linking). Deep linking should also work on iOS and Flutter, but there are no examples for this yet.
+You can read more about how to setup deep linking for Android [here](https://developer.android.com/training/app-links/deep-linking).
+
+For iOS, [this article](https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97) explains how to set up deep linking. Note that for the examples in this repo, we use URL schemes instead of Universal Links since they are simpler to set up.
+
+Deep linking should also work on Flutter, but there are no examples for this yet.
 
 ### 2. Launch Parameters
 appetize.io allows you to pass in custom launch parameters which will be sent to your mobile application when it first starts up. In your application, you must create a handler that determines what to render based on what those launch parameters are.  
@@ -77,6 +82,7 @@ Examples of how to use this module as both a build tool and as a component libra
 
 - [Android storybook with deep linking](https://5f99b8bcfe88ac0022fcf70e-ephawpkuvg.chromatic.com/)
 - [Android storybook with controls](https://5f99b8bcfe88ac0022fcf70e-xjyrunjvpo.chromatic.com/)
+TODO: iOS deep link
 - [Android storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-uqmnpmxiue.chromatic.com/)
 - [Flutter storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-zkykyigdhc.chromatic.com/)
 - [iOS storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-bkrwusstqb.chromatic.com/)
