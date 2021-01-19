@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-ios-example-deep-link",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "An iOS demo app for storybook native",
   "repository": "",

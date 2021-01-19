@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-flutter-example",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "A flutter demo app for storybook native",
   "repository": "",
