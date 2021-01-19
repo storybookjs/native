@@ -25,11 +25,12 @@
   "scripts": {
     "build": "lerna run build --stream",
     "build:storybook": "lerna run build:storybook --stream",
+    "build:stories": "lerna run build:stories --stream",
     "lint": "eslint --ext .ts --ext .tsx .",
     "prettier": "prettier './**/*.(ts|tsx|js|jsx)'",
     "test": "echo Test",
-    "release": "auto shipit && yarn release:storybook",
-    "release:storybook": "storybook-to-ghpages --packages examples"
+    "release": "auto shipit",
+    "release:storybook": "yarn build:stories && storybook-to-ghpages --packages examples"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.0.2",

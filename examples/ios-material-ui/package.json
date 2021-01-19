@@ -10,8 +10,9 @@
     "Jay Unnikrishn <Jayakrishnan_Unnikrishnan@intuit.com>"
   ],
   "scripts": {
-    "start": "node ./generate.js && yarn start-storybook",
-    "build:storybook": "node ./generate.js && yarn build-storybook"
+    "start": "yarn build:stories && yarn start-storybook",
+    "build:storybook": "yarn build:stories && yarn build-storybook",
+    "build:stories": "node ./generate.js"
   },
   "keywords": [],
   "dependencies": {

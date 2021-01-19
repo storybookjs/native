@@ -115,6 +115,9 @@ jobs:
           name: Auto Shipit
           command: |
             yarn release
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+              yarn release:storybook
+            fi
 workflows:
   test:
     jobs:
