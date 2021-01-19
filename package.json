@@ -30,7 +30,7 @@
     "prettier": "prettier './**/*.(ts|tsx|js|jsx)'",
     "test": "echo Test",
     "release": "auto shipit -vv",
-    "release:storybook": "yarn build:stories && storybook-to-ghpages --packages examples"
+    "release:storybook": "yarn build:stories && storybook-to-ghpages --ci --packages examples"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.0.2",
