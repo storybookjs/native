@@ -73,6 +73,8 @@ project.xcworkspace
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+.dart_tool
+.packages
 
 storybook-static/
 *.log

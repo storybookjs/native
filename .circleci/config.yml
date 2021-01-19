@@ -115,6 +115,7 @@ jobs:
           name: Auto Shipit
           command: |
             yarn release
+            bash ./deploy.sh
 workflows:
   test:
     jobs:

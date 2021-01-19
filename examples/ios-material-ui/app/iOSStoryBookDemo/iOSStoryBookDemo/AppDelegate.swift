@@ -80,6 +80,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let scheme = url.scheme,
+            scheme.localizedCaseInsensitiveCompare("sb-native") == .orderedSame,
+            let view = url.host {
+            
+            var parameters: [String: String] = [:]
+            URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach {
+                parameters[$0.name] = $0.value
+            }
+            
+            launchGalleryFromAppetize(parameters["component"]!)
+        }
+        return true
+    }
+    
     func launchGalleryFromAppetize(_ launchOption: String) {
         var launchOption = launchOption
         if launchOption.isEmpty {
