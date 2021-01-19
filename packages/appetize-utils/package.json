@@ -2,6 +2,7 @@
   "name": "@storybook/appetize-utils",
   "version": "1.0.0",
   "main": "./dist/index.js",
+  "description": "Utility functions for interacting with the appetize iframe",
   "files": [
     "dist"
   ],
