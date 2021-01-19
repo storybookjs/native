@@ -1,3 +1,15 @@
+# v1.0.1 (Tue Jan 19 2021)
+
+#### ⚠️ Pushed to `master`
+
+- patch: force release (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
 # v0.2.12 (Wed Jan 06 2021)
 
 #### 🐛 Bug Fix

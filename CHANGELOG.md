@@ -1,3 +1,28 @@
+# v1.0.1 (Tue Jan 19 2021)
+
+#### 🐛 Bug Fix
+
+- `@storybook/appetize-utils`
+  - Update package.json to release [#25](https://github.com/storybookjs/native/pull/25) (Adil_Malik@intuit.com)
+
+#### ⚠️ Pushed to `master`
+
+- `@storybook/native-components`
+  - patch: force release (Adil_Malik@intuit.com)
+- `@storybook/native`
+  - patch: force release (Adil_Malik@intuit.com)
+
+#### 📝 Documentation
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-ios-example`
+  - Add iOS deep linking example, testing github pages [#24](https://github.com/storybookjs/native/pull/24) (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.0 (Wed Jan 06 2021)
 
 #### 💥 Breaking Change
