@@ -2,6 +2,7 @@
   "name": "@storybook/native",
   "version": "1.0.0",
   "main": "./dist/index.js",
+  "description": "storybook native build tool",
   "files": [
     "dist",
     "story.template",
