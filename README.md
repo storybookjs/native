@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Storybook Native uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. 
+Storybook Native uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, knobs, etc.
 
 ### Installation
 If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md)
@@ -80,12 +80,12 @@ If you are using deep linking, your `.storybook` folder should also have a `prev
 ### Examples
 Examples of how to use this module as both a build tool and as a component library can be found [in this folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 
-- [Android storybook with deep linking](https://5f99b8bcfe88ac0022fcf70e-ephawpkuvg.chromatic.com/)
-- [Android storybook with controls](https://5f99b8bcfe88ac0022fcf70e-xjyrunjvpo.chromatic.com/)
-TODO: iOS deep link
-- [Android storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-uqmnpmxiue.chromatic.com/)
-- [Flutter storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-zkykyigdhc.chromatic.com/)
-- [iOS storybook with launch parameters](https://5f99b8bcfe88ac0022fcf70e-bkrwusstqb.chromatic.com/)
+- [Android storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-android-material-deep-link-example/index.html)
+- [Android storybook with controls](https://storybookjs.github.io/native/@storybook/native-controls-example/index.html?path=/story/button--example)
+- [iOS storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-ios-example-deep-link/index.html?path=/story/button--example)
+- [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--banner)
+
+More example static storybooks can be found [here](https://storybookjs.github.io/native/)
 
 ## Local development
  - Clone this repo

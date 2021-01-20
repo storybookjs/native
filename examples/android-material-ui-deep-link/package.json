@@ -2,7 +2,7 @@
   "name": "@storybook/native-android-material-deep-link-example",
   "version": "1.0.1",
   "private": true,
-  "description": "An android demo app for storybook native",
+  "description": "An android demo app for storybook native (deep linking - fast)",
   "repository": "",
   "author": "Vanya Sehgal <vanya_sehgal@intuit.com>",
   "license": "MIT",

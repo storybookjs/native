@@ -2,7 +2,7 @@
   "name": "@storybook/native-controls-example",
   "version": "1.0.1",
   "private": true,
-  "description": "A demo app for storybook native with controls",
+  "description": "A demo app showing how to use controls/knobs",
   "repository": "",
   "author": "Adil Malik <adil_malik@intuit.com>",
   "license": "MIT",
