@@ -2,7 +2,7 @@
   "name": "@storybook/native-ios-example-deep-link",
   "version": "1.0.2",
   "private": true,
-  "description": "An iOS demo app for storybook native",
+  "description": "An iOS demo app for storybook native (deep linking - fast)",
   "repository": "",
   "author": "Adil Malik <Adil_Malik@intuit.com>",
   "license": "MIT",

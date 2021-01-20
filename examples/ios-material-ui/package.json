@@ -2,7 +2,7 @@
   "name": "@storybook/native-ios-example",
   "version": "1.0.2",
   "private": true,
-  "description": "An iOS demo app for storybook native",
+  "description": "An iOS demo app for storybook native (launch parameters - slow)",
   "repository": "",
   "author": "Jay Unnikrishn <Jayakrishnan_Unnikrishnan@intuit.com>",
   "license": "MIT",
