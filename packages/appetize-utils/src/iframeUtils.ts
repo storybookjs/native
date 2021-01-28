@@ -21,8 +21,8 @@ export const createAppetizeIframe = (): HTMLIFrameElement => {
     iframe.id = APPETIZE_IFRAME_ID;
     iframe.style.border = "0";
     iframe.style.overflow = "hidden";
-    iframe.style.width = "800px";
-    iframe.style.height = "1400px";
+    iframe.style.width = "100vw";
+    iframe.style.height = "100vh";
     iframe.src = "about:blank";
     iframe.title = "appetize-embed";
     innerDoc.body.appendChild(iframe);

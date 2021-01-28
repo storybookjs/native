@@ -14,9 +14,7 @@ export default (props: RendererProps): React.ReactElement => {
         <iframe
             title="appetize-embed"
             src={url}
-            style={{ border: "0" }}
-            width="1400px"
-            height="888px"
+            style={{ border: "0", width: "100vw", height: "100vh" }}
             id="appetize-iframe"
         />
     );
