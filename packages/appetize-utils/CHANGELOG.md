@@ -1,3 +1,15 @@
+# v1.0.3 (Thu Jan 28 2021)
+
+#### 🐛 Bug Fix
+
+- Render without hardcoding size [#28](https://github.com/storybookjs/native/pull/28) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.1 (Tue Jan 19 2021)
 
 #### 🐛 Bug Fix

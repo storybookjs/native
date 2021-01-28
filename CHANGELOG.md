@@ -1,3 +1,21 @@
+# v1.0.3 (Thu Jan 28 2021)
+
+#### 🐛 Bug Fix
+
+- `@storybook/appetize-utils`, `@storybook/native-components`
+  - Render without hardcoding size [#28](https://github.com/storybookjs/native/pull/28) (Adil_Malik@intuit.com)
+
+#### 📝 Documentation
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-controls-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-ios-example`
+  - Add github pages docs [#27](https://github.com/storybookjs/native/pull/27) (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.2 (Tue Jan 19 2021)
 
 #### 🐛 Bug Fix
