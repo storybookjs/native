@@ -1,3 +1,16 @@
+# v1.0.4 (Mon Feb 01 2021)
+
+#### 🐛 Bug Fix
+
+- `@storybook/appetize-utils`, `@storybook/native-components`
+  - Fix multiple scroll bars [#29](https://github.com/storybookjs/native/pull/29) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.3 (Thu Jan 28 2021)
 
 #### 🐛 Bug Fix
