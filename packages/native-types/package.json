@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-types",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/index.js",
   "files": [
     "dist"
