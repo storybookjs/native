@@ -25,6 +25,7 @@ export const createAppetizeIframe = (): HTMLIFrameElement => {
     iframe.style.height = "100vh";
     iframe.src = "about:blank";
     iframe.title = "appetize-embed";
+    iframe.scrolling = "no";
     innerDoc.body.appendChild(iframe);
     return iframe;
 };
