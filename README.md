@@ -29,7 +29,7 @@ If you wanted to use those query parameters, your application would need to pars
 *You do not need to exactly follow the above example for your query parameters! Your query parameters can have any information that you want.*
 
 Examples of parsing query parameters:
- - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L32)
+ - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L42)
  - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L83)
 
 You can read more about how to setup deep linking for Android [here](https://developer.android.com/training/app-links/deep-linking).
@@ -53,7 +53,7 @@ If you wanted to use those launch parameters, your application would need to par
 *You do not need to exactly follow the above example for your launch parameters! Your launch parameters object can have any information that you want.*
 
 Examples of parsing launch parameters:
- - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L29)
+ - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L38)
  - [Flutter](examples/flutter/app/lib/main.dart#L73)
  - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L66)
 
@@ -80,8 +80,8 @@ If you are using deep linking, your `.storybook` folder should also have a `prev
 ### Examples
 Examples of how to use this module as both a build tool and as a component library can be found [in this folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 
-- [Android storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-android-material-deep-link-example/index.html)
 - [Android storybook with controls](https://storybookjs.github.io/native/@storybook/native-controls-example/index.html?path=/story/button--example)
+- [Android storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-android-material-deep-link-example/index.html)
 - [iOS storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-ios-example-deep-link/index.html?path=/story/button--example)
 - [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--banner)
 
