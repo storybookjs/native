@@ -11929,7 +11929,7 @@ reusify@^1.0.4:
 
 rgb-hex@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/rgb-hex/-/rgb-hex-3.0.0.tgz#eab0168cc1279563b18a14605315389142e2e487"
+  resolved "https://registry.yarnpkg.com/rgb-hex/-/rgb-hex-3.0.0.tgz#eab0168cc1279563b18a14605315389142e2e487"
   integrity sha1-6rAWjMEnlWOxihRgUxU4kULi5Ic=
 
 rimraf@2.6.3:
