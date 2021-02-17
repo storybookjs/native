@@ -38,12 +38,14 @@
 
 				<!-- Title, secondary and supporting text -->
 				<TextView
+					android:id="@+id/cardTitle"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="@string/title"
-					android:textAppearance="?attr/textAppearanceHeadline6" />
+					android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
 				<TextView
+					android:id="@+id/cardSubtitle"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="8dp"
@@ -52,6 +54,7 @@
 					android:textColor="?android:attr/textColorSecondary" />
 
 				<TextView
+					android:id="@+id/cardSupportingText"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="16dp"
@@ -66,6 +69,7 @@
 					android:orientation="horizontal">
 
 					<com.google.android.material.button.MaterialButton
+						android:id="@+id/action1"
 						style="?attr/borderlessButtonStyle"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
@@ -73,6 +77,7 @@
 						android:text="@string/action_1" />
 
 					<com.google.android.material.button.MaterialButton
+						android:id="@+id/action2"
 						style="@style/Widget.MaterialComponents.Button.TextButton"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
+import { PLATFORM, API_KEY, DEEP_LINK_BASE_URL } from "./constants";
 
 export default {
     title: "Radio"
@@ -8,11 +9,19 @@ export default {
 export const Example = (props) => {
     return (
         <EmulatorRenderer
-            apiKey="zv034bdme9je7c9d43chzmc2yg"
-            platform="android"
+            apiKey={API_KEY}
+            platform={PLATFORM}
+            deepLinkBaseUrl={DEEP_LINK_BASE_URL}
             storyParams={{ component: "radio" }}
-            deepLinkBaseUrl={"sb-native://deep.link"}
             knobs={props}
         />
     );
+};
+
+Example.args = {
+    label1: "Radio 1",
+    label2: "Radio 2",
+    label3: "Radio 3",
+    label4: "Radio 4",
+    label5: "Radio 5"
 };

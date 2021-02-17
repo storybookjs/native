@@ -1,18 +1,30 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
+import { PLATFORM, API_KEY, DEEP_LINK_BASE_URL } from "./constants";
 
 export default {
-    title: "Slider"
+    title: "Slider",
+    argTypes: {
+        rangeMax: { 
+            control: { type: 'range', min: 1, max: 100, step: 1 },
+        },
+    },
 };
 
 export const Example = (props) => {
     return (
         <EmulatorRenderer
-            apiKey="zv034bdme9je7c9d43chzmc2yg"
-            platform="android"
+            apiKey={API_KEY}
+            platform={PLATFORM}
+            deepLinkBaseUrl={DEEP_LINK_BASE_URL}
             storyParams={{ component: "slider" }}
-            deepLinkBaseUrl={"sb-native://deep.link"}
-            knobs={props}
+            knobs={{
+                rangeMax: props.rangeMax
+            }}
         />
     );
+};
+
+Example.args = {
+    rangeMax: 100
 };

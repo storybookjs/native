@@ -1,5 +1,6 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
+import { PLATFORM, API_KEY, DEEP_LINK_BASE_URL } from "./constants";
 
 export default {
     title: "Chips"
@@ -8,11 +9,18 @@ export default {
 export const Example = (props) => {
     return (
         <EmulatorRenderer
-            apiKey="zv034bdme9je7c9d43chzmc2yg"
-            platform="android"
+            apiKey={API_KEY}
+            platform={PLATFORM}
+            deepLinkBaseUrl={DEEP_LINK_BASE_URL}
             storyParams={{ component: "chips" }}
-            deepLinkBaseUrl={"sb-native://deep.link"}
             knobs={props}
         />
     );
+};
+
+Example.args = {
+    chip1: "Chip 1",
+    chip2: "Chip 2",
+    chip3: "Chip 3",
+    chip4: "Chip 4"
 };

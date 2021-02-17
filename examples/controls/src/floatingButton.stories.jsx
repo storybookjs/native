@@ -1,18 +1,34 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
+import rgbHex from 'rgb-hex';
+
+import { PLATFORM, API_KEY, DEEP_LINK_BASE_URL } from "./constants";
 
 export default {
-    title: "FloatingButton"
+    title: "FloatingButton",
+    argTypes: {
+        rippleColor: {
+            control: "color"
+        }
+    }
 };
 
 export const Example = (props) => {
+    const rippleColor = rgbHex(props.rippleColor);
+
     return (
         <EmulatorRenderer
-            apiKey="zv034bdme9je7c9d43chzmc2yg"
-            platform="android"
+            apiKey={API_KEY}
+            platform={PLATFORM}
+            deepLinkBaseUrl={DEEP_LINK_BASE_URL}
             storyParams={{ component: "floatingButton" }}
-            deepLinkBaseUrl={"sb-native://deep.link"}
-            knobs={props}
+            knobs={{
+                rippleColor
+            }}
         />
     );
+};
+
+Example.args = {
+    rippleColor: "rgb(0,255,255)"
 };

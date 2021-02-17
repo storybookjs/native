@@ -3,6 +3,7 @@ package com.intuit.august2020.storybookdemoapp
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +21,14 @@ class MainActivity : AppCompatActivity() {
 		const val TEXTFIELD = "textfield"
 	}
 
+	private fun propagateQueryParams(openIntent: Intent, viewIntent: Intent) {
+		if (openIntent.data != null) {
+			for (param in openIntent.data.queryParameterNames) {
+				viewIntent.putExtra(param, openIntent.data.getQueryParameter(param));
+			}
+		}
+	}
+
 	override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
@@ -29,54 +38,71 @@ class MainActivity : AppCompatActivity() {
 		var component = intent.getStringExtra("component");
 
 		// deep linking example
-		if (intent.data != null && intent.data.getQueryParameter("component") != null) {
-			component = intent.data.getQueryParameter("component");
+		if (intent.data != null) {
+			if (intent.data.getQueryParameter("component") != null) {
+				component = intent.data.getQueryParameter("component")
+			}
+
+			// toggle light/dark mode
+			// TODO: this causes flickering colours so its disabled right now
+			/* if (intent.data.getQueryParameter("theme") != null) {
+				val darkMode = intent.data.getQueryParameter("theme").equals("dark")
+				val compatMode = if (darkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+				AppCompatDelegate.setDefaultNightMode(compatMode)
+			} */
 		}
 
 		val buttonIntent = Intent(this, ButtonActivity::class.java).apply {
 			putExtra(BUTTON, "button")
-
-			if (intent.data != null && intent.data.getQueryParameter("label") != null) {
-				putExtra("label", intent.data.getQueryParameter("label"));
-			}
+			propagateQueryParams(intent, this)
 		}
 		val floatingButtonIntent = Intent(this, FloatingButtonActivity::class.java).apply {
 			putExtra(FLOATING_BUTTON, "floatingButton")
+			propagateQueryParams(intent, this)
 		}
 		val cardIntent = Intent(this, CardActivity::class.java).apply {
 			putExtra(CARD, "card")
+			propagateQueryParams(intent, this)
 		}
 
 		val chipsIntent = Intent(this, ChipsActivity::class.java).apply {
 			putExtra(CHIPS, "chips")
+			propagateQueryParams(intent, this)
 		}
 
 		val dialogsIntent = Intent(this, DialogsActivity::class.java).apply {
 			putExtra(DIALOGS, "dialogs")
+			propagateQueryParams(intent, this)
 		}
 
 		val radioIntent = Intent(this, RadioActivity::class.java).apply {
 			putExtra(RADIO, "radio")
+			propagateQueryParams(intent, this)
 		}
 
 		val switchIntent = Intent(this, SwitchActivity::class.java).apply {
 			putExtra(SWITCH, "switch")
+			propagateQueryParams(intent, this)
 		}
 
 		val sliderIntent = Intent(this, SliderActivity::class.java).apply {
 			putExtra(SLIDER, "slider")
+			propagateQueryParams(intent, this)
 		}
 
 		val snackbarIntent = Intent(this, SnackbarActivity::class.java).apply {
 			putExtra(SNACKBAR, "snackbar")
+			propagateQueryParams(intent, this)
 		}
 
 		val tabsIntent = Intent(this, TabsActivity::class.java).apply {
 			putExtra(TABS, "tabs")
+			propagateQueryParams(intent, this)
 		}
 
 		val textFieldIntent = Intent(this, TextFieldActivity::class.java).apply {
 			putExtra(TEXTFIELD, "textfield")
+			propagateQueryParams(intent, this)
 		}
 
 		startActivity(chipsIntent)
