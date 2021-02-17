@@ -1,6 +1,6 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
-import rgbHex from 'rgb-hex';
+import rgbHex from "rgb-hex";
 
 import { PLATFORM, API_KEY, DEEP_LINK_BASE_URL } from "./constants";
 

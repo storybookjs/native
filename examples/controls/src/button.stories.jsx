@@ -19,6 +19,5 @@ export const Example = (props) => {
 };
 
 Example.args = {
-    label: "Default button label",
-    darkMode: true
+    label: "Default button label"
 };
