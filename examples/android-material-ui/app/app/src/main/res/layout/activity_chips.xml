@@ -19,7 +19,7 @@
 		app:layout_constraintVertical_bias="0.0">
 
 		<com.google.android.material.chip.Chip
-			android:id="@+id/chip_1"
+			android:id="@+id/chip1"
 			style="Widget.MaterialComponents.Chip.Action"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
 			app:layout_constraintVertical_bias="0.081" />
 
 		<com.google.android.material.chip.Chip
-			android:id="@+id/chip4"
+			android:id="@+id/chip2"
 			style="Widget.MaterialComponents.Chip.Action"
 			android:layout_width="115dp"
 			android:layout_height="43dp"
@@ -44,11 +44,11 @@
 			app:chipIconTint="@color/colorAccent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.215"
-			app:layout_constraintStart_toEndOf="@+id/chip_1"
+			app:layout_constraintStart_toEndOf="@+id/chip1"
 			app:layout_constraintTop_toTopOf="parent" />
 
 		<com.google.android.material.chip.Chip
-			android:id="@+id/chip5"
+			android:id="@+id/chip3"
 			style="Widget.MaterialComponents.Chip.Action"
 			android:layout_width="115dp"
 			android:layout_height="43dp"
@@ -58,21 +58,22 @@
 			app:chipIcon="@drawable/ic_delete_outline_24px"
 			app:chipIconTint="@color/colorAccent"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/chip_1" />
+			app:layout_constraintTop_toBottomOf="@+id/chip1" />
 
 		<com.google.android.material.chip.Chip
+			android:id="@+id/chip4"
 			style="Widget.MaterialComponents.Chip.Action"
 			android:layout_width="115dp"
 			android:layout_height="43dp"
+			android:layout_marginStart="30dp"
 			android:layout_marginTop="68dp"
 			android:layout_marginEnd="55dp"
-			android:layout_marginStart="30dp"
 			android:text="Action 4"
 			app:chipIcon="@drawable/ic_room_24px"
 			app:chipIconTint="@color/colorAccent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.824"
-			app:layout_constraintStart_toEndOf="@+id/chip5"
-			app:layout_constraintTop_toBottomOf="@+id/chip4" />
+			app:layout_constraintStart_toEndOf="@+id/chip3"
+			app:layout_constraintTop_toBottomOf="@+id/chip2" />
 	</com.google.android.material.chip.ChipGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

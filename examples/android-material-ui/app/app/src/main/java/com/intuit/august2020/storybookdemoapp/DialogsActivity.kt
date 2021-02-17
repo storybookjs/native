@@ -10,13 +10,28 @@ class DialogsActivity : AppCompatActivity() {
 		setContentView(R.layout.activity_dialogs)
 		val multiItems = arrayOf("Item 1", "Item 2", "Item 3")
 		val checkedItems = booleanArrayOf(true, false, false, false)
-		
+
+		var header = resources.getString(R.string.title)
+		if (intent.hasExtra("header")) {
+			header = intent.getStringExtra("header");
+		}
+
+		var cancelText = resources.getString(R.string.dialogCancel)
+		if (intent.hasExtra("cancelText")) {
+			cancelText = intent.getStringExtra("cancelText")
+		}
+
+		var okText = resources.getString(R.string.dialogOk)
+		if (intent.hasExtra("confirmText")) {
+			okText = intent.getStringExtra("confirmText")
+		}
+
 		MaterialAlertDialogBuilder(this)
-			.setTitle(resources.getString(R.string.title))
-			.setNeutralButton(resources.getString(R.string.dialogCancel)) { dialog, which ->
+			.setTitle(header)
+			.setNeutralButton(cancelText) { dialog, which ->
 				// Respond to neutral button press
 			}
-			.setPositiveButton(resources.getString(R.string.dialogOk)) { dialog, which ->
+			.setPositiveButton(okText) { dialog, which ->
 				// Respond to positive button press
 			}
 			// Single-choice items (initialized with checked item)
