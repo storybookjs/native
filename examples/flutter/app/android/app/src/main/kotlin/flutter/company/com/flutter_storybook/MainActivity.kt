@@ -14,6 +14,7 @@ class MainActivity : FlutterActivity() {
         val intent = intent
         val action = intent.action
         val type = intent.type
+
         if (Intent.ACTION_SEND == action && type != null) {
             if ("text/plain" == type) {
                 sharedText = intent.getStringExtra(Intent.EXTRA_TEXT)
@@ -21,10 +22,13 @@ class MainActivity : FlutterActivity() {
         } else {
             // If appetize sends text another way, use their API
             val pageName = intent.getStringExtra("page")
-            if(pageName != null) {
+            if (pageName != null) {
                 sharedText = "{\"page\":\"$pageName\"}"
+            } else if (intent.data != null) {
+                sharedText = JsonUtils.convertQueryStringToJSON(intent.data)
             }
         }
+
         MethodChannel(flutterView, "app.channel.shared.data").setMethodCallHandler { call, result ->
             if (call.method.contentEquals("getSharedData")) {
                 result.success(sharedText)
