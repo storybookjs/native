@@ -1,14 +1,6 @@
 const { generateStories } = require("@storybook/native");
 
-const components = [
-    "Banner",
-    "Button",
-    "Checkbox",
-    "Chip",
-    "FAB",
-    "Radio",
-    "Text"
-];
+const components = ["Button", "Checkbox", "Chip", "FAB", "Radio", "Text"];
 
 generateStories({
     category: "Android",

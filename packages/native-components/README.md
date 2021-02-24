@@ -1,5 +1,5 @@
 # @storybook/native-components
-This module contains React functions that allow you to interact with appetize.io
+This module contains React components that allow you to interact with appetize.io. This lets you take advantage of controls/knobs, as well as add-ons.
 
 ## Installation
 `npm install @storybook/native-components`
