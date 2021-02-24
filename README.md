@@ -83,7 +83,7 @@ Examples of how to use this module as both a build tool and as a component libra
 - [Android storybook with controls](https://storybookjs.github.io/native/@storybook/native-controls-example/index.html?path=/story/button--example)
 - [Android storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-android-material-deep-link-example/index.html)
 - [iOS storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-ios-example-deep-link/index.html?path=/story/button--example)
-- [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--banner)
+- [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--button)
 
 More example static storybooks can be found [here](https://storybookjs.github.io/native/)
 
