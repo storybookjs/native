@@ -5,11 +5,12 @@ import { RendererProps } from "./types";
 
 export default (props: RendererProps): React.ReactElement => {
     const { apiKey, platform, knobs, storyParams, deepLinkBaseUrl } = props;
+    const device = useDevice(platform);
+
     if (!deepLinkBaseUrl) {
         throw new Error("No deep link base url was specified");
     }
 
-    const device = useDevice(platform);
     const storyParamsWithKnobs = { ...storyParams, ...knobs };
     React.useEffect(() => {
         const appetizeUrl = getAppetizeUrl(
