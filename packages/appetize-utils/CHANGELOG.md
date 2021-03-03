@@ -1,3 +1,15 @@
+# v1.0.5 (Wed Mar 03 2021)
+
+#### 🐛 Bug Fix
+
+- Fix not navigating back to prev story after changing devices [#34](https://github.com/storybookjs/native/pull/34) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.4 (Mon Feb 01 2021)
 
 #### 🐛 Bug Fix

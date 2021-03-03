@@ -1,3 +1,22 @@
+# v1.0.5 (Wed Mar 03 2021)
+
+#### 🐛 Bug Fix
+
+- Update link for flutter example [#33](https://github.com/storybookjs/native/pull/33) (Adil_Malik@intuit.com)
+- Add lint-staged + update README [#31](https://github.com/storybookjs/native/pull/31) (Adil_Malik@intuit.com)
+- `@storybook/appetize-utils`, `@storybook/native-components`
+  - Fix not navigating back to prev story after changing devices [#34](https://github.com/storybookjs/native/pull/34) (Adil_Malik@intuit.com)
+- `@storybook/native-flutter-example`, `@storybook/native-components`
+  - Update doc + remove flutter banner [#32](https://github.com/storybookjs/native/pull/32) (Adil_Malik@intuit.com)
+- `@storybook/native-android-material-example`, `@storybook/native-controls-example`
+  - Add more detailed control examples for android [#30](https://github.com/storybookjs/native/pull/30) (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.4 (Mon Feb 01 2021)
 
 #### 🐛 Bug Fix
