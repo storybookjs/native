@@ -23,3 +23,10 @@ export interface RendererProps {
      */
     knobs?: Record<string, any>;
 }
+
+export interface DeepLinkRendererProps extends RendererProps {
+    /**
+     * Delay in milliseconds before a new URL is sent to your mobile application.
+     */
+    debounceDelay?: number;
+}
