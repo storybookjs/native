@@ -1,3 +1,16 @@
+# v1.1.0 (Fri Mar 05 2021)
+
+#### 🚀 Enhancement
+
+- `@storybook/native-components`
+  - Add debounce for deep link navigation [#35](https://github.com/storybookjs/native/pull/35) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.5 (Wed Mar 03 2021)
 
 #### 🐛 Bug Fix
