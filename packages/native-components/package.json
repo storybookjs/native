@@ -18,6 +18,8 @@
     "@storybook/appetize-utils": "link:../appetize-utils",
     "@storybook/native-devices": "link:../native-devices",
     "@storybook/native-types": "link:../native-types",
+    "@types/lodash.debounce": "^4.0.6",
+    "lodash.debounce": "^4.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
