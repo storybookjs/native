@@ -1,3 +1,15 @@
+# v1.1.1 (Mon Mar 08 2021)
+
+#### ⚠️ Pushed to `master`
+
+- Remove knob references in docs, increase delay before reloading last story when deep linking (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
 # v1.0.5 (Wed Mar 03 2021)
 
 #### 🐛 Bug Fix

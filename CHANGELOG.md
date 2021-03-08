@@ -1,3 +1,16 @@
+# v1.1.1 (Mon Mar 08 2021)
+
+#### ⚠️ Pushed to `master`
+
+- `@storybook/native-controls-example`, `@storybook/appetize-utils`, `@storybook/native-components`
+  - Remove knob references in docs, increase delay before reloading last story when deep linking (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
 # v1.1.0 (Fri Mar 05 2021)
 
 #### 🚀 Enhancement
