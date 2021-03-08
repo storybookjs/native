@@ -17,7 +17,7 @@ export interface RendererProps {
      *
      * In general, the difference between this prop and `storyParams` is that
      * the values passed to this prop should be ones that can change in the current story
-     * based on knobs, controls, addons, etc.
+     * based on controls, addons, etc.
      *
      * This prop is provided entirely for convenience
      */

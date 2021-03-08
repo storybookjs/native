@@ -34,7 +34,7 @@ const messageEventHandler = (event: IncomingMessage) => {
             if (lastUrlMessage) {
                 sendMessage(lastUrlMessage);
             }
-        }, 300);
+        }, 600);
     } else if (event.data === "sessionEnded") {
         connected = false;
     }

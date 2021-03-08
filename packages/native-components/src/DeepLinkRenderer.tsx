@@ -34,7 +34,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         [debounceDelay]
     );
 
-    const storyParamsWithKnobs = { ...storyParams, ...knobs };
+    const storyParamsWithExtras = { ...storyParams, ...knobs };
     React.useEffect(() => {
         const appetizeUrl = getAppetizeUrl(
             {},
@@ -44,8 +44,13 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             apiKey
         );
 
-        navigate(appetizeUrl, deepLinkBaseUrl, storyParamsWithKnobs);
-    }, [device, JSON.stringify(storyParamsWithKnobs), deepLinkBaseUrl, apiKey]);
+        navigate(appetizeUrl, deepLinkBaseUrl, storyParamsWithExtras);
+    }, [
+        device,
+        JSON.stringify(storyParamsWithExtras),
+        deepLinkBaseUrl,
+        apiKey
+    ]);
 
     return <div />;
 };
