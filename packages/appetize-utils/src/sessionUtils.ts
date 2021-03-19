@@ -5,17 +5,20 @@ interface IncomingMessage {
     data: string;
 }
 
-let lastMessage: Message | null = null;
+let lastUrlMessage: Message | null = null;
 let connected = false;
 
 export const sendMessage = (message: Message, requireConnection?: boolean) => {
     const appetizeFrame = getAppetizeIframe();
+    if (typeof message === "object" && message.type === "url") {
+        lastUrlMessage = message;
+    }
+
     if (
         !appetizeFrame ||
         !appetizeFrame.contentWindow ||
         (!connected && requireConnection)
     ) {
-        lastMessage = message;
         return;
     }
 
@@ -25,10 +28,13 @@ export const sendMessage = (message: Message, requireConnection?: boolean) => {
 const messageEventHandler = (event: IncomingMessage) => {
     if (event.data === "firstFrameReceived") {
         connected = true;
-        if (lastMessage) {
-            sendMessage(lastMessage);
-            lastMessage = null;
-        }
+
+        // small delay because appetize sometimes will not navigate immediately
+        setTimeout(() => {
+            if (lastUrlMessage) {
+                sendMessage(lastUrlMessage);
+            }
+        }, 600);
     } else if (event.data === "sessionEnded") {
         connected = false;
     }

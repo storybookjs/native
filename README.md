@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, knobs, etc.
+Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, etc.
 
 ### Installation
 If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md)
@@ -83,7 +83,7 @@ Examples of how to use this module as both a build tool and as a component libra
 - [Android storybook with controls](https://storybookjs.github.io/native/@storybook/native-controls-example/index.html?path=/story/button--example)
 - [Android storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-android-material-deep-link-example/index.html)
 - [iOS storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-ios-example-deep-link/index.html?path=/story/button--example)
-- [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--banner)
+- [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--button)
 
 More example static storybooks can be found [here](https://storybookjs.github.io/native/)
 

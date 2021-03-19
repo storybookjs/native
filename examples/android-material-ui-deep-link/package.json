@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-android-material-deep-link-example",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "private": true,
   "description": "An android demo app for storybook native (deep linking - fast)",
   "repository": "",

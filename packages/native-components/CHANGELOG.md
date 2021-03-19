@@ -1,3 +1,40 @@
+# v1.1.1 (Mon Mar 08 2021)
+
+#### ⚠️ Pushed to `master`
+
+- Remove knob references in docs, increase delay before reloading last story when deep linking (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
+# v1.1.0 (Fri Mar 05 2021)
+
+#### 🚀 Enhancement
+
+- Add debounce for deep link navigation [#35](https://github.com/storybookjs/native/pull/35) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
+# v1.0.5 (Wed Mar 03 2021)
+
+#### 🐛 Bug Fix
+
+- Fix not navigating back to prev story after changing devices [#34](https://github.com/storybookjs/native/pull/34) ([@amalik2](https://github.com/amalik2))
+- Update doc + remove flutter banner [#32](https://github.com/storybookjs/native/pull/32) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.4 (Mon Feb 01 2021)
 
 #### 🐛 Bug Fix

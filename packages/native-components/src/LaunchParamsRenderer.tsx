@@ -7,9 +7,9 @@ export default (props: RendererProps): React.ReactElement => {
     const { apiKey, platform, knobs, storyParams } = props;
 
     const device = useDevice(platform);
-    const storyParamsWithKnobs = { ...storyParams, ...knobs };
+    const storyParamsWithExtras = { ...storyParams, ...knobs };
 
-    const url = getAppetizeUrl(storyParamsWithKnobs, { device }, apiKey);
+    const url = getAppetizeUrl(storyParamsWithExtras, { device }, apiKey);
     return (
         <iframe
             title="appetize-embed"
