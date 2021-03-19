@@ -18,5 +18,9 @@
   "gitHead": "0f52a30495259d2b515e3a23cd516553894a4b30",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@types/lodash.debounce": "^4.0.6",
+    "lodash.debounce": "^4.0.8"
   }
 }
