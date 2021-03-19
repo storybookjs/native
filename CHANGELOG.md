@@ -1,3 +1,16 @@
+# v1.1.4 (Fri Mar 19 2021)
+
+#### 🐛 Bug Fix
+
+- `@storybook/appetize-utils`, `@storybook/native-components`
+  - Make debounce delay last across stories [#42](https://github.com/storybookjs/native/pull/42) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.1.3 (Fri Mar 19 2021)
 
 #### ⚠️ Pushed to `master`
