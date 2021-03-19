@@ -75,6 +75,8 @@ fastlane/Preview.html
 fastlane/screenshots
 .dart_tool
 .packages
+.flutter-plugins
+.flutter-plugins-dependencies
 
 storybook-static/
 *.log

@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CheckboxPage extends StatelessWidget {
+class _CheckboxPageState extends State<CheckboxPage> {
+  bool checked = false;
+  Map<String, dynamic> launchOptions;
+
+  _CheckboxPageState({@required this.launchOptions});
+
   @override
   Widget build(BuildContext context) {
-    bool state = false;
+    var title = this.launchOptions["label"] ?? "Checkbox label";
 
     return Scaffold(
       appBar: AppBar(
@@ -11,14 +16,28 @@ class CheckboxPage extends StatelessWidget {
       ),
       body: Center(
         child: CheckboxListTile(
-          title: Text("Checkbox title"),
-          value: state,
+          title: Text(title),
+          value: checked,
           onChanged: (newValue) {
-            Navigator.pop(context);
+            setState(() {
+              checked = newValue;
+            });
           },
-          controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
+          controlAffinity:
+              ListTileControlAffinity.leading, //  <-- leading Checkbox
         ),
       ),
     );
+  }
+}
+
+class CheckboxPage extends StatefulWidget {
+  final Map<String, dynamic> launchOptions;
+
+  CheckboxPage({Key key, @required this.launchOptions}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    return _CheckboxPageState(launchOptions: this.launchOptions);
   }
 }

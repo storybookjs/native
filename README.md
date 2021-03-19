@@ -31,12 +31,13 @@ If you wanted to use those query parameters, your application would need to pars
 Examples of parsing query parameters:
  - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L42)
  - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L83)
+ - [Flutter](examples/flutter/app/lib/main.dart#L60)
 
 You can read more about how to setup deep linking for Android [here](https://developer.android.com/training/app-links/deep-linking).
 
 For iOS, [this article](https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97) explains how to set up deep linking. Note that for the examples in this repo, we use URL schemes instead of Universal Links since they are simpler to set up.
 
-Deep linking should also work on Flutter, but there are no examples for this yet.
+For Flutter, the [uni_links](https://pub.dev/packages/uni_links) package makes it easy to set up deep linking support for both Android and iOS.
 
 ### 2. Launch Parameters
 appetize.io allows you to pass in custom launch parameters which will be sent to your mobile application when it first starts up. In your application, you must create a handler that determines what to render based on what those launch parameters are.  
@@ -81,9 +82,8 @@ If you are using deep linking, your `.storybook` folder should also have a `prev
 Examples of how to use this module as both a build tool and as a component library can be found [in this folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 
 - [Android storybook with controls](https://storybookjs.github.io/native/@storybook/native-controls-example/index.html?path=/story/button--example)
-- [Android storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-android-material-deep-link-example/index.html)
+- [Flutter storybook with controls](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--button)
 - [iOS storybook with deep linking](https://storybookjs.github.io/native/@storybook/native-ios-example-deep-link/index.html?path=/story/button--example)
-- [Flutter storybook with launch parameters](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--button)
 
 More example static storybooks can be found [here](https://storybookjs.github.io/native/)
 
