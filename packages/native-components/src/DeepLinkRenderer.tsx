@@ -21,7 +21,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
 
     if (debounceDelay) {
         console.warn(
-            `The debounceDelay prop is deprecated and will be removed in the next version of Storybook Native`
+            `The debounceDelay prop is deprecated and will be removed in the next major version of Storybook Native`
         );
     }
 
