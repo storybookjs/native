@@ -1,3 +1,16 @@
+# v1.1.3 (Fri Mar 19 2021)
+
+#### ⚠️ Pushed to `master`
+
+- `@storybook/native-flutter-example`
+  - Add preview-body to flutter storybook (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
 # (Fri Mar 19 2021)
 
 #### ⚠️ Pushed to `master`
