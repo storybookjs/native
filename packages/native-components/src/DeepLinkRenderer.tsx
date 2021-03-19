@@ -1,7 +1,6 @@
 import React from "react";
 import { getAppetizeUrl, openDeepLink } from "@storybook/appetize-utils";
 import { useDevice } from "@storybook/native-devices";
-import debounce from "lodash.debounce";
 
 import { DeepLinkRendererProps } from "./types";
 
@@ -12,7 +11,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         knobs,
         storyParams,
         deepLinkBaseUrl,
-        debounceDelay = 400
+        debounceDelay
     } = props;
     const device = useDevice(platform);
 
@@ -20,19 +19,11 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         throw new Error("No deep link base url was specified");
     }
 
-    const navigate = React.useCallback(
-        debounce(
-            (
-                appetizeUrl: string,
-                baseUrl: string,
-                params: Record<string, any>
-            ) => {
-                openDeepLink(appetizeUrl, baseUrl, params);
-            },
-            debounceDelay
-        ),
-        [debounceDelay]
-    );
+    if (debounceDelay) {
+        console.warn(
+            `The debounceDelay prop is deprecated and will be removed in the next version of Storybook Native`
+        );
+    }
 
     const storyParamsWithExtras = { ...storyParams, ...knobs };
     React.useEffect(() => {
@@ -44,7 +35,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             apiKey
         );
 
-        navigate(appetizeUrl, deepLinkBaseUrl, storyParamsWithExtras);
+        openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithExtras);
     }, [
         device,
         JSON.stringify(storyParamsWithExtras),
