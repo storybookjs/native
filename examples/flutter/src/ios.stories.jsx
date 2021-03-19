@@ -15,12 +15,7 @@ const IosRenderer = ({ knobs, component }) => {
 };
 
 export default {
-    title: "iOS",
-    argTypes: {
-        backgroundColor: {
-            control: "color"
-        }
-    }
+    title: "iOS"
 };
 
 export const Banner = ({ message, ribbon }) => {
