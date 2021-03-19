@@ -2,12 +2,13 @@
   "name": "@storybook/native-flutter-example",
   "version": "1.1.1",
   "private": true,
-  "description": "A flutter demo app for storybook native (launch parameters - slow)",
+  "description": "A Flutter demo app showcasing cross-platform controls",
   "repository": "",
   "author": "Thomas Baker <thomas_baker@intuit.com>",
   "license": "MIT",
   "contributors": [
-    "Thomas Baker <thomas_baker@intuit.com>"
+    "Thomas Baker <thomas_baker@intuit.com>",
+    "Adil Malik <adil_malik@intuit.com>"
   ],
   "scripts": {
     "start": "yarn start-storybook",
@@ -16,6 +17,7 @@
   "keywords": [],
   "dependencies": {
     "@storybook/native": "link:../../packages/native",
-    "@storybook/native-addon": "link:../../packages/native-addon"
+    "@storybook/native-addon": "link:../../packages/native-addon",
+    "rgb-hex": "^3.0.0"
   }
 }

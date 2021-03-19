@@ -2,25 +2,30 @@ import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
 import rgbHex from "rgb-hex";
 
-const AndroidRenderer = ({ knobs, component }) => {
+const IosRenderer = ({ knobs, component }) => {
     return (
         <EmulatorRenderer
-            apiKey="a46a48pe86ceyuurevybt12qb0"
-            platform="android"
+            apiKey="tjtnucwkf4vaddqv9g8he74z9r"
+            platform="ios"
             storyParams={{ page: component }}
-            deepLinkBaseUrl="sb-native://deeplink"
+            deepLinkBaseUrl="native-flutter://deep.link"
             knobs={knobs}
         />
     );
 };
 
 export default {
-    title: "Android"
+    title: "iOS",
+    argTypes: {
+        backgroundColor: {
+            control: "color"
+        }
+    }
 };
 
 export const Banner = ({ message, ribbon }) => {
     return (
-        <AndroidRenderer
+        <IosRenderer
             knobs={{
                 message,
                 ribbon
@@ -37,7 +42,7 @@ Banner.args = {
 
 export const Button = ({ label }) => {
     return (
-        <AndroidRenderer
+        <IosRenderer
             knobs={{
                 label
             }}
@@ -52,7 +57,7 @@ Button.args = {
 
 export const Checkbox = ({ label }) => {
     return (
-        <AndroidRenderer
+        <IosRenderer
             knobs={{
                 label
             }}
@@ -67,7 +72,7 @@ Checkbox.args = {
 
 export const Chip = ({ label }) => {
     return (
-        <AndroidRenderer
+        <IosRenderer
             knobs={{
                 label
             }}
@@ -82,7 +87,7 @@ Chip.args = {
 
 export const FAB = (props) => {
     return (
-        <AndroidRenderer
+        <IosRenderer
             knobs={{
                 backgroundColor: rgbHex(props.backgroundColor).substr(0, 6)
             }}
@@ -102,7 +107,7 @@ FAB.argTypes = {
 
 export const Text = ({ text }) => {
     return (
-        <AndroidRenderer
+        <IosRenderer
             knobs={{
                 text
             }}
