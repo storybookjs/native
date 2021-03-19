@@ -1,3 +1,23 @@
+# (Fri Mar 19 2021)
+
+#### ⚠️ Pushed to `master`
+
+- Remove flutter launch param docs ([@amalik2](https://github.com/amalik2))
+- `@storybook/native-flutter-example`
+  - Make args only show up on specific story for Flutter ([@amalik2](https://github.com/amalik2))
+
+#### 📝 Documentation
+
+- Enhance documentation [#38](https://github.com/storybookjs/native/pull/38) ([@amalik2](https://github.com/amalik2))
+- `@storybook/native-controls-example`, `@storybook/native-flutter-example`
+  - Flutter deep linking + multi-platform controls example [#37](https://github.com/storybookjs/native/pull/37) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.1.1 (Mon Mar 08 2021)
 
 #### ⚠️ Pushed to `master`
