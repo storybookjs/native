@@ -6,80 +6,24 @@
 Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, etc.
 
 ### Installation
-If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md)
+If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code.
 
-If you just want to use this module to render an emulator as a 
-lightweight React component, [follow the instructions here](packages/native-components/README.md)
+If you want to use this module to render an emulator as a 
+lightweight React component, [follow the instructions here](packages/native-components/README.md). This is recommended if you are already familiar with React and Storybook, or if you want to use features such as addons and controls.
 
-## Your mobile application
-Your android or iOS app needs to be modified to handle switching between stories. There are 2 ways to handle this:
+## Configuring your mobile application
+Before using this module, your mobile application must be set up to support switching between stories. There are detailed instructions on this [here](APP-CONFIG.md)
 
-### 1. Deep Linking
-If your application is set to open up when the user requests a certain URL, you can use deep linking with storybook native. This approach is recommended over launch parameters, because you do not have to wait for the appetize.io session to reload when switching between stories.
+## Uploading your mobile application
+After you have modified your application to support launch parameters or query parameters, you must upload your application to [appetize.io](https://appetize.io/). After the upload, you will receive a **public key** that can be used with Storybook Native to view and interact with your application directly from Storybook.
 
-In your application, you must add handlers that determines what to render based on what the query parameters for the deep link URL are.
+## Setting up Storybook
+Once your application is uploaded to appetize.io, you can begin setting up Storybook Native. The details for this can be found [here](./STORYBOOK-CONFIG.md)
 
-Example URL:
-```
-sb-native://deep.link?component=button&theme=dark
-```
-
-If you wanted to use those query parameters, your application would need to parse the value associated with the  `component` query parameter, and then render the corresponding component (in this case, a button component). Your application would also need to request either light or dark mode based on what the value of the `theme` query parameter is.
-
-*You do not need to exactly follow the above example for your query parameters! Your query parameters can have any information that you want.*
-
-Examples of parsing query parameters:
- - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L42)
- - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L83)
- - [Flutter](examples/flutter/app/lib/main.dart#L60)
-
-You can read more about how to setup deep linking for Android [here](https://developer.android.com/training/app-links/deep-linking).
-
-For iOS, [this article](https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97) explains how to set up deep linking. Note that for the examples in this repo, we use URL schemes instead of Universal Links since they are simpler to set up.
-
-For Flutter, the [uni_links](https://pub.dev/packages/uni_links) package makes it easy to set up deep linking support for both Android and iOS.
-
-### 2. Launch Parameters
-appetize.io allows you to pass in custom launch parameters which will be sent to your mobile application when it first starts up. In your application, you must create a handler that determines what to render based on what those launch parameters are.  
-  
-Example launch parameters:
-```json
-{
-  "component": "button",
-  "theme": "dark"
-}
-```
-If you wanted to use those launch parameters, your application would need to parse the value associated with the  `component` key, and then render the corresponding component (in this case, a button component). Your application would also need to request either light or dark mode based on what the value of `theme` is.
-
-*You do not need to exactly follow the above example for your launch parameters! Your launch parameters object can have any information that you want.*
-
-Examples of parsing launch parameters:
- - [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L38)
- - [Flutter](examples/flutter/app/lib/main.dart#L73)
- - [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L66)
-
-More details about these parameters can be found in the [bottom of the appetize.io docs](https://docs.appetize.io/core-features/playback-options)
-
-## Usage
-After you have modified your application to support launch parameters or query parameters, you must upload your application to appetize.io. After the upload, you will receive a public key that can be used with Storybook Native to view your application directly in storybook.
-
-Storybook Native can then be used either as a [build tool](packages/native/README.md), or as a [React component library](packages/native-components/README.md) that manages switching between stories.
-
-You must create a `.storybook` folder with a `main.js` file inside of it, where you must configure the path to your stories, as well as any addons you want to use. The `@storybook/addon-docs` and `@storybook/addon-controls` addons must always be included. The `@storybook/native-addon` addon is required if you want to be able to rotate the emulator, capture screenshots, or switch between devices. [Here](examples/android-material-ui/.storybook/main.js) is an example of a valid `main.js` file.
-
-To enable switching between devices, you must also create a `preview.js` file in your `.storybook` folder, with the [contents found here](examples/android-material-ui/.storybook/preview.js)
-
-If you are using deep linking, your `.storybook` folder should also have a `preview-body.html` that declares the following contents:
-```html
-<style>
-  #root[hidden="true"] ~ #appetize-iframe {
-    display: none;
-  }
-</style>
-```
+If you are already familiar with Storybook, the TLDR is that you would set up a `.storybook` folder similar to how you would with the web Storybook, and then create your `.jsx` or `.tsx` files that render stories.
 
 ### Examples
-Examples of how to use this module as both a build tool and as a component library can be found [in this folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
+Examples of how to use this module as both a build tool and as a component library can be found in the [examples folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 
 - [Android storybook with controls](https://storybookjs.github.io/native/@storybook/native-controls-example/index.html?path=/story/button--example)
 - [Flutter storybook with controls](https://storybookjs.github.io/native/@storybook/native-flutter-example/index.html?path=/story/android--button)
@@ -87,11 +31,14 @@ Examples of how to use this module as both a build tool and as a component libra
 
 More example static storybooks can be found [here](https://storybookjs.github.io/native/)
 
-## Local development
+## Debugging/testing your mobile application
+Details on how to test changes that you make to your mobile application to support features such as controls can be found [here](APP-TESTING.md)
+
+## Local development in this repo
  - Clone this repo
  - Run yarn to install dependencies
- - `yarn build && cd examples/android-material-ui && yarn start`  
-Anytime changes are made, yarn build and start must be re-run
+ - `yarn build && cd examples/flutter && yarn start`  
+ - In a new tab, run `yarn build` whenever changes are made to any of the packages inside of the `packages/` folder
 
 ## Contributors ✨
 
