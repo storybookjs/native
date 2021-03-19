@@ -1,0 +1,23 @@
+{
+  "name": "@storybook/native-cross-platform-example",
+  "version": "1.1.1",
+  "private": true,
+  "description": "material-ui Web, Android, and iOS components in the same storybook",
+  "repository": "",
+  "author": "Adil Malik <adil_malik@intuit.com>",
+  "license": "MIT",
+  "contributors": [
+    "Adil Malik <adil_malik@intuit.com>"
+  ],
+  "scripts": {
+    "start": "yarn start-storybook -p 53743",
+    "build:storybook": "yarn build-storybook"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@storybook/native": "link:../../packages/native",
+    "@storybook/native-addon": "link:../../packages/native-addon",
+    "@storybook/native-components": "link:../../packages/native-components"
+  }
+}

@@ -49,3 +49,40 @@ export const loadUrl = (url: string) => {
         iframe.src = url;
     }
 };
+
+let iframeStyleTag: HTMLStyleElement | undefined;
+
+const createIframeStyleTag = () => {
+    iframeStyleTag = getInnerDocument().createElement("style");
+    iframeStyleTag.innerHTML = `#appetize-iframe {
+        display: none;
+    }`;
+};
+
+export const showIframe = () => {
+    const iframe = getAppetizeIframe();
+    if (!iframe) {
+        console.warn("Appetize iframe can not be shown since none was found");
+        return;
+    }
+
+    if (iframeStyleTag && iframeStyleTag.parentElement) {
+        getInnerDocument().head.removeChild(iframeStyleTag);
+    }
+};
+
+export const hideIframe = () => {
+    const iframe = getAppetizeIframe();
+    if (!iframe) {
+        console.warn("Appetize iframe can not be hidden since none was found");
+        return;
+    }
+
+    if (!iframeStyleTag) {
+        createIframeStyleTag();
+    }
+
+    if (iframeStyleTag && !iframeStyleTag.parentElement) {
+        getInnerDocument().head.appendChild(iframeStyleTag);
+    }
+};
