@@ -79,7 +79,9 @@ export const FAB = (props) => {
             style={{
                 backgroundColor: props.backgroundColor
             }}
-        />
+        >
+            FAB
+        </MaterialFAB>
     );
 };
 
