@@ -4,9 +4,11 @@ There are a few ways to test your application's support for deep linking and con
 
 ### Launching your app with deep links
 
-This test does not require you to upload anything to appetize.io, but you will not be able to test the end-to-end integration between your application and Storybook Native
-
 If you are using deep linking, the easiest way to to test support for this is to just open deep links that your application is set to handle.
+
+This test does not require you to upload anything to appetize.io, but you will not be able to test the end-to-end integration between your application and Storybook Native.
+
+This is fine for most use cases, because you can simply copy the URLs in the "Deep links" addon panel that are sent to your application, and make sure that they work locally with the changes you've made to your application.
 
 On Android, you can configure Android Studio to directly launch your application with a specific URL. You can also use this command from your terminal if you have an emulator running already:
 
