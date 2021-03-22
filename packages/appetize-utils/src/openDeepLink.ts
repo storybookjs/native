@@ -1,4 +1,6 @@
 import debounce from "lodash.debounce";
+import { logDeepLink } from "@storybook/deep-link-logger";
+
 import { loadUrl } from "./iframeUtils";
 import { sendMessage } from "./sessionUtils";
 
@@ -10,6 +12,7 @@ const undebouncedOpenDeepLink = (
     loadUrl(appetizeUrl);
     const qsParams = new URLSearchParams(storyParams).toString();
     const newAppUrl = `${deepLinkUrl}?${qsParams}`;
+    logDeepLink(newAppUrl);
     sendMessage({ type: "url", value: newAppUrl }, true);
 };
 

@@ -20,6 +20,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@storybook/deep-link-logger": "link:../deep-link-logger",
     "@types/lodash.debounce": "^4.0.6",
     "lodash.debounce": "^4.0.8"
   }
