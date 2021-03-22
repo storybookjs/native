@@ -17,7 +17,9 @@ export default ({ link }: DeepLinkDetailsProps) => {
                 <Button style={{ minWidth: "60px" }} onClick={onCopyClicked}>
                     Copy
                 </Button>
-                <div style={{ marginLeft: "16px" }}>{link}</div>
+                <div style={{ marginLeft: "16px", alignSelf: "center" }}>
+                    {link}
+                </div>
             </div>
             <hr />
         </>
