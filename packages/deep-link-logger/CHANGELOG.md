@@ -1,3 +1,15 @@
+# v1.2.0 (Mon Mar 22 2021)
+
+#### 🚀 Enhancement
+
+- Add panel that displays navigated deep links for easier local testing [#44](https://github.com/storybookjs/native/pull/44) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.0.0 (Wed Jan 06 2021)
 
 #### 💥 Breaking Change
