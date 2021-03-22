@@ -29,6 +29,8 @@ module.exports = {
         "react/jsx-indent-props": "off",
         "@typescript-eslint/comma-dangle": ["error", "never"],
         "operator-linebreak": "off",
-        "object-curly-newline": "off"
+        "object-curly-newline": "off",
+        "react/prop-types": "off",
+        "arrow-body-style": "off"
     }
 };

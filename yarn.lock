@@ -2629,7 +2629,11 @@
     util-deprecate "^1.0.2"
 
 "@storybook/appetize-utils@link:packages/appetize-utils":
-  version "1.0.5"
+  version "1.1.4"
+  dependencies:
+    "@storybook/deep-link-logger" "link:packages/deep-link-logger"
+    "@types/lodash.debounce" "^4.0.6"
+    lodash.debounce "^4.0.8"
 
 "@storybook/channel-postmessage@6.1.11":
   version "6.1.11"
@@ -2685,6 +2689,14 @@
     core-js "^3.0.1"
     global "^4.3.2"
 
+"@storybook/client-logger@6.1.21":
+  version "6.1.21"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.1.21.tgz#fe7d9e645ddb4eb9dc18fdacea24b4baf11bc6c9"
+  integrity sha512-QJV+gnVM2fQ4M7lSkRLCXkOw/RU+aEtUefo9TAnXxPHK3UGG+DyvLmha6fHGaz9GAcFxyWtgqCyVOhMe03Q35g==
+  dependencies:
+    core-js "^3.0.1"
+    global "^4.3.2"
+
 "@storybook/components@6.1.11", "@storybook/components@^6.0.6":
   version "6.1.11"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.1.11.tgz#edd5db7fe43f47b5a7ab515840795a89d931512e"
@@ -2715,6 +2727,13 @@
   version "6.1.11"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.1.11.tgz#d50e8ec90490f9a7180a8c8a83afb6dcfe47ed66"
   integrity sha512-hTib81W8PxepM7iXVvl3pBXSaGpChl5LTzaLCoIRO9sSB8dy0/x2DLAHzbQvShk/l1wqUc3TtOLIxq+eC9l3wg==
+  dependencies:
+    core-js "^3.0.1"
+
+"@storybook/core-events@^6.0.6":
+  version "6.1.21"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.1.21.tgz#11f537f78f8c73ba5e627b57b282a279793a3511"
+  integrity sha512-KWqnh1C7M1pT//WfQb3AD60yTR8jL48AfaeLGto2gO9VK7VVgj/EGsrXZP/GTL90ygyExbbBI5gkr7EBTu/HYw==
   dependencies:
     core-js "^3.0.1"
 
@@ -2832,42 +2851,55 @@
   dependencies:
     lodash "^4.17.15"
 
+"@storybook/deep-link-logger@link:packages/deep-link-logger":
+  version "1.1.4"
+  dependencies:
+    "@storybook/addons" "^6.0.6"
+    "@storybook/api" "^6.0.6"
+    "@storybook/components" "^6.0.6"
+    "@storybook/core-events" "^6.0.6"
+    "@storybook/theming" "^6.0.6"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+
 "@storybook/native-addon@link:packages/native-addon":
-  version "1.0.5"
+  version "1.1.4"
   dependencies:
     "@storybook/addons" "^6.0.6"
     "@storybook/api" "^6.0.6"
     "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/client-api" "^6.0.6"
     "@storybook/components" "^6.0.6"
+    "@storybook/core-events" "^6.0.6"
+    "@storybook/deep-link-logger" "link:packages/deep-link-logger"
     "@storybook/native-devices" "link:packages/native-devices"
     "@storybook/native-types" "link:packages/native-types"
     "@storybook/react" "^6.0.6"
+    "@storybook/theming" "^6.0.6"
     react "^16.13.1"
     react-dom "^16.13.1"
 
 "@storybook/native-components@link:packages/native-components":
-  version "1.0.5"
+  version "1.1.4"
   dependencies:
     "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/native-devices" "link:packages/native-devices"
     "@storybook/native-types" "link:packages/native-types"
-    lodash.debounce "^4.0.8"
     react "^16.13.1"
     react-dom "^16.13.1"
 
 "@storybook/native-devices@link:packages/native-devices":
-  version "1.0.5"
+  version "1.1.4"
   dependencies:
     "@storybook/native-types" "link:packages/native-types"
     react "^16.13.1"
     react-dom "^16.13.1"
 
 "@storybook/native-types@link:packages/native-types":
-  version "1.0.5"
+  version "1.1.4"
 
 "@storybook/native@link:packages/native":
-  version "1.0.5"
+  version "1.1.4"
   dependencies:
     "@storybook/addon-controls" "^6.0.6"
     "@storybook/addon-docs" "^6.0.6"
@@ -2988,6 +3020,24 @@
     "@emotion/is-prop-valid" "^0.8.6"
     "@emotion/styled" "^10.0.23"
     "@storybook/client-logger" "6.1.11"
+    core-js "^3.0.1"
+    deep-object-diff "^1.1.0"
+    emotion-theming "^10.0.19"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    polished "^3.4.4"
+    resolve-from "^5.0.0"
+    ts-dedent "^2.0.0"
+
+"@storybook/theming@^6.0.6":
+  version "6.1.21"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.1.21.tgz#b8e612e5a39b77f7e63a5f9ea322ed62adb0d5b0"
+  integrity sha512-yq7+/mpdljRdSRJYw/In/9tnDGXIUDe//mhyMftFfrB2mq6zi1yAZpowCerWhiDE2ipGkrfzIYx/Sn7bcaXgqg==
+  dependencies:
+    "@emotion/core" "^10.1.1"
+    "@emotion/is-prop-valid" "^0.8.6"
+    "@emotion/styled" "^10.0.23"
+    "@storybook/client-logger" "6.1.21"
     core-js "^3.0.1"
     deep-object-diff "^1.1.0"
     emotion-theming "^10.0.19"
@@ -5591,6 +5641,13 @@ copy-to-clipboard@^3.0.8:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/copy-to-clipboard/-/copy-to-clipboard-3.3.1.tgz#115aa1a9998ffab6196f93076ad6da3b913662ae"
   integrity sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==
+  dependencies:
+    toggle-selection "^1.0.6"
+
+copy-to-clipboard@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/copy-to-clipboard/-/copy-to-clipboard-3.3.1.tgz#115aa1a9998ffab6196f93076ad6da3b913662ae"
+  integrity sha1-EVqhqZmP+rYZb5MHatbaO5E2Yq4=
   dependencies:
     toggle-selection "^1.0.6"
 
