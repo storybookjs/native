@@ -18,4 +18,4 @@ If you are using deep linking, your `.storybook` folder should also have a `prev
 </style>
 ```
 
-Without this step, the emulator will still be visible on the docs tab. If you have multiple stories with no documentation, the emulator will rapidly switch between each of them.
+Without this step, the emulator will still be visible on the docs tab.
