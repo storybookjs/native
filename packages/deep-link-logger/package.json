@@ -1,5 +1,5 @@
 {
-  "name": "@storybook/native-components",
+  "name": "@storybook/deep-link-logger",
   "version": "1.2.0",
   "main": "./dist/index.js",
   "files": [
@@ -9,15 +9,18 @@
   "author": "Adil Malik <adil_malik@intuit.com>",
   "license": "MIT",
   "contributors": [
+    "Raj Vasikarla <raj_vasikarla@intuit.com>",
     "Adil Malik <adil_malik@intuit.com>"
   ],
   "scripts": {
     "build": "tsc -b"
   },
   "dependencies": {
-    "@storybook/appetize-utils": "link:../appetize-utils",
-    "@storybook/native-devices": "link:../native-devices",
-    "@storybook/native-types": "link:../native-types",
+    "@storybook/addons": "^6.0.6",
+    "@storybook/api": "^6.0.6",
+    "@storybook/components": "^6.0.6",
+    "@storybook/theming": "^6.0.6",
+    "copy-to-clipboard": "^3.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

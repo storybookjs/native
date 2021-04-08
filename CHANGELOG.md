@@ -1,3 +1,66 @@
+# v1.2.0 (Mon Mar 22 2021)
+
+#### 🚀 Enhancement
+
+- `@storybook/native-controls-example`, `@storybook/appetize-utils`, `@storybook/deep-link-logger`, `@storybook/native-addon`
+  - Add panel that displays navigated deep links for easier local testing [#44](https://github.com/storybookjs/native/pull/44) ([@amalik2](https://github.com/amalik2))
+
+#### 📝 Documentation
+
+- Remove old content from storybook setup [#43](https://github.com/storybookjs/native/pull/43) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
+# v1.1.4 (Fri Mar 19 2021)
+
+#### 🐛 Bug Fix
+
+- `@storybook/appetize-utils`, `@storybook/native-components`
+  - Make debounce delay last across stories [#42](https://github.com/storybookjs/native/pull/42) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
+# v1.1.3 (Fri Mar 19 2021)
+
+#### ⚠️ Pushed to `master`
+
+- `@storybook/native-flutter-example`
+  - Add preview-body to flutter storybook (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
+# (Fri Mar 19 2021)
+
+#### ⚠️ Pushed to `master`
+
+- Remove flutter launch param docs ([@amalik2](https://github.com/amalik2))
+- `@storybook/native-flutter-example`
+  - Make args only show up on specific story for Flutter ([@amalik2](https://github.com/amalik2))
+
+#### 📝 Documentation
+
+- Enhance documentation [#38](https://github.com/storybookjs/native/pull/38) ([@amalik2](https://github.com/amalik2))
+- `@storybook/native-controls-example`, `@storybook/native-flutter-example`
+  - Flutter deep linking + multi-platform controls example [#37](https://github.com/storybookjs/native/pull/37) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.1.1 (Mon Mar 08 2021)
 
 #### ⚠️ Pushed to `master`

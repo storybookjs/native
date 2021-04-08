@@ -10,14 +10,14 @@ import {
 } from "@storybook/components";
 import { getDevices, DeviceSelections } from "@storybook/native-devices";
 
-import { ADDON_ID } from "./constants";
+import { ADDON_ID } from "../constants";
 import {
     DEFAULT_STATE,
     restoreFromLocalStorage,
     saveToLocalStorage
-} from "./utils/localStorageUtil";
+} from "../utils/localStorageUtils";
 
-export const DeviceSelectorTool = (): React.ReactElement => {
+export default () => {
     const savedState = restoreFromLocalStorage(DEFAULT_STATE);
 
     const [state, setState] = useAddonState<DeviceSelections>(

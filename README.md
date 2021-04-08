@@ -20,8 +20,6 @@ After you have modified your application to support launch parameters or query p
 ## Setting up Storybook
 Once your application is uploaded to appetize.io, you can begin setting up Storybook Native. The details for this can be found [here](./STORYBOOK-CONFIG.md)
 
-If you are already familiar with Storybook, the TLDR is that you would set up a `.storybook` folder similar to how you would with the web Storybook, and then create your `.jsx` or `.tsx` files that render stories.
-
 ### Examples
 Examples of how to use this module as both a build tool and as a component library can be found in the [examples folder](examples/). The `app` folder inside each example contains the source code of the application the example is for.
 

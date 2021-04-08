@@ -6,6 +6,8 @@ You must create a `.storybook` folder with a `main.js` file inside of it, where 
 
 To enable switching between devices, you must also create a `preview.js` file in your `.storybook` folder, with the [contents found here](examples/android-material-ui/.storybook/preview.js)
 
+### Extra step for deep linking
+
 If you are using deep linking, your `.storybook` folder should also have a `preview-body.html` that declares the following contents:
 
 ```html
@@ -15,3 +17,5 @@ If you are using deep linking, your `.storybook` folder should also have a `prev
     }
 </style>
 ```
+
+Without this step, the emulator will still be visible on the docs tab.
