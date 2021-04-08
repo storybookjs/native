@@ -1,20 +1,16 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import MaterialButton from "@material-ui/core/Button";
 import MaterialCheckbox from "@material-ui/core/Checkbox";
 import MaterialChip from "@material-ui/core/Chip";
 import MaterialFAB from "@material-ui/core/Fab";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import { hideIframe } from "@storybook/appetize-utils";
 
 export default {
     title: "Web"
 };
 
 export const Button = ({ label }) => {
-    React.useEffect(() => {
-        hideIframe();
-    }, []);
-
     return (
         <MaterialButton variant="outlined" color="primary">
             {label}
@@ -27,10 +23,6 @@ Button.args = {
 };
 
 export const Checkbox = ({ label }) => {
-    React.useEffect(() => {
-        hideIframe();
-    }, []);
-
     return (
         <FormControlLabel
             value="top"
@@ -40,23 +32,27 @@ export const Checkbox = ({ label }) => {
     );
 };
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: "flex",
+        flexWrap: "wrap",
+        "& > *": {
+            margin: theme.spacing(0.5)
+        }
+    }
+}));
+
 Checkbox.args = {
     label: "Material checkbox"
 };
 
 export const Chip = ({ chip1, chip2, chip3, chip4 }) => {
-    React.useEffect(() => {
-        hideIframe();
-    }, []);
-
+    const classes = useStyles();
     return (
-        <div>
+        <div className={classes.root}>
             <MaterialChip label={chip1} />
-
             <MaterialChip label={chip2} />
-
             <MaterialChip label={chip3} />
-
             <MaterialChip label={chip4} />
         </div>
     );
@@ -70,10 +66,6 @@ Chip.args = {
 };
 
 export const FAB = (props) => {
-    React.useEffect(() => {
-        hideIframe();
-    }, []);
-
     return (
         <MaterialFAB
             style={{

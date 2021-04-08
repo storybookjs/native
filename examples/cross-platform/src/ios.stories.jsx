@@ -1,12 +1,7 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
-import { showIframe } from "@storybook/appetize-utils";
 
 const IosRenderer = ({ knobs, component }) => {
-    React.useEffect(() => {
-        showIframe();
-    }, []);
-
     return (
         <EmulatorRenderer
             apiKey="yc0e33432655wbjnnnemyghhxm"

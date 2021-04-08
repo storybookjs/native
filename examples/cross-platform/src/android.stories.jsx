@@ -1,13 +1,8 @@
 import React from "react";
 import rgbHex from "rgb-hex";
 import { EmulatorRenderer } from "@storybook/native-components";
-import { showIframe } from "@storybook/appetize-utils";
 
 const AndroidRenderer = ({ knobs, component }) => {
-    React.useEffect(() => {
-        showIframe();
-    }, []);
-
     return (
         <EmulatorRenderer
             apiKey="zv034bdme9je7c9d43chzmc2yg"
