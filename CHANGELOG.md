@@ -1,3 +1,16 @@
+# v1.3.0 (Thu Apr 08 2021)
+
+#### 🚀 Enhancement
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-controls-example`, `@storybook/native-cross-platform-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-components`
+  - Auto hide iframe when needed, add cross platform material-ui example [#41](https://github.com/storybookjs/native/pull/41) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.2.0 (Mon Mar 22 2021)
 
 #### 🚀 Enhancement

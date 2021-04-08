@@ -1,3 +1,15 @@
+# v1.3.0 (Thu Apr 08 2021)
+
+#### 🚀 Enhancement
+
+- Auto hide iframe when needed, add cross platform material-ui example [#41](https://github.com/storybookjs/native/pull/41) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.1.4 (Fri Mar 19 2021)
 
 #### 🐛 Bug Fix
