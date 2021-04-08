@@ -4,7 +4,7 @@ import { useDevice } from "@storybook/native-devices";
 
 import type { DeepLinkRendererProps } from "./types";
 
-const renderedIframeCss = `
+const renderedIFrameCss = `
     #appetize-iframe {
         display: block;
     }
@@ -70,5 +70,5 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         }
     }, []);
 
-    return <style>{renderedIframeCss}</style>;
+    return <style>{renderedIFrameCss}</style>;
 };
