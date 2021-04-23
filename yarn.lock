@@ -2699,13 +2699,6 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/appetize-utils@link:packages/appetize-utils":
-  version "1.2.0"
-  dependencies:
-    "@storybook/deep-link-logger" "link:packages/deep-link-logger"
-    "@types/lodash.debounce" "^4.0.6"
-    lodash.debounce "^4.0.8"
-
 "@storybook/channel-postmessage@6.1.11":
   version "6.1.11"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-6.1.11.tgz#62c1079f04870dd27925bd538a2020e7380daa2e"
@@ -2923,7 +2916,7 @@
     lodash "^4.17.15"
 
 "@storybook/deep-link-logger@link:packages/deep-link-logger":
-  version "1.2.0"
+  version "1.3.0"
   dependencies:
     "@storybook/addons" "^6.0.6"
     "@storybook/api" "^6.0.6"
@@ -2933,54 +2926,66 @@
     react "^16.13.1"
     react-dom "^16.13.1"
 
-"@storybook/native-addon@link:packages/native-addon":
-  version "1.2.0"
+"@storybook/native-addon@link:packages/addon":
+  version "1.3.0"
   dependencies:
     "@storybook/addons" "^6.0.6"
     "@storybook/api" "^6.0.6"
-    "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/client-api" "^6.0.6"
     "@storybook/components" "^6.0.6"
     "@storybook/core-events" "^6.0.6"
     "@storybook/deep-link-logger" "link:packages/deep-link-logger"
-    "@storybook/native-devices" "link:packages/native-devices"
-    "@storybook/native-types" "link:packages/native-types"
+    "@storybook/native-controllers" "link:packages/controllers"
+    "@storybook/native-devices" "link:packages/devices"
+    "@storybook/native-types" "link:packages/types"
     "@storybook/react" "^6.0.6"
     "@storybook/theming" "^6.0.6"
     react "^16.13.1"
     react-dom "^16.13.1"
 
+"@storybook/native-addon@link:packages/native-addon":
+  version "0.0.0"
+  uid ""
+
 "@storybook/native-components@link:packages/native-components":
-  version "1.2.0"
+  version "1.3.0"
   dependencies:
-    "@storybook/appetize-utils" "link:packages/appetize-utils"
-    "@storybook/native-devices" "link:packages/native-devices"
-    "@storybook/native-types" "link:packages/native-types"
+    "@storybook/native-controllers" "link:packages/controllers"
+    "@storybook/native-devices" "link:packages/devices"
+    "@storybook/native-types" "link:packages/types"
     react "^16.13.1"
     react-dom "^16.13.1"
 
-"@storybook/native-devices@link:packages/native-devices":
-  version "1.2.0"
+"@storybook/native-controllers@link:packages/controllers":
+  version "1.3.0"
   dependencies:
-    "@storybook/native-types" "link:packages/native-types"
+    "@storybook/deep-link-logger" "link:packages/deep-link-logger"
+    "@storybook/native-types" "link:packages/types"
+    "@types/lodash.debounce" "^4.0.6"
+    lodash.debounce "^4.0.8"
+
+"@storybook/native-devices@link:packages/devices":
+  version "1.3.0"
+  dependencies:
+    "@storybook/native-types" "link:packages/types"
     react "^16.13.1"
     react-dom "^16.13.1"
 
-"@storybook/native-types@link:packages/native-types":
-  version "1.2.0"
+"@storybook/native-types@link:packages/types":
+  version "1.3.0"
 
 "@storybook/native@link:packages/native":
-  version "1.2.0"
+  version "1.3.0"
   dependencies:
     "@storybook/addon-controls" "^6.0.6"
     "@storybook/addon-docs" "^6.0.6"
     "@storybook/addon-toolbars" "^6.0.6"
     "@storybook/addons" "^6.0.6"
-    "@storybook/appetize-utils" "link:packages/appetize-utils"
     "@storybook/components" "^6.0.6"
-    "@storybook/native-addon" "link:packages/native-addon"
+    "@storybook/native-addon" "link:packages/addon"
     "@storybook/native-components" "link:packages/native-components"
-    "@storybook/native-types" "link:packages/native-types"
+    "@storybook/native-controllers" "link:packages/controllers"
+    "@storybook/native-types" "link:packages/types"
     "@storybook/react" "^6.0.6"
     babel-loader "^8.1.0"
     change-case "4.1.1"
@@ -4286,6 +4291,13 @@ axios@0.20.0:
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
   integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+  dependencies:
+    follow-redirects "^1.10.0"
+
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=
   dependencies:
     follow-redirects "^1.10.0"
 

@@ -5,20 +5,12 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "composite": true,
+        "jsx": "react",
         "module": "commonjs",
         "target": "es5",
-        "lib": ["es5", "es6"]
+        "lib": ["es5", "es6", "DOM"]
     },
     "references": [
-        {
-            "path": "../controllers"
-        },
-        {
-            "path": "../addon"
-        },
-        {
-            "path": "../native-components"
-        },
         {
             "path": "../types"
         }

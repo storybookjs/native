@@ -1,8 +1,7 @@
 {
-  "name": "@storybook/appetize-utils",
+  "name": "@storybook/native-devices",
   "version": "1.3.0",
   "main": "./dist/index.js",
-  "description": "Utility functions for interacting with the appetize iframe",
   "files": [
     "dist"
   ],
@@ -15,13 +14,13 @@
   "scripts": {
     "build": "tsc -b"
   },
-  "gitHead": "0f52a30495259d2b515e3a23cd516553894a4b30",
+  "dependencies": {
+    "@storybook/native-types": "link:../types",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@storybook/deep-link-logger": "link:../deep-link-logger",
-    "@types/lodash.debounce": "^4.0.6",
-    "lodash.debounce": "^4.0.8"
   }
 }

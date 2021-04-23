@@ -1,4 +1,4 @@
-import { Platform } from "@storybook/native-types";
+import type { Platform, EmulatorContext } from "@storybook/native-types";
 
 export interface RendererProps {
     /** Your public appetize.io API key */
@@ -29,4 +29,9 @@ export interface DeepLinkRendererProps extends RendererProps {
      * Delay in milliseconds before a new URL is sent to your mobile application.
      */
     debounceDelay?: number;
+    /**
+     * A unique ID for this emulator. Used for rendering multiple emulators
+     * at once with deep linking.
+     */
+    context?: EmulatorContext;
 }

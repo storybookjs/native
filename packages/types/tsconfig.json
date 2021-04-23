@@ -9,16 +9,5 @@
         "module": "commonjs",
         "target": "es5",
         "lib": ["es5", "es6", "DOM"]
-    },
-    "references": [
-        {
-            "path": "../controllers"
-        },
-        {
-            "path": "../devices"
-        },
-        {
-            "path": "../types"
-        }
-    ]
+    }
 }

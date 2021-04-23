@@ -1,22 +1,28 @@
 import React from "react";
 import { addons, types } from "@storybook/addons";
 import { Icons, IconButton } from "@storybook/components";
-import { sendMessage } from "@storybook/appetize-utils";
+import { controllerManager } from "@storybook/native-controllers";
 import { DeepLinksContainer } from "@storybook/deep-link-logger";
 
 import { ADDON_ID, DEEP_LINKS_PARAM_KEY } from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
 
 const rotateLeft = () => {
-    sendMessage("rotateLeft");
+    controllerManager.sendMessageToControllers({
+        message: "rotateLeft"
+    });
 };
 
 const rotateRight = () => {
-    sendMessage("rotateRight");
+    controllerManager.sendMessageToControllers({
+        message: "rotateRight"
+    });
 };
 
 const captureScreenshot = () => {
-    sendMessage("saveScreenshot");
+    controllerManager.sendMessageToControllers({
+        message: "saveScreenshot"
+    });
 };
 
 addons.register(ADDON_ID, (api) => {

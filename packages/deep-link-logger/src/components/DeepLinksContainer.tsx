@@ -3,7 +3,7 @@ import { API } from "@storybook/api";
 import { AddonPanel } from "@storybook/components";
 
 import { DEEP_LINKS_EVENT_ID } from "../constants";
-import DeepLinksRenderer from "./DeepLinksList";
+import DeepLinksList from "./DeepLinksList";
 
 export interface DeepLinksContainerProps {
     api: API;
@@ -33,7 +33,7 @@ export default ({ api, active }: DeepLinksContainerProps) => {
 
     return (
         <AddonPanel key="deep-links-panel" active={Boolean(active)}>
-            <DeepLinksRenderer links={links} onClear={clearUrls} />
+            <DeepLinksList links={links} onClear={clearUrls} />
         </AddonPanel>
     );
 };

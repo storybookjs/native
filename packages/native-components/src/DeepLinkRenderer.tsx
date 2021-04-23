@@ -1,15 +1,17 @@
 import React from "react";
-import { getAppetizeUrl, openDeepLink } from "@storybook/appetize-utils";
+import { openDeepLink, controllerManager } from "@storybook/native-controllers";
 import { useDevice } from "@storybook/native-devices";
 
 import type { DeepLinkRendererProps } from "./types";
 
+// TODO: use constant for ID, include context
 const renderedIFrameCss = `
     #appetize-iframe {
         display: block;
     }
 `;
 
+// TODO: use constant for ID, include context
 const persistentIFrameCss = `
     #root[hidden="true"] ~ #appetize-iframe {
         display: none;
@@ -27,7 +29,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         knobs,
         storyParams,
         deepLinkBaseUrl,
-        debounceDelay
+        debounceDelay,
+        context
     } = props;
     const device = useDevice(platform);
 
@@ -41,22 +44,33 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         );
     }
 
-    const storyParamsWithExtras = { ...storyParams, ...knobs };
     React.useEffect(() => {
-        const appetizeUrl = getAppetizeUrl(
-            {},
-            {
+        const controller = controllerManager.getController(context);
+        controller.updateConfig({
+            apiKey,
+            settings: {
                 device
             },
-            apiKey
-        );
+            platform
+        });
+    }, [device, apiKey, context, platform]);
 
-        openDeepLink(appetizeUrl, deepLinkBaseUrl, storyParamsWithExtras);
+    const storyParamsWithExtras = { ...storyParams, ...knobs };
+    React.useEffect(() => {
+        const controller = controllerManager.getController(context);
+        openDeepLink(
+            {
+                deepLinkBaseUrl,
+                storyParams: storyParamsWithExtras
+            },
+            controller
+        );
     }, [
         device,
         JSON.stringify(storyParamsWithExtras),
         deepLinkBaseUrl,
-        apiKey
+        apiKey,
+        context
     ]);
 
     React.useEffect(() => {
