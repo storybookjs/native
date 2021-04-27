@@ -20,9 +20,7 @@ _You do not need to exactly follow the above example for your query parameters! 
 
 Examples of parsing query parameters:
 
-## TODO: update android link
-
--   [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L42)
+-   [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L38)
 -   [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L83)
 -   [Flutter](examples/flutter/app/lib/main.dart#L60)
 

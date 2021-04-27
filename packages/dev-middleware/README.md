@@ -18,12 +18,12 @@ const { middleware } = require("@storybook/native-dev-middleware");
 module.exports = middleware();
 ```
 
-Example file can be found [here](TODO)
-
 The `middleware` function optionally takes in an object argument that lets you configure how to interact with emulators. Supported keys in that object are:
 - androidCommandPath: Path to `adb`. Defaults to `adb`
 - iosCommandPath: Path to `xcrun`. Defaults to `xcrun`
 - timeout: How long before a command times out. Defaults to `10000` ms
+
+An example of this file can be found [here](../../examples/cross-platform/.storybook/middleware.js)
 
 #### 2. Setting environment variable
 To actually tell storybook to interact with a local emulator, the `STORYBOOK_NATIVE_LOCAL_EMULATOR` environment variable must be set to a non-empty string.
@@ -52,5 +52,5 @@ On Android, there may be instances where your emulator will not start an activit
 
 To work around this, you can add `android:launchMode="singleTask"` to your activity in your `AndroidManifest.xml` file, and create a function called `onNewIntent(intent: Intent?)` in your activity class to handle switching to a new deep link.
 
-Example [manifest file](TODO)
-Example [activity file](TODO)
+Example [manifest file](../../examples/android-material-ui/app/app/src/main/AndroidManifest.xml#L24)
+Example [activity class](../../examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L121)
