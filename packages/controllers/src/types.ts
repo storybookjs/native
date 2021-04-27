@@ -1,5 +1,3 @@
-import type { Platform } from "@storybook/native-types";
-
 export interface MessageWithParam {
     type: string;
     value: string;
@@ -17,15 +15,13 @@ export interface SendMessageOptions {
     requireConnection?: boolean;
 }
 
-export interface EmulatorSettings {
-    device: string;
-    [key: string]: string;
+export interface HandledMessageResponse {
+    message: Record<string, any>;
+    response: string;
+    successful: boolean;
 }
 
-export interface EmulatorConfig {
-    settings: EmulatorSettings;
-    platform: Platform;
-
-    apiKey?: string;
-    launchArgs?: Record<string, any>;
+export interface ReduxState {
+    loading: boolean;
+    commands: HandledMessageResponse[];
 }

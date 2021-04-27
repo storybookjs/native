@@ -1,6 +1,6 @@
 ## Configuring your mobile application
 
-Your android or iOS app needs to be modified to handle switching between stories. There are 2 ways to handle this:
+Your mobile app needs to be modified to handle switching between stories. There are 2 ways to handle this:
 
 ### 1. Deep Linking
 
@@ -19,6 +19,8 @@ If you wanted to use those query parameters, your application would need to pars
 _You do not need to exactly follow the above example for your query parameters! Your query parameters can have any information that you want._
 
 Examples of parsing query parameters:
+
+## TODO: update android link
 
 -   [Android](examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L42)
 -   [iOS](examples/ios-material-ui/app/iOSStoryBookDemo/iOSStoryBookDemo/AppDelegate.swift#L83)

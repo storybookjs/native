@@ -4,7 +4,7 @@ export const <%= storyName %> = (props) => {
         platform="<%= platform %>"
         storyParams={<%= storyParams %>}
         deepLinkBaseUrl={<%= deepLinkBaseUrl %>}
-        knobs={props}
+        extraParams={props}
     />;
 };
 

@@ -1,4 +1,4 @@
-import { EmulatorRotation, RotationsList } from "../rotations";
+import { EmulatorRotation, RotationsList } from "@storybook/native-types";
 
 export const getPreviousRotation = (
     rotation: EmulatorRotation

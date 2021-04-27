@@ -1,14 +1,14 @@
-import type { EmulatorContext } from "@storybook/native-types";
-import type { EmulatorConfig, SendMessageOptions } from "../types";
+import type { EmulatorContext, EmulatorConfig } from "@storybook/native-types";
+import type { SendMessageOptions } from "../types";
 
 export default interface EmulatorController {
-    sendMessage(options: SendMessageOptions): Promise<void>;
+    sendMessage(options: SendMessageOptions): void;
 
     createEmulator(): void;
 
     destroyEmulator(): void;
 
-    openDeepLink(deepLinkUrl: string): Promise<void>;
+    openDeepLink(deepLinkUrl: string): void;
 
     getContext(): EmulatorContext | undefined;
 

@@ -1,8 +1,17 @@
 import React from "react";
-import { openDeepLink, controllerManager } from "@storybook/native-controllers";
+import {
+    openDeepLink,
+    ControllerManager,
+    ACTION_EVENT_NAME,
+    store
+} from "@storybook/native-controllers";
 import { useDevice } from "@storybook/native-devices";
+import { EmulatorActions } from "@storybook/native-types";
+import { addons } from "@storybook/addons";
+import { Provider } from "react-redux";
 
-import type { DeepLinkRendererProps } from "./types";
+import type { DeepLinkRendererProps } from "../types";
+import CommandsList from "../commands/CommandsList";
 
 // TODO: use constant for ID, include context
 const renderedIFrameCss = `
@@ -22,30 +31,39 @@ const persistentIFrameCss = `
     }
 `;
 
+const manager = new ControllerManager();
+
 export default (props: DeepLinkRendererProps): React.ReactElement => {
     const {
         apiKey,
         platform,
-        knobs,
+        extraParams,
         storyParams,
         deepLinkBaseUrl,
-        debounceDelay,
         context
     } = props;
-    const device = useDevice(platform);
 
     if (!deepLinkBaseUrl) {
         throw new Error("No deep link base url was specified");
     }
 
-    if (debounceDelay) {
-        console.warn(
-            `The debounceDelay prop is deprecated and will be removed in the next major version of Storybook Native`
-        );
-    }
+    const device = useDevice(platform);
+    React.useEffect(() => {
+        const onAction = (action: EmulatorActions) => {
+            const controller = manager.getController(context);
+            controller.sendMessage({
+                message: action
+            });
+        };
+
+        addons.getChannel().on(ACTION_EVENT_NAME, onAction);
+        return () => {
+            addons.getChannel().off(ACTION_EVENT_NAME, onAction);
+        };
+    }, [context]);
 
     React.useEffect(() => {
-        const controller = controllerManager.getController(context);
+        const controller = manager.getController(context);
         controller.updateConfig({
             apiKey,
             settings: {
@@ -55,9 +73,9 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         });
     }, [device, apiKey, context, platform]);
 
-    const storyParamsWithExtras = { ...storyParams, ...knobs };
+    const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
-        const controller = controllerManager.getController(context);
+        const controller = manager.getController(context);
         openDeepLink(
             {
                 deepLinkBaseUrl,
@@ -84,5 +102,12 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         }
     }, []);
 
-    return <style>{renderedIFrameCss}</style>;
+    return (
+        <Provider store={store}>
+            <>
+                <style>{renderedIFrameCss}</style>
+                <CommandsList context={context} />
+            </>
+        </Provider>
+    );
 };

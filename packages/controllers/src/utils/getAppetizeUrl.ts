@@ -1,4 +1,4 @@
-import type { EmulatorConfig } from "../types";
+import type { EmulatorConfig } from "@storybook/native-types";
 
 export const getAppetizeUrl = ({
     launchArgs,

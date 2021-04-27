@@ -1,17 +1,14 @@
 import type { EmulatorContext } from "@storybook/native-types";
-import type { SendMessageOptions } from "./types";
+import type { SendMessageOptions } from "../types";
 
-import AppetizeEmulatorController from "./controllers/AppetizeEmulatorController";
-import EmulatorController from "./controllers/EmulatorController";
-import LocalEmulatorController from "./controllers/LocalEmulatorController";
+import EmulatorController from "../controllers/EmulatorController";
+import { getNewController } from "./controllerFactory";
 
 export default class ControllerManager {
     private controllers: EmulatorController[] = [];
 
-    createController(context?: EmulatorContext) {
-        // TODO: if local dev, create local controller
-        const controller = new LocalEmulatorController(context);
-        // const controller = new AppetizeEmulatorController(context);
+    createController(context?: EmulatorContext): EmulatorController {
+        const controller = getNewController(context);
         controller.createEmulator();
         this.controllers.push(controller);
         console.log(
@@ -21,12 +18,9 @@ export default class ControllerManager {
     }
 
     sendMessageToControllers(options: SendMessageOptions) {
-        console.error(this.controllers);
-        const promises = this.controllers.map((controller) => {
-            return controller.sendMessage(options);
+        this.controllers.forEach((controller) => {
+            controller.sendMessage(options);
         });
-
-        return Promise.all(promises);
     }
 
     getController(context?: EmulatorContext): EmulatorController {

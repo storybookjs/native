@@ -21,14 +21,10 @@ export interface RendererProps {
      *
      * This prop is provided entirely for convenience
      */
-    knobs?: Record<string, any>;
+    extraParams?: Record<string, any>;
 }
 
 export interface DeepLinkRendererProps extends RendererProps {
-    /**
-     * Delay in milliseconds before a new URL is sent to your mobile application.
-     */
-    debounceDelay?: number;
     /**
      * A unique ID for this emulator. Used for rendering multiple emulators
      * at once with deep linking.

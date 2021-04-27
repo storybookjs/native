@@ -50,9 +50,6 @@ export const getAppetizeIframe = (
         iframeId
     ) as HTMLIFrameElement;
     if (!appetizeFrame) {
-        // TODO: remove this
-        /* console.warn("The appetize.io iframe was not found. Creating one");
-        return createAppetizeIframe(context); */
         throw new Error(
             `The appetize.io iframe was not found for context: ${context}`
         );

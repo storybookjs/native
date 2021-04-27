@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import type { EmulatorContext } from "@storybook/native-types";
+import type { EmulatorContext, EmulatorConfig } from "@storybook/native-types";
 
 import EmulatorController from "./EmulatorController";
 import {
@@ -7,7 +7,7 @@ import {
     getAppetizeIframe,
     updateIframeUrl
 } from "../utils/iframeUtils";
-import { EmulatorConfig, Message, SendMessageOptions } from "../types";
+import { Message, SendMessageOptions } from "../types";
 import { getAppetizeUrl } from "../utils/getAppetizeUrl";
 
 interface IncomingMessage {
@@ -55,11 +55,10 @@ export default class AppetizeEmulatorController implements EmulatorController {
             !appetizeFrame.contentWindow ||
             (!this.connected && requireConnection)
         ) {
-            return Promise.resolve();
+            return;
         }
 
         appetizeFrame.contentWindow.postMessage(message, "*");
-        return Promise.resolve();
     }
 
     public createEmulator() {
@@ -72,8 +71,8 @@ export default class AppetizeEmulatorController implements EmulatorController {
         throw new Error("Method not implemented.");
     }
 
-    public openDeepLink(deepLinkUrl: string): Promise<void> {
-        return this.sendMessage({
+    public openDeepLink(deepLinkUrl: string) {
+        this.sendMessage({
             message: { type: "url", value: deepLinkUrl },
             requireConnection: true
         });

@@ -17,7 +17,8 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@storybook/native": "link:../../packages/native",
-    "@storybook/native-addon": "link:../../packages/native-addon",
-    "@storybook/native-components": "link:../../packages/native-components"
+    "@storybook/native-addon": "link:../../packages/addon",
+    "@storybook/native-components": "link:../../packages/native-components",
+    "@storybook/native-dev-middleware": "link:../../packages/dev-middleware"
   }
 }
