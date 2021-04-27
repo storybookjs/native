@@ -17,7 +17,7 @@
   "keywords": [],
   "dependencies": {
     "@storybook/native": "link:../../packages/native",
-    "@storybook/native-addon": "link:../../packages/native-addon",
+    "@storybook/native-addon": "link:../../packages/addon",
     "rgb-hex": "^3.0.0"
   }
 }

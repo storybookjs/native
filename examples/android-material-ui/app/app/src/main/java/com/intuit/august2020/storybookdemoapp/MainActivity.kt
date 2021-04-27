@@ -29,11 +29,7 @@ class MainActivity : AppCompatActivity() {
 		}
 	}
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_main)
-
-		val intent = getIntent();
+	private fun handleIntent(intent: Intent) {
 		// launch arguments example
 		var component = intent.getStringExtra("component");
 
@@ -120,6 +116,22 @@ class MainActivity : AppCompatActivity() {
 			TABS -> startActivity(tabsIntent)
 			TEXTFIELD -> startActivity(textFieldIntent)
 		}
+	}
+
+	override fun onNewIntent(intent: Intent?) {
+		super.onNewIntent(intent)
+		if (intent != null) {
+			setIntent(intent)
+			handleIntent(intent)
+		}
+	}
+
+	override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+		setContentView(R.layout.activity_main)
+
+		val intent = getIntent();
+		handleIntent(intent)
 	}
 }
 

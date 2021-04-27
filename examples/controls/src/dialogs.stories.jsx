@@ -13,7 +13,7 @@ export const Example = (props) => {
             platform={PLATFORM}
             deepLinkBaseUrl={DEEP_LINK_BASE_URL}
             storyParams={{ component: "dialogs" }}
-            knobs={props}
+            extraParams={props}
         />
     );
 };

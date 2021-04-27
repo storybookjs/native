@@ -12,12 +12,12 @@ const Wrapper = styled(({ children }) => (
     padding: "10px 5px 20px"
 });
 
-export interface DeepLinksRendererProps {
+export interface DeepLinksListProps {
     links: string[];
     onClear: () => void;
 }
 
-export default ({ links, onClear }: DeepLinksRendererProps) => {
+export default ({ links, onClear }: DeepLinksListProps) => {
     const onCopyClicked = () => {
         copy(JSON.stringify(links));
     };
@@ -25,8 +25,9 @@ export default ({ links, onClear }: DeepLinksRendererProps) => {
     return (
         <>
             <Wrapper title="linksLogger">
-                {links.map((link: string) => (
-                    <DeepLinkDetails key={link} link={link} />
+                {links.map((link, index) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <DeepLinkDetails key={`${link}-${index}`} link={link} />
                 ))}
             </Wrapper>
             <ActionBar

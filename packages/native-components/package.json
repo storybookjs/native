@@ -15,11 +15,14 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@storybook/appetize-utils": "link:../appetize-utils",
-    "@storybook/native-devices": "link:../native-devices",
-    "@storybook/native-types": "link:../native-types",
+    "@storybook/addons": "^6.0.6",
+    "@storybook/components": "^6.0.6",
+    "@storybook/native-controllers": "link:../controllers",
+    "@storybook/native-devices": "link:../devices",
+    "@storybook/native-types": "link:../types",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.2"
   },
   "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {

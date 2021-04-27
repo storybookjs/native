@@ -5,6 +5,8 @@
 
 Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, etc.
 
+It also supports using Storybook as a local development environment to develop Android and iOS components (just like with Web components).
+
 ### Installation
 If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code.
 
@@ -32,6 +34,9 @@ More example static storybooks can be found [here](https://storybookjs.github.io
 
 ## Debugging/testing your mobile application
 Details on how to test changes that you make to your mobile application to support features such as controls can be found [here](APP-TESTING.md)
+
+## Migrating from version 1 to version 2
+A full migration guide for breaking changes can be found [here](MIGRATION.md)
 
 ## Local development in this repo
  - Clone this repo

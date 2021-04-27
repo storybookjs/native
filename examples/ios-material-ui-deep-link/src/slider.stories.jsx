@@ -13,7 +13,7 @@ export const Example = (props) => {
             platform="ios"
             storyParams={{ component: "slider" }}
             deepLinkBaseUrl="sb-native://deep.link"
-            knobs={props}
+            extraParams={props}
         />
     );
 };

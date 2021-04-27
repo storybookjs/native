@@ -2,14 +2,14 @@ import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
 import rgbHex from "rgb-hex";
 
-const AndroidRenderer = ({ knobs, component }) => {
+const AndroidRenderer = ({ extraParams, component }) => {
     return (
         <EmulatorRenderer
             apiKey="a46a48pe86ceyuurevybt12qb0"
             platform="android"
             storyParams={{ page: component }}
             deepLinkBaseUrl="sb-native://deeplink"
-            knobs={knobs}
+            extraParams={extraParams}
         />
     );
 };
@@ -21,7 +21,7 @@ export default {
 export const Banner = ({ message, ribbon }) => {
     return (
         <AndroidRenderer
-            knobs={{
+            extraParams={{
                 message,
                 ribbon
             }}
@@ -38,7 +38,7 @@ Banner.args = {
 export const Button = ({ label }) => {
     return (
         <AndroidRenderer
-            knobs={{
+            extraParams={{
                 label
             }}
             component="button"
@@ -53,7 +53,7 @@ Button.args = {
 export const Checkbox = ({ label }) => {
     return (
         <AndroidRenderer
-            knobs={{
+            extraParams={{
                 label
             }}
             component="checkbox"
@@ -68,7 +68,7 @@ Checkbox.args = {
 export const Chip = ({ label }) => {
     return (
         <AndroidRenderer
-            knobs={{
+            extraParams={{
                 label
             }}
             component="chip"
@@ -83,7 +83,7 @@ Chip.args = {
 export const FAB = (props) => {
     return (
         <AndroidRenderer
-            knobs={{
+            extraParams={{
                 backgroundColor: rgbHex(props.backgroundColor).substr(0, 6)
             }}
             component="fab"
@@ -103,7 +103,7 @@ FAB.argTypes = {
 export const Text = ({ text }) => {
     return (
         <AndroidRenderer
-            knobs={{
+            extraParams={{
                 text
             }}
             component="text"

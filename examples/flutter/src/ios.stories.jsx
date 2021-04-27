@@ -2,14 +2,14 @@ import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
 import rgbHex from "rgb-hex";
 
-const IosRenderer = ({ knobs, component }) => {
+const IosRenderer = ({ extraParams, component }) => {
     return (
         <EmulatorRenderer
             apiKey="tjtnucwkf4vaddqv9g8he74z9r"
             platform="ios"
             storyParams={{ page: component }}
             deepLinkBaseUrl="native-flutter://deep.link"
-            knobs={knobs}
+            extraParams={extraParams}
         />
     );
 };
@@ -21,7 +21,7 @@ export default {
 export const Banner = ({ message, ribbon }) => {
     return (
         <IosRenderer
-            knobs={{
+            extraParams={{
                 message,
                 ribbon
             }}
@@ -38,7 +38,7 @@ Banner.args = {
 export const Button = ({ label }) => {
     return (
         <IosRenderer
-            knobs={{
+            extraParams={{
                 label
             }}
             component="button"
@@ -53,7 +53,7 @@ Button.args = {
 export const Checkbox = ({ label }) => {
     return (
         <IosRenderer
-            knobs={{
+            extraParams={{
                 label
             }}
             component="checkbox"
@@ -68,7 +68,7 @@ Checkbox.args = {
 export const Chip = ({ label }) => {
     return (
         <IosRenderer
-            knobs={{
+            extraParams={{
                 label
             }}
             component="chip"
@@ -83,7 +83,7 @@ Chip.args = {
 export const FAB = (props) => {
     return (
         <IosRenderer
-            knobs={{
+            extraParams={{
                 backgroundColor: rgbHex(props.backgroundColor).substr(0, 6)
             }}
             component="fab"
@@ -103,7 +103,7 @@ FAB.argTypes = {
 export const Text = ({ text }) => {
     return (
         <IosRenderer
-            knobs={{
+            extraParams={{
                 text
             }}
             component="text"

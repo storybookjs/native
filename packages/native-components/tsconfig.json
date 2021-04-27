@@ -1,19 +1,24 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": [
-    "src/**/*"
-  ],
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "composite": true,
-    "jsx": "react",
-    "module": "commonjs",
-    "target": "es5",
-    "lib": [
-      "es5",
-      "es6",
-      "DOM"
+    "extends": "../../tsconfig.json",
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "composite": true,
+        "jsx": "react",
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["es5", "es6", "DOM"]
+    },
+    "references": [
+        {
+            "path": "../controllers"
+        },
+        {
+            "path": "../devices"
+        },
+        {
+            "path": "../types"
+        }
     ]
-  }
 }

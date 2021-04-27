@@ -1,15 +1,26 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": [
-    "src/**/*"
-  ],
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "composite": true,
-    "module": "commonjs",
-    "target": "es5",
-    "lib": ["es5", "es6"]
-  },
-  "references": []
+    "extends": "../../tsconfig.json",
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "composite": true,
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["es5", "es6"]
+    },
+    "references": [
+        {
+            "path": "../controllers"
+        },
+        {
+            "path": "../addon"
+        },
+        {
+            "path": "../native-components"
+        },
+        {
+            "path": "../types"
+        }
+    ]
 }

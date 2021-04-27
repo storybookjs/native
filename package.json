@@ -26,6 +26,9 @@
     "build": "lerna run build --stream",
     "build:storybook": "lerna run build:storybook --stream",
     "build:stories": "lerna run build:stories --stream",
+    "clean": "run-p clean:*",
+    "clean:node": "lerna clean -y",
+    "clean:dist": "lerna exec 'rm -rf ./dist && rm -rf ./tsconfig.tsbuildinfo'",
     "lint": "eslint --ext .ts --ext .tsx .",
     "prettier": "prettier './**/*.(ts|tsx|js|jsx)'",
     "test": "echo Test",
@@ -51,6 +54,7 @@
     "husky": "4.3.0",
     "lerna": "3.20.2",
     "lint-staged": "^10.5.4",
+    "npm-run-all": "4.1.5",
     "prettier": "^2.1.2",
     "sort-package-json": "^1.42.1",
     "typescript": "3.9.7"
