@@ -7,6 +7,13 @@ Storybook Native is an extension of the normal web storybook that uses [appetize
 
 It also supports using Storybook as a local development environment to develop Android and iOS components (just like with Web components).
 
+### Previews
+#### Appetize emulator
+![](./images/appetize-emulator.gif)
+
+#### Local emulators
+![](./images/local-emulators.gif)
+
 ### Installation
 If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code.
 
