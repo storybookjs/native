@@ -52,5 +52,5 @@ On Android, there may be instances where your emulator will not start an activit
 
 To work around this, you can add `android:launchMode="singleTask"` to your activity in your `AndroidManifest.xml` file, and create a function called `onNewIntent(intent: Intent?)` in your activity class to handle switching to a new deep link.
 
-Example [manifest file](../../examples/android-material-ui/app/app/src/main/AndroidManifest.xml#L24)
+Example [manifest file](../../examples/android-material-ui/app/app/src/main/AndroidManifest.xml#L24)  
 Example [activity class](../../examples/android-material-ui/app/app/src/main/java/com/intuit/august2020/storybookdemoapp/MainActivity.kt#L121)
