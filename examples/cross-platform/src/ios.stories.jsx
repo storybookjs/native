@@ -1,14 +1,14 @@
 import React from "react";
 import { EmulatorRenderer } from "@storybook/native-components";
 
-const IosRenderer = ({ knobs, component }) => {
+const IosRenderer = ({ extraParams, component }) => {
     return (
         <EmulatorRenderer
             apiKey="yc0e33432655wbjnnnemyghhxm"
             platform="ios"
             storyParams={{ component }}
             deepLinkBaseUrl="sb-native://deep.link"
-            knobs={knobs}
+            extraParams={extraParams}
         />
     );
 };
@@ -18,9 +18,9 @@ export default {
 };
 
 export const Button = (props) => {
-    return <IosRenderer knobs={props} component="button" />;
+    return <IosRenderer extraParams={props} component="button" />;
 };
 
 export const FAB = (props) => {
-    return <IosRenderer component="floatingbutton" knobs={props} />;
+    return <IosRenderer component="floatingbutton" extraParams={props} />;
 };

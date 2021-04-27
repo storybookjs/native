@@ -2,14 +2,14 @@ import React from "react";
 import rgbHex from "rgb-hex";
 import { EmulatorRenderer } from "@storybook/native-components";
 
-const AndroidRenderer = ({ knobs, component }) => {
+const AndroidRenderer = ({ extraParams, component }) => {
     return (
         <EmulatorRenderer
             apiKey="zv034bdme9je7c9d43chzmc2yg"
             platform="android"
             storyParams={{ component }}
             deepLinkBaseUrl="sb-native://deep.link"
-            knobs={knobs}
+            extraParams={extraParams}
         />
     );
 };
@@ -19,7 +19,7 @@ export default {
 };
 
 export const Button = (props) => {
-    return <AndroidRenderer knobs={props} component="button" />;
+    return <AndroidRenderer extraParams={props} component="button" />;
 };
 
 Button.args = {
@@ -32,7 +32,7 @@ export const FAB = (props) => {
     return (
         <AndroidRenderer
             component="floatingButton"
-            knobs={{
+            extraParams={{
                 rippleColor
             }}
         />
@@ -49,7 +49,7 @@ FAB.argTypes = {
 };
 
 export const Chip = (props) => {
-    return <AndroidRenderer component="chips" knobs={props} />;
+    return <AndroidRenderer component="chips" extraParams={props} />;
 };
 
 Chip.args = {
