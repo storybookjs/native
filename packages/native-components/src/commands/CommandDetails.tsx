@@ -8,9 +8,15 @@ export interface CommandDetailsProps {
 }
 
 export default ({ command }: CommandDetailsProps) => {
-    if (command.successful) {
-        return <SuccessMessage>{command.response}</SuccessMessage>;
+    const { successful, response, message } = command;
+    let textToRender = response;
+    if (!textToRender) {
+        textToRender = `Sent data to app: ${JSON.stringify(message, null, 2)}`;
     }
 
-    return <ErrorMessage>{command.response}</ErrorMessage>;
+    if (successful) {
+        return <SuccessMessage>{textToRender}</SuccessMessage>;
+    }
+
+    return <ErrorMessage>{textToRender}</ErrorMessage>;
 };
