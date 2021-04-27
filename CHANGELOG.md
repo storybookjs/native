@@ -1,3 +1,21 @@
+# v2.0.0 (Tue Apr 27 2021)
+
+#### 💥 Breaking Change
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-controls-example`, `@storybook/native-cross-platform-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-ios-example`, `@storybook/native-addon`, `@storybook/native-controllers`, `@storybook/deep-link-logger`, `@storybook/native-dev-middleware`, `@storybook/native-devices`, `@storybook/native-components`, `@storybook/native`, `@storybook/native-types`
+  - Support for using storybook as a local dev environment + architecture overhaul [#48](https://github.com/storybookjs/native/pull/48) ([@amalik2](https://github.com/amalik2))
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-cross-platform-example`
+  - Add cross platform storybook link to readme [#45](https://github.com/storybookjs/native/pull/45) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v1.3.0 (Thu Apr 08 2021)
 
 #### 🚀 Enhancement
