@@ -1,3 +1,18 @@
+# v2.0.1 (Tue Apr 27 2021)
+
+#### ⚠️ Pushed to `master`
+
+- `@storybook/native-dev-middleware`
+  - Update placeholder docs (Adil_Malik@intuit.com)
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-android-material-example`, `@storybook/native-controls-example`, `@storybook/native-cross-platform-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-ios-example`, `@storybook/native-addon`, `@storybook/native-controllers`, `@storybook/deep-link-logger`, `@storybook/native-dev-middleware`, `@storybook/native-devices`, `@storybook/native-components`, `@storybook/native`, `@storybook/native-types`
+  - Merge branch 'master' of https://github.com/storybookjs/native into master (Adil_Malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik (Adil_Malik@intuit.com)
+
+---
+
 # v2.0.0 (Tue Apr 27 2021)
 
 #### 💥 Breaking Change
