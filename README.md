@@ -5,13 +5,10 @@
 
 Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, etc.
 
-It also supports using Storybook as a local development environment to develop Android and iOS components (similar to Web components).
-
-### Previews
-#### Appetize emulator
 ![](./images/appetize-emulator.gif)
 
-#### Local emulators
+It also supports using Storybook as a [local development environment](packages/dev-middleware) to develop Android and iOS apps/components, without the need for using appetize.io.
+
 ![](./images/local-emulators.gif)
 
 ### Installation
@@ -39,13 +36,13 @@ Examples of how to use this module as both a build tool and as a component libra
 
 More example static storybooks can be found [here](https://storybookjs.github.io/native/)
 
-## Debugging/testing your mobile application
+## Local app development
 Details on how to test changes that you make to your mobile application to support features such as controls can be found [here](APP-TESTING.md)
 
 ## Migrating from version 1 to version 2
 A full migration guide for breaking changes can be found [here](MIGRATION.md)
 
-## Local development in this repo
+## Development in this repo
  - Clone this repo
  - Run yarn to install dependencies
  - `yarn build && cd examples/flutter && yarn start`  
