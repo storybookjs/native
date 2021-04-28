@@ -2,7 +2,7 @@
 
 This package allows you to control an emulator open on your local device by interacting with storybook. It only supports stories that use deep linking.
 
-To use this package, you must have an emulator open on your local machine through `adb` (for Android apps), or through `xcrun` (for iOS apps)
+To use this package, you must have an emulator open on your local machine through `adb` (for Android apps), or through `xcrun` (for iOS apps). You can also open your app from either Android Studio or XCode directly.
 
 ## Installation
 `npm install @storybook/native-dev-middleware`
