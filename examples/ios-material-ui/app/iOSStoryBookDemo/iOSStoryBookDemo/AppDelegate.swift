@@ -66,9 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchOption: String = UserDefaults.standard.string(forKey: AppDelegate.launch_option) ?? ""
         if launchOption.lowercased() == DemoPageType.main.rawValue {
             UserDefaults.standard.set(true, forKey: isDeveloper)
-            launchDemoPage( DemoAppType.developer, DemoPageType.main )
+            launchDemoPage( DemoAppType.developer, DemoPageType.main, [:])
         } else if  AppDelegate.fromAppetize() {
-            launchGalleryFromAppetize(launchOption)
+            launchGalleryFromAppetize(launchOption, [:])
         } else {
             UserDefaults.standard.set(true, forKey: isDeveloper)
         }
@@ -91,20 +91,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 parameters[$0.name] = $0.value
             }
             
-            launchGalleryFromAppetize(parameters["component"]!)
+            launchGalleryFromAppetize(parameters["component"]!, parameters)
         }
         return true
     }
     
-    func launchGalleryFromAppetize(_ launchOption: String) {
+    func launchGalleryFromAppetize(_ launchOption: String, _ params: [String: String]) {
         var launchOption = launchOption
         if launchOption.isEmpty {
             launchOption = DemoPageType.main.rawValue
         }
         if let pageType = DemoPageType(rawValue: launchOption.lowercased()) {
-            launchDemoPage( DemoAppType.gallery, pageType )
+            launchDemoPage( DemoAppType.gallery, pageType, params)
         } else {
-            launchDemoPage( DemoAppType.gallery, DemoPageType.main )
+            launchDemoPage( DemoAppType.gallery, DemoPageType.main, params)
         }
     }
     
@@ -112,17 +112,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch demoAppType {
         case .gallery:
             AppDelegate.setGalleryDemoAppUserDefaults()
-            launchDemoPage(DemoAppType.gallery, DemoPageType.main)
+            launchDemoPage(DemoAppType.gallery, DemoPageType.main, [:])
         default:
             AppDelegate.resetGalleryDemoApppUserDefaults()
-            launchDemoPage( DemoAppType.developer, DemoPageType.main )
+            launchDemoPage( DemoAppType.developer, DemoPageType.main, [:])
         }
     }
     
-    func launchDemoPage(_ demoAppType: DemoAppType, _ demoPage: DemoPageType) {
+    func launchDemoPage(_ demoAppType: DemoAppType, _ demoPage: DemoPageType, _ params: [String: String]) {
         let nvc = navigationController(demoAppType)
         let menuVC = viewController(DemoPageType.main)
+        
         let VCToLaunch = viewController(demoPage)
+        if let controlsProtocol = VCToLaunch as? StorybookControlsProtocol {
+            controlsProtocol.loadControls(params)
+        }
         
         switch demoAppType {
         default:

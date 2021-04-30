@@ -16,6 +16,7 @@
   "keywords": [],
   "dependencies": {
     "@storybook/native": "link:../../packages/native",
-    "@storybook/native-addon": "link:../../packages/addon"
+    "@storybook/native-addon": "link:../../packages/addon",
+    "@storybook/native-dev-middleware": "link:../../packages/dev-middleware"
   }
 }

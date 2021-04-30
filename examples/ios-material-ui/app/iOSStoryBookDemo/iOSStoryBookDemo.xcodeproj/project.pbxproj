@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1770CD59263C94DC006EFB54 /* StorybookControlsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1770CD58263C94DC006EFB54 /* StorybookControlsProtocol.swift */; };
 		18EF26042501B62800B5A32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF26032501B62800B5A32B /* AppDelegate.swift */; };
 		18EF260D2501B62900B5A32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EF260C2501B62900B5A32B /* Assets.xcassets */; };
 		18EF26102501B62900B5A32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF260E2501B62900B5A32B /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1770CD58263C94DC006EFB54 /* StorybookControlsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorybookControlsProtocol.swift; sourceTree = "<group>"; };
 		18EF26002501B62800B5A32B /* iOSStoryBookDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStoryBookDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EF26032501B62800B5A32B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18EF260C2501B62900B5A32B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				18EF260C2501B62900B5A32B /* Assets.xcassets */,
 				18EF260E2501B62900B5A32B /* LaunchScreen.storyboard */,
 				18EF26112501B62900B5A32B /* Info.plist */,
+				1770CD58263C94DC006EFB54 /* StorybookControlsProtocol.swift */,
 			);
 			path = iOSStoryBookDemo;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				6FFBDE7D252B640A00F9DE23 /* TextFieldViewController.swift in Sources */,
 				6F46DA1F252C03D500F30E94 /* label.swift in Sources */,
 				6FFBDE86252BD7A700F9DE23 /* SpinnerViewController.swift in Sources */,
+				1770CD59263C94DC006EFB54 /* StorybookControlsProtocol.swift in Sources */,
 				6FFBDE71252B53EE00F9DE23 /* AnimationTransactions.swift in Sources */,
 				6FFBDE6F252B53EE00F9DE23 /* CALayer+Extensions.swift in Sources */,
 				6FFBDE88252BE11900F9DE23 /* SliderViewController.swift in Sources */,

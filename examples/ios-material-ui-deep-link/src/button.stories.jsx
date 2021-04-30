@@ -1,5 +1,4 @@
 import React from "react";
-import { Description } from "@storybook/addon-docs/blocks";
 import { EmulatorRenderer } from "@storybook/native-components";
 
 export default {
@@ -18,8 +17,6 @@ export const Example = (props) => {
     );
 };
 
-Example.parameters = {
-    docs: {
-        page: () => <Description markdown={undefined} />
-    }
+Example.args = {
+    label: "Button"
 };

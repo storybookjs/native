@@ -3,7 +3,8 @@ import {
     openDeepLink,
     ControllerManager,
     ACTION_EVENT_NAME,
-    store
+    store,
+    getAppetizeIframeId
 } from "@storybook/native-controllers";
 import { useDevice } from "@storybook/native-devices";
 import { EmulatorActions } from "@storybook/native-types";
@@ -12,24 +13,6 @@ import { Provider } from "react-redux";
 
 import type { DeepLinkRendererProps } from "../types";
 import CommandsList from "../commands/CommandsList";
-
-// TODO: use constant for ID, include context
-const renderedIFrameCss = `
-    #appetize-iframe {
-        display: block;
-    }
-`;
-
-// TODO: use constant for ID, include context
-const persistentIFrameCss = `
-    #root[hidden="true"] ~ #appetize-iframe {
-        display: none;
-    }
-
-    #appetize-iframe {
-        display: none;
-    }
-`;
 
 const manager = new ControllerManager();
 
@@ -76,6 +59,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
         const controller = manager.getController(context);
+        console.error(`navigating with controller`);
+        console.error(controller);
         openDeepLink(
             {
                 deepLinkBaseUrl,
@@ -92,7 +77,17 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     ]);
 
     React.useEffect(() => {
-        const elementId = "native-iframe-css";
+        const elementId = `native-iframe-css-${context || ""}`;
+        const persistentIFrameCss = `
+        #root[hidden="true"] ~ #${getAppetizeIframeId(context)} {
+            display: none;
+        }
+    
+        #${getAppetizeIframeId(context)} {
+            display: none;
+        }
+        `;
+
         const existingStyle = document.head.querySelector(`#${elementId}`);
         if (!existingStyle) {
             const style = document.createElement("style");
@@ -100,7 +95,13 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             style.id = elementId;
             document.head.appendChild(style);
         }
-    }, []);
+    }, [context]);
+
+    const renderedIFrameCss = `
+    #${getAppetizeIframeId(context)} {
+        display: block;
+    }
+    `;
 
     return (
         <Provider store={store}>
