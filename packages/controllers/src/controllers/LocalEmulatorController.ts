@@ -61,11 +61,6 @@ export default class LocalEmulatorController implements EmulatorController {
     // TODO: start up emulator if needed
     createEmulator(): void {}
 
-    // TODO: implement
-    destroyEmulator(): void {
-        throw new Error("Method not implemented.");
-    }
-
     openDeepLink(deepLinkUrl: string) {
         if (!this.config) {
             throw new Error(
