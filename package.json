@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "lerna run build --stream",
-    "build:storybook": "export NODE_OPTIONS=\"--max_old_space_size=2048\" && lerna run build:storybook --stream",
+    "build:storybook": "lerna run build:storybook --stream",
     "build:stories": "lerna run build:stories --stream",
     "clean": "run-p clean:*",
     "clean:node": "lerna clean -y",
@@ -33,7 +33,7 @@
     "prettier": "prettier './**/*.(ts|tsx|js|jsx)'",
     "test": "echo Test",
     "release": "auto shipit -vv",
-    "release:storybook": "yarn build:stories && storybook-to-ghpages --ci --packages examples"
+    "release:storybook": "export NODE_OPTIONS=\"--max_old_space_size=2048\" && yarn build:stories && storybook-to-ghpages --ci --packages examples"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.0.2",
