@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "lerna run build --stream",
-    "build:storybook": "lerna run build:storybook --stream",
+    "build:storybook": "bash ./scripts/buildExamples.sh",
     "build:stories": "lerna run build:stories --stream",
     "clean": "run-p clean:*",
     "clean:node": "lerna clean -y",
@@ -40,7 +40,7 @@
     "@auto-it/conventional-commits": "10.0.2",
     "@auto-it/first-time-contributor": "10.0.2",
     "@auto-it/released": "10.0.2",
-    "@storybook/storybook-deployer": "^2.8.7",
+    "@storybook/storybook-deployer": "2.8.7",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
     "auto": "10.0.2",
