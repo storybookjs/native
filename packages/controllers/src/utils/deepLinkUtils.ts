@@ -1,9 +1,10 @@
 const getQueryString = (data: Record<string, any>) => {
     return Object.keys(data)
-        .map(
-            (key) =>
-                `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
+        .map((key) => {
+            return `${encodeURIComponent(key)}=${encodeURIComponent(
+                data[key]
+            )}`;
+        })
         .join("&");
 };
 
