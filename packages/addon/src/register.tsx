@@ -4,6 +4,8 @@ import { Icons, IconButton } from "@storybook/components";
 import { ACTION_EVENT_NAME } from "@storybook/native-controllers";
 import { DeepLinksContainer } from "@storybook/deep-link-logger";
 import { EmulatorActions } from "@storybook/native-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUndo, faRedo } from "@fortawesome/free-solid-svg-icons";
 
 import { ADDON_ID, DEEP_LINKS_PARAM_KEY } from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
@@ -29,7 +31,7 @@ addons.register(ADDON_ID, (api) => {
         title: "Rotate left",
         render: () => (
             <IconButton title="Rotate left" onClick={rotateLeft}>
-                <Icons icon="arrowleft" />
+                <FontAwesomeIcon size="sm" icon={faUndo} />
             </IconButton>
         )
     });
@@ -39,7 +41,7 @@ addons.register(ADDON_ID, (api) => {
         title: "Rotate right",
         render: () => (
             <IconButton title="Rotate right" onClick={rotateRight}>
-                <Icons icon="arrowright" />
+                <FontAwesomeIcon size="sm" icon={faRedo} />
             </IconButton>
         )
     });
