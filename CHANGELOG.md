@@ -1,3 +1,16 @@
+# v2.1.0 (Fri May 21 2021)
+
+#### 🚀 Enhancement
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-cross-platform-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-controllers`, `@storybook/native-components`
+  - Add support for multiple emulators when deep linking [#60](https://github.com/storybookjs/native/pull/60) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v2.0.2 (Thu May 13 2021)
 
 :tada: This release contains work from a new contributor! :tada:
