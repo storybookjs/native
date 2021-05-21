@@ -44,20 +44,6 @@ class ButtonViewController: UIViewController, StorybookControlsProtocol {
             outLinedButton.setTitle(params["label"], for: UIControl.State.normal)
             containedButton.setTitle(params["label"], for: UIControl.State.normal)
         }
-        
-        if (params["type"] != nil) {
-            let type = params["type"]
-            if (type == "text") {
-                outLinedButton.isHidden = true
-                containedButton.isHidden = true
-            } else if (type == "outlined") {
-                textButton.isHidden = true
-                containedButton.isHidden = true
-            } else if (type == "contained") {
-                textButton.isHidden = true
-                outLinedButton.isHidden = true
-            }
-        }
     }
     func buttonResize() {
         let buttonVerticalInset =

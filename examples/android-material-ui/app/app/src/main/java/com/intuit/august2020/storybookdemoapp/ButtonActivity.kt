@@ -11,7 +11,9 @@ class ButtonActivity : AppCompatActivity() {
 
         if (intent.hasExtra("label")) {
             var label = intent.getStringExtra("label");
-            outlinedButton.text = label;
+            textButton.text = label
+            outlinedButton.text = label
+            containedButton.text = label
         }
     }
 }
