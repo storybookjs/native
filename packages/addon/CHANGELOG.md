@@ -1,3 +1,15 @@
+# v2.1.1 (Fri May 21 2021)
+
+#### 🐛 Bug Fix
+
+- Add better rotation icons [#61](https://github.com/storybookjs/native/pull/61) ([@amalik2](https://github.com/amalik2))
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v2.0.1 (Tue Apr 27 2021)
 
 #### ⚠️ Pushed to `master`
