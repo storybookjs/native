@@ -5,58 +5,47 @@ const axios = require("axios");
 const components = [
     {
         name: "button",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
     },
     {
         name: "floatingButton",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/FloatingActionButton.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/FloatingActionButton.md"
     },
     {
         name: "card",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Card.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Card.md"
     },
     {
         name: "chips",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Chip.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Chip.md"
     },
     {
         name: "dialogs",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Dialog.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Dialog.md"
     },
     {
         name: "radio",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/RadioButton.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/RadioButton.md"
     },
     {
         name: "switch",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Switch.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Switch.md"
     },
     {
         name: "slider",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Slider.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Slider.md"
     },
     {
         name: "snackbar",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Snackbar.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Snackbar.md"
     },
     {
         name: "tabs",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Tabs.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Tabs.md"
     },
     {
         name: "textfield",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/TextField.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/TextField.md"
     }
 ];
 
@@ -75,7 +64,8 @@ const promises = components.map(async (component) => {
                 },
                 docs: docsRequest.data
             }
-        ]
+        ],
+        deepLinkUrl: "sb-native://deep.link"
     });
 });
 

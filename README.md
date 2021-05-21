@@ -1,6 +1,6 @@
 # Storybook Native
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, etc.
@@ -17,7 +17,7 @@ Before using this, ensure that you have installed [NodeJS](https://nodejs.org/en
 If you want to use this module to render an emulator as a 
 React component, [follow the instructions here](packages/native-components/README.md). This is recommended if you are already familiar with React and Storybook, or if you want to use features such as addons and controls.
 
-If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code. If you use this package, you will not have to install any storybook dependencies, as they will already be included.
+If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code. If you use this package, you will not have to install any extra Storybook dependencies, as they will already be included.
 
 ## Configuring your mobile application
 Before using this module, your mobile application must be set up to support switching between stories. There are detailed instructions on this [here](APP-CONFIG.md)
@@ -62,6 +62,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://shilman.net/"><img src="https://avatars2.githubusercontent.com/u/488689?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Shilman</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=shilman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/amalik2"><img src="https://avatars1.githubusercontent.com/u/25858348?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adil Malik</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=amalik2" title="Code">💻</a> <a href="https://github.com/storybookjs/native/commits?author=amalik2" title="Documentation">📖</a> <a href="#example-amalik2" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/vasikarla"><img src="https://avatars0.githubusercontent.com/u/1945958?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raj Vasikarla</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=vasikarla" title="Documentation">📖</a> <a href="https://github.com/storybookjs/native/commits?author=vasikarla" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/apps/imgbot"><img src="https://avatars.githubusercontent.com/in/4706?v=4?s=100" width="100px;" alt=""/><br /><sub><b>imgbot[bot]</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=imgbot[bot]" title="Code">💻</a></td>
   </tr>
 </table>
 

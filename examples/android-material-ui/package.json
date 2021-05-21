@@ -1,8 +1,8 @@
 {
-  "name": "@storybook/native-android-material-example",
-  "version": "2.0.1",
+  "name": "@storybook/native-android-material-deep-link-example",
+  "version": "2.0.2",
   "private": true,
-  "description": "An android demo app for storybook native (launch parameters - slow)",
+  "description": "An android demo app for storybook native",
   "repository": "",
   "author": "Vanya Sehgal <vanya_sehgal@intuit.com>",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "Vanya Sehgal <vanya_sehgal@intuit.com>"
   ],
   "scripts": {
-    "start": "yarn build:stories && yarn start-storybook",
+    "start": "yarn build:stories && yarn start-storybook -p 53743",
     "build:storybook": "yarn build:stories && yarn build-storybook",
     "build:stories": "node ./generate.js"
   },

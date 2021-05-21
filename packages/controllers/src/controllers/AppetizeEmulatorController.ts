@@ -66,11 +66,6 @@ export default class AppetizeEmulatorController implements EmulatorController {
         window.addEventListener("message", this.handleIncomingMessage, false);
     }
 
-    // TODO: implement this
-    public destroyEmulator() {
-        throw new Error("Method not implemented.");
-    }
-
     public openDeepLink(deepLinkUrl: string) {
         this.sendMessage({
             message: { type: "url", value: deepLinkUrl },

@@ -1,3 +1,33 @@
+# v2.0.2 (Thu May 13 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Imgbot ([@ImgBotApp](https://github.com/ImgBotApp)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Fix build errors [#59](https://github.com/storybookjs/native/pull/59) (Adil_Malik@intuit.com)
+- Add preview gifs to readme [#51](https://github.com/storybookjs/native/pull/51) (Adil_Malik@intuit.com)
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-ios-example-deep-link`
+  - [ImgBot] Optimize images [#52](https://github.com/storybookjs/native/pull/52) ([@ImgBotApp](https://github.com/ImgBotApp) [@imgbot[bot]](https://github.com/imgbot[bot]))
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-controllers`
+  - Remove unused method from controllers [#58](https://github.com/storybookjs/native/pull/58) (Adil_Malik@intuit.com)
+- `@storybook/deep-link-logger`, `@storybook/native-dev-middleware`
+  - Enhance readme files [#53](https://github.com/storybookjs/native/pull/53) (Adil_Malik@intuit.com)
+
+#### ⚠️ Pushed to `master`
+
+- Update old line number (Adil_Malik@intuit.com)
+- Readme installation details (Adil_Malik@intuit.com)
+
+#### Authors: 3
+
+- [@imgbot[bot]](https://github.com/imgbot[bot])
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+- Imgbot ([@ImgBotApp](https://github.com/ImgBotApp))
+
+---
+
 # v2.0.1 (Tue Apr 27 2021)
 
 #### ⚠️ Pushed to `master`

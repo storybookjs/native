@@ -6,8 +6,6 @@ export default interface EmulatorController {
 
     createEmulator(): void;
 
-    destroyEmulator(): void;
-
     openDeepLink(deepLinkUrl: string): void;
 
     getContext(): EmulatorContext | undefined;
