@@ -1,5 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import type { EmulatorContext, EmulatorConfig } from "@storybook/native-types";
+import { debounce } from "lodash";
+import { logDeepLink } from "@storybook/deep-link-logger";
 
 import EmulatorController from "./EmulatorController";
 import {
@@ -66,12 +68,17 @@ export default class AppetizeEmulatorController implements EmulatorController {
         window.addEventListener("message", this.handleIncomingMessage, false);
     }
 
-    public openDeepLink(deepLinkUrl: string) {
+    private undebouncedOpenDeepLink(deepLinkUrl: string) {
+        logDeepLink(deepLinkUrl);
         this.sendMessage({
             message: { type: "url", value: deepLinkUrl },
             requireConnection: true
         });
     }
+
+    public openDeepLink = debounce((deepLinkUrl: string) => {
+        this.undebouncedOpenDeepLink(deepLinkUrl);
+    }, 400);
 
     public getContext() {
         return this.emulatorContext;

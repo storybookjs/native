@@ -1,10 +1,10 @@
 import React from "react";
 import {
-    openDeepLink,
     ControllerManager,
     ACTION_EVENT_NAME,
     store,
-    getAppetizeIframeId
+    getAppetizeIframeId,
+    getFullDeepLinkUrl
 } from "@storybook/native-controllers";
 import { useDevice } from "@storybook/native-devices";
 import { EmulatorActions } from "@storybook/native-types";
@@ -59,15 +59,11 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
         const controller = manager.getController(context);
-        console.error(`navigating with controller`);
-        console.error(controller);
-        openDeepLink(
-            {
-                deepLinkBaseUrl,
-                storyParams: storyParamsWithExtras
-            },
-            controller
+        const newAppUrl = getFullDeepLinkUrl(
+            deepLinkBaseUrl,
+            storyParamsWithExtras
         );
+        controller.openDeepLink(newAppUrl);
     }, [
         device,
         JSON.stringify(storyParamsWithExtras),
