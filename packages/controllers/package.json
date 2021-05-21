@@ -24,7 +24,7 @@
     "@storybook/native-types": "link:../types",
     "@types/lodash.debounce": "^4.0.6",
     "axios": "^0.21.1",
-    "lodash.debounce": "^4.0.8",
+    "lodash": "^4.17.21",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"

@@ -5,6 +5,9 @@ import {
     EmulatorActions,
     EmulatorRotation
 } from "@storybook/native-types";
+import { debounce } from "lodash";
+import { logDeepLink } from "@storybook/deep-link-logger";
+
 import { performCommand } from "../state/commandsSlice";
 import { dispatchThunk } from "../state/store";
 
@@ -61,7 +64,8 @@ export default class LocalEmulatorController implements EmulatorController {
     // TODO: start up emulator if needed
     createEmulator(): void {}
 
-    openDeepLink(deepLinkUrl: string) {
+    private undebouncedOpenDeepLink(deepLinkUrl: string) {
+        logDeepLink(deepLinkUrl);
         if (!this.config) {
             throw new Error(
                 `No config was set for emulator: ${this.emulatorContext}`
@@ -74,6 +78,10 @@ export default class LocalEmulatorController implements EmulatorController {
         });
         dispatchThunk(thunk);
     }
+
+    public openDeepLink = debounce((deepLinkUrl: string) => {
+        this.undebouncedOpenDeepLink(deepLinkUrl);
+    }, 400);
 
     getContext() {
         return this.emulatorContext;
