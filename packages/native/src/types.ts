@@ -12,5 +12,6 @@ export interface Config {
     apiKey: string;
     platform: Platform;
     stories: StoryParams[];
+    controls: [string, unknown][];
     deepLinkUrl?: string;
 }
