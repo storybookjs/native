@@ -1,0 +1,11 @@
+<%= storyName %>.args = {
+    <% _.each(controls, function(control){ %>
+    <% if (control[1] === '') { %>
+    <%= control[0] %>: "Default",
+    <% } else if (typeof control[1] == 'boolean') { %>
+    <%= control[0] %>: <%= control[1] %>,
+    <% } else { %>
+    <%= control[0] %>: "<%= control[1][0] %>",
+    <% } %>
+    <% }); %>
+};
