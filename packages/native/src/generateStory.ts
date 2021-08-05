@@ -6,34 +6,38 @@ import { Config, StoryParams } from "./types";
 
 export const generateStory = async (
     { name, appParams, docs }: StoryParams,
-    config: Config
+    config: Config,
+    isControl: boolean
 ): Promise<string> => {
     const storyTemplatePath = path.join(__dirname, "..", "story.template");
     const storyTemplate = await fs.readFile(storyTemplatePath, "utf8");
     const storyCompiled = _.template(storyTemplate);
 
-    const templatePath = path.join(__dirname, "..", "defaults.template");
-    const template = await fs.readFile(templatePath, "utf8");
-    const compiled = _.template(template);
+    const defaultArgsTemplatePath = path.join(__dirname, "..", "defaults.template");
+    const defaultArgsTemplate = await fs.readFile(defaultArgsTemplatePath, "utf8");
+    const compiledDefaultArgs = _.template(defaultArgsTemplate);
 
     const docsContent = docs ? docs.replace(/`/g, "\\`") : undefined;
+    const storyName = isControl? `${name}Playground` : name
 
-    return (
-        storyCompiled({
-            storyName: name,
-            apiKey: config.apiKey,
-            platform: config.platform,
-            storyParams: JSON.stringify(appParams),
-            deepLinkBaseUrl: config.deepLinkUrl
-                ? `"${config.deepLinkUrl}"`
-                : "undefined",
-            docsContent: docsContent ? `\`${docsContent}\`` : "undefined"
-        }) +
-        "\n" +
-        compiled({
-            storyName: name,
+    const standardStory = storyCompiled({
+        storyName: storyName,
+        apiKey: config.apiKey,
+        platform: config.platform,
+        storyParams: JSON.stringify(appParams),
+        deepLinkBaseUrl: config.deepLinkUrl
+            ? `"${config.deepLinkUrl}"`
+            : "undefined",
+        docsContent: docsContent ? `\`${docsContent}\`` : "undefined"
+    })
+
+    if (!isControl) {
+        return standardStory
+    } else {
+        return standardStory + "\n" + compiledDefaultArgs({
+            storyName: storyName,
             controls: config.controls
         })
-    );
+    }
 
 };

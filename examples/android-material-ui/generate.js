@@ -73,12 +73,11 @@ const components = [
 ];
 
 const promises = components
-    .filter((x) => x.control != undefined)
     .map(async (component) => {
         const docsRequest = await axios.get(component.docs);
-        return generateControlledStories({
+        return generateStories({
             category: pascalCase(component.name),
-            filePath: `./stories/${component.name}.playground.stories.jsx`,
+            filePath: `./stories/${component.name}.stories.jsx`,
             apiKey: "zv034bdme9je7c9d43chzmc2yg",
             platform: "android",
             stories: [
@@ -90,7 +89,7 @@ const promises = components
                     docs: docsRequest.data
                 }
             ],
-            controls: Object.entries(component.control),
+            controls: component.control ? Object.entries(component.control) : undefined,
             deepLinkUrl: "sb-native://deep.link"
         });
     });

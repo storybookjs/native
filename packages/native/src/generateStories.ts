@@ -11,7 +11,7 @@ export const generateStories = async (config: Config): Promise<void> => {
     const compiled = _.template(template);
 
     const storiesContent = await Promise.all(
-        config.stories.map(async (story) => generateStory(story, config))
+        config.stories.map(async (story) => generateStory(story, config, false))
     );
     const storyFileData = compiled({
         category: config.category,
@@ -20,30 +20,31 @@ export const generateStories = async (config: Config): Promise<void> => {
 
     await fs.ensureDir(path.dirname(config.filePath));
     await fs.writeFile(config.filePath, storyFileData);
+
+    if (typeof config.controls !== 'undefined') {
+        const templatePath = path.join(__dirname, "..", "categoryControl.template");
+        const template = await fs.readFile(templatePath, "utf8");
+        const compiled = _.template(template);
+        const transformedControls = config.controls.map((item) => {
+            return stringify(item);
+        });
+
+        const storiesContent = await Promise.all(
+            config.stories.map(async (story) => generateStory(story, config, true))
+        );
+        const storyFileData = compiled({
+            category: config.category,
+            controls: transformedControls,
+            stories: storiesContent.join("\n")
+        });
+
+        const playgroundPath = config.filePath.replace('.jsx', '.playground.jsx')
+        await fs.ensureDir(path.dirname(playgroundPath));
+        await fs.writeFile(playgroundPath, storyFileData);
+    }
 };
 
-export const generateControlledStories = async (
-    config: Config
-): Promise<void> => {
-    const templatePath = path.join(__dirname, "..", "categoryControl.template");
-    const template = await fs.readFile(templatePath, "utf8");
-    const compiled = _.template(template);
-    const usableControls = config.controls.map((item) => {
-        return stringify(item);
-    });
 
-    const storiesContent = await Promise.all(
-        config.stories.map(async (story) => generateStory(story, config))
-    );
-    const storyFileData = compiled({
-        category: config.category,
-        controls: usableControls,
-        stories: storiesContent.join("\n")
-    });
-
-    await fs.ensureDir(path.dirname(config.filePath));
-    await fs.writeFile(config.filePath, storyFileData);
-};
 
 function stringify(entry: [string, unknown]): [string, string] {
     if (Array.isArray(entry[1])) {
