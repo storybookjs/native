@@ -25,7 +25,7 @@ export const generateStories = async (config: Config): Promise<void> => {
 export const generateControlledStories = async (
     config: Config
 ): Promise<void> => {
-    const templatePath = path.join(__dirname, "..", "category.template");
+    const templatePath = path.join(__dirname, "..", "categoryControl.template");
     const template = await fs.readFile(templatePath, "utf8");
     const compiled = _.template(template);
     const usableControls = config.controls.map((item) => {

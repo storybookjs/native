@@ -10,7 +10,12 @@ const components = [
             variant: ["primary", "passive", "special", "destructive"],
             size: ["small", "medium", "large"],
             fill: ["solid", "ghost", "text"],
-            something: false
+            switch: false,
+            progress: {
+                min: 0,
+                max: 1,
+                increment: 0.2
+            }
         },
         docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
 

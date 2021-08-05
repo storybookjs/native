@@ -4,7 +4,7 @@
     <%= control[0] %>: "Default",
     <% } else if (typeof control[1] == 'boolean') { %>
     <%= control[0] %>: <%= control[1] %>,
-    <% } else { %>
+    <% } else if (!control[1].hasOwnProperty('min') && !control[1].hasOwnProperty('max')) { %>
     <%= control[0] %>: "<%= control[1][0] %>",
     <% } %>
     <% }); %>

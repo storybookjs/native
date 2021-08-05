@@ -3,22 +3,7 @@ import { Description } from '@storybook/addon-docs/blocks';
 import { EmulatorRenderer } from '@storybook/native-components';
 
 export default { 
-    title: '<%= category %>',
-    argTypes: {
-        <% _.each(controls, function(control){ %>
-        <% if (control[1].startsWith("[") && control[1].endsWith("]")) { %>
-        <%= control[0] %>: {
-            control: {
-                type: 'select',
-                options: <%= control[1] %>
-            }
-        },
-        <% } else { %>
-        <%= control[0] %>: "<%= control[1] %>",
-        <% } %>
-        <% }); %>
-    }
-
+    title: '<%= category %>'
 };
 
 <%= stories %>
