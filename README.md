@@ -17,7 +17,7 @@ Before using this, ensure that you have installed [NodeJS](https://nodejs.org/en
 If you want to use this module to render an emulator as a 
 React component, [follow the instructions here](packages/native-components/README.md). This is recommended if you are already familiar with React and Storybook, or if you want to use features such as addons and controls.
 
-If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code. If you use this package, you will not have to install any extra Storybook dependencies, as they will already be included.
+If you want to use this module as a build tool that generates stories from metadata, [follow the instructions here](packages/native/README.md). This package supports limited variations of controls generation. This is recommended if you do not want to write any React code, and you will only have to write some basic JavaScript code. If you use this package, you will not have to install any extra Storybook dependencies, as they will already be included.
 
 ## Configuring your mobile application
 Before using this module, your mobile application must be set up to support switching between stories. There are detailed instructions on this [here](APP-CONFIG.md)
