@@ -1,4 +1,4 @@
-const { generateStories, generateControlledStories } = require("@storybook/native");
+const { generateStories } = require("@storybook/native");
 const { pascalCase } = require("change-case");
 const axios = require("axios");
 
@@ -7,9 +7,7 @@ const components = [
         name: "button",
         control: {
             label: "",
-            variant: ["primary", "passive", "special", "destructive"],
-            size: ["small", "medium", "large"],
-            fill: ["solid", "ghost", "text"],
+            variant: ["small", "medium", "large"],
             switch: false,
             progress: {
                 min: 0,

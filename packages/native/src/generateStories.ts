@@ -2,14 +2,11 @@ import fs from "fs-extra";
 import path from "path";
 import _ from "lodash";
 
-import { generateStory } from "./generateStory";
+import { createTemplate, generateStory } from "./generateStory";
 import { Config } from "./types";
 
 export const generateStories = async (config: Config): Promise<void> => {
-    const templatePath = path.join(__dirname, "..", "category.template");
-    const template = await fs.readFile(templatePath, "utf8");
-    const compiled = _.template(template);
-
+    const compiled = await createTemplate("category.template");
     const storiesContent = await Promise.all(
         config.stories.map(async (story) => generateStory(story, config, false))
     );
@@ -22,9 +19,7 @@ export const generateStories = async (config: Config): Promise<void> => {
     await fs.writeFile(config.filePath, storyFileData);
 
     if (typeof config.controls !== 'undefined') {
-        const templatePath = path.join(__dirname, "..", "categoryControl.template");
-        const template = await fs.readFile(templatePath, "utf8");
-        const compiled = _.template(template);
+        const compiled = await createTemplate("categoryControl.template");
         const transformedControls = config.controls.map((item) => {
             return stringify(item);
         });
@@ -43,8 +38,6 @@ export const generateStories = async (config: Config): Promise<void> => {
         await fs.writeFile(playgroundPath, storyFileData);
     }
 };
-
-
 
 function stringify(entry: [string, unknown]): [string, string] {
     if (Array.isArray(entry[1])) {
