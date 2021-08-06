@@ -19,8 +19,8 @@ To use this module, you must create a node script [such as this example one](../
    - appParams: Either an object that gets passed to your application when it first launches, or an object representing query string parameters for deep linking. This is what is used to determine which component or page to load in your application, and it can also be used to handle other logic such as theming.
    - docs (optional): Documentation that you want to show up in the storybook docs panel
  - controls: A list of key-value pairs. The key represents the control option, and the value is a data type describing the control configuration, used to generate the story. Currently, supported types include:
-   - a list of strings for a `select` option 
-   - a simple string for an editable text field (defaulting to `Default` if left empty) 
-   - a boolean for a `switch`
-   - or an object with 3 keys: min/max/increment for a `number`
+   - an array of strings for a `select` option (default to the first value in the array)
+   - a simple string for an editable text field (default to `Default` if left empty) 
+   - a boolean for a `switch` (default to the set value)
+   - or an object with 3 keys: min/max/increment for a `number` (no default value)
  - deepLinkUrl: An optional base URL that is required only if you are using deep linking. Your application must be set to handle incoming URLs for this host (example: sb-native://deep.link)
