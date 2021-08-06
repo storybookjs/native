@@ -70,27 +70,26 @@ const components = [
     }
 ];
 
-const promises = components
-    .map(async (component) => {
-        const docsRequest = await axios.get(component.docs);
-        return generateStories({
-            category: pascalCase(component.name),
-            filePath: `./stories/${component.name}.stories.jsx`,
-            apiKey: "zv034bdme9je7c9d43chzmc2yg",
-            platform: "android",
-            stories: [
-                {
-                    name: "Example",
-                    appParams: {
-                        component: component.name
-                    },
-                    docs: docsRequest.data
-                }
-            ],
-            controls: component.control ? Object.entries(component.control) : undefined,
-            deepLinkUrl: "sb-native://deep.link"
-        });
+const promises = components.map(async (component) => {
+    const docsRequest = await axios.get(component.docs);
+    return generateStories({
+        category: pascalCase(component.name),
+        filePath: `./stories/${component.name}.stories.jsx`,
+        apiKey: "zv034bdme9je7c9d43chzmc2yg",
+        platform: "android",
+        stories: [
+            {
+                name: "Example",
+                appParams: {
+                    component: component.name
+                },
+                docs: docsRequest.data
+            }
+        ],
+        controls: component.control ? Object.entries(component.control) : undefined,
+        deepLinkUrl: "sb-native://deep.link"
     });
+});
 
 Promise.all(promises).catch((err) => {
     console.error(err);
