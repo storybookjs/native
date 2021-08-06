@@ -6,7 +6,9 @@
   "files": [
     "dist",
     "story.template",
-    "category.template"
+    "category.template",
+    "defaults.template",
+    "categoryControl.template"
   ],
   "repository": "https://github.com/storybookjs/native.git",
   "author": "Adil Malik <adil_malik@intuit.com>",
