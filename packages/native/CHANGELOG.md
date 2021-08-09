@@ -1,3 +1,19 @@
+# v2.2.0 (Mon Aug 09 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@brocollie08](https://github.com/brocollie08), for all your work!
+
+#### 🚀 Enhancement
+
+- Enhanced Story Generation [#63](https://github.com/storybookjs/native/pull/63) ([@brocollie08](https://github.com/brocollie08))
+
+#### Authors: 1
+
+- [@brocollie08](https://github.com/brocollie08)
+
+---
+
 # v2.0.1 (Tue Apr 27 2021)
 
 #### ⚠️ Pushed to `master`

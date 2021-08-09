@@ -1,3 +1,20 @@
+# v2.2.0 (Mon Aug 09 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@brocollie08](https://github.com/brocollie08), for all your work!
+
+#### 🚀 Enhancement
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native`
+  - Enhanced Story Generation [#63](https://github.com/storybookjs/native/pull/63) ([@brocollie08](https://github.com/brocollie08))
+
+#### Authors: 1
+
+- [@brocollie08](https://github.com/brocollie08)
+
+---
+
 # v2.1.1 (Fri May 21 2021)
 
 #### 🐛 Bug Fix
