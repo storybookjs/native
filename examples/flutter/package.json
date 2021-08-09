@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-flutter-example",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "private": true,
   "description": "A Flutter demo app showcasing cross-platform controls",
   "repository": "",
