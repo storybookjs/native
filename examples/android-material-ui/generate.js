@@ -5,8 +5,18 @@ const axios = require("axios");
 const components = [
     {
         name: "button",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
+        control: {
+            label: "",
+            variant: ["small", "medium", "large"],
+            switch: false,
+            progress: {
+                min: 0,
+                max: 1,
+                increment: 0.2
+            }
+        },
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
+
     },
     {
         name: "floatingButton",
@@ -76,6 +86,7 @@ const promises = components.map(async (component) => {
                 docs: docsRequest.data
             }
         ],
+        controls: component.control ? Object.entries(component.control) : undefined,
         deepLinkUrl: "sb-native://deep.link"
     });
 });
