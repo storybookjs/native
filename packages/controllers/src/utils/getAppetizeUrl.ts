@@ -3,7 +3,8 @@ import type { EmulatorConfig } from "@storybook/native-types";
 export const getAppetizeUrl = ({
     launchArgs,
     settings,
-    apiKey
+    apiKey,
+    baseUrl = "https://appetize.io"
 }: EmulatorConfig) => {
     if (!apiKey) {
         throw new Error("No appetize API key was specified");
@@ -18,7 +19,7 @@ export const getAppetizeUrl = ({
         options.params = JSON.stringify(launchArgs);
     }
 
-    const urlWithoutParams = `https://appetize.io/embed/${apiKey}`;
+    const urlWithoutParams = `${baseUrl}/embed/${apiKey}`;
     // @ts-ignore
     const qsParams = new URLSearchParams(options).toString();
 
