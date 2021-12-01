@@ -24,6 +24,7 @@ export const generateStory = async (
 
     const standardStory = storyCompiled({
         storyName,
+        appetizeBaseUrl: config.appetizeBaseUrl,
         apiKey: config.apiKey,
         platform: config.platform,
         storyParams: JSON.stringify(appParams),

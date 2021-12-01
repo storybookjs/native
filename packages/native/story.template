@@ -1,5 +1,6 @@
 export const <%= storyName %> = (props) => {
     return <EmulatorRenderer
+        appetizeBaseUrl="<%= appetizeBaseUrl %>"
         apiKey="<%= apiKey %>"
         platform="<%= platform %>"
         storyParams={<%= storyParams %>}

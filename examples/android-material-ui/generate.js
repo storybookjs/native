@@ -74,6 +74,7 @@ const promises = components.map(async (component) => {
     const docsRequest = await axios.get(component.docs);
     return generateStories({
         category: pascalCase(component.name),
+        appetizeBaseUrl: "https://intuit.appetize.io",
         filePath: `./stories/${component.name}.stories.jsx`,
         apiKey: "zv034bdme9je7c9d43chzmc2yg",
         platform: "android",
