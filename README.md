@@ -1,6 +1,6 @@
 # Storybook Native
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Storybook Native is an extension of the normal web storybook that uses [appetize.io](https://appetize.io/) to render your mobile application in an emulator that can be interacted with from your browser. It allows you to use many of the features that are available in the web storybook, such as addons, controls, etc.
@@ -64,6 +64,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/vasikarla"><img src="https://avatars0.githubusercontent.com/u/1945958?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raj Vasikarla</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=vasikarla" title="Documentation">📖</a> <a href="https://github.com/storybookjs/native/commits?author=vasikarla" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/apps/imgbot"><img src="https://avatars.githubusercontent.com/in/4706?v=4?s=100" width="100px;" alt=""/><br /><sub><b>imgbot[bot]</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=imgbot[bot]" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/brocollie08"><img src="https://avatars.githubusercontent.com/u/13474011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>brocollie08</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=brocollie08" title="Documentation">📖</a> <a href="https://github.com/storybookjs/native/commits?author=brocollie08" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/hborawski"><img src="https://avatars.githubusercontent.com/u/1325154?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Harris Borawski</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=hborawski" title="Code">💻</a></td>
   </tr>
 </table>
 
