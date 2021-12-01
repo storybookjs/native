@@ -23,6 +23,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         extraParams,
         storyParams,
         deepLinkBaseUrl,
+        appetizeBaseUrl,
         context
     } = props;
 
@@ -52,9 +53,10 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             settings: {
                 device
             },
-            platform
+            platform,
+            baseUrl: appetizeBaseUrl
         });
-    }, [device, apiKey, context, platform]);
+    }, [device, apiKey, context, platform, appetizeBaseUrl]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
@@ -69,7 +71,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         JSON.stringify(storyParamsWithExtras),
         deepLinkBaseUrl,
         apiKey,
-        context
+        context,
+        appetizeBaseUrl
     ]);
 
     React.useEffect(() => {

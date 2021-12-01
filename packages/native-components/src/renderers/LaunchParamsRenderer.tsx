@@ -9,7 +9,8 @@ import { addons } from "@storybook/addons";
 import { RendererProps } from "../types";
 
 export default (props: RendererProps): React.ReactElement => {
-    const { apiKey, platform, extraParams, storyParams } = props;
+    const { apiKey, platform, extraParams, storyParams, appetizeBaseUrl } =
+        props;
     const iframeRef = React.useRef<HTMLIFrameElement>(null);
     const device = useDevice(platform);
 
@@ -31,7 +32,8 @@ export default (props: RendererProps): React.ReactElement => {
             device
         },
         launchArgs: storyParamsWithExtras,
-        platform
+        platform,
+        baseUrl: appetizeBaseUrl
     });
     return (
         <iframe

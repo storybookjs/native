@@ -12,6 +12,9 @@ export interface EmulatorConfig {
 
     apiKey?: string;
     launchArgs?: Record<string, any>;
+
+    /** The base URL to use for appetize */
+    baseUrl?: string;
 }
 
 export enum EmulatorActions {

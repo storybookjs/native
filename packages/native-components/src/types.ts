@@ -22,6 +22,13 @@ export interface RendererProps {
      * This prop is provided entirely for convenience
      */
     extraParams?: Record<string, any>;
+
+    /**
+     * An alternate base URL to use for Appetize, if a custom subdomain is required
+     *
+     * Example: "https://mycompany.appetize.io"
+     */
+    appetizeBaseUrl?: string;
 }
 
 export interface DeepLinkRendererProps extends RendererProps {
