@@ -1,3 +1,20 @@
+# v2.2.1 (Wed Dec 01 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Harris Borawski ([@hborawski](https://github.com/hborawski)), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-controllers`, `@storybook/native-components`, `@storybook/native-types`
+  - make appetize base url configurable for use with subdomains [#67](https://github.com/storybookjs/native/pull/67) ([@hborawski](https://github.com/hborawski))
+
+#### Authors: 1
+
+- Harris Borawski ([@hborawski](https://github.com/hborawski))
+
+---
+
 # v2.2.0 (Mon Aug 09 2021)
 
 :tada: This release contains work from a new contributor! :tada:
