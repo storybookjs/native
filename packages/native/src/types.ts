@@ -8,6 +8,7 @@ export interface StoryParams {
 
 export interface Config {
     category: string;
+    appetizeBaseUrl: string;
     filePath: string;
     apiKey: string;
     platform: Platform;
