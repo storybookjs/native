@@ -1,3 +1,15 @@
+# v2.2.2 (Wed Dec 08 2021)
+
+#### 🐛 Bug Fix
+
+- Template Appetize baseUrl update [#68](https://github.com/storybookjs/native/pull/68) ([@brocollie08](https://github.com/brocollie08))
+
+#### Authors: 1
+
+- [@brocollie08](https://github.com/brocollie08)
+
+---
+
 # v2.2.0 (Mon Aug 09 2021)
 
 :tada: This release contains work from a new contributor! :tada:
