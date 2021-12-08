@@ -1,6 +1,6 @@
 {
   "name": "@storybook/deep-link-logger",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "main": "./dist/index.js",
   "files": [
     "dist"
