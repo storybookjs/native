@@ -19,6 +19,8 @@ export const getDevices = (platform: Platform): string[] => {
             "nexus9",
             "pixel4",
             "pixel4xl",
+            "pixel6",
+            "pixel6pro",
             "galaxytabs7"
         ];
     }
@@ -30,7 +32,11 @@ export const getDevices = (platform: Platform): string[] => {
             "ipadair2",
             "iphone9",
             "iphone11pro",
-            "iphone11promax"
+            "iphone11promax",
+            "iphone12",
+            "iphone12mini",
+            "iphone12pro",
+            "iphone12promax"
         ];
     }
 
