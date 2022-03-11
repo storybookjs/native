@@ -1,3 +1,20 @@
+# v2.2.3 (Fri Mar 11 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Josh Halvorson ([@JoshHalvorson](https://github.com/JoshHalvorson)), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-devices`
+  - Add newer devices from appetize [#69](https://github.com/storybookjs/native/pull/69) ([@JoshHalvorson](https://github.com/JoshHalvorson))
+
+#### Authors: 1
+
+- Josh Halvorson ([@JoshHalvorson](https://github.com/JoshHalvorson))
+
+---
+
 # v2.2.2 (Wed Dec 08 2021)
 
 #### 🐛 Bug Fix
