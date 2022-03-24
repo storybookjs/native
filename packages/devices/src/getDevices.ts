@@ -5,7 +5,7 @@ export const getDefaultDevice = (platform: Platform): string => {
         return "nexus5";
     }
     if (platform === "ios") {
-        return "iphone9";
+        return "iphone12";
     }
 
     throw new Error(`No device for platform: ${platform}`);
