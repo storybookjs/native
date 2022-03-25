@@ -1,3 +1,19 @@
+# v2.2.4 (Fri Mar 25 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@daisyduong-acc](https://github.com/daisyduong-acc), for all your work!
+
+#### 🐛 Bug Fix
+
+- Change default iOS device to iPhone 12 [#70](https://github.com/storybookjs/native/pull/70) ([@daisyduong-acc](https://github.com/daisyduong-acc))
+
+#### Authors: 1
+
+- [@daisyduong-acc](https://github.com/daisyduong-acc)
+
+---
+
 # v2.2.3 (Fri Mar 11 2022)
 
 :tada: This release contains work from a new contributor! :tada:
