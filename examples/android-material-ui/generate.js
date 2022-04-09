@@ -14,7 +14,7 @@ const components = [
                 max: 1,
                 increment: 0.2
             },
-            progressSlider: {
+            size: {
                 type: 'range',
                 min: 0,
                 max: 1,
