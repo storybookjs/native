@@ -1,3 +1,20 @@
+# v2.2.5 (Wed Apr 20 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Ahmed na ([@ahna92](https://github.com/ahna92)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Support range control [#71](https://github.com/storybookjs/native/pull/71) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- ahmed alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.2 (Wed Dec 08 2021)
 
 #### 🐛 Bug Fix

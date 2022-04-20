@@ -1,3 +1,21 @@
+# v2.2.5 (Wed Apr 20 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Ahmed na ([@ahna92](https://github.com/ahna92)), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native`
+  - Support range control [#71](https://github.com/storybookjs/native/pull/71) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- ahmed alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.4 (Fri Mar 25 2022)
 
 :tada: This release contains work from a new contributor! :tada:
