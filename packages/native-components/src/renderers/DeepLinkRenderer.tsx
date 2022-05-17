@@ -70,6 +70,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         controller.openDeepLink(newAppUrl);
     }, [
         device,
+        osVersion,
         JSON.stringify(storyParamsWithExtras),
         deepLinkBaseUrl,
         apiKey,
