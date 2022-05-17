@@ -1,3 +1,16 @@
+# v2.2.6 (Tue May 17 2022)
+
+#### 🐛 Bug Fix
+
+- Add options to select OS Version [#73](https://github.com/storybookjs/native/pull/73) ([@hborawski](https://github.com/hborawski))
+- add os version to device context and a selector ([@hborawski](https://github.com/hborawski))
+
+#### Authors: 1
+
+- Harris Borawski ([@hborawski](https://github.com/hborawski))
+
+---
+
 # v2.2.4 (Fri Mar 25 2022)
 
 :tada: This release contains work from a new contributor! :tada:
