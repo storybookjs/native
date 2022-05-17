@@ -8,7 +8,7 @@ import {
     TooltipLinkList,
     Icons
 } from "@storybook/components";
-import { getDevices, DeviceSelections } from "@storybook/native-devices";
+import { DeviceSelections, getOsVersions } from "@storybook/native-devices";
 
 import { ADDON_ID } from "../constants";
 import {
@@ -24,8 +24,8 @@ export default () => {
         ADDON_ID,
         savedState
     );
-    const androidDevices = getDevices("android");
-    const iosDevices = getDevices("ios");
+    const androidVersions = getOsVersions("android");
+    const iosVersions = getOsVersions("ios");
 
     const saveState = (s: DeviceSelections) => {
         setState(s);
@@ -39,44 +39,44 @@ export default () => {
             trigger="click"
             tooltip={(props) => (
                 <TooltipLinkList
-                    links={androidDevices
-                        .map((device) => {
+                    links={androidVersions
+                        .map((version) => {
                             const onClick = () => {
                                 saveState({
-                                    androidSelection: device,
+                                    androidSelection: state.androidSelection,
                                     iosSelection: state.iosSelection,
-                                    androidVersion: state.androidVersion,
+                                    androidVersion: version,
                                     iosVersion: state.iosVersion
                                 });
                                 props.onHide();
                             };
                             return {
-                                id: device,
-                                title: device,
+                                id: version,
+                                title: version,
                                 onClick,
-                                value: device,
-                                active: state.androidSelection === device,
+                                value: version,
+                                active: state.androidVersion === version,
                                 left: "Android"
                             };
                         })
                         .concat(
-                            iosDevices.map((device) => {
+                            iosVersions.map((version) => {
                                 const onClick = () => {
                                     saveState({
                                         androidSelection:
                                             state.androidSelection,
-                                        iosSelection: device,
-                                        iosVersion: state.iosVersion,
+                                        iosSelection: state.iosSelection,
+                                        iosVersion: version,
                                         androidVersion: state.androidVersion
                                     });
                                     props.onHide();
                                 };
                                 return {
-                                    id: device,
-                                    title: device,
+                                    id: version,
+                                    title: version,
                                     onClick,
-                                    value: device,
-                                    active: state.iosSelection === device,
+                                    value: version,
+                                    active: state.iosVersion === version,
                                     left: "iOS"
                                 };
                             })
@@ -84,8 +84,8 @@ export default () => {
                 />
             )}
         >
-            <IconButton title="Select device">
-                <Icons icon="tablet" />
+            <IconButton title="Select OS Version">
+                <Icons icon="cpu" />
             </IconButton>
         </WithTooltip>
     );

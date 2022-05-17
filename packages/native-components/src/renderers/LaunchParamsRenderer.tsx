@@ -3,7 +3,7 @@ import {
     ACTION_EVENT_NAME,
     getAppetizeUrl
 } from "@storybook/native-controllers";
-import { useDevice } from "@storybook/native-devices";
+import { useDevice, useOsVersion } from "@storybook/native-devices";
 import { EmulatorActions } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 import { RendererProps } from "../types";
@@ -13,6 +13,7 @@ export default (props: RendererProps): React.ReactElement => {
         props;
     const iframeRef = React.useRef<HTMLIFrameElement>(null);
     const device = useDevice(platform);
+    const osVersion = useOsVersion(platform);
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions) => {
@@ -29,7 +30,8 @@ export default (props: RendererProps): React.ReactElement => {
     const url = getAppetizeUrl({
         apiKey,
         settings: {
-            device
+            device,
+            osVersion
         },
         launchArgs: storyParamsWithExtras,
         platform,

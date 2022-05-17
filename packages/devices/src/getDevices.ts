@@ -42,3 +42,25 @@ export const getDevices = (platform: Platform): string[] => {
 
     throw new Error(`No devices for platform: ${platform}`);
 };
+
+export const getDefaultOsVersion = (platform: Platform): string => {
+    if (platform === "android") {
+        return "11.0";
+    }
+    if (platform === "ios") {
+        return "15.0";
+    }
+
+    throw new Error(`No osVersion for platform: ${platform}`);
+};
+
+export const getOsVersions = (platform: Platform): string[] => {
+    if (platform === "android") {
+        return ["4.4", "5.1", "6.0", "7.1", "8.1", "9.0", "10.0", "11.0"];
+    }
+    if (platform === "ios") {
+        return ["11.4", "12.4", "13.7", "14.5", "15.0"];
+    }
+
+    throw new Error(`No osVersions for platform: ${platform}`);
+};

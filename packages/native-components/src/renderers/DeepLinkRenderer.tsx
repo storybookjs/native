@@ -6,7 +6,7 @@ import {
     getAppetizeIframeId,
     getFullDeepLinkUrl
 } from "@storybook/native-controllers";
-import { useDevice } from "@storybook/native-devices";
+import { useDevice, useOsVersion } from "@storybook/native-devices";
 import { EmulatorActions } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 import { Provider } from "react-redux";
@@ -32,6 +32,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     }
 
     const device = useDevice(platform);
+    const osVersion = useOsVersion(platform);
     React.useEffect(() => {
         const onAction = (action: EmulatorActions) => {
             const controller = manager.getController(context);
@@ -51,7 +52,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         controller.updateConfig({
             apiKey,
             settings: {
-                device
+                device,
+                osVersion
             },
             platform,
             baseUrl: appetizeBaseUrl
