@@ -58,7 +58,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             platform,
             baseUrl: appetizeBaseUrl
         });
-    }, [device, apiKey, context, platform, appetizeBaseUrl]);
+    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
