@@ -1,3 +1,16 @@
+# v2.2.7 (Wed May 25 2022)
+
+#### 🐛 Bug Fix
+
+- [FEAT] Support color and date controls [#72](https://github.com/storybookjs/native/pull/72) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- ahmed alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.5 (Wed Apr 20 2022)
 
 :tada: This release contains work from a new contributor! :tada:

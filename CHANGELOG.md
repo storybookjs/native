@@ -1,3 +1,17 @@
+# v2.2.7 (Wed May 25 2022)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native`
+  - [FEAT] Support color and date controls [#72](https://github.com/storybookjs/native/pull/72) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- ahmed alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.6 (Tue May 17 2022)
 
 #### 🐛 Bug Fix
