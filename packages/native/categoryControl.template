@@ -6,7 +6,20 @@ export default {
     title: '<%= category %>',
     argTypes: {
         <% _.each(controls, function(control){ %>
-        <% if (control[1].hasOwnProperty('min') && control[1].hasOwnProperty('max')) { %>
+        <% if (control[1].type == 'date') { %>
+        <%= control[0] %>: {
+            control: {
+                type: '<%= control[1].type %>',
+            }
+        },
+        <% } else if (control[1].type == 'color') { %>
+        <%= control[0] %>: {
+            control: {
+                type: '<%= control[1].type %>',
+                <% if (control[1].hasOwnProperty('presetColors')) { %>presetColors: [<%= _.map(control[1].presetColors, function (color) { return `'${color}'` }) %>]<% } %>,
+            }
+        },
+        <% } else if (control[1].hasOwnProperty('min') && control[1].hasOwnProperty('max')) { %>
         <%= control[0] %>: {
             control: {
                 type: '<%= control[1].type || "number" %>',

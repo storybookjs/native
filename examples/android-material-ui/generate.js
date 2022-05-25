@@ -15,64 +15,60 @@ const components = [
                 increment: 0.2
             },
             size: {
-                type: 'range',
+                type: "range",
                 min: 0,
                 max: 1,
                 increment: 0.2
+            },
+            color: {
+                type: "color",
+                presetColors: ["red", "green"]
+            },
+            date: {
+                type: "date"
             }
         },
         docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
-
     },
     {
         name: "floatingButton",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/FloatingActionButton.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/FloatingActionButton.md"
     },
     {
         name: "card",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Card.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Card.md"
     },
     {
         name: "chips",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Chip.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Chip.md"
     },
     {
         name: "dialogs",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Dialog.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Dialog.md"
     },
     {
         name: "radio",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/RadioButton.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/RadioButton.md"
     },
     {
         name: "switch",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Switch.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Switch.md"
     },
     {
         name: "slider",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Slider.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Slider.md"
     },
     {
         name: "snackbar",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Snackbar.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Snackbar.md"
     },
     {
         name: "tabs",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Tabs.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Tabs.md"
     },
     {
         name: "textfield",
-        docs:
-            "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/TextField.md"
+        docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/TextField.md"
     }
 ];
 
@@ -92,7 +88,9 @@ const promises = components.map(async (component) => {
                 docs: docsRequest.data
             }
         ],
-        controls: component.control ? Object.entries(component.control) : undefined,
+        controls: component.control
+            ? Object.entries(component.control)
+            : undefined,
         deepLinkUrl: "sb-native://deep.link"
     });
 });
