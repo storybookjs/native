@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-controllers",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "main": "./dist/index.js",
   "description": "Functions for programatically interacting with emulators",
   "files": [
