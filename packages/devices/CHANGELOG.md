@@ -1,3 +1,15 @@
+# v2.2.8 (Wed Dec 21 2022)
+
+#### 🐛 Bug Fix
+
+- add updated devices and OS version options [#76](https://github.com/storybookjs/native/pull/76) ([@hborawski](https://github.com/hborawski))
+
+#### Authors: 1
+
+- Harris Borawski ([@hborawski](https://github.com/hborawski))
+
+---
+
 # v2.2.6 (Tue May 17 2022)
 
 #### 🐛 Bug Fix
