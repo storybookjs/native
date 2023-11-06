@@ -34,7 +34,7 @@ export const postSetRotation = (config: FullConfig) => {
                 })
                 .toString();
             res.json({ message: output } as ResponseBody);
-        } catch (ex) {
+        } catch (ex: any) {
             console.error(ex);
             res.status(400).json({
                 message: ex.toString()

@@ -5,7 +5,7 @@ export const getDefaultDevice = (platform: Platform): string => {
         return "nexus5";
     }
     if (platform === "ios") {
-        return "iphone14pro";
+        return "iphone15pro";
     }
 
     throw new Error(`No device for platform: ${platform}`);
@@ -21,6 +21,8 @@ export const getDevices = (platform: Platform): string[] => {
             "pixel4xl",
             "pixel6",
             "pixel6pro",
+            "pixel7",
+            "pixel7pro",
             "galaxytabs7"
         ];
     }
@@ -38,7 +40,9 @@ export const getDevices = (platform: Platform): string[] => {
             "iphone12pro",
             "iphone12promax",
             "iphone14pro",
-            "iphone14promax"
+            "iphone14promax",
+            "iphone15pro",
+            "iphone15promax"
         ];
     }
 
@@ -50,7 +54,7 @@ export const getDefaultOsVersion = (platform: Platform): string => {
         return "11.0";
     }
     if (platform === "ios") {
-        return "16.0";
+        return "17.0";
     }
 
     throw new Error(`No osVersion for platform: ${platform}`);
@@ -67,11 +71,12 @@ export const getOsVersions = (platform: Platform): string[] => {
             "9.0",
             "10.0",
             "11.0",
-            "12.0"
+            "12.0",
+            "13.0"
         ];
     }
     if (platform === "ios") {
-        return ["11.4", "12.4", "13.7", "14.5", "15.5", "16.0"];
+        return ["11.4", "12.4", "13.7", "14.5", "15.5", "16.0", "17.0"];
     }
 
     throw new Error(`No osVersions for platform: ${platform}`);

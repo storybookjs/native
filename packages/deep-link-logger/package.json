@@ -16,10 +16,10 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@storybook/addons": "^6.0.6",
-    "@storybook/api": "^6.0.6",
-    "@storybook/components": "^6.0.6",
-    "@storybook/theming": "^6.0.6",
+    "@storybook/addons": "^7.5.2",
+    "@storybook/api": "^7.5.2",
+    "@storybook/components": "^7.5.2",
+    "@storybook/theming": "^7.5.2",
     "copy-to-clipboard": "^3.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

@@ -5,7 +5,7 @@ import copy from "copy-to-clipboard";
 
 import DeepLinkDetails from "./DeepLinkDetails";
 
-const Wrapper = styled(({ children }) => (
+const Wrapper = styled(({children}: any) => (
     <ScrollArea vertical>{children}</ScrollArea>
 ))({
     margin: 0,

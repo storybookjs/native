@@ -10,12 +10,19 @@
     "Adil Malik <Adil_Malik@intuit.com>"
   ],
   "scripts": {
-    "start": "yarn start-storybook",
-    "build:storybook": "yarn build-storybook"
+    "start": "storybook dev",
+    "build:storybook": "storybook build"
   },
   "keywords": [],
   "dependencies": {
     "@storybook/native": "link:../../packages/native",
     "@storybook/native-addon": "link:../../packages/addon"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@storybook/react-webpack5": "^7.5.2",
+    "storybook": "^7.5.2"
   }
 }

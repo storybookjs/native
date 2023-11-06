@@ -15,8 +15,8 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@storybook/addons": "^6.0.6",
-    "@storybook/components": "^6.0.6",
+    "@storybook/addons": "^7.5.2",
+    "@storybook/components": "^7.5.2",
     "@storybook/native-controllers": "link:../controllers",
     "@storybook/native-devices": "link:../devices",
     "@storybook/native-types": "link:../types",

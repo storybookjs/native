@@ -10,8 +10,8 @@
     "Vanya Sehgal <vanya_sehgal@intuit.com>"
   ],
   "scripts": {
-    "start": "yarn build:stories && yarn start-storybook -p 53743",
-    "build:storybook": "yarn build:stories && yarn build-storybook",
+    "start": "yarn build:stories && storybook dev -p 53743",
+    "build:storybook": "yarn build:stories && storybook build",
     "build:stories": "node ./generate.js"
   },
   "keywords": [],
@@ -20,5 +20,12 @@
     "@storybook/native-addon": "link:../../packages/addon",
     "axios": "0.20.0",
     "change-case": "4.1.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@storybook/react-webpack5": "^7.5.2",
+    "storybook": "^7.5.2"
   }
 }

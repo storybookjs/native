@@ -13,15 +13,15 @@ import VersionSelector from "./components/VersionSelector";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
-        api.getChannel().emit(ACTION_EVENT_NAME, EmulatorActions.rotateLeft);
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.rotateLeft);
     };
 
     const rotateRight = () => {
-        api.getChannel().emit(ACTION_EVENT_NAME, EmulatorActions.rotateRight);
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.rotateRight);
     };
 
     const captureScreenshot = () => {
-        api.getChannel().emit(
+        api?.getChannel()?.emit(
             ACTION_EVENT_NAME,
             EmulatorActions.saveScreenshot
         );
@@ -72,8 +72,8 @@ addons.register(ADDON_ID, (api) => {
     addons.add(`${ADDON_ID}/deepLinks/panel`, {
         title: "Deep links",
         type: types.PANEL,
-        render: ({ active, key }) => (
-            <DeepLinksContainer key={key} api={api} active={active} />
+        render: ({ active }) => (
+            <DeepLinksContainer api={api} active={active} />
         ),
         paramKey: DEEP_LINKS_PARAM_KEY
     });
