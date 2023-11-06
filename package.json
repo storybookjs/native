@@ -22,9 +22,6 @@
     "registry": "https://registry.npmjs.com/",
     "access": "public"
   },
-  "engines": {
-    "node": "^16.0.0 || >=18.0.0"
-  },
   "scripts": {
     "build": "lerna run build --stream",
     "build:storybook": "bash ./scripts/buildExamples.sh",
