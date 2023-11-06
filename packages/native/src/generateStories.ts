@@ -1,6 +1,5 @@
 import fs from "fs-extra";
 import path from "path";
-import _ from "lodash";
 
 import { createTemplate, generateStory } from "./generateStory";
 import { Config } from "./types";

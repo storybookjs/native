@@ -55,7 +55,7 @@ export default () => {
                                 title: `Android ${version}`,
                                 onClick,
                                 value: version,
-                                active: state.androidVersion === version,
+                                active: state.androidVersion === version
                             };
                         })
                         .concat(
@@ -75,7 +75,7 @@ export default () => {
                                     title: `iOS ${version}`,
                                     onClick,
                                     value: version,
-                                    active: state.iosVersion === version,
+                                    active: state.iosVersion === version
                                 };
                             })
                         )}

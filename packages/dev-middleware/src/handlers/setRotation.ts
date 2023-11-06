@@ -1,13 +1,12 @@
 /* eslint-disable max-len */
 import exec from "child_process";
 import { Request, Response } from "express";
-import { Platform, EmulatorRotation } from "@storybook/native-types";
+import { Platform } from "@storybook/native-types";
 import { FullConfig, ResponseBody } from "../types";
 
 const getCommand = (
     config: FullConfig,
-    platform: Platform,
-    mode: EmulatorRotation
+    platform: Platform
 ) => {
     if (platform === "android") {
         throw new Error(`Rotations are not supported on Android`);
@@ -26,10 +25,10 @@ const getCommand = (
 
 export const postSetRotation = (config: FullConfig) => {
     return (req: Request, res: Response) => {
-        const { platform, rotationMode } = req.body;
+        const { platform } = req.body;
         try {
             const output = exec
-                .execSync(getCommand(config, platform, rotationMode), {
+                .execSync(getCommand(config, platform), {
                     timeout: config.timeout
                 })
                 .toString();

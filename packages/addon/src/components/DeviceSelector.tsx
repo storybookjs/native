@@ -55,7 +55,7 @@ export default () => {
                                 title: `Android ${device}`,
                                 onClick,
                                 value: device,
-                                active: state.androidSelection === device,
+                                active: state.androidSelection === device
                             };
                         })
                         .concat(
@@ -75,7 +75,7 @@ export default () => {
                                     title: `iOS ${device}`,
                                     onClick,
                                     value: device,
-                                    active: state.iosSelection === device,
+                                    active: state.iosSelection === device
                                 };
                             })
                         )}
