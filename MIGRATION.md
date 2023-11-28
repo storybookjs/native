@@ -1,11 +1,18 @@
 # Migration Guide
 
-## Version `6.*` to Version `7.*`
+## Version `2.*` to Version `3.*`
 
-* Add the following to your `devDependencies` and `resolutions` in package.json
-    
-    The `resolution` is needed due to [this issue](https://github.com/storybookjs/storybook/issues/22431)
-    ```json
+* Update to latest version [![GitHub release (latest by date)](https://img.shields.io/github/v/release/storybookjs/native)](https://github.com/storybookjs/native/releases)
+
+  ```shell
+  yarn add @storybook/native
+  ```
+* Add the following `devDependencies` 
+  ```shell
+  yarn -D add @babel/preset-env @babel/preset-react @babel/preset-typescript @storybook/react-webpack5@7.5.3 storybook@7.5.3
+  ```
+* Add the following to your `resolutions` section in `package.json` due to [this issue](https://github.com/storybookjs/storybook/issues/22431)
+     ```json
     {
       "devDependencies": {
         "@babel/preset-env": "^7.23.2",
@@ -20,13 +27,7 @@
     }
     ```
 
-then run 
-
-```shell
-yarn 
-```
-
-* Update your `scripts`, `start-storybook` to `storybook dev` and `build-storybook` to `storybook build`
+* Update your `scripts`: `start-storybook` to `storybook dev` and `build-storybook` to `storybook build`
   ```json
   {
     "scripts": {
@@ -61,7 +62,7 @@ yarn
   export default config;
   ```
 
-* create `.babelrc.json` file at project root dir if your project does not have one already
+* create `.babelrc.json` file at project's root dir if your project does not have one already
 ```json
 {
   "sourceType": "unambiguous",
