@@ -26,30 +26,40 @@ then run
 yarn 
 ```
 
+* Update your `scripts`, `start-storybook` to `storybook dev` and `build-storybook` to `storybook build`
+  ```json
+  {
+    "scripts": {
+    "start": "yarn build:stories && storybook dev -p 53743",
+    "build:storybook": "yarn build:stories && storybook build",
+    "build:stories": "node ./generate.js"
+    }
+  }
+  ```
 
 * Update `.storybook/main.js` by exporting config and adding `framework` section
-```javascript
-const config = {
-    stories: ["../stories/*.stories.jsx"],
-    
-    framework: {
-        name: "@storybook/react-webpack5",
-        options: {},
-    },
-
-    addons: [
-        "@storybook/addon-docs",
-        "@storybook/addon-controls",
-        "@storybook/native-addon/dist/register.js"
-    ],
-
-    docs: {
-        autodocs: true
-    }
-};
-
-export default config;
-```
+  ```javascript
+  const config = {
+      stories: ["../stories/*.stories.jsx"],
+      
+      framework: {
+          name: "@storybook/react-webpack5",
+          options: {},
+      },
+  
+      addons: [
+          "@storybook/addon-docs",
+          "@storybook/addon-controls",
+          "@storybook/native-addon/dist/register.js"
+      ],
+  
+      docs: {
+          autodocs: true
+      }
+  };
+  
+  export default config;
+  ```
 
 * create `.babelrc.json` file at project root dir if your project does not have one already
 ```json
