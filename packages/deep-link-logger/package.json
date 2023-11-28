@@ -21,8 +21,8 @@
     "@storybook/components": "^7.5.3",
     "@storybook/theming": "^7.5.3",
     "copy-to-clipboard": "^3.3.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {

@@ -1,5 +1,5 @@
 const  config = {
-    stories: [{ directory: '../stories', files: '**/*.stories.@(mdx|tsx|ts|jsx|js)' }],
+    stories: ["../stories/*.stories.jsx"],
     framework: {
         name: "@storybook/react-webpack5",
         options: {},

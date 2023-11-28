@@ -1,5 +1,5 @@
 import React from "react";
-import { useAddonState } from "@storybook/manager-api";
+import { useAddonState } from "@storybook/client-api";
 import { DeviceSelections, DeviceWrapper } from "@storybook/native-devices";
 
 import { ADDON_ID } from "./constants";

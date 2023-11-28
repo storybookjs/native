@@ -6,6 +6,8 @@
     <%= control[0] %>: "Default",
     <% } else if (Array.isArray(control[1])) { %>
     <%= control[0] %>: "<%= control[1][0] %>",
+    <% } else if (control[1].type == 'color') { %>
+    <%= control[0] %>: <% if (control[1].hasOwnProperty('presetColors')) { %>"<%= control[1].presetColors[0] %>"<% } else { %> "white" <% } %>,
     <% } else if (!(control[1].hasOwnProperty('min') && control[1].hasOwnProperty('max'))) { %>
     <%= control[0] %>: "<%= control[1] %>",
     <% } %>
