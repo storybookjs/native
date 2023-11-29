@@ -34,7 +34,7 @@ export default () => {
 
     return (
         <WithTooltip
-            closeOnClick
+            closeOnOutsideClick
             placement="top"
             trigger="click"
             tooltip={(props) => (
@@ -52,11 +52,10 @@ export default () => {
                             };
                             return {
                                 id: version,
-                                title: version,
+                                title: `Android ${version}`,
                                 onClick,
                                 value: version,
-                                active: state.androidVersion === version,
-                                left: "Android"
+                                active: state.androidVersion === version
                             };
                         })
                         .concat(
@@ -73,11 +72,10 @@ export default () => {
                                 };
                                 return {
                                     id: version,
-                                    title: version,
+                                    title: `iOS ${version}`,
                                     onClick,
                                     value: version,
-                                    active: state.iosVersion === version,
-                                    left: "iOS"
+                                    active: state.iosVersion === version
                                 };
                             })
                         )}

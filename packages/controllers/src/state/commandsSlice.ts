@@ -19,7 +19,7 @@ export const performCommand = (
             };
 
             dispatch({ type: ActionTypes.COMMAND_SUCCESS, payload: details });
-        } catch (ex) {
+        } catch (ex: any) {
             console.error(ex);
             const details: HandledMessageResponse = {
                 message: data,

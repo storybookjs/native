@@ -8,32 +8,24 @@ export default {
         <% _.each(controls, function(control){ %>
         <% if (control[1].type == 'date') { %>
         <%= control[0] %>: {
-            control: {
-                type: '<%= control[1].type %>',
-            }
+            control: '<%= control[1].type %>'
         },
         <% } else if (control[1].type == 'color') { %>
         <%= control[0] %>: {
-            control: {
-                type: '<%= control[1].type %>',
-                <% if (control[1].hasOwnProperty('presetColors')) { %>presetColors: [<%= _.map(control[1].presetColors, function (color) { return `'${color}'` }) %>]<% } %>,
-            }
+            control: '<%= control[1].type %>',
+            <% if (control[1].hasOwnProperty('presetColors')) { %>presetColors: [<%= _.map(control[1].presetColors, function (color) { return `'${color}'` }) %>]<% } else { %> presetColors: [] <% } %>,
         },
         <% } else if (control[1].hasOwnProperty('min') && control[1].hasOwnProperty('max')) { %>
         <%= control[0] %>: {
-            control: {
-                type: '<%= control[1].type || "number" %>',
-                min: <%= control[1].min %>,
-                max: <%= control[1].max %>,
-                step: <%= control[1].increment %>
-            }
+            control: '<%= control[1].type || "number" %>',
+            min: <%= control[1].min %>,
+            max: <%= control[1].max %>,
+            step: <%= control[1].increment %>
         },
         <% } else if (control[1].startsWith("[") && control[1].endsWith("]")) { %>
         <%= control[0] %>: {
-            control: {
-                type: 'select',
-                options: <%= control[1] %>
-            }
+            control: 'select',
+            options: <%= control[1] %>
         },
         <% } else { %>
         <%= control[0] %>: "<%= control[1] %>",

@@ -1,6 +1,5 @@
 import fs from "fs-extra";
 import path from "path";
-import _ from "lodash";
 
 import { createTemplate, generateStory } from "./generateStory";
 import { Config } from "./types";
@@ -43,7 +42,7 @@ export const generateStories = async (config: Config): Promise<void> => {
             stories: controlStoriesContent.join("\n")
         });
 
-        const playgroundPath = config.filePath.replace('.jsx', '.playground.jsx');
+        const playgroundPath = config.filePath.replace('.stories.jsx', '.playground.stories.jsx');
         await fs.ensureDir(path.dirname(playgroundPath));
         await fs.writeFile(playgroundPath, controlStoryFileData);
     }

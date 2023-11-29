@@ -11,7 +11,7 @@ export const middleware = (config: NativeDevMiddlewareConfig = {}) => {
     return (app: Application) => {
         app.use(json());
         app.post("/deepLink", postDeepLink(fullConfig));
-        app.post("/updateConfig", postUpdateConfig(fullConfig));
+        app.post("/updateConfig", postUpdateConfig());
         app.post("/screenshot", postSaveScreenshot(fullConfig));
         app.post("/rotation", postSetRotation(fullConfig));
     };
