@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-addon",
-  "version": "2.2.8",
+  "version": "3.0.0",
   "main": "./dist/index.js",
   "files": [
     "dist"
