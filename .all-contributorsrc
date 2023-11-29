@@ -85,6 +85,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ahna92",
+      "name": "Ahmed na",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22000308?v=4",
+      "profile": "https://github.com/ahna92",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
