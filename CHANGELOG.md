@@ -1,3 +1,17 @@
+# v3.0.0 (Wed Nov 29 2023)
+
+#### 💥 Breaking Change
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-controls-example`, `@storybook/native-cross-platform-example`, `@storybook/native-flutter-example`, `@storybook/native-ios-example-deep-link`, `@storybook/native-addon`, `@storybook/native-controllers`, `@storybook/deep-link-logger`, `@storybook/native-dev-middleware`, `@storybook/native-devices`, `@storybook/native-components`, `@storybook/native`
+  - [CHORE] Update Storybook 7.5.3 [#79](https://github.com/storybookjs/native/pull/79) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- Ahmed Alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.8 (Wed Dec 21 2022)
 
 #### 🐛 Bug Fix

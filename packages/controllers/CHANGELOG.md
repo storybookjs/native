@@ -1,3 +1,16 @@
+# v3.0.0 (Wed Nov 29 2023)
+
+#### 💥 Breaking Change
+
+- [CHORE] Update Storybook 7.5.3 [#79](https://github.com/storybookjs/native/pull/79) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- Ahmed Alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.1 (Wed Dec 01 2021)
 
 :tada: This release contains work from a new contributor! :tada:
