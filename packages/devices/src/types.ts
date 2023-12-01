@@ -14,3 +14,9 @@ export interface Location {
     latlng: number[];
     flag: string;
 }
+
+export interface GlobalLocation {
+    defaultCode?: string;
+    locations?: Location[];
+    filterCodes?: string[];
+}

@@ -1,4 +1,5 @@
 import { Platform } from "@storybook/native-types";
+import { GlobalLocation } from "./types";
 
 export const getDefaultDevice = (platform: Platform): string => {
     if (platform === "android") {
@@ -2833,8 +2834,18 @@ export const getLocationsCodes = () => {
     });
 };
 
-export const getDefaultLocation = () => {
+export const getDefaultLocation = (code?: string) => {
     return getLocations().filter((e) => {
-        return e.code2 === getDefaultLocationCode();
+        return e.code2 === (code ?? getDefaultLocationCode());
     })[0];
+};
+
+export const getFilteredLocations = (onlyCodes2: string[]) => {
+    return getLocations().filter((e) => {
+        return onlyCodes2.includes(e.code2);
+    });
+};
+
+export const getGlobalLocationJson = (globalLocation: GlobalLocation): string => {
+    return JSON.stringify(globalLocation);
 };
