@@ -1,17 +1,17 @@
 // this file is based upon similar code by https://github.com/hipstersmoothie
 
 import React from "react";
-import {useAddonState} from "@storybook/api";
+import { useAddonState } from "@storybook/api";
 import {
     IconButton,
     WithTooltip,
     TooltipLinkList,
     Icons
 } from "@storybook/components";
-import {DeviceSelections, getLocations} from "@storybook/native-devices";
+import { DeviceSelections, getLocations } from "@storybook/native-devices";
 
-import {ADDON_ID} from "../constants";
-import {DEFAULT_STATE, restoreFromLocalStorage, saveToLocalStorage} from "../utils/localStorageUtils";
+import { ADDON_ID } from "../constants";
+import { DEFAULT_STATE, restoreFromLocalStorage, saveToLocalStorage } from "../utils/localStorageUtils";
 
 export default () => {
     const savedState = restoreFromLocalStorage(DEFAULT_STATE);
@@ -26,7 +26,7 @@ export default () => {
         saveToLocalStorage(s);
     };
 
-    const locations = getLocations()
+    const locations = getLocations();
 
     return (
         <WithTooltip
@@ -43,7 +43,7 @@ export default () => {
                                     iosSelection: state.iosSelection,
                                     androidVersion: state.androidVersion,
                                     iosVersion: state.iosVersion,
-                                    location: location
+                                    location
                                 });
                                 props.onHide();
                             };
@@ -60,7 +60,7 @@ export default () => {
             )}
         >
             <IconButton title="Select Country">
-                <Icons icon="flag"/>
+                <Icons icon="flag" />
             </IconButton>
         </WithTooltip>
     );

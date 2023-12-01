@@ -83,2758 +83,2758 @@ export const getOsVersions = (platform: Platform): string[] => {
 };
 
 export const getDefaultLocationCode = () => {
-    return "US"
-}
+    return "US";
+};
 
-export const getDefaultLocation = () => {
-    return getLocations().filter((e => {
-        return e.code2 === getDefaultLocationCode()
-    }))[0]
-}
-
-export const getLocationsCodes = () => {
-    return getLocations().map((e) => {
-        return e.code2
-    })
-}
-
-export const getLocations = ()=> {
+export const getLocations = () => {
     return [
         {
-            "name": "Afghanistan",
-            "city": "Kabul",
-            "code2": "AF",
-            "code3": "AFG",
-            "latlng": [
+            name: "Afghanistan",
+            city: "Kabul",
+            code2: "AF",
+            code3: "AFG",
+            latlng: [
                 33,
                 65
             ],
-            "flag": "🇦🇫"
+            flag: "🇦🇫"
         },
         {
-            "name": "Åland Islands",
-            "city": "Mariehamn",
-            "code2": "AX",
-            "code3": "ALA",
-            "latlng": [
+            name: "Åland Islands",
+            city: "Mariehamn",
+            code2: "AX",
+            code3: "ALA",
+            latlng: [
                 60.116667,
                 19.9
             ],
-            "flag": "🇦🇽"
+            flag: "🇦🇽"
         },
         {
-            "name": "Albania",
-            "city": "Tirana",
-            "code2": "AL",
-            "code3": "ALB",
-            "latlng": [
+            name: "Albania",
+            city: "Tirana",
+            code2: "AL",
+            code3: "ALB",
+            latlng: [
                 41,
                 20
             ],
-            "flag": "🇦🇱"
+            flag: "🇦🇱"
         },
         {
-            "name": "Algeria",
-            "city": "Algiers",
-            "code2": "DZ",
-            "code3": "DZA",
-            "latlng": [
+            name: "Algeria",
+            city: "Algiers",
+            code2: "DZ",
+            code3: "DZA",
+            latlng: [
                 28,
                 3
             ],
-            "flag": "🇩🇿"
+            flag: "🇩🇿"
         },
         {
-            "name": "American Samoa",
-            "city": "Pago Pago",
-            "code2": "AS",
-            "code3": "ASM",
-            "latlng": [
+            name: "American Samoa",
+            city: "Pago Pago",
+            code2: "AS",
+            code3: "ASM",
+            latlng: [
                 -14.33333333,
                 -170
             ],
-            "flag": "🇦🇸"
+            flag: "🇦🇸"
         },
         {
-            "name": "Andorra",
-            "city": "Andorra la Vella",
-            "code2": "AD",
-            "code3": "AND",
-            "latlng": [
+            name: "Andorra",
+            city: "Andorra la Vella",
+            code2: "AD",
+            code3: "AND",
+            latlng: [
                 42.5,
                 1.5
             ],
-            "flag": "🇦🇩"
+            flag: "🇦🇩"
         },
         {
-            "name": "Angola",
-            "city": "Luanda",
-            "code2": "AO",
-            "code3": "AGO",
-            "latlng": [
+            name: "Angola",
+            city: "Luanda",
+            code2: "AO",
+            code3: "AGO",
+            latlng: [
                 -12.5,
                 18.5
             ],
-            "flag": "🇦🇴"
+            flag: "🇦🇴"
         },
         {
-            "name": "Anguilla",
-            "city": "The Valley",
-            "code2": "AI",
-            "code3": "AIA",
-            "latlng": [
+            name: "Anguilla",
+            city: "The Valley",
+            code2: "AI",
+            code3: "AIA",
+            latlng: [
                 18.25,
                 -63.16666666
             ],
-            "flag": "🇦🇮"
+            flag: "🇦🇮"
         },
         {
-            "name": "Antarctica",
-            "city": "",
-            "code2": "AQ",
-            "code3": "ATA",
-            "latlng": [
+            name: "Antarctica",
+            city: "",
+            code2: "AQ",
+            code3: "ATA",
+            latlng: [
                 -74.65,
                 4.48
             ],
-            "flag": "🇦🇶"
+            flag: "🇦🇶"
         },
         {
-            "name": "Antigua and Barbuda",
-            "city": "Saint John's",
-            "code2": "AG",
-            "code3": "ATG",
-            "latlng": [
+            name: "Antigua and Barbuda",
+            city: "Saint John's",
+            code2: "AG",
+            code3: "ATG",
+            latlng: [
                 17.05,
                 -61.8
             ],
-            "flag": "🇦🇬"
+            flag: "🇦🇬"
         },
         {
-            "name": "Argentina",
-            "city": "Buenos Aires",
-            "code2": "AR",
-            "code3": "ARG",
-            "latlng": [
+            name: "Argentina",
+            city: "Buenos Aires",
+            code2: "AR",
+            code3: "ARG",
+            latlng: [
                 -34,
                 -64
             ],
-            "flag": "🇦🇷"
+            flag: "🇦🇷"
         },
         {
-            "name": "Armenia",
-            "city": "Yerevan",
-            "code2": "AM",
-            "code3": "ARM",
-            "latlng": [
+            name: "Armenia",
+            city: "Yerevan",
+            code2: "AM",
+            code3: "ARM",
+            latlng: [
                 40,
                 45
             ],
-            "flag": "🇦🇲"
+            flag: "🇦🇲"
         },
         {
-            "name": "Aruba",
-            "city": "Oranjestad",
-            "code2": "AW",
-            "code3": "ABW",
-            "latlng": [
+            name: "Aruba",
+            city: "Oranjestad",
+            code2: "AW",
+            code3: "ABW",
+            latlng: [
                 12.5,
                 -69.96666666
             ],
-            "flag": "🇦🇼"
+            flag: "🇦🇼"
         },
         {
-            "name": "Australia",
-            "city": "Canberra",
-            "code2": "AU",
-            "code3": "AUS",
-            "latlng": [
+            name: "Australia",
+            city: "Canberra",
+            code2: "AU",
+            code3: "AUS",
+            latlng: [
                 -27,
                 133
             ],
-            "flag": "🇦🇺"
+            flag: "🇦🇺"
         },
         {
-            "name": "Austria",
-            "city": "Vienna",
-            "code2": "AT",
-            "code3": "AUT",
-            "latlng": [
+            name: "Austria",
+            city: "Vienna",
+            code2: "AT",
+            code3: "AUT",
+            latlng: [
                 47.33333333,
                 13.33333333
             ],
-            "flag": "🇦🇹"
+            flag: "🇦🇹"
         },
         {
-            "name": "Azerbaijan",
-            "city": "Baku",
-            "code2": "AZ",
-            "code3": "AZE",
-            "latlng": [
+            name: "Azerbaijan",
+            city: "Baku",
+            code2: "AZ",
+            code3: "AZE",
+            latlng: [
                 40.5,
                 47.5
             ],
-            "flag": "🇦🇿"
+            flag: "🇦🇿"
         },
         {
-            "name": "Bahamas",
-            "city": "Nassau",
-            "code2": "BS",
-            "code3": "BHS",
-            "latlng": [
+            name: "Bahamas",
+            city: "Nassau",
+            code2: "BS",
+            code3: "BHS",
+            latlng: [
                 24.25,
                 -76
             ],
-            "flag": "🇧🇸"
+            flag: "🇧🇸"
         },
         {
-            "name": "Bahrain",
-            "city": "Manama",
-            "code2": "BH",
-            "code3": "BHR",
-            "latlng": [
+            name: "Bahrain",
+            city: "Manama",
+            code2: "BH",
+            code3: "BHR",
+            latlng: [
                 26,
                 50.55
             ],
-            "flag": "🇧🇭"
+            flag: "🇧🇭"
         },
         {
-            "name": "Bangladesh",
-            "city": "Dhaka",
-            "code2": "BD",
-            "code3": "BGD",
-            "latlng": [
+            name: "Bangladesh",
+            city: "Dhaka",
+            code2: "BD",
+            code3: "BGD",
+            latlng: [
                 24,
                 90
             ],
-            "flag": "🇧🇩"
+            flag: "🇧🇩"
         },
         {
-            "name": "Barbados",
-            "city": "Bridgetown",
-            "code2": "BB",
-            "code3": "BRB",
-            "latlng": [
+            name: "Barbados",
+            city: "Bridgetown",
+            code2: "BB",
+            code3: "BRB",
+            latlng: [
                 13.16666666,
                 -59.53333333
             ],
-            "flag": "🇧🇧"
+            flag: "🇧🇧"
         },
         {
-            "name": "Belarus",
-            "city": "Minsk",
-            "code2": "BY",
-            "code3": "BLR",
-            "latlng": [
+            name: "Belarus",
+            city: "Minsk",
+            code2: "BY",
+            code3: "BLR",
+            latlng: [
                 53,
                 28
             ],
-            "flag": "🇧🇾"
+            flag: "🇧🇾"
         },
         {
-            "name": "Belgium",
-            "city": "Brussels",
-            "code2": "BE",
-            "code3": "BEL",
-            "latlng": [
+            name: "Belgium",
+            city: "Brussels",
+            code2: "BE",
+            code3: "BEL",
+            latlng: [
                 50.83333333,
                 4
             ],
-            "flag": "🇧🇪"
+            flag: "🇧🇪"
         },
         {
-            "name": "Belize",
-            "city": "Belmopan",
-            "code2": "BZ",
-            "code3": "BLZ",
-            "latlng": [
+            name: "Belize",
+            city: "Belmopan",
+            code2: "BZ",
+            code3: "BLZ",
+            latlng: [
                 17.25,
                 -88.75
             ],
-            "flag": "🇧🇿"
+            flag: "🇧🇿"
         },
         {
-            "name": "Benin",
-            "city": "Porto-Novo",
-            "code2": "BJ",
-            "code3": "BEN",
-            "latlng": [
+            name: "Benin",
+            city: "Porto-Novo",
+            code2: "BJ",
+            code3: "BEN",
+            latlng: [
                 9.5,
                 2.25
             ],
-            "flag": "🇧🇯"
+            flag: "🇧🇯"
         },
         {
-            "name": "Bermuda",
-            "city": "Hamilton",
-            "code2": "BM",
-            "code3": "BMU",
-            "latlng": [
+            name: "Bermuda",
+            city: "Hamilton",
+            code2: "BM",
+            code3: "BMU",
+            latlng: [
                 32.33333333,
                 -64.75
             ],
-            "flag": "🇧🇲"
+            flag: "🇧🇲"
         },
         {
-            "name": "Bhutan",
-            "city": "Thimphu",
-            "code2": "BT",
-            "code3": "BTN",
-            "latlng": [
+            name: "Bhutan",
+            city: "Thimphu",
+            code2: "BT",
+            code3: "BTN",
+            latlng: [
                 27.5,
                 90.5
             ],
-            "flag": "🇧🇹"
+            flag: "🇧🇹"
         },
         {
-            "name": "Bolivia (Plurinational State of)",
-            "city": "Sucre",
-            "code2": "BO",
-            "code3": "BOL",
-            "latlng": [
+            name: "Bolivia (Plurinational State of)",
+            city: "Sucre",
+            code2: "BO",
+            code3: "BOL",
+            latlng: [
                 -17,
                 -65
             ],
-            "flag": "🇧🇴"
+            flag: "🇧🇴"
         },
         {
-            "name": "Bonaire, Sint Eustatius and Saba",
-            "city": "Kralendijk",
-            "code2": "BQ",
-            "code3": "BES",
-            "latlng": [
+            name: "Bonaire, Sint Eustatius and Saba",
+            city: "Kralendijk",
+            code2: "BQ",
+            code3: "BES",
+            latlng: [
                 12.15,
                 -68.266667
             ],
-            "flag": "🇧🇶"
+            flag: "🇧🇶"
         },
         {
-            "name": "Bosnia and Herzegovina",
-            "city": "Sarajevo",
-            "code2": "BA",
-            "code3": "BIH",
-            "latlng": [
+            name: "Bosnia and Herzegovina",
+            city: "Sarajevo",
+            code2: "BA",
+            code3: "BIH",
+            latlng: [
                 44,
                 18
             ],
-            "flag": "🇧🇦"
+            flag: "🇧🇦"
         },
         {
-            "name": "Botswana",
-            "city": "Gaborone",
-            "code2": "BW",
-            "code3": "BWA",
-            "latlng": [
+            name: "Botswana",
+            city: "Gaborone",
+            code2: "BW",
+            code3: "BWA",
+            latlng: [
                 -22,
                 24
             ],
-            "flag": "🇧🇼"
+            flag: "🇧🇼"
         },
         {
-            "name": "Bouvet Island",
-            "city": "",
-            "code2": "BV",
-            "code3": "BVT",
-            "latlng": [
+            name: "Bouvet Island",
+            city: "",
+            code2: "BV",
+            code3: "BVT",
+            latlng: [
                 -54.43333333,
                 3.4
             ],
-            "flag": "🇧🇻"
+            flag: "🇧🇻"
         },
         {
-            "name": "Brazil",
-            "city": "Brasília",
-            "code2": "BR",
-            "code3": "BRA",
-            "latlng": [
+            name: "Brazil",
+            city: "Brasília",
+            code2: "BR",
+            code3: "BRA",
+            latlng: [
                 -10,
                 -55
             ],
-            "flag": "🇧🇷"
+            flag: "🇧🇷"
         },
         {
-            "name": "British Indian Ocean Territory",
-            "city": "Diego Garcia",
-            "code2": "IO",
-            "code3": "IOT",
-            "latlng": [
+            name: "British Indian Ocean Territory",
+            city: "Diego Garcia",
+            code2: "IO",
+            code3: "IOT",
+            latlng: [
                 -6,
                 71.5
             ],
-            "flag": "🇮🇴"
+            flag: "🇮🇴"
         },
         {
-            "name": "United States Minor Outlying Islands",
-            "city": "",
-            "code2": "UM",
-            "code3": "UMI",
-            "latlng": [],
-            "flag": "🇺🇲"
+            name: "United States Minor Outlying Islands",
+            city: "",
+            code2: "UM",
+            code3: "UMI",
+            latlng: [],
+            flag: "🇺🇲"
         },
         {
-            "name": "Virgin Islands (British)",
-            "city": "Road Town",
-            "code2": "VG",
-            "code3": "VGB",
-            "latlng": [
+            name: "Virgin Islands (British)",
+            city: "Road Town",
+            code2: "VG",
+            code3: "VGB",
+            latlng: [
                 18.431383,
                 -64.62305
             ],
-            "flag": "🇻🇬"
+            flag: "🇻🇬"
         },
         {
-            "name": "Virgin Islands (U.S.)",
-            "city": "Charlotte Amalie",
-            "code2": "VI",
-            "code3": "VIR",
-            "latlng": [
+            name: "Virgin Islands (U.S.)",
+            city: "Charlotte Amalie",
+            code2: "VI",
+            code3: "VIR",
+            latlng: [
                 18.34,
                 -64.93
             ],
-            "flag": "🇻🇮"
+            flag: "🇻🇮"
         },
         {
-            "name": "Brunei Darussalam",
-            "city": "Bandar Seri Begawan",
-            "code2": "BN",
-            "code3": "BRN",
-            "latlng": [
+            name: "Brunei Darussalam",
+            city: "Bandar Seri Begawan",
+            code2: "BN",
+            code3: "BRN",
+            latlng: [
                 4.5,
                 114.66666666
             ],
-            "flag": "🇧🇳"
+            flag: "🇧🇳"
         },
         {
-            "name": "Bulgaria",
-            "city": "Sofia",
-            "code2": "BG",
-            "code3": "BGR",
-            "latlng": [
+            name: "Bulgaria",
+            city: "Sofia",
+            code2: "BG",
+            code3: "BGR",
+            latlng: [
                 43,
                 25
             ],
-            "flag": "🇧🇬"
+            flag: "🇧🇬"
         },
         {
-            "name": "Burkina Faso",
-            "city": "Ouagadougou",
-            "code2": "BF",
-            "code3": "BFA",
-            "latlng": [
+            name: "Burkina Faso",
+            city: "Ouagadougou",
+            code2: "BF",
+            code3: "BFA",
+            latlng: [
                 13,
                 -2
             ],
-            "flag": "🇧🇫"
+            flag: "🇧🇫"
         },
         {
-            "name": "Burundi",
-            "city": "Gitega",
-            "code2": "BI",
-            "code3": "BDI",
-            "latlng": [
+            name: "Burundi",
+            city: "Gitega",
+            code2: "BI",
+            code3: "BDI",
+            latlng: [
                 -3.5,
                 30
             ],
-            "flag": "🇧🇮"
+            flag: "🇧🇮"
         },
         {
-            "name": "Cambodia",
-            "city": "Phnom Penh",
-            "code2": "KH",
-            "code3": "KHM",
-            "latlng": [
+            name: "Cambodia",
+            city: "Phnom Penh",
+            code2: "KH",
+            code3: "KHM",
+            latlng: [
                 13,
                 105
             ],
-            "flag": "🇰🇭"
+            flag: "🇰🇭"
         },
         {
-            "name": "Cameroon",
-            "city": "Yaoundé",
-            "code2": "CM",
-            "code3": "CMR",
-            "latlng": [
+            name: "Cameroon",
+            city: "Yaoundé",
+            code2: "CM",
+            code3: "CMR",
+            latlng: [
                 6,
                 12
             ],
-            "flag": "🇨🇲"
+            flag: "🇨🇲"
         },
         {
-            "name": "Canada",
-            "city": "Ottawa",
-            "code2": "CA",
-            "code3": "CAN",
-            "latlng": [
+            name: "Canada",
+            city: "Ottawa",
+            code2: "CA",
+            code3: "CAN",
+            latlng: [
                 60,
                 -95
             ],
-            "flag": "🇨🇦"
+            flag: "🇨🇦"
         },
         {
-            "name": "Cabo Verde",
-            "city": "Praia",
-            "code2": "CV",
-            "code3": "CPV",
-            "latlng": [
+            name: "Cabo Verde",
+            city: "Praia",
+            code2: "CV",
+            code3: "CPV",
+            latlng: [
                 16,
                 -24
             ],
-            "flag": "🇨🇻"
+            flag: "🇨🇻"
         },
         {
-            "name": "Cayman Islands",
-            "city": "George Town",
-            "code2": "KY",
-            "code3": "CYM",
-            "latlng": [
+            name: "Cayman Islands",
+            city: "George Town",
+            code2: "KY",
+            code3: "CYM",
+            latlng: [
                 19.5,
                 -80.5
             ],
-            "flag": "🇰🇾"
+            flag: "🇰🇾"
         },
         {
-            "name": "Central African Republic",
-            "city": "Bangui",
-            "code2": "CF",
-            "code3": "CAF",
-            "latlng": [
+            name: "Central African Republic",
+            city: "Bangui",
+            code2: "CF",
+            code3: "CAF",
+            latlng: [
                 7,
                 21
             ],
-            "flag": "🇨🇫"
+            flag: "🇨🇫"
         },
         {
-            "name": "Chad",
-            "city": "N'Djamena",
-            "code2": "TD",
-            "code3": "TCD",
-            "latlng": [
+            name: "Chad",
+            city: "N'Djamena",
+            code2: "TD",
+            code3: "TCD",
+            latlng: [
                 15,
                 19
             ],
-            "flag": "🇹🇩"
+            flag: "🇹🇩"
         },
         {
-            "name": "Chile",
-            "city": "Santiago",
-            "code2": "CL",
-            "code3": "CHL",
-            "latlng": [
+            name: "Chile",
+            city: "Santiago",
+            code2: "CL",
+            code3: "CHL",
+            latlng: [
                 -30,
                 -71
             ],
-            "flag": "🇨🇱"
+            flag: "🇨🇱"
         },
         {
-            "name": "China",
-            "city": "Beijing",
-            "code2": "CN",
-            "code3": "CHN",
-            "latlng": [
+            name: "China",
+            city: "Beijing",
+            code2: "CN",
+            code3: "CHN",
+            latlng: [
                 35,
                 105
             ],
-            "flag": "🇨🇳"
+            flag: "🇨🇳"
         },
         {
-            "name": "Christmas Island",
-            "city": "Flying Fish Cove",
-            "code2": "CX",
-            "code3": "CXR",
-            "latlng": [
+            name: "Christmas Island",
+            city: "Flying Fish Cove",
+            code2: "CX",
+            code3: "CXR",
+            latlng: [
                 -10.5,
                 105.66666666
             ],
-            "flag": "🇨🇽"
+            flag: "🇨🇽"
         },
         {
-            "name": "Cocos (Keeling) Islands",
-            "city": "West Island",
-            "code2": "CC",
-            "code3": "CCK",
-            "latlng": [
+            name: "Cocos (Keeling) Islands",
+            city: "West Island",
+            code2: "CC",
+            code3: "CCK",
+            latlng: [
                 -12.5,
                 96.83333333
             ],
-            "flag": "🇨🇨"
+            flag: "🇨🇨"
         },
         {
-            "name": "Colombia",
-            "city": "Bogotá",
-            "code2": "CO",
-            "code3": "COL",
-            "latlng": [
+            name: "Colombia",
+            city: "Bogotá",
+            code2: "CO",
+            code3: "COL",
+            latlng: [
                 4,
                 -72
             ],
-            "flag": "🇨🇴"
+            flag: "🇨🇴"
         },
         {
-            "name": "Comoros",
-            "city": "Moroni",
-            "code2": "KM",
-            "code3": "COM",
-            "latlng": [
+            name: "Comoros",
+            city: "Moroni",
+            code2: "KM",
+            code3: "COM",
+            latlng: [
                 -12.16666666,
                 44.25
             ],
-            "flag": "🇰🇲"
+            flag: "🇰🇲"
         },
         {
-            "name": "Congo",
-            "city": "Brazzaville",
-            "code2": "CG",
-            "code3": "COG",
-            "latlng": [
+            name: "Congo",
+            city: "Brazzaville",
+            code2: "CG",
+            code3: "COG",
+            latlng: [
                 -1,
                 15
             ],
-            "flag": "🇨🇬"
+            flag: "🇨🇬"
         },
         {
-            "name": "Congo (Democratic Republic of the)",
-            "city": "Kinshasa",
-            "code2": "CD",
-            "code3": "COD",
-            "latlng": [
+            name: "Congo (Democratic Republic of the)",
+            city: "Kinshasa",
+            code2: "CD",
+            code3: "COD",
+            latlng: [
                 0,
                 25
             ],
-            "flag": "🇨🇩"
+            flag: "🇨🇩"
         },
         {
-            "name": "Cook Islands",
-            "city": "Avarua",
-            "code2": "CK",
-            "code3": "COK",
-            "latlng": [
+            name: "Cook Islands",
+            city: "Avarua",
+            code2: "CK",
+            code3: "COK",
+            latlng: [
                 -21.23333333,
                 -159.76666666
             ],
-            "flag": "🇨🇰"
+            flag: "🇨🇰"
         },
         {
-            "name": "Costa Rica",
-            "city": "San José",
-            "code2": "CR",
-            "code3": "CRI",
-            "latlng": [
+            name: "Costa Rica",
+            city: "San José",
+            code2: "CR",
+            code3: "CRI",
+            latlng: [
                 10,
                 -84
             ],
-            "flag": "🇨🇷"
+            flag: "🇨🇷"
         },
         {
-            "name": "Croatia",
-            "city": "Zagreb",
-            "code2": "HR",
-            "code3": "HRV",
-            "latlng": [
+            name: "Croatia",
+            city: "Zagreb",
+            code2: "HR",
+            code3: "HRV",
+            latlng: [
                 45.16666666,
                 15.5
             ],
-            "flag": "🇭🇷"
+            flag: "🇭🇷"
         },
         {
-            "name": "Cuba",
-            "city": "Havana",
-            "code2": "CU",
-            "code3": "CUB",
-            "latlng": [
+            name: "Cuba",
+            city: "Havana",
+            code2: "CU",
+            code3: "CUB",
+            latlng: [
                 21.5,
                 -80
             ],
-            "flag": "🇨🇺"
+            flag: "🇨🇺"
         },
         {
-            "name": "Curaçao",
-            "city": "Willemstad",
-            "code2": "CW",
-            "code3": "CUW",
-            "latlng": [
+            name: "Curaçao",
+            city: "Willemstad",
+            code2: "CW",
+            code3: "CUW",
+            latlng: [
                 12.116667,
                 -68.933333
             ],
-            "flag": "🇨🇼"
+            flag: "🇨🇼"
         },
         {
-            "name": "Cyprus",
-            "city": "Nicosia",
-            "code2": "CY",
-            "code3": "CYP",
-            "latlng": [
+            name: "Cyprus",
+            city: "Nicosia",
+            code2: "CY",
+            code3: "CYP",
+            latlng: [
                 35,
                 33
             ],
-            "flag": "🇨🇾"
+            flag: "🇨🇾"
         },
         {
-            "name": "Czech Republic",
-            "city": "Prague",
-            "code2": "CZ",
-            "code3": "CZE",
-            "latlng": [
+            name: "Czech Republic",
+            city: "Prague",
+            code2: "CZ",
+            code3: "CZE",
+            latlng: [
                 49.75,
                 15.5
             ],
-            "flag": "🇨🇿"
+            flag: "🇨🇿"
         },
         {
-            "name": "Denmark",
-            "city": "Copenhagen",
-            "code2": "DK",
-            "code3": "DNK",
-            "latlng": [
+            name: "Denmark",
+            city: "Copenhagen",
+            code2: "DK",
+            code3: "DNK",
+            latlng: [
                 56,
                 10
             ],
-            "flag": "🇩🇰"
+            flag: "🇩🇰"
         },
         {
-            "name": "Djibouti",
-            "city": "Djibouti",
-            "code2": "DJ",
-            "code3": "DJI",
-            "latlng": [
+            name: "Djibouti",
+            city: "Djibouti",
+            code2: "DJ",
+            code3: "DJI",
+            latlng: [
                 11.5,
                 43
             ],
-            "flag": "🇩🇯"
+            flag: "🇩🇯"
         },
         {
-            "name": "Dominica",
-            "city": "Roseau",
-            "code2": "DM",
-            "code3": "DMA",
-            "latlng": [
+            name: "Dominica",
+            city: "Roseau",
+            code2: "DM",
+            code3: "DMA",
+            latlng: [
                 15.41666666,
                 -61.33333333
             ],
-            "flag": "🇩🇲"
+            flag: "🇩🇲"
         },
         {
-            "name": "Dominican Republic",
-            "city": "Santo Domingo",
-            "code2": "DO",
-            "code3": "DOM",
-            "latlng": [
+            name: "Dominican Republic",
+            city: "Santo Domingo",
+            code2: "DO",
+            code3: "DOM",
+            latlng: [
                 19,
                 -70.66666666
             ],
-            "flag": "🇩🇴"
+            flag: "🇩🇴"
         },
         {
-            "name": "Ecuador",
-            "city": "Quito",
-            "code2": "EC",
-            "code3": "ECU",
-            "latlng": [
+            name: "Ecuador",
+            city: "Quito",
+            code2: "EC",
+            code3: "ECU",
+            latlng: [
                 -2,
                 -77.5
             ],
-            "flag": "🇪🇨"
+            flag: "🇪🇨"
         },
         {
-            "name": "Egypt",
-            "city": "Cairo",
-            "code2": "EG",
-            "code3": "EGY",
-            "latlng": [
+            name: "Egypt",
+            city: "Cairo",
+            code2: "EG",
+            code3: "EGY",
+            latlng: [
                 27,
                 30
             ],
-            "flag": "🇪🇬"
+            flag: "🇪🇬"
         },
         {
-            "name": "El Salvador",
-            "city": "San Salvador",
-            "code2": "SV",
-            "code3": "SLV",
-            "latlng": [
+            name: "El Salvador",
+            city: "San Salvador",
+            code2: "SV",
+            code3: "SLV",
+            latlng: [
                 13.83333333,
                 -88.91666666
             ],
-            "flag": "🇸🇻"
+            flag: "🇸🇻"
         },
         {
-            "name": "Equatorial Guinea",
-            "city": "Malabo",
-            "code2": "GQ",
-            "code3": "GNQ",
-            "latlng": [
+            name: "Equatorial Guinea",
+            city: "Malabo",
+            code2: "GQ",
+            code3: "GNQ",
+            latlng: [
                 2,
                 10
             ],
-            "flag": "🇬🇶"
+            flag: "🇬🇶"
         },
         {
-            "name": "Eritrea",
-            "city": "Asmara",
-            "code2": "ER",
-            "code3": "ERI",
-            "latlng": [
+            name: "Eritrea",
+            city: "Asmara",
+            code2: "ER",
+            code3: "ERI",
+            latlng: [
                 15,
                 39
             ],
-            "flag": "🇪🇷"
+            flag: "🇪🇷"
         },
         {
-            "name": "Estonia",
-            "city": "Tallinn",
-            "code2": "EE",
-            "code3": "EST",
-            "latlng": [
+            name: "Estonia",
+            city: "Tallinn",
+            code2: "EE",
+            code3: "EST",
+            latlng: [
                 59,
                 26
             ],
-            "flag": "🇪🇪"
+            flag: "🇪🇪"
         },
         {
-            "name": "Ethiopia",
-            "city": "Addis Ababa",
-            "code2": "ET",
-            "code3": "ETH",
-            "latlng": [
+            name: "Ethiopia",
+            city: "Addis Ababa",
+            code2: "ET",
+            code3: "ETH",
+            latlng: [
                 8,
                 38
             ],
-            "flag": "🇪🇹"
+            flag: "🇪🇹"
         },
         {
-            "name": "Falkland Islands (Malvinas)",
-            "city": "Stanley",
-            "code2": "FK",
-            "code3": "FLK",
-            "latlng": [
+            name: "Falkland Islands (Malvinas)",
+            city: "Stanley",
+            code2: "FK",
+            code3: "FLK",
+            latlng: [
                 -51.75,
                 -59
             ],
-            "flag": "🇫🇰"
+            flag: "🇫🇰"
         },
         {
-            "name": "Faroe Islands",
-            "city": "Tórshavn",
-            "code2": "FO",
-            "code3": "FRO",
-            "latlng": [
+            name: "Faroe Islands",
+            city: "Tórshavn",
+            code2: "FO",
+            code3: "FRO",
+            latlng: [
                 62,
                 -7
             ],
-            "flag": "🇫🇴"
+            flag: "🇫🇴"
         },
         {
-            "name": "Fiji",
-            "city": "Suva",
-            "code2": "FJ",
-            "code3": "FJI",
-            "latlng": [
+            name: "Fiji",
+            city: "Suva",
+            code2: "FJ",
+            code3: "FJI",
+            latlng: [
                 -18,
                 175
             ],
-            "flag": "🇫🇯"
+            flag: "🇫🇯"
         },
         {
-            "name": "Finland",
-            "city": "Helsinki",
-            "code2": "FI",
-            "code3": "FIN",
-            "latlng": [
+            name: "Finland",
+            city: "Helsinki",
+            code2: "FI",
+            code3: "FIN",
+            latlng: [
                 64,
                 26
             ],
-            "flag": "🇫🇮"
+            flag: "🇫🇮"
         },
         {
-            "name": "France",
-            "city": "Paris",
-            "code2": "FR",
-            "code3": "FRA",
-            "latlng": [
+            name: "France",
+            city: "Paris",
+            code2: "FR",
+            code3: "FRA",
+            latlng: [
                 46,
                 2
             ],
-            "flag": "🇫🇷"
+            flag: "🇫🇷"
         },
         {
-            "name": "French Guiana",
-            "city": "Cayenne",
-            "code2": "GF",
-            "code3": "GUF",
-            "latlng": [
+            name: "French Guiana",
+            city: "Cayenne",
+            code2: "GF",
+            code3: "GUF",
+            latlng: [
                 4,
                 -53
             ],
-            "flag": "🇬🇫"
+            flag: "🇬🇫"
         },
         {
-            "name": "French Polynesia",
-            "city": "Papeetē",
-            "code2": "PF",
-            "code3": "PYF",
-            "latlng": [
+            name: "French Polynesia",
+            city: "Papeetē",
+            code2: "PF",
+            code3: "PYF",
+            latlng: [
                 -15,
                 -140
             ],
-            "flag": "🇵🇫"
+            flag: "🇵🇫"
         },
         {
-            "name": "French Southern Territories",
-            "city": "Port-aux-Français",
-            "code2": "TF",
-            "code3": "ATF",
-            "latlng": [
+            name: "French Southern Territories",
+            city: "Port-aux-Français",
+            code2: "TF",
+            code3: "ATF",
+            latlng: [
                 -49.25,
                 69.167
             ],
-            "flag": "🇹🇫"
+            flag: "🇹🇫"
         },
         {
-            "name": "Gabon",
-            "city": "Libreville",
-            "code2": "GA",
-            "code3": "GAB",
-            "latlng": [
+            name: "Gabon",
+            city: "Libreville",
+            code2: "GA",
+            code3: "GAB",
+            latlng: [
                 -1,
                 11.75
             ],
-            "flag": "🇬🇦"
+            flag: "🇬🇦"
         },
         {
-            "name": "Gambia",
-            "city": "Banjul",
-            "code2": "GM",
-            "code3": "GMB",
-            "latlng": [
+            name: "Gambia",
+            city: "Banjul",
+            code2: "GM",
+            code3: "GMB",
+            latlng: [
                 13.46666666,
                 -16.56666666
             ],
-            "flag": "🇬🇲"
+            flag: "🇬🇲"
         },
         {
-            "name": "Georgia",
-            "city": "Tbilisi",
-            "code2": "GE",
-            "code3": "GEO",
-            "latlng": [
+            name: "Georgia",
+            city: "Tbilisi",
+            code2: "GE",
+            code3: "GEO",
+            latlng: [
                 42,
                 43.5
             ],
-            "flag": "🇬🇪"
+            flag: "🇬🇪"
         },
         {
-            "name": "Germany",
-            "city": "Berlin",
-            "code2": "DE",
-            "code3": "DEU",
-            "latlng": [
+            name: "Germany",
+            city: "Berlin",
+            code2: "DE",
+            code3: "DEU",
+            latlng: [
                 51,
                 9
             ],
-            "flag": "🇩🇪"
+            flag: "🇩🇪"
         },
         {
-            "name": "Ghana",
-            "city": "Accra",
-            "code2": "GH",
-            "code3": "GHA",
-            "latlng": [
+            name: "Ghana",
+            city: "Accra",
+            code2: "GH",
+            code3: "GHA",
+            latlng: [
                 8,
                 -2
             ],
-            "flag": "🇬🇭"
+            flag: "🇬🇭"
         },
         {
-            "name": "Gibraltar",
-            "city": "Gibraltar",
-            "code2": "GI",
-            "code3": "GIB",
-            "latlng": [
+            name: "Gibraltar",
+            city: "Gibraltar",
+            code2: "GI",
+            code3: "GIB",
+            latlng: [
                 36.13333333,
                 -5.35
             ],
-            "flag": "🇬🇮"
+            flag: "🇬🇮"
         },
         {
-            "name": "Greece",
-            "city": "Athens",
-            "code2": "GR",
-            "code3": "GRC",
-            "latlng": [
+            name: "Greece",
+            city: "Athens",
+            code2: "GR",
+            code3: "GRC",
+            latlng: [
                 39,
                 22
             ],
-            "flag": "🇬🇷"
+            flag: "🇬🇷"
         },
         {
-            "name": "Greenland",
-            "city": "Nuuk",
-            "code2": "GL",
-            "code3": "GRL",
-            "latlng": [
+            name: "Greenland",
+            city: "Nuuk",
+            code2: "GL",
+            code3: "GRL",
+            latlng: [
                 72,
                 -40
             ],
-            "flag": "🇬🇱"
+            flag: "🇬🇱"
         },
         {
-            "name": "Grenada",
-            "city": "St. George's",
-            "code2": "GD",
-            "code3": "GRD",
-            "latlng": [
+            name: "Grenada",
+            city: "St. George's",
+            code2: "GD",
+            code3: "GRD",
+            latlng: [
                 12.11666666,
                 -61.66666666
             ],
-            "flag": "🇬🇩"
+            flag: "🇬🇩"
         },
         {
-            "name": "Guadeloupe",
-            "city": "Basse-Terre",
-            "code2": "GP",
-            "code3": "GLP",
-            "latlng": [
+            name: "Guadeloupe",
+            city: "Basse-Terre",
+            code2: "GP",
+            code3: "GLP",
+            latlng: [
                 16.25,
                 -61.583333
             ],
-            "flag": "🇬🇵"
+            flag: "🇬🇵"
         },
         {
-            "name": "Guam",
-            "city": "Hagåtña",
-            "code2": "GU",
-            "code3": "GUM",
-            "latlng": [
+            name: "Guam",
+            city: "Hagåtña",
+            code2: "GU",
+            code3: "GUM",
+            latlng: [
                 13.46666666,
                 144.78333333
             ],
-            "flag": "🇬🇺"
+            flag: "🇬🇺"
         },
         {
-            "name": "Guatemala",
-            "city": "Guatemala City",
-            "code2": "GT",
-            "code3": "GTM",
-            "latlng": [
+            name: "Guatemala",
+            city: "Guatemala City",
+            code2: "GT",
+            code3: "GTM",
+            latlng: [
                 15.5,
                 -90.25
             ],
-            "flag": "🇬🇹"
+            flag: "🇬🇹"
         },
         {
-            "name": "Guernsey",
-            "city": "St. Peter Port",
-            "code2": "GG",
-            "code3": "GGY",
-            "latlng": [
+            name: "Guernsey",
+            city: "St. Peter Port",
+            code2: "GG",
+            code3: "GGY",
+            latlng: [
                 49.46666666,
                 -2.58333333
             ],
-            "flag": "🇬🇬"
+            flag: "🇬🇬"
         },
         {
-            "name": "Guinea",
-            "city": "Conakry",
-            "code2": "GN",
-            "code3": "GIN",
-            "latlng": [
+            name: "Guinea",
+            city: "Conakry",
+            code2: "GN",
+            code3: "GIN",
+            latlng: [
                 11,
                 -10
             ],
-            "flag": "🇬🇳"
+            flag: "🇬🇳"
         },
         {
-            "name": "Guinea-Bissau",
-            "city": "Bissau",
-            "code2": "GW",
-            "code3": "GNB",
-            "latlng": [
+            name: "Guinea-Bissau",
+            city: "Bissau",
+            code2: "GW",
+            code3: "GNB",
+            latlng: [
                 12,
                 -15
             ],
-            "flag": "🇬🇼"
+            flag: "🇬🇼"
         },
         {
-            "name": "Guyana",
-            "city": "Georgetown",
-            "code2": "GY",
-            "code3": "GUY",
-            "latlng": [
+            name: "Guyana",
+            city: "Georgetown",
+            code2: "GY",
+            code3: "GUY",
+            latlng: [
                 5,
                 -59
             ],
-            "flag": "🇬🇾"
+            flag: "🇬🇾"
         },
         {
-            "name": "Haiti",
-            "city": "Port-au-Prince",
-            "code2": "HT",
-            "code3": "HTI",
-            "latlng": [
+            name: "Haiti",
+            city: "Port-au-Prince",
+            code2: "HT",
+            code3: "HTI",
+            latlng: [
                 19,
                 -72.41666666
             ],
-            "flag": "🇭🇹"
+            flag: "🇭🇹"
         },
         {
-            "name": "Heard Island and McDonald Islands",
-            "city": "",
-            "code2": "HM",
-            "code3": "HMD",
-            "latlng": [
+            name: "Heard Island and McDonald Islands",
+            city: "",
+            code2: "HM",
+            code3: "HMD",
+            latlng: [
                 -53.1,
                 72.51666666
             ],
-            "flag": "🇭🇲"
+            flag: "🇭🇲"
         },
         {
-            "name": "Vatican City",
-            "city": "Vatican City",
-            "code2": "VA",
-            "code3": "VAT",
-            "latlng": [
+            name: "Vatican City",
+            city: "Vatican City",
+            code2: "VA",
+            code3: "VAT",
+            latlng: [
                 41.9,
                 12.45
             ],
-            "flag": "🇻🇦"
+            flag: "🇻🇦"
         },
         {
-            "name": "Honduras",
-            "city": "Tegucigalpa",
-            "code2": "HN",
-            "code3": "HND",
-            "latlng": [
+            name: "Honduras",
+            city: "Tegucigalpa",
+            code2: "HN",
+            code3: "HND",
+            latlng: [
                 15,
                 -86.5
             ],
-            "flag": "🇭🇳"
+            flag: "🇭🇳"
         },
         {
-            "name": "Hong Kong",
-            "city": "City of Victoria",
-            "code2": "HK",
-            "code3": "HKG",
-            "latlng": [
+            name: "Hong Kong",
+            city: "City of Victoria",
+            code2: "HK",
+            code3: "HKG",
+            latlng: [
                 22.25,
                 114.16666666
             ],
-            "flag": "🇭🇰"
+            flag: "🇭🇰"
         },
         {
-            "name": "Hungary",
-            "city": "Budapest",
-            "code2": "HU",
-            "code3": "HUN",
-            "latlng": [
+            name: "Hungary",
+            city: "Budapest",
+            code2: "HU",
+            code3: "HUN",
+            latlng: [
                 47,
                 20
             ],
-            "flag": "🇭🇺"
+            flag: "🇭🇺"
         },
         {
-            "name": "Iceland",
-            "city": "Reykjavík",
-            "code2": "IS",
-            "code3": "ISL",
-            "latlng": [
+            name: "Iceland",
+            city: "Reykjavík",
+            code2: "IS",
+            code3: "ISL",
+            latlng: [
                 65,
                 -18
             ],
-            "flag": "🇮🇸"
+            flag: "🇮🇸"
         },
         {
-            "name": "India",
-            "city": "New Delhi",
-            "code2": "IN",
-            "code3": "IND",
-            "latlng": [
+            name: "India",
+            city: "New Delhi",
+            code2: "IN",
+            code3: "IND",
+            latlng: [
                 20,
                 77
             ],
-            "flag": "🇮🇳"
+            flag: "🇮🇳"
         },
         {
-            "name": "Indonesia",
-            "city": "Jakarta",
-            "code2": "ID",
-            "code3": "IDN",
-            "latlng": [
+            name: "Indonesia",
+            city: "Jakarta",
+            code2: "ID",
+            code3: "IDN",
+            latlng: [
                 -5,
                 120
             ],
-            "flag": "🇮🇩"
+            flag: "🇮🇩"
         },
         {
-            "name": "Côte d'Ivoire",
-            "city": "Yamoussoukro",
-            "code2": "CI",
-            "code3": "CIV",
-            "latlng": [
+            name: "Côte d'Ivoire",
+            city: "Yamoussoukro",
+            code2: "CI",
+            code3: "CIV",
+            latlng: [
                 8,
                 -5
             ],
-            "flag": "🇨🇮"
+            flag: "🇨🇮"
         },
         {
-            "name": "Iran (Islamic Republic of)",
-            "city": "Tehran",
-            "code2": "IR",
-            "code3": "IRN",
-            "latlng": [
+            name: "Iran (Islamic Republic of)",
+            city: "Tehran",
+            code2: "IR",
+            code3: "IRN",
+            latlng: [
                 32,
                 53
             ],
-            "flag": "🇮🇷"
+            flag: "🇮🇷"
         },
         {
-            "name": "Iraq",
-            "city": "Baghdad",
-            "code2": "IQ",
-            "code3": "IRQ",
-            "latlng": [
+            name: "Iraq",
+            city: "Baghdad",
+            code2: "IQ",
+            code3: "IRQ",
+            latlng: [
                 33,
                 44
             ],
-            "flag": "🇮🇶"
+            flag: "🇮🇶"
         },
         {
-            "name": "Ireland",
-            "city": "Dublin",
-            "code2": "IE",
-            "code3": "IRL",
-            "latlng": [
+            name: "Ireland",
+            city: "Dublin",
+            code2: "IE",
+            code3: "IRL",
+            latlng: [
                 53,
                 -8
             ],
-            "flag": "🇮🇪"
+            flag: "🇮🇪"
         },
         {
-            "name": "Isle of Man",
-            "city": "Douglas",
-            "code2": "IM",
-            "code3": "IMN",
-            "latlng": [
+            name: "Isle of Man",
+            city: "Douglas",
+            code2: "IM",
+            code3: "IMN",
+            latlng: [
                 54.25,
                 -4.5
             ],
-            "flag": "🇮🇲"
+            flag: "🇮🇲"
         },
         {
-            "name": "Israel",
-            "city": "Jerusalem",
-            "code2": "IL",
-            "code3": "ISR",
-            "latlng": [
+            name: "Israel",
+            city: "Jerusalem",
+            code2: "IL",
+            code3: "ISR",
+            latlng: [
                 31.5,
                 34.75
             ],
-            "flag": "🇮🇱"
+            flag: "🇮🇱"
         },
         {
-            "name": "Italy",
-            "city": "Rome",
-            "code2": "IT",
-            "code3": "ITA",
-            "latlng": [
+            name: "Italy",
+            city: "Rome",
+            code2: "IT",
+            code3: "ITA",
+            latlng: [
                 42.83333333,
                 12.83333333
             ],
-            "flag": "🇮🇹"
+            flag: "🇮🇹"
         },
         {
-            "name": "Jamaica",
-            "city": "Kingston",
-            "code2": "JM",
-            "code3": "JAM",
-            "latlng": [
+            name: "Jamaica",
+            city: "Kingston",
+            code2: "JM",
+            code3: "JAM",
+            latlng: [
                 18.25,
                 -77.5
             ],
-            "flag": "🇯🇲"
+            flag: "🇯🇲"
         },
         {
-            "name": "Japan",
-            "city": "Tokyo",
-            "code2": "JP",
-            "code3": "JPN",
-            "latlng": [
+            name: "Japan",
+            city: "Tokyo",
+            code2: "JP",
+            code3: "JPN",
+            latlng: [
                 36,
                 138
             ],
-            "flag": "🇯🇵"
+            flag: "🇯🇵"
         },
         {
-            "name": "Jersey",
-            "city": "Saint Helier",
-            "code2": "JE",
-            "code3": "JEY",
-            "latlng": [
+            name: "Jersey",
+            city: "Saint Helier",
+            code2: "JE",
+            code3: "JEY",
+            latlng: [
                 49.25,
                 -2.16666666
             ],
-            "flag": "🇯🇪"
+            flag: "🇯🇪"
         },
         {
-            "name": "Jordan",
-            "city": "Amman",
-            "code2": "JO",
-            "code3": "JOR",
-            "latlng": [
+            name: "Jordan",
+            city: "Amman",
+            code2: "JO",
+            code3: "JOR",
+            latlng: [
                 31,
                 36
             ],
-            "flag": "🇯🇴"
+            flag: "🇯🇴"
         },
         {
-            "name": "Kazakhstan",
-            "city": "Nur-Sultan",
-            "code2": "KZ",
-            "code3": "KAZ",
-            "latlng": [
+            name: "Kazakhstan",
+            city: "Nur-Sultan",
+            code2: "KZ",
+            code3: "KAZ",
+            latlng: [
                 48,
                 68
             ],
-            "flag": "🇰🇿"
+            flag: "🇰🇿"
         },
         {
-            "name": "Kenya",
-            "city": "Nairobi",
-            "code2": "KE",
-            "code3": "KEN",
-            "latlng": [
+            name: "Kenya",
+            city: "Nairobi",
+            code2: "KE",
+            code3: "KEN",
+            latlng: [
                 1,
                 38
             ],
-            "flag": "🇰🇪"
+            flag: "🇰🇪"
         },
         {
-            "name": "Kiribati",
-            "city": "South Tarawa",
-            "code2": "KI",
-            "code3": "KIR",
-            "latlng": [
+            name: "Kiribati",
+            city: "South Tarawa",
+            code2: "KI",
+            code3: "KIR",
+            latlng: [
                 1.41666666,
                 173
             ],
-            "flag": "🇰🇮"
+            flag: "🇰🇮"
         },
         {
-            "name": "Kuwait",
-            "city": "Kuwait City",
-            "code2": "KW",
-            "code3": "KWT",
-            "latlng": [
+            name: "Kuwait",
+            city: "Kuwait City",
+            code2: "KW",
+            code3: "KWT",
+            latlng: [
                 29.5,
                 45.75
             ],
-            "flag": "🇰🇼"
+            flag: "🇰🇼"
         },
         {
-            "name": "Kyrgyzstan",
-            "city": "Bishkek",
-            "code2": "KG",
-            "code3": "KGZ",
-            "latlng": [
+            name: "Kyrgyzstan",
+            city: "Bishkek",
+            code2: "KG",
+            code3: "KGZ",
+            latlng: [
                 41,
                 75
             ],
-            "flag": "🇰🇬"
+            flag: "🇰🇬"
         },
         {
-            "name": "Lao People's Democratic Republic",
-            "city": "Vientiane",
-            "code2": "LA",
-            "code3": "LAO",
-            "latlng": [
+            name: "Lao People's Democratic Republic",
+            city: "Vientiane",
+            code2: "LA",
+            code3: "LAO",
+            latlng: [
                 18,
                 105
             ],
-            "flag": "🇱🇦"
+            flag: "🇱🇦"
         },
         {
-            "name": "Latvia",
-            "city": "Riga",
-            "code2": "LV",
-            "code3": "LVA",
-            "latlng": [
+            name: "Latvia",
+            city: "Riga",
+            code2: "LV",
+            code3: "LVA",
+            latlng: [
                 57,
                 25
             ],
-            "flag": "🇱🇻"
+            flag: "🇱🇻"
         },
         {
-            "name": "Lebanon",
-            "city": "Beirut",
-            "code2": "LB",
-            "code3": "LBN",
-            "latlng": [
+            name: "Lebanon",
+            city: "Beirut",
+            code2: "LB",
+            code3: "LBN",
+            latlng: [
                 33.83333333,
                 35.83333333
             ],
-            "flag": "🇱🇧"
+            flag: "🇱🇧"
         },
         {
-            "name": "Lesotho",
-            "city": "Maseru",
-            "code2": "LS",
-            "code3": "LSO",
-            "latlng": [
+            name: "Lesotho",
+            city: "Maseru",
+            code2: "LS",
+            code3: "LSO",
+            latlng: [
                 -29.5,
                 28.5
             ],
-            "flag": "🇱🇸"
+            flag: "🇱🇸"
         },
         {
-            "name": "Liberia",
-            "city": "Monrovia",
-            "code2": "LR",
-            "code3": "LBR",
-            "latlng": [
+            name: "Liberia",
+            city: "Monrovia",
+            code2: "LR",
+            code3: "LBR",
+            latlng: [
                 6.5,
                 -9.5
             ],
-            "flag": "🇱🇷"
+            flag: "🇱🇷"
         },
         {
-            "name": "Libya",
-            "city": "Tripoli",
-            "code2": "LY",
-            "code3": "LBY",
-            "latlng": [
+            name: "Libya",
+            city: "Tripoli",
+            code2: "LY",
+            code3: "LBY",
+            latlng: [
                 25,
                 17
             ],
-            "flag": "🇱🇾"
+            flag: "🇱🇾"
         },
         {
-            "name": "Liechtenstein",
-            "city": "Vaduz",
-            "code2": "LI",
-            "code3": "LIE",
-            "latlng": [
+            name: "Liechtenstein",
+            city: "Vaduz",
+            code2: "LI",
+            code3: "LIE",
+            latlng: [
                 47.26666666,
                 9.53333333
             ],
-            "flag": "🇱🇮"
+            flag: "🇱🇮"
         },
         {
-            "name": "Lithuania",
-            "city": "Vilnius",
-            "code2": "LT",
-            "code3": "LTU",
-            "latlng": [
+            name: "Lithuania",
+            city: "Vilnius",
+            code2: "LT",
+            code3: "LTU",
+            latlng: [
                 56,
                 24
             ],
-            "flag": "🇱🇹"
+            flag: "🇱🇹"
         },
         {
-            "name": "Luxembourg",
-            "city": "Luxembourg",
-            "code2": "LU",
-            "code3": "LUX",
-            "latlng": [
+            name: "Luxembourg",
+            city: "Luxembourg",
+            code2: "LU",
+            code3: "LUX",
+            latlng: [
                 49.75,
                 6.16666666
             ],
-            "flag": "🇱🇺"
+            flag: "🇱🇺"
         },
         {
-            "name": "Macao",
-            "city": "",
-            "code2": "MO",
-            "code3": "MAC",
-            "latlng": [
+            name: "Macao",
+            city: "",
+            code2: "MO",
+            code3: "MAC",
+            latlng: [
                 22.16666666,
                 113.55
             ],
-            "flag": "🇲🇴"
+            flag: "🇲🇴"
         },
         {
-            "name": "North Macedonia",
-            "city": "Skopje",
-            "code2": "MK",
-            "code3": "MKD",
-            "latlng": [
+            name: "North Macedonia",
+            city: "Skopje",
+            code2: "MK",
+            code3: "MKD",
+            latlng: [
                 41.83333333,
                 22
             ],
-            "flag": "🇲🇰"
+            flag: "🇲🇰"
         },
         {
-            "name": "Madagascar",
-            "city": "Antananarivo",
-            "code2": "MG",
-            "code3": "MDG",
-            "latlng": [
+            name: "Madagascar",
+            city: "Antananarivo",
+            code2: "MG",
+            code3: "MDG",
+            latlng: [
                 -20,
                 47
             ],
-            "flag": "🇲🇬"
+            flag: "🇲🇬"
         },
         {
-            "name": "Malawi",
-            "city": "Lilongwe",
-            "code2": "MW",
-            "code3": "MWI",
-            "latlng": [
+            name: "Malawi",
+            city: "Lilongwe",
+            code2: "MW",
+            code3: "MWI",
+            latlng: [
                 -13.5,
                 34
             ],
-            "flag": "🇲🇼"
+            flag: "🇲🇼"
         },
         {
-            "name": "Malaysia",
-            "city": "Kuala Lumpur",
-            "code2": "MY",
-            "code3": "MYS",
-            "latlng": [
+            name: "Malaysia",
+            city: "Kuala Lumpur",
+            code2: "MY",
+            code3: "MYS",
+            latlng: [
                 2.5,
                 112.5
             ],
-            "flag": "🇲🇾"
+            flag: "🇲🇾"
         },
         {
-            "name": "Maldives",
-            "city": "Malé",
-            "code2": "MV",
-            "code3": "MDV",
-            "latlng": [
+            name: "Maldives",
+            city: "Malé",
+            code2: "MV",
+            code3: "MDV",
+            latlng: [
                 3.25,
                 73
             ],
-            "flag": "🇲🇻"
+            flag: "🇲🇻"
         },
         {
-            "name": "Mali",
-            "city": "Bamako",
-            "code2": "ML",
-            "code3": "MLI",
-            "latlng": [
+            name: "Mali",
+            city: "Bamako",
+            code2: "ML",
+            code3: "MLI",
+            latlng: [
                 17,
                 -4
             ],
-            "flag": "🇲🇱"
+            flag: "🇲🇱"
         },
         {
-            "name": "Malta",
-            "city": "Valletta",
-            "code2": "MT",
-            "code3": "MLT",
-            "latlng": [
+            name: "Malta",
+            city: "Valletta",
+            code2: "MT",
+            code3: "MLT",
+            latlng: [
                 35.83333333,
                 14.58333333
             ],
-            "flag": "🇲🇹"
+            flag: "🇲🇹"
         },
         {
-            "name": "Marshall Islands",
-            "city": "Majuro",
-            "code2": "MH",
-            "code3": "MHL",
-            "latlng": [
+            name: "Marshall Islands",
+            city: "Majuro",
+            code2: "MH",
+            code3: "MHL",
+            latlng: [
                 9,
                 168
             ],
-            "flag": "🇲🇭"
+            flag: "🇲🇭"
         },
         {
-            "name": "Martinique",
-            "city": "Fort-de-France",
-            "code2": "MQ",
-            "code3": "MTQ",
-            "latlng": [
+            name: "Martinique",
+            city: "Fort-de-France",
+            code2: "MQ",
+            code3: "MTQ",
+            latlng: [
                 14.666667,
                 -61
             ],
-            "flag": "🇲🇶"
+            flag: "🇲🇶"
         },
         {
-            "name": "Mauritania",
-            "city": "Nouakchott",
-            "code2": "MR",
-            "code3": "MRT",
-            "latlng": [
+            name: "Mauritania",
+            city: "Nouakchott",
+            code2: "MR",
+            code3: "MRT",
+            latlng: [
                 20,
                 -12
             ],
-            "flag": "🇲🇷"
+            flag: "🇲🇷"
         },
         {
-            "name": "Mauritius",
-            "city": "Port Louis",
-            "code2": "MU",
-            "code3": "MUS",
-            "latlng": [
+            name: "Mauritius",
+            city: "Port Louis",
+            code2: "MU",
+            code3: "MUS",
+            latlng: [
                 -20.28333333,
                 57.55
             ],
-            "flag": "🇲🇺"
+            flag: "🇲🇺"
         },
         {
-            "name": "Mayotte",
-            "city": "Mamoudzou",
-            "code2": "YT",
-            "code3": "MYT",
-            "latlng": [
+            name: "Mayotte",
+            city: "Mamoudzou",
+            code2: "YT",
+            code3: "MYT",
+            latlng: [
                 -12.83333333,
                 45.16666666
             ],
-            "flag": "🇾🇹"
+            flag: "🇾🇹"
         },
         {
-            "name": "Mexico",
-            "city": "Mexico City",
-            "code2": "MX",
-            "code3": "MEX",
-            "latlng": [
+            name: "Mexico",
+            city: "Mexico City",
+            code2: "MX",
+            code3: "MEX",
+            latlng: [
                 23,
                 -102
             ],
-            "flag": "🇲🇽"
+            flag: "🇲🇽"
         },
         {
-            "name": "Micronesia (Federated States of)",
-            "city": "Palikir",
-            "code2": "FM",
-            "code3": "FSM",
-            "latlng": [
+            name: "Micronesia (Federated States of)",
+            city: "Palikir",
+            code2: "FM",
+            code3: "FSM",
+            latlng: [
                 6.91666666,
                 158.25
             ],
-            "flag": "🇫🇲"
+            flag: "🇫🇲"
         },
         {
-            "name": "Moldova (Republic of)",
-            "city": "Chișinău",
-            "code2": "MD",
-            "code3": "MDA",
-            "latlng": [
+            name: "Moldova (Republic of)",
+            city: "Chișinău",
+            code2: "MD",
+            code3: "MDA",
+            latlng: [
                 47,
                 29
             ],
-            "flag": "🇲🇩"
+            flag: "🇲🇩"
         },
         {
-            "name": "Monaco",
-            "city": "Monaco",
-            "code2": "MC",
-            "code3": "MCO",
-            "latlng": [
+            name: "Monaco",
+            city: "Monaco",
+            code2: "MC",
+            code3: "MCO",
+            latlng: [
                 43.73333333,
                 7.4
             ],
-            "flag": "🇲🇨"
+            flag: "🇲🇨"
         },
         {
-            "name": "Mongolia",
-            "city": "Ulan Bator",
-            "code2": "MN",
-            "code3": "MNG",
-            "latlng": [
+            name: "Mongolia",
+            city: "Ulan Bator",
+            code2: "MN",
+            code3: "MNG",
+            latlng: [
                 46,
                 105
             ],
-            "flag": "🇲🇳"
+            flag: "🇲🇳"
         },
         {
-            "name": "Montserrat",
-            "city": "Plymouth",
-            "code2": "MS",
-            "code3": "MSR",
-            "latlng": [
+            name: "Montserrat",
+            city: "Plymouth",
+            code2: "MS",
+            code3: "MSR",
+            latlng: [
                 16.75,
                 -62.2
             ],
-            "flag": "🇲🇸"
+            flag: "🇲🇸"
         },
         {
-            "name": "Morocco",
-            "city": "Rabat",
-            "code2": "MA",
-            "code3": "MAR",
-            "latlng": [
+            name: "Morocco",
+            city: "Rabat",
+            code2: "MA",
+            code3: "MAR",
+            latlng: [
                 32,
                 -5
             ],
-            "flag": "🇲🇦"
+            flag: "🇲🇦"
         },
         {
-            "name": "Mozambique",
-            "city": "Maputo",
-            "code2": "MZ",
-            "code3": "MOZ",
-            "latlng": [
+            name: "Mozambique",
+            city: "Maputo",
+            code2: "MZ",
+            code3: "MOZ",
+            latlng: [
                 -18.25,
                 35
             ],
-            "flag": "🇲🇿"
+            flag: "🇲🇿"
         },
         {
-            "name": "Myanmar",
-            "city": "Naypyidaw",
-            "code2": "MM",
-            "code3": "MMR",
-            "latlng": [
+            name: "Myanmar",
+            city: "Naypyidaw",
+            code2: "MM",
+            code3: "MMR",
+            latlng: [
                 22,
                 98
             ],
-            "flag": "🇲🇲"
+            flag: "🇲🇲"
         },
         {
-            "name": "Namibia",
-            "city": "Windhoek",
-            "code2": "NA",
-            "code3": "NAM",
-            "latlng": [
+            name: "Namibia",
+            city: "Windhoek",
+            code2: "NA",
+            code3: "NAM",
+            latlng: [
                 -22,
                 17
             ],
-            "flag": "🇳🇦"
+            flag: "🇳🇦"
         },
         {
-            "name": "Nauru",
-            "city": "Yaren",
-            "code2": "NR",
-            "code3": "NRU",
-            "latlng": [
+            name: "Nauru",
+            city: "Yaren",
+            code2: "NR",
+            code3: "NRU",
+            latlng: [
                 -0.53333333,
                 166.91666666
             ],
-            "flag": "🇳🇷"
+            flag: "🇳🇷"
         },
         {
-            "name": "Nepal",
-            "city": "Kathmandu",
-            "code2": "NP",
-            "code3": "NPL",
-            "latlng": [
+            name: "Nepal",
+            city: "Kathmandu",
+            code2: "NP",
+            code3: "NPL",
+            latlng: [
                 28,
                 84
             ],
-            "flag": "🇳🇵"
+            flag: "🇳🇵"
         },
         {
-            "name": "Netherlands",
-            "city": "Amsterdam",
-            "code2": "NL",
-            "code3": "NLD",
-            "latlng": [
+            name: "Netherlands",
+            city: "Amsterdam",
+            code2: "NL",
+            code3: "NLD",
+            latlng: [
                 52.5,
                 5.75
             ],
-            "flag": "🇳🇱"
+            flag: "🇳🇱"
         },
         {
-            "name": "New Caledonia",
-            "city": "Nouméa",
-            "code2": "NC",
-            "code3": "NCL",
-            "latlng": [
+            name: "New Caledonia",
+            city: "Nouméa",
+            code2: "NC",
+            code3: "NCL",
+            latlng: [
                 -21.5,
                 165.5
             ],
-            "flag": "🇳🇨"
+            flag: "🇳🇨"
         },
         {
-            "name": "New Zealand",
-            "city": "Wellington",
-            "code2": "NZ",
-            "code3": "NZL",
-            "latlng": [
+            name: "New Zealand",
+            city: "Wellington",
+            code2: "NZ",
+            code3: "NZL",
+            latlng: [
                 -41,
                 174
             ],
-            "flag": "🇳🇿"
+            flag: "🇳🇿"
         },
         {
-            "name": "Nicaragua",
-            "city": "Managua",
-            "code2": "NI",
-            "code3": "NIC",
-            "latlng": [
+            name: "Nicaragua",
+            city: "Managua",
+            code2: "NI",
+            code3: "NIC",
+            latlng: [
                 13,
                 -85
             ],
-            "flag": "🇳🇮"
+            flag: "🇳🇮"
         },
         {
-            "name": "Niger",
-            "city": "Niamey",
-            "code2": "NE",
-            "code3": "NER",
-            "latlng": [
+            name: "Niger",
+            city: "Niamey",
+            code2: "NE",
+            code3: "NER",
+            latlng: [
                 16,
                 8
             ],
-            "flag": "🇳🇪"
+            flag: "🇳🇪"
         },
         {
-            "name": "Nigeria",
-            "city": "Abuja",
-            "code2": "NG",
-            "code3": "NGA",
-            "latlng": [
+            name: "Nigeria",
+            city: "Abuja",
+            code2: "NG",
+            code3: "NGA",
+            latlng: [
                 10,
                 8
             ],
-            "flag": "🇳🇬"
+            flag: "🇳🇬"
         },
         {
-            "name": "Niue",
-            "city": "Alofi",
-            "code2": "NU",
-            "code3": "NIU",
-            "latlng": [
+            name: "Niue",
+            city: "Alofi",
+            code2: "NU",
+            code3: "NIU",
+            latlng: [
                 -19.03333333,
                 -169.86666666
             ],
-            "flag": "🇳🇺"
+            flag: "🇳🇺"
         },
         {
-            "name": "Norfolk Island",
-            "city": "Kingston",
-            "code2": "NF",
-            "code3": "NFK",
-            "latlng": [
+            name: "Norfolk Island",
+            city: "Kingston",
+            code2: "NF",
+            code3: "NFK",
+            latlng: [
                 -29.03333333,
                 167.95
             ],
-            "flag": "🇳🇫"
+            flag: "🇳🇫"
         },
         {
-            "name": "Korea (Democratic People's Republic of)",
-            "city": "Pyongyang",
-            "code2": "KP",
-            "code3": "PRK",
-            "latlng": [
+            name: "Korea (Democratic People's Republic of)",
+            city: "Pyongyang",
+            code2: "KP",
+            code3: "PRK",
+            latlng: [
                 40,
                 127
             ],
-            "flag": "🇰🇵"
+            flag: "🇰🇵"
         },
         {
-            "name": "Northern Mariana Islands",
-            "city": "Saipan",
-            "code2": "MP",
-            "code3": "MNP",
-            "latlng": [
+            name: "Northern Mariana Islands",
+            city: "Saipan",
+            code2: "MP",
+            code3: "MNP",
+            latlng: [
                 15.2,
                 145.75
             ],
-            "flag": "🇲🇵"
+            flag: "🇲🇵"
         },
         {
-            "name": "Norway",
-            "city": "Oslo",
-            "code2": "NO",
-            "code3": "NOR",
-            "latlng": [
+            name: "Norway",
+            city: "Oslo",
+            code2: "NO",
+            code3: "NOR",
+            latlng: [
                 62,
                 10
             ],
-            "flag": "🇳🇴"
+            flag: "🇳🇴"
         },
         {
-            "name": "Oman",
-            "city": "Muscat",
-            "code2": "OM",
-            "code3": "OMN",
-            "latlng": [
+            name: "Oman",
+            city: "Muscat",
+            code2: "OM",
+            code3: "OMN",
+            latlng: [
                 21,
                 57
             ],
-            "flag": "🇴🇲"
+            flag: "🇴🇲"
         },
         {
-            "name": "Pakistan",
-            "city": "Islamabad",
-            "code2": "PK",
-            "code3": "PAK",
-            "latlng": [
+            name: "Pakistan",
+            city: "Islamabad",
+            code2: "PK",
+            code3: "PAK",
+            latlng: [
                 30,
                 70
             ],
-            "flag": "🇵🇰"
+            flag: "🇵🇰"
         },
         {
-            "name": "Palau",
-            "city": "Ngerulmud",
-            "code2": "PW",
-            "code3": "PLW",
-            "latlng": [
+            name: "Palau",
+            city: "Ngerulmud",
+            code2: "PW",
+            code3: "PLW",
+            latlng: [
                 7.5,
                 134.5
             ],
-            "flag": "🇵🇼"
+            flag: "🇵🇼"
         },
         {
-            "name": "Palestine, State of",
-            "city": "Ramallah",
-            "code2": "PS",
-            "code3": "PSE",
-            "latlng": [
+            name: "Palestine, State of",
+            city: "Ramallah",
+            code2: "PS",
+            code3: "PSE",
+            latlng: [
                 31.9,
                 35.2
             ],
-            "flag": "🇵🇸"
+            flag: "🇵🇸"
         },
         {
-            "name": "Panama",
-            "city": "Panama City",
-            "code2": "PA",
-            "code3": "PAN",
-            "latlng": [
+            name: "Panama",
+            city: "Panama City",
+            code2: "PA",
+            code3: "PAN",
+            latlng: [
                 9,
                 -80
             ],
-            "flag": "🇵🇦"
+            flag: "🇵🇦"
         },
         {
-            "name": "Papua New Guinea",
-            "city": "Port Moresby",
-            "code2": "PG",
-            "code3": "PNG",
-            "latlng": [
+            name: "Papua New Guinea",
+            city: "Port Moresby",
+            code2: "PG",
+            code3: "PNG",
+            latlng: [
                 -6,
                 147
             ],
-            "flag": "🇵🇬"
+            flag: "🇵🇬"
         },
         {
-            "name": "Paraguay",
-            "city": "Asunción",
-            "code2": "PY",
-            "code3": "PRY",
-            "latlng": [
+            name: "Paraguay",
+            city: "Asunción",
+            code2: "PY",
+            code3: "PRY",
+            latlng: [
                 -23,
                 -58
             ],
-            "flag": "🇵🇾"
+            flag: "🇵🇾"
         },
         {
-            "name": "Peru",
-            "city": "Lima",
-            "code2": "PE",
-            "code3": "PER",
-            "latlng": [
+            name: "Peru",
+            city: "Lima",
+            code2: "PE",
+            code3: "PER",
+            latlng: [
                 -10,
                 -76
             ],
-            "flag": "🇵🇪"
+            flag: "🇵🇪"
         },
         {
-            "name": "Philippines",
-            "city": "Manila",
-            "code2": "PH",
-            "code3": "PHL",
-            "latlng": [
+            name: "Philippines",
+            city: "Manila",
+            code2: "PH",
+            code3: "PHL",
+            latlng: [
                 13,
                 122
             ],
-            "flag": "🇵🇭"
+            flag: "🇵🇭"
         },
         {
-            "name": "Pitcairn",
-            "city": "Adamstown",
-            "code2": "PN",
-            "code3": "PCN",
-            "latlng": [
+            name: "Pitcairn",
+            city: "Adamstown",
+            code2: "PN",
+            code3: "PCN",
+            latlng: [
                 -25.06666666,
                 -130.1
             ],
-            "flag": "🇵🇳"
+            flag: "🇵🇳"
         },
         {
-            "name": "Poland",
-            "city": "Warsaw",
-            "code2": "PL",
-            "code3": "POL",
-            "latlng": [
+            name: "Poland",
+            city: "Warsaw",
+            code2: "PL",
+            code3: "POL",
+            latlng: [
                 52,
                 20
             ],
-            "flag": "🇵🇱"
+            flag: "🇵🇱"
         },
         {
-            "name": "Portugal",
-            "city": "Lisbon",
-            "code2": "PT",
-            "code3": "PRT",
-            "latlng": [
+            name: "Portugal",
+            city: "Lisbon",
+            code2: "PT",
+            code3: "PRT",
+            latlng: [
                 39.5,
                 -8
             ],
-            "flag": "🇵🇹"
+            flag: "🇵🇹"
         },
         {
-            "name": "Puerto Rico",
-            "city": "San Juan",
-            "code2": "PR",
-            "code3": "PRI",
-            "latlng": [
+            name: "Puerto Rico",
+            city: "San Juan",
+            code2: "PR",
+            code3: "PRI",
+            latlng: [
                 18.25,
                 -66.5
             ],
-            "flag": "🇵🇷"
+            flag: "🇵🇷"
         },
         {
-            "name": "Qatar",
-            "city": "Doha",
-            "code2": "QA",
-            "code3": "QAT",
-            "latlng": [
+            name: "Qatar",
+            city: "Doha",
+            code2: "QA",
+            code3: "QAT",
+            latlng: [
                 25.5,
                 51.25
             ],
-            "flag": "🇶🇦"
+            flag: "🇶🇦"
         },
         {
-            "name": "Republic of Kosovo",
-            "city": "Pristina",
-            "code2": "XK",
-            "code3": "UNK",
-            "latlng": [
+            name: "Republic of Kosovo",
+            city: "Pristina",
+            code2: "XK",
+            code3: "UNK",
+            latlng: [
                 42.666667,
                 21.166667
             ],
-            "flag": "🇽🇰"
+            flag: "🇽🇰"
         },
         {
-            "name": "Réunion",
-            "city": "Saint-Denis",
-            "code2": "RE",
-            "code3": "REU",
-            "latlng": [
+            name: "Réunion",
+            city: "Saint-Denis",
+            code2: "RE",
+            code3: "REU",
+            latlng: [
                 -21.15,
                 55.5
             ],
-            "flag": "🇷🇪"
+            flag: "🇷🇪"
         },
         {
-            "name": "Romania",
-            "city": "Bucharest",
-            "code2": "RO",
-            "code3": "ROU",
-            "latlng": [
+            name: "Romania",
+            city: "Bucharest",
+            code2: "RO",
+            code3: "ROU",
+            latlng: [
                 46,
                 25
             ],
-            "flag": "🇷🇴"
+            flag: "🇷🇴"
         },
         {
-            "name": "Russian Federation",
-            "city": "Moscow",
-            "code2": "RU",
-            "code3": "RUS",
-            "latlng": [
+            name: "Russian Federation",
+            city: "Moscow",
+            code2: "RU",
+            code3: "RUS",
+            latlng: [
                 60,
                 100
             ],
-            "flag": "🇷🇺"
+            flag: "🇷🇺"
         },
         {
-            "name": "Rwanda",
-            "city": "Kigali",
-            "code2": "RW",
-            "code3": "RWA",
-            "latlng": [
+            name: "Rwanda",
+            city: "Kigali",
+            code2: "RW",
+            code3: "RWA",
+            latlng: [
                 -2,
                 30
             ],
-            "flag": "🇷🇼"
+            flag: "🇷🇼"
         },
         {
-            "name": "Saint Barthélemy",
-            "city": "Gustavia",
-            "code2": "BL",
-            "code3": "BLM",
-            "latlng": [
+            name: "Saint Barthélemy",
+            city: "Gustavia",
+            code2: "BL",
+            code3: "BLM",
+            latlng: [
                 18.5,
                 -63.41666666
             ],
-            "flag": "🇧🇱"
+            flag: "🇧🇱"
         },
         {
-            "name": "Saint Helena, Ascension and Tristan da Cunha",
-            "city": "Jamestown",
-            "code2": "SH",
-            "code3": "SHN",
-            "latlng": [
+            name: "Saint Helena, Ascension and Tristan da Cunha",
+            city: "Jamestown",
+            code2: "SH",
+            code3: "SHN",
+            latlng: [
                 -15.95,
                 -5.7
             ],
-            "flag": "🇸🇭"
+            flag: "🇸🇭"
         },
         {
-            "name": "Saint Kitts and Nevis",
-            "city": "Basseterre",
-            "code2": "KN",
-            "code3": "KNA",
-            "latlng": [
+            name: "Saint Kitts and Nevis",
+            city: "Basseterre",
+            code2: "KN",
+            code3: "KNA",
+            latlng: [
                 17.33333333,
                 -62.75
             ],
-            "flag": "🇰🇳"
+            flag: "🇰🇳"
         },
         {
-            "name": "Saint Lucia",
-            "city": "Castries",
-            "code2": "LC",
-            "code3": "LCA",
-            "latlng": [
+            name: "Saint Lucia",
+            city: "Castries",
+            code2: "LC",
+            code3: "LCA",
+            latlng: [
                 13.88333333,
                 -60.96666666
             ],
-            "flag": "🇱🇨"
+            flag: "🇱🇨"
         },
         {
-            "name": "Saint Martin (French part)",
-            "city": "Marigot",
-            "code2": "MF",
-            "code3": "MAF",
-            "latlng": [
+            name: "Saint Martin (French part)",
+            city: "Marigot",
+            code2: "MF",
+            code3: "MAF",
+            latlng: [
                 18.08333333,
                 -63.95
             ],
-            "flag": "🇲🇫"
+            flag: "🇲🇫"
         },
         {
-            "name": "Saint Pierre and Miquelon",
-            "city": "Saint-Pierre",
-            "code2": "PM",
-            "code3": "SPM",
-            "latlng": [
+            name: "Saint Pierre and Miquelon",
+            city: "Saint-Pierre",
+            code2: "PM",
+            code3: "SPM",
+            latlng: [
                 46.83333333,
                 -56.33333333
             ],
-            "flag": "🇵🇲"
+            flag: "🇵🇲"
         },
         {
-            "name": "Saint Vincent and the Grenadines",
-            "city": "Kingstown",
-            "code2": "VC",
-            "code3": "VCT",
-            "latlng": [
+            name: "Saint Vincent and the Grenadines",
+            city: "Kingstown",
+            code2: "VC",
+            code3: "VCT",
+            latlng: [
                 13.25,
                 -61.2
             ],
-            "flag": "🇻🇨"
+            flag: "🇻🇨"
         },
         {
-            "name": "Samoa",
-            "city": "Apia",
-            "code2": "WS",
-            "code3": "WSM",
-            "latlng": [
+            name: "Samoa",
+            city: "Apia",
+            code2: "WS",
+            code3: "WSM",
+            latlng: [
                 -13.58333333,
                 -172.33333333
             ],
-            "flag": "🇼🇸"
+            flag: "🇼🇸"
         },
         {
-            "name": "San Marino",
-            "city": "City of San Marino",
-            "code2": "SM",
-            "code3": "SMR",
-            "latlng": [
+            name: "San Marino",
+            city: "City of San Marino",
+            code2: "SM",
+            code3: "SMR",
+            latlng: [
                 43.76666666,
                 12.41666666
             ],
-            "flag": "🇸🇲"
+            flag: "🇸🇲"
         },
         {
-            "name": "Sao Tome and Principe",
-            "city": "São Tomé",
-            "code2": "ST",
-            "code3": "STP",
-            "latlng": [
+            name: "Sao Tome and Principe",
+            city: "São Tomé",
+            code2: "ST",
+            code3: "STP",
+            latlng: [
                 1,
                 7
             ],
-            "flag": "🇸🇹"
+            flag: "🇸🇹"
         },
         {
-            "name": "Saudi Arabia",
-            "city": "Riyadh",
-            "code2": "SA",
-            "code3": "SAU",
-            "latlng": [
+            name: "Saudi Arabia",
+            city: "Riyadh",
+            code2: "SA",
+            code3: "SAU",
+            latlng: [
                 25,
                 45
             ],
-            "flag": "🇸🇦"
+            flag: "🇸🇦"
         },
         {
-            "name": "Senegal",
-            "city": "Dakar",
-            "code2": "SN",
-            "code3": "SEN",
-            "latlng": [
+            name: "Senegal",
+            city: "Dakar",
+            code2: "SN",
+            code3: "SEN",
+            latlng: [
                 14,
                 -14
             ],
-            "flag": "🇸🇳"
+            flag: "🇸🇳"
         },
         {
-            "name": "Serbia",
-            "city": "Belgrade",
-            "code2": "RS",
-            "code3": "SRB",
-            "latlng": [
+            name: "Serbia",
+            city: "Belgrade",
+            code2: "RS",
+            code3: "SRB",
+            latlng: [
                 44,
                 21
             ],
-            "flag": "🇷🇸"
+            flag: "🇷🇸"
         },
         {
-            "name": "Seychelles",
-            "city": "Victoria",
-            "code2": "SC",
-            "code3": "SYC",
-            "latlng": [
+            name: "Seychelles",
+            city: "Victoria",
+            code2: "SC",
+            code3: "SYC",
+            latlng: [
                 -4.58333333,
                 55.66666666
             ],
-            "flag": "🇸🇨"
+            flag: "🇸🇨"
         },
         {
-            "name": "Sierra Leone",
-            "city": "Freetown",
-            "code2": "SL",
-            "code3": "SLE",
-            "latlng": [
+            name: "Sierra Leone",
+            city: "Freetown",
+            code2: "SL",
+            code3: "SLE",
+            latlng: [
                 8.5,
                 -11.5
             ],
-            "flag": "🇸🇱"
+            flag: "🇸🇱"
         },
         {
-            "name": "Singapore",
-            "city": "Singapore",
-            "code2": "SG",
-            "code3": "SGP",
-            "latlng": [
+            name: "Singapore",
+            city: "Singapore",
+            code2: "SG",
+            code3: "SGP",
+            latlng: [
                 1.36666666,
                 103.8
             ],
-            "flag": "🇸🇬"
+            flag: "🇸🇬"
         },
         {
-            "name": "Sint Maarten (Dutch part)",
-            "city": "Philipsburg",
-            "code2": "SX",
-            "code3": "SXM",
-            "latlng": [
+            name: "Sint Maarten (Dutch part)",
+            city: "Philipsburg",
+            code2: "SX",
+            code3: "SXM",
+            latlng: [
                 18.033333,
                 -63.05
             ],
-            "flag": "🇸🇽"
+            flag: "🇸🇽"
         },
         {
-            "name": "Slovakia",
-            "city": "Bratislava",
-            "code2": "SK",
-            "code3": "SVK",
-            "latlng": [
+            name: "Slovakia",
+            city: "Bratislava",
+            code2: "SK",
+            code3: "SVK",
+            latlng: [
                 48.66666666,
                 19.5
             ],
-            "flag": "🇸🇰"
+            flag: "🇸🇰"
         },
         {
-            "name": "Slovenia",
-            "city": "Ljubljana",
-            "code2": "SI",
-            "code3": "SVN",
-            "latlng": [
+            name: "Slovenia",
+            city: "Ljubljana",
+            code2: "SI",
+            code3: "SVN",
+            latlng: [
                 46.11666666,
                 14.81666666
             ],
-            "flag": "🇸🇮"
+            flag: "🇸🇮"
         },
         {
-            "name": "Solomon Islands",
-            "city": "Honiara",
-            "code2": "SB",
-            "code3": "SLB",
-            "latlng": [
+            name: "Solomon Islands",
+            city: "Honiara",
+            code2: "SB",
+            code3: "SLB",
+            latlng: [
                 -8,
                 159
             ],
-            "flag": "🇸🇧"
+            flag: "🇸🇧"
         },
         {
-            "name": "Somalia",
-            "city": "Mogadishu",
-            "code2": "SO",
-            "code3": "SOM",
-            "latlng": [
+            name: "Somalia",
+            city: "Mogadishu",
+            code2: "SO",
+            code3: "SOM",
+            latlng: [
                 10,
                 49
             ],
-            "flag": "🇸🇴"
+            flag: "🇸🇴"
         },
         {
-            "name": "South Africa",
-            "city": "Pretoria",
-            "code2": "ZA",
-            "code3": "ZAF",
-            "latlng": [
+            name: "South Africa",
+            city: "Pretoria",
+            code2: "ZA",
+            code3: "ZAF",
+            latlng: [
                 -29,
                 24
             ],
-            "flag": "🇿🇦"
+            flag: "🇿🇦"
         },
         {
-            "name": "South Georgia and the South Sandwich Islands",
-            "city": "King Edward Point",
-            "code2": "GS",
-            "code3": "SGS",
-            "latlng": [
+            name: "South Georgia and the South Sandwich Islands",
+            city: "King Edward Point",
+            code2: "GS",
+            code3: "SGS",
+            latlng: [
                 -54.5,
                 -37
             ],
-            "flag": "🇬🇸"
+            flag: "🇬🇸"
         },
         {
-            "name": "Korea (Republic of)",
-            "city": "Seoul",
-            "code2": "KR",
-            "code3": "KOR",
-            "latlng": [
+            name: "Korea (Republic of)",
+            city: "Seoul",
+            code2: "KR",
+            code3: "KOR",
+            latlng: [
                 37,
                 127.5
             ],
-            "flag": "🇰🇷"
+            flag: "🇰🇷"
         },
         {
-            "name": "South Sudan",
-            "city": "Juba",
-            "code2": "SS",
-            "code3": "SSD",
-            "latlng": [
+            name: "South Sudan",
+            city: "Juba",
+            code2: "SS",
+            code3: "SSD",
+            latlng: [
                 7,
                 30
             ],
-            "flag": "🇸🇸"
+            flag: "🇸🇸"
         },
         {
-            "name": "Spain",
-            "city": "Madrid",
-            "code2": "ES",
-            "code3": "ESP",
-            "latlng": [
+            name: "Spain",
+            city: "Madrid",
+            code2: "ES",
+            code3: "ESP",
+            latlng: [
                 40,
                 -4
             ],
-            "flag": "🇪🇸"
+            flag: "🇪🇸"
         },
         {
-            "name": "Sri Lanka",
-            "city": "Sri Jayawardenepura Kotte",
-            "code2": "LK",
-            "code3": "LKA",
-            "latlng": [
+            name: "Sri Lanka",
+            city: "Sri Jayawardenepura Kotte",
+            code2: "LK",
+            code3: "LKA",
+            latlng: [
                 7,
                 81
             ],
-            "flag": "🇱🇰"
+            flag: "🇱🇰"
         },
         {
-            "name": "Sudan",
-            "city": "Khartoum",
-            "code2": "SD",
-            "code3": "SDN",
-            "latlng": [
+            name: "Sudan",
+            city: "Khartoum",
+            code2: "SD",
+            code3: "SDN",
+            latlng: [
                 15,
                 30
             ],
-            "flag": "🇸🇩"
+            flag: "🇸🇩"
         },
         {
-            "name": "Suriname",
-            "city": "Paramaribo",
-            "code2": "SR",
-            "code3": "SUR",
-            "latlng": [
+            name: "Suriname",
+            city: "Paramaribo",
+            code2: "SR",
+            code3: "SUR",
+            latlng: [
                 4,
                 -56
             ],
-            "flag": "🇸🇷"
+            flag: "🇸🇷"
         },
         {
-            "name": "Svalbard and Jan Mayen",
-            "city": "Longyearbyen",
-            "code2": "SJ",
-            "code3": "SJM",
-            "latlng": [
+            name: "Svalbard and Jan Mayen",
+            city: "Longyearbyen",
+            code2: "SJ",
+            code3: "SJM",
+            latlng: [
                 78,
                 20
             ],
-            "flag": "🇸🇯"
+            flag: "🇸🇯"
         },
         {
-            "name": "Eswatini",
-            "city": "Mbabane",
-            "code2": "SZ",
-            "code3": "SWZ",
-            "latlng": [
+            name: "Eswatini",
+            city: "Mbabane",
+            code2: "SZ",
+            code3: "SWZ",
+            latlng: [
                 -26.5,
                 31.5
             ],
-            "flag": "🇸🇿"
+            flag: "🇸🇿"
         },
         {
-            "name": "Sweden",
-            "city": "Stockholm",
-            "code2": "SE",
-            "code3": "SWE",
-            "latlng": [
+            name: "Sweden",
+            city: "Stockholm",
+            code2: "SE",
+            code3: "SWE",
+            latlng: [
                 62,
                 15
             ],
-            "flag": "🇸🇪"
+            flag: "🇸🇪"
         },
         {
-            "name": "Switzerland",
-            "city": "Bern",
-            "code2": "CH",
-            "code3": "CHE",
-            "latlng": [
+            name: "Switzerland",
+            city: "Bern",
+            code2: "CH",
+            code3: "CHE",
+            latlng: [
                 47,
                 8
             ],
-            "flag": "🇨🇭"
+            flag: "🇨🇭"
         },
         {
-            "name": "Syrian Arab Republic",
-            "city": "Damascus",
-            "code2": "SY",
-            "code3": "SYR",
-            "latlng": [
+            name: "Syrian Arab Republic",
+            city: "Damascus",
+            code2: "SY",
+            code3: "SYR",
+            latlng: [
                 35,
                 38
             ],
-            "flag": "🇸🇾"
+            flag: "🇸🇾"
         },
         {
-            "name": "Taiwan",
-            "city": "Taipei",
-            "code2": "TW",
-            "code3": "TWN",
-            "latlng": [
+            name: "Taiwan",
+            city: "Taipei",
+            code2: "TW",
+            code3: "TWN",
+            latlng: [
                 23.5,
                 121
             ],
-            "flag": "🇹🇼"
+            flag: "🇹🇼"
         },
         {
-            "name": "Tajikistan",
-            "city": "Dushanbe",
-            "code2": "TJ",
-            "code3": "TJK",
-            "latlng": [
+            name: "Tajikistan",
+            city: "Dushanbe",
+            code2: "TJ",
+            code3: "TJK",
+            latlng: [
                 39,
                 71
             ],
-            "flag": "🇹🇯"
+            flag: "🇹🇯"
         },
         {
-            "name": "Tanzania, United Republic of",
-            "city": "Dodoma",
-            "code2": "TZ",
-            "code3": "TZA",
-            "latlng": [
+            name: "Tanzania, United Republic of",
+            city: "Dodoma",
+            code2: "TZ",
+            code3: "TZA",
+            latlng: [
                 -6,
                 35
             ],
-            "flag": "🇹🇿"
+            flag: "🇹🇿"
         },
         {
-            "name": "Thailand",
-            "city": "Bangkok",
-            "code2": "TH",
-            "code3": "THA",
-            "latlng": [
+            name: "Thailand",
+            city: "Bangkok",
+            code2: "TH",
+            code3: "THA",
+            latlng: [
                 15,
                 100
             ],
-            "flag": "🇹🇭"
+            flag: "🇹🇭"
         },
         {
-            "name": "Timor-Leste",
-            "city": "Dili",
-            "code2": "TL",
-            "code3": "TLS",
-            "latlng": [
+            name: "Timor-Leste",
+            city: "Dili",
+            code2: "TL",
+            code3: "TLS",
+            latlng: [
                 -8.83333333,
                 125.91666666
             ],
-            "flag": "🇹🇱"
+            flag: "🇹🇱"
         },
         {
-            "name": "Togo",
-            "city": "Lomé",
-            "code2": "TG",
-            "code3": "TGO",
-            "latlng": [
+            name: "Togo",
+            city: "Lomé",
+            code2: "TG",
+            code3: "TGO",
+            latlng: [
                 8,
                 1.16666666
             ],
-            "flag": "🇹🇬"
+            flag: "🇹🇬"
         },
         {
-            "name": "Tokelau",
-            "city": "Fakaofo",
-            "code2": "TK",
-            "code3": "TKL",
-            "latlng": [
+            name: "Tokelau",
+            city: "Fakaofo",
+            code2: "TK",
+            code3: "TKL",
+            latlng: [
                 -9,
                 -172
             ],
-            "flag": "🇹🇰"
+            flag: "🇹🇰"
         },
         {
-            "name": "Tonga",
-            "city": "Nuku'alofa",
-            "code2": "TO",
-            "code3": "TON",
-            "latlng": [
+            name: "Tonga",
+            city: "Nuku'alofa",
+            code2: "TO",
+            code3: "TON",
+            latlng: [
                 -20,
                 -175
             ],
-            "flag": "🇹🇴"
+            flag: "🇹🇴"
         },
         {
-            "name": "Trinidad and Tobago",
-            "city": "Port of Spain",
-            "code2": "TT",
-            "code3": "TTO",
-            "latlng": [
+            name: "Trinidad and Tobago",
+            city: "Port of Spain",
+            code2: "TT",
+            code3: "TTO",
+            latlng: [
                 11,
                 -61
             ],
-            "flag": "🇹🇹"
+            flag: "🇹🇹"
         },
         {
-            "name": "Tunisia",
-            "city": "Tunis",
-            "code2": "TN",
-            "code3": "TUN",
-            "latlng": [
+            name: "Tunisia",
+            city: "Tunis",
+            code2: "TN",
+            code3: "TUN",
+            latlng: [
                 34,
                 9
             ],
-            "flag": "🇹🇳"
+            flag: "🇹🇳"
         },
         {
-            "name": "Turkey",
-            "city": "Ankara",
-            "code2": "TR",
-            "code3": "TUR",
-            "latlng": [
+            name: "Turkey",
+            city: "Ankara",
+            code2: "TR",
+            code3: "TUR",
+            latlng: [
                 39,
                 35
             ],
-            "flag": "🇹🇷"
+            flag: "🇹🇷"
         },
         {
-            "name": "Turkmenistan",
-            "city": "Ashgabat",
-            "code2": "TM",
-            "code3": "TKM",
-            "latlng": [
+            name: "Turkmenistan",
+            city: "Ashgabat",
+            code2: "TM",
+            code3: "TKM",
+            latlng: [
                 40,
                 60
             ],
-            "flag": "🇹🇲"
+            flag: "🇹🇲"
         },
         {
-            "name": "Turks and Caicos Islands",
-            "city": "Cockburn Town",
-            "code2": "TC",
-            "code3": "TCA",
-            "latlng": [
+            name: "Turks and Caicos Islands",
+            city: "Cockburn Town",
+            code2: "TC",
+            code3: "TCA",
+            latlng: [
                 21.75,
                 -71.58333333
             ],
-            "flag": "🇹🇨"
+            flag: "🇹🇨"
         },
         {
-            "name": "Tuvalu",
-            "city": "Funafuti",
-            "code2": "TV",
-            "code3": "TUV",
-            "latlng": [
+            name: "Tuvalu",
+            city: "Funafuti",
+            code2: "TV",
+            code3: "TUV",
+            latlng: [
                 -8,
                 178
             ],
-            "flag": "🇹🇻"
+            flag: "🇹🇻"
         },
         {
-            "name": "Uganda",
-            "city": "Kampala",
-            "code2": "UG",
-            "code3": "UGA",
-            "latlng": [
+            name: "Uganda",
+            city: "Kampala",
+            code2: "UG",
+            code3: "UGA",
+            latlng: [
                 1,
                 32
             ],
-            "flag": "🇺🇬"
+            flag: "🇺🇬"
         },
         {
-            "name": "Ukraine",
-            "city": "Kyiv",
-            "code2": "UA",
-            "code3": "UKR",
-            "latlng": [
+            name: "Ukraine",
+            city: "Kyiv",
+            code2: "UA",
+            code3: "UKR",
+            latlng: [
                 49,
                 32
             ],
-            "flag": "🇺🇦"
+            flag: "🇺🇦"
         },
         {
-            "name": "United Arab Emirates",
-            "city": "Abu Dhabi",
-            "code2": "AE",
-            "code3": "ARE",
-            "latlng": [
+            name: "United Arab Emirates",
+            city: "Abu Dhabi",
+            code2: "AE",
+            code3: "ARE",
+            latlng: [
                 24,
                 54
             ],
-            "flag": "🇦🇪"
+            flag: "🇦🇪"
         },
         {
-            "name": "United Kingdom of Great Britain and Northern Ireland",
-            "city": "London",
-            "code2": "GB",
-            "code3": "GBR",
-            "latlng": [
+            name: "United Kingdom of Great Britain and Northern Ireland",
+            city: "London",
+            code2: "GB",
+            code3: "GBR",
+            latlng: [
                 54,
                 -2
             ],
-            "flag": "🇬🇧"
+            flag: "🇬🇧"
         },
         {
-            "name": "United States of America",
-            "city": "Washington, D.C.",
-            "code2": "US",
-            "code3": "USA",
-            "latlng": [
+            name: "United States of America",
+            city: "Washington, D.C.",
+            code2: "US",
+            code3: "USA",
+            latlng: [
                 38,
                 -97
             ],
-            "flag": "🇺🇸"
+            flag: "🇺🇸"
         },
         {
-            "name": "Uruguay",
-            "city": "Montevideo",
-            "code2": "UY",
-            "code3": "URY",
-            "latlng": [
+            name: "Uruguay",
+            city: "Montevideo",
+            code2: "UY",
+            code3: "URY",
+            latlng: [
                 -33,
                 -56
             ],
-            "flag": "🇺🇾"
+            flag: "🇺🇾"
         },
         {
-            "name": "Uzbekistan",
-            "city": "Tashkent",
-            "code2": "UZ",
-            "code3": "UZB",
-            "latlng": [
+            name: "Uzbekistan",
+            city: "Tashkent",
+            code2: "UZ",
+            code3: "UZB",
+            latlng: [
                 41,
                 64
             ],
-            "flag": "🇺🇿"
+            flag: "🇺🇿"
         },
         {
-            "name": "Vanuatu",
-            "city": "Port Vila",
-            "code2": "VU",
-            "code3": "VUT",
-            "latlng": [
+            name: "Vanuatu",
+            city: "Port Vila",
+            code2: "VU",
+            code3: "VUT",
+            latlng: [
                 -16,
                 167
             ],
-            "flag": "🇻🇺"
+            flag: "🇻🇺"
         },
         {
-            "name": "Venezuela (Bolivarian Republic of)",
-            "city": "Caracas",
-            "code2": "VE",
-            "code3": "VEN",
-            "latlng": [
+            name: "Venezuela (Bolivarian Republic of)",
+            city: "Caracas",
+            code2: "VE",
+            code3: "VEN",
+            latlng: [
                 8,
                 -66
             ],
-            "flag": "🇻🇪"
+            flag: "🇻🇪"
         },
         {
-            "name": "Vietnam",
-            "city": "Hanoi",
-            "code2": "VN",
-            "code3": "VNM",
-            "latlng": [
+            name: "Vietnam",
+            city: "Hanoi",
+            code2: "VN",
+            code3: "VNM",
+            latlng: [
                 16.16666666,
                 107.83333333
             ],
-            "flag": "🇻🇳"
+            flag: "🇻🇳"
         },
         {
-            "name": "Wallis and Futuna",
-            "city": "Mata-Utu",
-            "code2": "WF",
-            "code3": "WLF",
-            "latlng": [
+            name: "Wallis and Futuna",
+            city: "Mata-Utu",
+            code2: "WF",
+            code3: "WLF",
+            latlng: [
                 -13.3,
                 -176.2
             ],
-            "flag": "🇼🇫"
+            flag: "🇼🇫"
         },
         {
-            "name": "Western Sahara",
-            "city": "El Aaiún",
-            "code2": "EH",
-            "code3": "ESH",
-            "latlng": [
+            name: "Western Sahara",
+            city: "El Aaiún",
+            code2: "EH",
+            code3: "ESH",
+            latlng: [
                 24.5,
                 -13
             ],
-            "flag": "🇪🇭"
+            flag: "🇪🇭"
         },
         {
-            "name": "Yemen",
-            "city": "Sana'a",
-            "code2": "YE",
-            "code3": "YEM",
-            "latlng": [
+            name: "Yemen",
+            city: "Sana'a",
+            code2: "YE",
+            code3: "YEM",
+            latlng: [
                 15,
                 48
             ],
-            "flag": "🇾🇪"
+            flag: "🇾🇪"
         },
         {
-            "name": "Zambia",
-            "city": "Lusaka",
-            "code2": "ZM",
-            "code3": "ZMB",
-            "latlng": [
+            name: "Zambia",
+            city: "Lusaka",
+            code2: "ZM",
+            code3: "ZMB",
+            latlng: [
                 -15,
                 30
             ],
-            "flag": "🇿🇲"
+            flag: "🇿🇲"
         },
         {
-            "name": "Zimbabwe",
-            "city": "Harare",
-            "code2": "ZW",
-            "code3": "ZWE",
-            "latlng": [
+            name: "Zimbabwe",
+            city: "Harare",
+            code2: "ZW",
+            code3: "ZWE",
+            latlng: [
                 -20,
                 30
             ],
-            "flag": "🇿🇼"
+            flag: "🇿🇼"
         }
-    ]
-}
+    ];
+};
+
+export const getLocationsCodes = () => {
+    return getLocations().map((e) => {
+        return e.code2;
+    });
+};
+
+export const getDefaultLocation = () => {
+    return getLocations().filter((e) => {
+        return e.code2 === getDefaultLocationCode();
+    })[0];
+};

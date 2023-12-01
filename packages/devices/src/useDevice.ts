@@ -2,7 +2,7 @@ import { Platform } from "@storybook/native-types";
 import React from "react";
 
 import { DeviceContext } from "./DeviceContext";
-import {Location} from "./types";
+import { Location } from "./types";
 
 export const useDevice = (platform: Platform): string => {
     const state = React.useContext(DeviceContext);
@@ -16,5 +16,5 @@ export const useOsVersion = (platform: Platform): string => {
 
 export const useLocation = (): Location => {
     const state = React.useContext(DeviceContext);
-    return state.location
+    return state.location;
 };

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DeviceSelections } from "./types";
-import {getDefaultDevice, getDefaultLocation, getDefaultOsVersion} from "./getDevices";
+import { getDefaultDevice, getDefaultLocation, getDefaultOsVersion } from "./getDevices";
 
 export const DeviceContext = React.createContext<DeviceSelections>({
     androidSelection: getDefaultDevice("android"),

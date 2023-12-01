@@ -6,7 +6,8 @@ import {
     DeviceSelections,
     getDefaultOsVersion,
     getOsVersions,
-    getDefaultLocation, getLocationsCodes,
+    getDefaultLocation,
+    getLocationsCodes
 } from "@storybook/native-devices";
 
 import { LOCAL_STORAGE_KEY } from "../constants";
