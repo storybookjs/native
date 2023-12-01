@@ -5,7 +5,8 @@ import {
     getDevices,
     DeviceSelections,
     getDefaultOsVersion,
-    getOsVersions
+    getOsVersions,
+    getDefaultLocation, getLocationsCodes,
 } from "@storybook/native-devices";
 
 import { LOCAL_STORAGE_KEY } from "../constants";
@@ -14,7 +15,8 @@ export const DEFAULT_STATE: DeviceSelections = {
     androidSelection: getDefaultDevice("android"),
     iosSelection: getDefaultDevice("ios"),
     iosVersion: getDefaultOsVersion("ios"),
-    androidVersion: getDefaultOsVersion("android")
+    androidVersion: getDefaultOsVersion("android"),
+    location: getDefaultLocation()
 };
 
 export const saveToLocalStorage = (data: DeviceSelections) => {
@@ -37,6 +39,7 @@ export const restoreFromLocalStorage = (
     const iosDevices = getDevices("ios");
     const androidVersions = getOsVersions("android");
     const iosVersions = getOsVersions("ios");
+    const locationCodes = getLocationsCodes();
     const storedSelections = JSON.parse(data) as DeviceSelections;
 
     if (!androidDevices.includes(storedSelections.androidSelection)) {
@@ -53,6 +56,10 @@ export const restoreFromLocalStorage = (
 
     if (!iosVersions.includes(storedSelections.iosVersion)) {
         storedSelections.iosVersion = getDefaultOsVersion("ios");
+    }
+
+    if (!locationCodes.includes(storedSelections.location.code2)) {
+        storedSelections.location = getDefaultLocation();
     }
 
     return storedSelections;

@@ -6,7 +6,7 @@ import {
     getAppetizeIframeId,
     getFullDeepLinkUrl
 } from "@storybook/native-controllers";
-import { useDevice, useOsVersion } from "@storybook/native-devices";
+import { useDevice, useLocation, useOsVersion } from "@storybook/native-devices";
 import { EmulatorActions } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 import { Provider } from "react-redux";
@@ -33,6 +33,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
 
     const device = useDevice(platform);
     const osVersion = useOsVersion(platform);
+    const location = useLocation();
+
     React.useEffect(() => {
         const onAction = (action: EmulatorActions) => {
             const controller = manager.getController(context);
@@ -53,12 +55,13 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             apiKey,
             settings: {
                 device,
-                osVersion
+                osVersion,
+                location: location.latlng.join(",")
             },
             platform,
             baseUrl: appetizeBaseUrl
         });
-    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl]);
+    }, [device, osVersion, location, apiKey, context, platform, appetizeBaseUrl]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
@@ -71,6 +74,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     }, [
         device,
         osVersion,
+        location,
         JSON.stringify(storyParamsWithExtras),
         deepLinkBaseUrl,
         apiKey,

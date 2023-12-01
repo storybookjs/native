@@ -10,6 +10,7 @@ import { faUndo, faRedo } from "@fortawesome/free-solid-svg-icons";
 import { ADDON_ID, DEEP_LINKS_PARAM_KEY } from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
 import VersionSelector from "./components/VersionSelector";
+import CountrySelector from "./components/CountrySelector";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -67,6 +68,12 @@ addons.register(ADDON_ID, (api) => {
         type: types.TOOL,
         title: "Select device",
         render: () => <VersionSelector />
+    });
+
+    addons.add(`${ADDON_ID}/countryPicker`, {
+        type: types.TOOL,
+        title: "Select country",
+        render: () => <CountrySelector />
     });
 
     addons.add(`${ADDON_ID}/deepLinks/panel`, {

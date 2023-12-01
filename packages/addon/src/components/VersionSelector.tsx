@@ -46,7 +46,8 @@ export default () => {
                                     androidSelection: state.androidSelection,
                                     iosSelection: state.iosSelection,
                                     androidVersion: version,
-                                    iosVersion: state.iosVersion
+                                    iosVersion: state.iosVersion,
+                                    location: state.location
                                 });
                                 props.onHide();
                             };
@@ -66,7 +67,8 @@ export default () => {
                                             state.androidSelection,
                                         iosSelection: state.iosSelection,
                                         iosVersion: version,
-                                        androidVersion: state.androidVersion
+                                        androidVersion: state.androidVersion,
+                                        location: state.location
                                     });
                                     props.onHide();
                                 };
