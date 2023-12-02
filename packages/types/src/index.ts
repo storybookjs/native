@@ -20,6 +20,7 @@ export interface EmulatorConfig {
 export enum EmulatorActions {
     rotateLeft = "rotateLeft",
     rotateRight = "rotateRight",
+    location = "location",
     saveScreenshot = "saveScreenshot"
 }
 

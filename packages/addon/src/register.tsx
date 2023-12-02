@@ -7,10 +7,11 @@ import { EmulatorActions } from "@storybook/native-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo, faRedo } from "@fortawesome/free-solid-svg-icons";
 
-import { ADDON_ID, DEEP_LINKS_PARAM_KEY } from "./constants";
+import { ADDON_ID, DEEP_LINKS_PARAM_KEY, MAP_PARAM_KEY } from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
 import VersionSelector from "./components/VersionSelector";
 import CountrySelector from "./components/CountrySelector";
+import MapContainer from "./components/MapContainer";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -73,7 +74,7 @@ addons.register(ADDON_ID, (api) => {
     addons.add(`${ADDON_ID}/countryPicker`, {
         type: types.TOOL,
         title: "Select country",
-        render: () => <CountrySelector />
+        render: () => <CountrySelector api={api} />
     });
 
     addons.add(`${ADDON_ID}/deepLinks/panel`, {
@@ -83,5 +84,14 @@ addons.register(ADDON_ID, (api) => {
             <DeepLinksContainer api={api} active={active} />
         ),
         paramKey: DEEP_LINKS_PARAM_KEY
+    });
+
+    addons.add(`${ADDON_ID}/map/panel`, {
+        title: "Map",
+        type: types.PANEL,
+        render: ({ active }) => (
+            <MapContainer api={api} active={active} />
+        ),
+        paramKey: MAP_PARAM_KEY
     });
 });

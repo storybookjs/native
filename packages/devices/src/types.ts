@@ -19,4 +19,5 @@ export interface GlobalLocation {
     defaultCode?: string;
     locations?: Location[];
     filterCodes?: string[];
+    googleMapsApiKey?: string;
 }

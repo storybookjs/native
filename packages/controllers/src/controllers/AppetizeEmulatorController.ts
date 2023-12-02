@@ -3,6 +3,7 @@ import type { EmulatorContext, EmulatorConfig } from "@storybook/native-types";
 import { debounce } from "lodash";
 import { logDeepLink } from "@storybook/deep-link-logger";
 
+import { EmulatorActions } from "@storybook/native-types";
 import EmulatorController from "./EmulatorController";
 import {
     createAppetizeIframe,
@@ -46,7 +47,7 @@ export default class AppetizeEmulatorController implements EmulatorController {
         }
     };
 
-    public sendMessage({ message, requireConnection }: SendMessageOptions) {
+    public sendMessage({ message, requireConnection, latLng }: SendMessageOptions) {
         const appetizeFrame = getAppetizeIframe(this.emulatorContext);
         if (typeof message === "object" && message.type === "url") {
             this.lastUrlMessage = message;
@@ -60,7 +61,17 @@ export default class AppetizeEmulatorController implements EmulatorController {
             return;
         }
 
-        appetizeFrame.contentWindow.postMessage(message, "*");
+        switch (message) {
+            case EmulatorActions.location:
+                appetizeFrame.contentWindow.postMessage({
+                    type: EmulatorActions.location,
+                    value: latLng
+                }, "*");
+                break;
+            default:
+                appetizeFrame.contentWindow.postMessage(message, "*");
+                break;
+        }
     }
 
     public createEmulator() {

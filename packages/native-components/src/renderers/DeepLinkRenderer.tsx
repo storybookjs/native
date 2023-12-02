@@ -36,10 +36,11 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const location = useLocation();
 
     React.useEffect(() => {
-        const onAction = (action: EmulatorActions) => {
+        const onAction = (action: EmulatorActions, latLng?: number[]) => {
             const controller = manager.getController(context);
             controller.sendMessage({
-                message: action
+                message: action,
+                latLng
             });
         };
 
@@ -61,7 +62,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             platform,
             baseUrl: appetizeBaseUrl
         });
-    }, [device, osVersion, location, apiKey, context, platform, appetizeBaseUrl]);
+    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
@@ -74,7 +75,6 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     }, [
         device,
         osVersion,
-        location,
         JSON.stringify(storyParamsWithExtras),
         deepLinkBaseUrl,
         apiKey,

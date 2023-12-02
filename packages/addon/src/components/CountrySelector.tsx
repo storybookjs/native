@@ -1,7 +1,7 @@
 // this file is based upon similar code by https://github.com/hipstersmoothie
 
 import React, { useEffect } from "react";
-import { useAddonState } from "@storybook/api";
+import { API, useAddonState } from "@storybook/api";
 import { useGlobals } from '@storybook/manager-api';
 import {
     IconButton,
@@ -17,8 +17,14 @@ import {
 } from "@storybook/native-devices";
 
 import { GlobalLocation } from "@storybook/native-devices/dist/types";
+import { ACTION_EVENT_NAME } from "@storybook/native-controllers";
+import { EmulatorActions } from "@storybook/native-types";
 import { ADDON_ID } from "../constants";
 import { DEFAULT_STATE, restoreFromLocalStorage, saveToLocalStorage } from "../utils/localStorageUtils";
+
+export interface CountrySelectorProps {
+    api: API;
+}
 
 let userHasSelected = false;
 
@@ -38,7 +44,7 @@ const getGlobalLocationsOrDefault = (globalLocationJson?: any) :GlobalLocation =
     return globalLocation;
 };
 
-export default () => {
+export default ({ api }: CountrySelectorProps) => {
     const savedState = restoreFromLocalStorage(DEFAULT_STATE);
 
     const [state, setState] = useAddonState<DeviceSelections>(
@@ -51,6 +57,7 @@ export default () => {
     const saveState = (s: DeviceSelections) => {
         setState(s);
         saveToLocalStorage(s);
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.location, s.location.latlng);
     };
 
     const globalLocation = getGlobalLocationsOrDefault(location);
@@ -61,7 +68,7 @@ export default () => {
             && state.location
             && state.location.code2 !== globalLocation.defaultCode) {
             saveState({
-                androidSelection: state.iosSelection,
+                androidSelection: state.androidSelection,
                 iosSelection: state.iosSelection,
                 androidVersion: state.androidVersion,
                 iosVersion: state.iosVersion,
@@ -82,7 +89,7 @@ export default () => {
                             const onClick = () => {
                                 userHasSelected = true;
                                 saveState({
-                                    androidSelection: state.iosSelection,
+                                    androidSelection: state.androidSelection,
                                     iosSelection: state.iosSelection,
                                     androidVersion: state.androidVersion,
                                     iosVersion: state.iosVersion,

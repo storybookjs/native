@@ -8,6 +8,7 @@ const preview = {
         //     description: 'Device Location',
         //     defaultValue: getGlobalLocationJson(
         //         {
+        //             googleMapsApiKey: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
         //             defaultCode: "US",
         //             filterCodes: ["US","MY"],
         //             locations: [

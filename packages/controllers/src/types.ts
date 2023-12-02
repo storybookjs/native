@@ -13,6 +13,7 @@ export interface OpenDeepLinkOptions {
 export interface SendMessageOptions {
     message: Message;
     requireConnection?: boolean;
+    latLng?: number[];
 }
 
 export interface HandledMessageResponse {
