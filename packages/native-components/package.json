@@ -20,9 +20,12 @@
     "@storybook/native-controllers": "link:../controllers",
     "@storybook/native-devices": "link:../devices",
     "@storybook/native-types": "link:../types",
+    "add": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^7.2.2"
+    "react-redux": "^7.2.2",
+    "react-toastify": "^9.1.3",
+    "yarn": "^1.22.21"
   },
   "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {

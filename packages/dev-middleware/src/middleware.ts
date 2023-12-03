@@ -4,6 +4,7 @@ import { postDeepLink } from "./handlers/deepLink";
 import { postSaveScreenshot } from "./handlers/saveScreenshot";
 import { postSetRotation } from "./handlers/setRotation";
 import { postUpdateConfig } from "./handlers/updateConfig";
+import { postStopApp } from "./handlers/stopApp";
 import type { NativeDevMiddlewareConfig } from "./types";
 
 export const middleware = (config: NativeDevMiddlewareConfig = {}) => {
@@ -14,5 +15,6 @@ export const middleware = (config: NativeDevMiddlewareConfig = {}) => {
         app.post("/updateConfig", postUpdateConfig());
         app.post("/screenshot", postSaveScreenshot(fullConfig));
         app.post("/rotation", postSetRotation(fullConfig));
+        app.post("/stopApp", postStopApp(fullConfig));
     };
 };

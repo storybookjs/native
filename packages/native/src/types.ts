@@ -15,4 +15,5 @@ export interface Config {
     stories: StoryParams[];
     controls: [string, unknown][];
     deepLinkUrl?: string;
+    applicationId?: string;
 }

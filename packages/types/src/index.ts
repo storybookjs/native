@@ -18,6 +18,11 @@ export interface EmulatorConfig {
 }
 
 export enum EmulatorActions {
+    clickHomeButton = "emitHomeButton",
+    restartApp = "restartApp",
+    stopApp = "stopApp",
+    toggleFirebaseDebugView = "toggleFirebaseDebugView",
+    shakeDevice = "shakeDevice",
     rotateLeft = "rotateLeft",
     rotateRight = "rotateRight",
     location = "location",

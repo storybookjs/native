@@ -11,6 +11,9 @@ import { EmulatorActions } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 import { Provider } from "react-redux";
 
+import { Slide, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import type { DeepLinkRendererProps } from "../types";
 import CommandsList from "../commands/CommandsList";
 
@@ -24,7 +27,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         storyParams,
         deepLinkBaseUrl,
         appetizeBaseUrl,
-        context
+        context,
+        applicationId
     } = props;
 
     if (!deepLinkBaseUrl) {
@@ -40,7 +44,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             const controller = manager.getController(context);
             controller.sendMessage({
                 message: action,
-                latLng
+                latLng,
+                applicationId
             });
         };
 
@@ -115,6 +120,18 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
                 <style>{renderedIFrameCss}</style>
                 <CommandsList context={context} />
             </>
+            <ToastContainer
+                newestOnTop
+                closeOnClick
+                draggable
+                pauseOnHover
+                limit={2}
+                hideProgressBar={false}
+                autoClose={3000}
+                pauseOnFocusLoss
+                transition={Slide}
+                theme="light"
+            />
         </Provider>
     );
 };

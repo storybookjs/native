@@ -5,7 +5,15 @@ import { ACTION_EVENT_NAME } from "@storybook/native-controllers";
 import { DeepLinksContainer } from "@storybook/deep-link-logger";
 import { EmulatorActions } from "@storybook/native-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUndo, faRedo } from "@fortawesome/free-solid-svg-icons";
+import {
+    faUndo,
+    faRedo,
+    faCircleStop,
+    faHome,
+    faRefresh,
+    faMagnifyingGlassChart,
+    faMobile
+} from "@fortawesome/free-solid-svg-icons";
 
 import { ADDON_ID, DEEP_LINKS_PARAM_KEY, MAP_PARAM_KEY } from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
@@ -22,12 +30,82 @@ addons.register(ADDON_ID, (api) => {
         api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.rotateRight);
     };
 
+    const restartApp = () => {
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.restartApp);
+    };
+
+    const clickHomeButton = () => {
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.clickHomeButton);
+    };
+
+    const stopApp = () => {
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.stopApp);
+    };
+
+    const toggleFirebaseDebugView = () => {
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.toggleFirebaseDebugView);
+    };
+
+    const shakeDevice = () => {
+        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.shakeDevice);
+    };
+
     const captureScreenshot = () => {
         api?.getChannel()?.emit(
             ACTION_EVENT_NAME,
             EmulatorActions.saveScreenshot
         );
     };
+
+    addons.add(`${ADDON_ID}/clickHome`, {
+        type: types.TOOL,
+        title: "Home",
+        render: () => (
+            <IconButton title="Click Home" onClick={clickHomeButton}>
+                <FontAwesomeIcon size="sm" icon={faHome} />
+            </IconButton>
+        )
+    });
+
+    addons.add(`${ADDON_ID}/restartApp`, {
+        type: types.TOOL,
+        title: "Restart App",
+        render: () => (
+            <IconButton title="Restart App" onClick={restartApp}>
+                <FontAwesomeIcon size="sm" icon={faRefresh} />
+            </IconButton>
+        )
+    });
+
+    addons.add(`${ADDON_ID}/stopApp`, {
+        type: types.TOOL,
+        title: "Stop App",
+        render: () => (
+            <IconButton title="Stop App" onClick={stopApp}>
+                <FontAwesomeIcon size="sm" icon={faCircleStop} />
+            </IconButton>
+        )
+    });
+
+    addons.add(`${ADDON_ID}/shakeDevice`, {
+        type: types.TOOL,
+        title: "Shake Device",
+        render: () => (
+            <IconButton title="Shake Device" onClick={shakeDevice}>
+                <FontAwesomeIcon size="sm" icon={faMobile} />
+            </IconButton>
+        )
+    });
+
+    addons.add(`${ADDON_ID}/toggleFirebaseDebugView`, {
+        type: types.TOOL,
+        title: "Enable Firebase Debug View",
+        render: () => (
+            <IconButton title="Enable Firebase Debug View" onClick={toggleFirebaseDebugView}>
+                <FontAwesomeIcon size="sm" icon={faMagnifyingGlassChart} />
+            </IconButton>
+        )
+    });
 
     addons.add(`${ADDON_ID}/rotateLeft`, {
         type: types.TOOL,

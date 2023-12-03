@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import type { EmulatorContext, EmulatorConfig } from "@storybook/native-types";
 import { debounce } from "lodash";
+import { toast } from "react-toastify";
 import { logDeepLink } from "@storybook/deep-link-logger";
 
 import { EmulatorActions } from "@storybook/native-types";
@@ -26,6 +27,8 @@ export default class AppetizeEmulatorController implements EmulatorController {
 
     private config: EmulatorConfig | undefined = undefined;
 
+    private fireBaseDebugViewEnabled = false;
+
     constructor(context?: EmulatorContext) {
         this.emulatorContext = context;
     }
@@ -47,7 +50,7 @@ export default class AppetizeEmulatorController implements EmulatorController {
         }
     };
 
-    public sendMessage({ message, requireConnection, latLng }: SendMessageOptions) {
+    public sendMessage({ message, requireConnection, latLng, applicationId }: SendMessageOptions) {
         const appetizeFrame = getAppetizeIframe(this.emulatorContext);
         if (typeof message === "object" && message.type === "url") {
             this.lastUrlMessage = message;
@@ -61,7 +64,46 @@ export default class AppetizeEmulatorController implements EmulatorController {
             return;
         }
 
+        const handleMissingApplicationId = () => {
+            if (!applicationId || applicationId === "") {
+                toast.error(`applicationId is not set!`, {
+                    position: "bottom-center",
+                    autoClose: 1500
+                });
+                return true;
+            }
+            return false;
+        };
+
         switch (message) {
+            case EmulatorActions.stopApp:
+                if (handleMissingApplicationId()) return;
+
+                appetizeFrame.contentWindow.postMessage({
+                    type: 'adbShellCommand',
+                    value: `am force-stop ${applicationId}`
+                }, "*");
+                toast.success(`Stopped app ${applicationId} (Android only)`, {
+                    position: "bottom-center",
+                    autoClose: 1500
+                });
+                break;
+
+            case EmulatorActions.toggleFirebaseDebugView:
+                if (handleMissingApplicationId()) return;
+
+                this.fireBaseDebugViewEnabled = !this.fireBaseDebugViewEnabled;
+                appetizeFrame.contentWindow.postMessage({
+                    type: 'adbShellCommand',
+                    value: `setprop debug.firebase.analytics.app ${this.fireBaseDebugViewEnabled ? applicationId : ".none."}`
+                }, "*");
+                toast.success(`${this.fireBaseDebugViewEnabled ?
+                    "Enabled" : "Disabled"} firebase  debug view! (Android only) for app ${applicationId}`, {
+                    position: "bottom-center",
+                    autoClose: 1500
+                });
+                break;
+
             case EmulatorActions.location:
                 appetizeFrame.contentWindow.postMessage({
                     type: EmulatorActions.location,
