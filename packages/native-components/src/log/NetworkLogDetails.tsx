@@ -17,7 +17,7 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
     const [open, setOpen] = React.useState(false);
     return (
         <div style={{padding: "5px",marginTop:"4px"}}>
-            <div style={{color: themes.normal.textColor, display: "table"}}>
+            <div style={{display: "table"}}>
                 <span onClick={() => setOpen(!open)}><FontAwesomeIcon icon={open ? faCaretUp : faCaretDown}/></span>
                 <span style={{
                     marginLeft: "5px",
@@ -85,7 +85,7 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                 </span>
             </div>
 
-            {open && <div style={{backgroundColor: "#f8f8f8", padding: "5px"}}>
+            {open && <div style={{padding: "5px 5px 5px 13px"}}>
                 <h4 style={{fontWeight: "bold"}}>URL</h4>
                 <p>{log.url}</p>
                 <h4 style={{fontWeight: "bold"}}>Request Headers</h4>

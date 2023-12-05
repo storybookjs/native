@@ -18,3 +18,8 @@ export const useLocation = (): Location => {
     const state = React.useContext(DeviceContext);
     return state.location;
 };
+
+export const useNetworkLogs = (): Boolean => {
+    const state = React.useContext(DeviceContext);
+    return state.networkLogs ?? false
+};

@@ -6,9 +6,9 @@ import {
     getAppetizeIframeId,
     getFullDeepLinkUrl, useAppDispatch
 } from "@storybook/native-controllers";
-import { useDevice, useLocation, useOsVersion } from "@storybook/native-devices";
-import { EmulatorActions, EmulatorEvents } from "@storybook/native-types";
-import { addons } from "@storybook/addons";
+import {useDevice, useLocation, useNetworkLogs, useOsVersion} from "@storybook/native-devices";
+import {EmulatorActions, EmulatorSettings} from "@storybook/native-types";
+import {addons} from "@storybook/addons";
 import { Provider } from "react-redux";
 
 import { Slide, ToastContainer } from "react-toastify";
@@ -16,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import type { DeepLinkRendererProps } from "../types";
 import CommandsList from "../commands/CommandsList";
-import { addNetworkLog } from "@storybook/native-controllers/dist/state/networkLogsSlice";
 
 const manager = new ControllerManager();
 
@@ -39,7 +38,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const device = useDevice(platform);
     const osVersion = useOsVersion(platform);
     const location = useLocation();
-    const dispatch = useAppDispatch();
+    const networkLogs = useNetworkLogs();
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions, latLng?: number[]) => {
@@ -59,19 +58,21 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
 
     React.useEffect(() => {
         const controller = manager.getController(context);
+        const settings : EmulatorSettings = {
+            device,
+            osVersion,
+            location: location.latlng.join(","),
+        }
+        if (networkLogs) {
+            settings.proxy = "intercept";
+        }
         controller.updateConfig({
             apiKey,
-            settings: {
-                device,
-                osVersion,
-                location: location.latlng.join(","),
-                debug: "true",
-                proxy: "intercept"
-            },
+            settings,
             platform,
             baseUrl: appetizeBaseUrl
         });
-    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl]);
+    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl, networkLogs]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {

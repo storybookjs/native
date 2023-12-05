@@ -172,7 +172,6 @@ addons.register(ADDON_ID, (api) => {
         type: types.PANEL,
         render: ({ active }) => (
             <Provider store={store}>
-
             <NetworkLogsContainer api={api} active={active} />
             </Provider>
 

@@ -4,6 +4,7 @@ export interface DeviceSelections {
     iosVersion: string;
     androidVersion: string;
     location: Location;
+    networkLogs: boolean;
 }
 
 export interface Location {

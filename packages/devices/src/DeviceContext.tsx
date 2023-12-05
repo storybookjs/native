@@ -7,5 +7,6 @@ export const DeviceContext = React.createContext<DeviceSelections>({
     iosSelection: getDefaultDevice("ios"),
     iosVersion: getDefaultOsVersion("ios"),
     androidVersion: getDefaultOsVersion("android"),
-    location: getDefaultLocation()
+    location: getDefaultLocation(),
+    networkLogs: false
 });

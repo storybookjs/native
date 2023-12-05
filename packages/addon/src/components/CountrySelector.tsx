@@ -68,10 +68,7 @@ export default ({ api }: CountrySelectorProps) => {
             && state.location
             && state.location.code2 !== globalLocation.defaultCode) {
             saveState({
-                androidSelection: state.androidSelection,
-                iosSelection: state.iosSelection,
-                androidVersion: state.androidVersion,
-                iosVersion: state.iosVersion,
+                ...state,
                 location: getDefaultLocation(globalLocation.defaultCode)
             });
         }
@@ -89,10 +86,7 @@ export default ({ api }: CountrySelectorProps) => {
                             const onClick = () => {
                                 userHasSelected = true;
                                 saveState({
-                                    androidSelection: state.androidSelection,
-                                    iosSelection: state.iosSelection,
-                                    androidVersion: state.androidVersion,
-                                    iosVersion: state.iosVersion,
+                                    ...state,
                                     location: loc
                                 });
                                 props.onHide();

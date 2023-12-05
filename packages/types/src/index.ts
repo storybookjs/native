@@ -33,7 +33,8 @@ export enum EmulatorEvents {
     onClient = "onClient",
     onSession = "onSession",
     onLog = "log",
-    onNetworkLog = "network",
+    onNetworkLog = "network-log",
+    onRestNetworkLogs = "reset-network-logs",
 }
 
 export enum EmulatorRotation {

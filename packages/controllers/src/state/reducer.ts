@@ -79,6 +79,12 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
                 networkLogsFilterKeyword: action.networkLogsFilterKeyword,
                 filteredNetworkLogs: list,
             };
+        case ActionTypes.RESET_NETWORK_LOGS:
+            return {
+                ...state,
+                filteredNetworkLogs: [],
+                networkLogs: [],
+            };
         default:
             return state;
     }

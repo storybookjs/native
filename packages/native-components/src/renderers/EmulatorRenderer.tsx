@@ -6,12 +6,13 @@ import {Provider} from "react-redux";
 import {store, useAppDispatch} from "@storybook/native-controllers";
 import {addons} from "@storybook/addons";
 import {EmulatorEvents} from "@storybook/native-types";
-import {addNetworkLog} from "@storybook/native-controllers/dist/state/networkLogsSlice";
+import {addNetworkLog, resetNetworkLogs} from "@storybook/native-controllers/dist/state/networkLogsSlice";
 
 
 const WithStore = (props: RendererProps): React.ReactElement => {
 
     const dispatch = useAppDispatch();
+
     useEffect(() => {
         window.appetize
             .getClient("#appetize-iframe")
@@ -19,6 +20,8 @@ const WithStore = (props: RendererProps): React.ReactElement => {
                 addons.getChannel().emit(EmulatorEvents.onClient, client);
 
                 client.on("session", (session: Session) => {
+                    resetNetworkLogs(dispatch)
+                    addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
 
                     session.on("network", (log: Record<string, any>) => {
                         addons.getChannel().emit(EmulatorEvents.onNetworkLog, log);
