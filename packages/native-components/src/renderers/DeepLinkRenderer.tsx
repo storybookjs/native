@@ -2,14 +2,12 @@ import React from "react";
 import {
     ControllerManager,
     ACTION_EVENT_NAME,
-    store,
     getAppetizeIframeId,
-    getFullDeepLinkUrl, useAppDispatch
+    getFullDeepLinkUrl
 } from "@storybook/native-controllers";
-import {useDevice, useLocation, useNetworkLogs, useOsVersion} from "@storybook/native-devices";
-import {EmulatorActions, EmulatorSettings} from "@storybook/native-types";
-import {addons} from "@storybook/addons";
-import { Provider } from "react-redux";
+import { useDevice, useLocation, useNetworkLogs, useOsVersion } from "@storybook/native-devices";
+import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
+import { addons } from "@storybook/addons";
 
 import { Slide, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -61,8 +59,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         const settings : EmulatorSettings = {
             device,
             osVersion,
-            location: location.latlng.join(","),
-        }
+            location: location.latlng.join(",")
+        };
         if (networkLogs) {
             settings.proxy = "intercept";
         }

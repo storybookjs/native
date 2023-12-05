@@ -1,8 +1,6 @@
 import React from "react";
-import {NetworkLog} from "@storybook/native-controllers";
-import {IconButton} from "@storybook/components";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {themes} from "@storybook/theming";
+import { NetworkLog } from "@storybook/native-controllers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
     faCaretDown,
@@ -13,12 +11,12 @@ export interface NetworkLogDetailsProps {
     log: NetworkLog;
 }
 
-const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
+const NetworkLogDetails = ({ log }: NetworkLogDetailsProps) => {
     const [open, setOpen] = React.useState(false);
     return (
-        <div style={{padding: "5px",marginTop:"4px"}}>
-            <div style={{display: "table"}}>
-                <span onClick={() => setOpen(!open)}><FontAwesomeIcon icon={open ? faCaretUp : faCaretDown}/></span>
+        <div style={{ padding: "5px", marginTop: "4px" }}>
+            <div style={{ display: "table" }}>
+                <span onClick={() => setOpen(!open)}><FontAwesomeIcon icon={open ? faCaretUp : faCaretDown} /></span>
                 <span style={{
                     marginLeft: "5px",
                     width: "35px",
@@ -27,7 +25,8 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                     textAlign: "start",
                     fontWeight: "bold",
                     verticalAlign: "middle"
-                }}>
+                }}
+                >
                     {log.method}
                 </span>
                 <span
@@ -38,7 +37,8 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                         whiteSpace: "nowrap",
                         textAlign: "center",
                         verticalAlign: "middle"
-                    }}>
+                    }}
+                >
                     {log.status}
                 </span>
                 <span style={{
@@ -49,7 +49,8 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                     whiteSpace: "nowrap",
                     overflow: "hidden",
                     verticalAlign: "middle"
-                }}>
+                }}
+                >
                     {log.url}
                 </span>
                 <span style={{
@@ -60,7 +61,8 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                     whiteSpace: "nowrap",
                     overflow: "hidden",
                     verticalAlign: "middle"
-                }}>
+                }}
+                >
                     {log.type}
                 </span>
                 <span style={{
@@ -69,7 +71,8 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                     display: "inline-block",
                     textAlign: "end",
                     verticalAlign: "middle"
-                }}>
+                }}
+                >
                     {log.size}
                 </span>
                 <span style={{
@@ -80,7 +83,8 @@ const NetworkLogDetails = ({log}: NetworkLogDetailsProps) => {
                     overflow: "hidden",
                     textAlign: "end",
                     verticalAlign: "middle"
-                }}>
+                }}
+                >
                     {log.time}
                 </span>
             </div>

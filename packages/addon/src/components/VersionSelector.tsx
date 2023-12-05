@@ -44,7 +44,7 @@ export default () => {
                             const onClick = () => {
                                 saveState({
                                     ...state,
-                                    androidVersion: version,
+                                    androidVersion: version
                                 });
                                 props.onHide();
                             };
@@ -61,7 +61,7 @@ export default () => {
                                 const onClick = () => {
                                     saveState({
                                         ...state,
-                                        iosVersion: version,
+                                        iosVersion: version
                                     });
                                     props.onHide();
                                 };

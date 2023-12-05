@@ -2,27 +2,23 @@ import React from "react";
 import type {ReduxState} from "@storybook/native-controllers";
 import {EmulatorContext} from "@storybook/native-types";
 
-import NetworkLogDetails from "./NetworkLogDetails";
 import {connect} from "react-redux";
 import {useAppDispatch} from "@storybook/native-controllers";
 import {
     filterNetWorkLogs,
     resetNetworkLogs
 } from "@storybook/native-controllers/dist/state/networkLogsSlice";
-import {useAddonState} from "@storybook/api";
-import {DeviceSelections} from "@storybook/native-devices";
-import {ADDON_ID} from "@storybook/native-addon/dist/constants";
 
-const mapStateToProps = (state: NetWorkLogsListProps) => {
-    return {...state};
+const mapStateToProps = (state: ReduxState, props: NetWorkLogsListProps) => {
+    return {...state, ...props};
 };
 
-export interface NetWorkLogsListProps extends ReduxState {
+export interface NetWorkLogsListProps {
     context?: EmulatorContext;
+    onDisableNetwork: () => void;
 }
 
-const NetworkLogsList = ({networkLogs, filteredNetworkLogs, context}: NetWorkLogsListProps) => {
-    const [state, setState] = useAddonState<DeviceSelections>(ADDON_ID);
+const NetworkLogsList = ({onDisableNetwork, context}: NetWorkLogsListProps) => {
 
     const dispatch = useAppDispatch();
     React.useEffect(() => {
@@ -30,17 +26,14 @@ const NetworkLogsList = ({networkLogs, filteredNetworkLogs, context}: NetWorkLog
     }, [context, dispatch]);
 
     const onFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        filterNetWorkLogs(dispatch, event.target?.value ?? "")
+        filterNetWorkLogs(dispatch, event.target?.value ?? "");
     };
 
-    const disableNetworkLogs = () => {
-        setState({...state, networkLogs: false});
-    }
     return (
         <div style={{margin: "4px"}}>
             <div style={{marginTop: "5px", marginBottom: "5px"}}>
                 <input
-                    placeholder={"Filter"}
+                    placeholder="Filter"
                     onChange={onFilterChange}
                     style={{
                         padding: "5px",
@@ -49,11 +42,13 @@ const NetworkLogsList = ({networkLogs, filteredNetworkLogs, context}: NetWorkLog
                         borderWidth: "0.2px",
                         borderColor: "#f8ffff",
                         backgroundColor: "#f8f8f8",
-                        height: "2rem",
-                    }}/>
+                        height: "2rem"
+                    }}
+                />
                 <span>
                     <button
-                        onClick={disableNetworkLogs}
+                        type={"button"}
+                        onClick={onDisableNetwork}
                         style={{
                             marginLeft: "20px",
                             backgroundColor: "#65e5a6",
@@ -64,10 +59,11 @@ const NetworkLogsList = ({networkLogs, filteredNetworkLogs, context}: NetWorkLog
                             padding: "5px",
                             paddingLeft: "15px",
                             paddingRight: "15px",
-                            fontSize: "13px",
-                        }}>
+                            fontSize: "13px"
+                        }}
+                    >
                     Disable
-                </button>
+                    </button>
                 </span>
             </div>
             <div style={{fontWeight: "bold", fontSize: "12px"}}>
@@ -78,9 +74,9 @@ const NetworkLogsList = ({networkLogs, filteredNetworkLogs, context}: NetWorkLog
                 <span style={{marginLeft: "87px"}}>SIZE</span>
                 <span style={{marginLeft: "9px"}}>TIME</span>
             </div>
-            {(filteredNetworkLogs ?? networkLogs).map((log) => {
-                return <NetworkLogDetails log={log}/>;
-            })}
+            {/*{(filteredNetworkLogs ?? networkLogs).map((log) => {*/}
+            {/*    return <NetworkLogDetails log={log}/>;*/}
+            {/*})}*/}
         </div>
     );
 };

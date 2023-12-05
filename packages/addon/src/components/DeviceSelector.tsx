@@ -44,7 +44,7 @@ export default () => {
                             const onClick = () => {
                                 saveState({
                                     ...state,
-                                    androidSelection: device,
+                                    androidSelection: device
                                 });
                                 props.onHide();
                             };
@@ -61,7 +61,7 @@ export default () => {
                                 const onClick = () => {
                                     saveState({
                                         ...state,
-                                        iosSelection: device,
+                                        iosSelection: device
                                     });
                                     props.onHide();
                                 };

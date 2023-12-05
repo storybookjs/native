@@ -3,9 +3,9 @@ import {
     ACTION_EVENT_NAME,
     getAppetizeUrl
 } from "@storybook/native-controllers";
-import {useDevice, useLocation, useNetworkLogs, useOsVersion} from "@storybook/native-devices";
-import {EmulatorActions, EmulatorSettings} from "@storybook/native-types";
-import {addons} from "@storybook/addons";
+import { useDevice, useLocation, useNetworkLogs, useOsVersion } from "@storybook/native-devices";
+import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
+import { addons } from "@storybook/addons";
 import { ToastContainer, Slide } from "react-toastify";
 import { RendererProps } from "../types";
 
@@ -19,7 +19,6 @@ export default (props: RendererProps): React.ReactElement => {
     const osVersion = useOsVersion(platform);
     const location = useLocation();
     const networkLogs = useNetworkLogs();
-
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions) => {
@@ -46,8 +45,8 @@ export default (props: RendererProps): React.ReactElement => {
     const settings: EmulatorSettings = {
         device,
         osVersion,
-        location: location.latlng.join(","),
-    }
+        location: location.latlng.join(",")
+    };
     if (networkLogs) {
         settings.proxy = "intercept";
     }

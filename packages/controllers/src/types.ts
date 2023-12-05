@@ -43,4 +43,3 @@ export interface ReduxState {
     networkLogsFilterKeyword?: string;
     filteredNetworkLogs?: NetworkLog[];
 }
-

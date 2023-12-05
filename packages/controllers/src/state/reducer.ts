@@ -1,5 +1,5 @@
 import { ActionTypes } from "../constants";
-import type {ReduxState, HandledMessageResponse, NetworkLog} from "../types";
+import type { ReduxState, HandledMessageResponse, NetworkLog } from "../types";
 
 const defaultState: ReduxState = {
     loading: false,
@@ -14,16 +14,16 @@ export interface ReduxAction {
     networkLogsFilterKeyword?: string;
 }
 
-
-function getFiltered(logs: NetworkLog[], key?: string,): NetworkLog[] | undefined {
-    let filtered = undefined
-    if (key && key.length > 0)
-        filtered = logs.filter((log) => {
+function getFiltered(logs: NetworkLog[], key?: string): NetworkLog[] | undefined {
+    let filtered;
+    if (key && key.length > 0) {
+filtered = logs.filter((log) => {
             return log.method.toLowerCase().includes(key)
                 || log.url.toLowerCase().includes(key)
-                || log.content.toLowerCase().includes(key)
+                || log.content.toLowerCase().includes(key);
         });
-    return filtered
+}
+    return filtered;
 }
 
 export default (state = defaultState, action: ReduxAction): ReduxState => {
@@ -50,7 +50,6 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
                 commands: []
             };
 
-
         case ActionTypes.ADD_NETWORK_LOG:
             if (!action.networkLog) {
                 throw new Error(`No networkLog for action: ${action.type}`);
@@ -60,30 +59,30 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
             const newLogs = state.networkLogs.map((log) => {
                 if (log.id === action.networkLog!.id) {
                     updated = true;
-                    return action.networkLog!
+                    return action.networkLog!;
                 }
-                return log
+                return log;
             });
 
-            const final = updated ? newLogs : newLogs.concat(action.networkLog)
+            const final = updated ? newLogs : newLogs.concat(action.networkLog);
 
             return {
                 ...state,
                 filteredNetworkLogs: getFiltered(final, state.networkLogsFilterKeyword),
-                networkLogs: final,
+                networkLogs: final
             };
         case ActionTypes.FILTER_NETWORK_LOG:
-            const list = getFiltered(state.networkLogs, action.networkLogsFilterKeyword)
+            const list = getFiltered(state.networkLogs, action.networkLogsFilterKeyword);
             return {
                 ...state,
                 networkLogsFilterKeyword: action.networkLogsFilterKeyword,
-                filteredNetworkLogs: list,
+                filteredNetworkLogs: list
             };
         case ActionTypes.RESET_NETWORK_LOGS:
             return {
                 ...state,
                 filteredNetworkLogs: [],
-                networkLogs: [],
+                networkLogs: []
             };
         default:
             return state;

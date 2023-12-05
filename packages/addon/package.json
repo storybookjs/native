@@ -30,6 +30,7 @@
     "@storybook/native-controllers": "link:../controllers",
     "@storybook/native-devices": "link:../devices",
     "@storybook/native-types": "link:../types",
+    "@storybook/native-components": "link:../native-components",
     "@storybook/react": "^7.5.3",
     "@storybook/theming": "^7.5.3",
     "react": "^18.2.0",
