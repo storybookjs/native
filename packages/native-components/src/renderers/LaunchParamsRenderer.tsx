@@ -46,7 +46,9 @@ export default (props: RendererProps): React.ReactElement => {
         settings: {
             device,
             osVersion,
-            location: location.latlng.join(",")
+            location: location.latlng.join(","),
+            debug: "true",
+            proxy: "intercept"
         },
         launchArgs: storyParamsWithExtras,
         platform,

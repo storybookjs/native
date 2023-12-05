@@ -4,10 +4,10 @@ import {
     ACTION_EVENT_NAME,
     store,
     getAppetizeIframeId,
-    getFullDeepLinkUrl
+    getFullDeepLinkUrl, useAppDispatch
 } from "@storybook/native-controllers";
 import { useDevice, useLocation, useOsVersion } from "@storybook/native-devices";
-import { EmulatorActions } from "@storybook/native-types";
+import { EmulatorActions, EmulatorEvents } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 import { Provider } from "react-redux";
 
@@ -16,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import type { DeepLinkRendererProps } from "../types";
 import CommandsList from "../commands/CommandsList";
+import { addNetworkLog } from "@storybook/native-controllers/dist/state/networkLogsSlice";
 
 const manager = new ControllerManager();
 
@@ -38,6 +39,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const device = useDevice(platform);
     const osVersion = useOsVersion(platform);
     const location = useLocation();
+    const dispatch = useAppDispatch();
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions, latLng?: number[]) => {
@@ -62,7 +64,9 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             settings: {
                 device,
                 osVersion,
-                location: location.latlng.join(",")
+                location: location.latlng.join(","),
+                debug: "true",
+                proxy: "intercept"
             },
             platform,
             baseUrl: appetizeBaseUrl
@@ -115,23 +119,21 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     `;
 
     return (
-        <Provider store={store}>
             <>
                 <style>{renderedIFrameCss}</style>
                 <CommandsList context={context} />
+                <ToastContainer
+                    newestOnTop
+                    closeOnClick
+                    draggable
+                    pauseOnHover
+                    limit={2}
+                    hideProgressBar={false}
+                    autoClose={3000}
+                    pauseOnFocusLoss
+                    transition={Slide}
+                    theme="light"
+                />
             </>
-            <ToastContainer
-                newestOnTop
-                closeOnClick
-                draggable
-                pauseOnHover
-                limit={2}
-                hideProgressBar={false}
-                autoClose={3000}
-                pauseOnFocusLoss
-                transition={Slide}
-                theme="light"
-            />
-        </Provider>
     );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { addons, types } from "@storybook/addons";
 import { Icons, IconButton } from "@storybook/components";
-import { ACTION_EVENT_NAME } from "@storybook/native-controllers";
+import {ACTION_EVENT_NAME, store} from "@storybook/native-controllers";
 import { DeepLinksContainer } from "@storybook/deep-link-logger";
 import { EmulatorActions } from "@storybook/native-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,11 +15,14 @@ import {
     faMobile
 } from "@fortawesome/free-solid-svg-icons";
 
-import { ADDON_ID, DEEP_LINKS_PARAM_KEY, MAP_PARAM_KEY } from "./constants";
+import {Provider} from "react-redux";
+
+import {ADDON_ID, DEEP_LINKS_PARAM_KEY, MAP_PARAM_KEY, NETWORK_LOGS_PARAM_KEY} from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
 import VersionSelector from "./components/VersionSelector";
 import CountrySelector from "./components/CountrySelector";
 import MapContainer from "./components/MapContainer";
+import NetworkLogsContainer from "./components/NetworkLogsContainer";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -162,6 +165,19 @@ addons.register(ADDON_ID, (api) => {
             <DeepLinksContainer api={api} active={active} />
         ),
         paramKey: DEEP_LINKS_PARAM_KEY
+    });
+
+    addons.add(`${ADDON_ID}/network-logs/panel`, {
+        title: "Network Logs",
+        type: types.PANEL,
+        render: ({ active }) => (
+            <Provider store={store}>
+
+            <NetworkLogsContainer api={api} active={active} />
+            </Provider>
+
+        ),
+        paramKey: NETWORK_LOGS_PARAM_KEY
     });
 
     addons.add(`${ADDON_ID}/map/panel`, {

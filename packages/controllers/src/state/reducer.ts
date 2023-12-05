@@ -1,14 +1,29 @@
 import { ActionTypes } from "../constants";
-import type { ReduxState, HandledMessageResponse } from "../types";
+import type {ReduxState, HandledMessageResponse, NetworkLog} from "../types";
 
 const defaultState: ReduxState = {
     loading: false,
-    commands: []
+    commands: [],
+    networkLogs: []
 };
 
 export interface ReduxAction {
     type: ActionTypes;
     payload?: HandledMessageResponse;
+    networkLog?: NetworkLog;
+    networkLogsFilterKeyword?: string;
+}
+
+
+function getFiltered(logs: NetworkLog[], key?: string,): NetworkLog[] | undefined {
+    let filtered = undefined
+    if (key && key.length > 0)
+        filtered = logs.filter((log) => {
+            return log.method.toLowerCase().includes(key)
+                || log.url.toLowerCase().includes(key)
+                || log.content.toLowerCase().includes(key)
+        });
+    return filtered
 }
 
 export default (state = defaultState, action: ReduxAction): ReduxState => {
@@ -33,6 +48,36 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
             return {
                 ...state,
                 commands: []
+            };
+
+
+        case ActionTypes.ADD_NETWORK_LOG:
+            if (!action.networkLog) {
+                throw new Error(`No networkLog for action: ${action.type}`);
+            }
+
+            let updated = false;
+            const newLogs = state.networkLogs.map((log) => {
+                if (log.id === action.networkLog!.id) {
+                    updated = true;
+                    return action.networkLog!
+                }
+                return log
+            });
+
+            const final = updated ? newLogs : newLogs.concat(action.networkLog)
+
+            return {
+                ...state,
+                filteredNetworkLogs: getFiltered(final, state.networkLogsFilterKeyword),
+                networkLogs: final,
+            };
+        case ActionTypes.FILTER_NETWORK_LOG:
+            const list = getFiltered(state.networkLogs, action.networkLogsFilterKeyword)
+            return {
+                ...state,
+                networkLogsFilterKeyword: action.networkLogsFilterKeyword,
+                filteredNetworkLogs: list,
             };
         default:
             return state;

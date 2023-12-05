@@ -1,3 +1,5 @@
+import { nativePreviewHead } from "@storybook/native/dist/previewHeader";
+
 const  config = {
     stories: ["../stories/*.stories.jsx"],
     framework: {
@@ -11,7 +13,9 @@ const  config = {
     ],
     docs: {
         autodocs: true
-    }
+    },
+    previewHead: nativePreviewHead,
+
 };
 
 export default config;

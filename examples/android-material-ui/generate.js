@@ -78,7 +78,7 @@ const promises = components.map(async (component) => {
         category: pascalCase(component.name),
         filePath: `./stories/${component.name}.stories.jsx`,
         // applicationId: "com.example.app",
-        apiKey: "zv034bdme9je7c9d43chzmc2yg",
+        apiKey: "oshu6gud4hjpnyasrhin7dsbgy",
         platform: "android",
         stories: [
             {

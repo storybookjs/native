@@ -29,6 +29,13 @@ export enum EmulatorActions {
     saveScreenshot = "saveScreenshot"
 }
 
+export enum EmulatorEvents {
+    onClient = "onClient",
+    onSession = "onSession",
+    onLog = "log",
+    onNetworkLog = "network",
+}
+
 export enum EmulatorRotation {
     vertical,
     horizontal,
@@ -42,3 +49,27 @@ export const RotationsList = [
     EmulatorRotation.invertedVertical,
     EmulatorRotation.invertedHorizontal
 ] as readonly EmulatorRotation[];
+
+/**
+ * For full api reference check
+ * https://docs.appetize.io/javascript-sdk/api-reference
+ */
+declare global {
+    interface Window {
+        appetize: {
+            getClient: (client: string) => Promise<Client>;
+        };
+    }
+
+    interface Client {
+        on: (event: string, data: string | Session | Record<string, any> | any) => void;
+    }
+
+    interface Session {
+        on: (event: string, data: Log | Record<string, any> | any) => void;
+    }
+
+    interface Log {
+        message: string
+    }
+}
