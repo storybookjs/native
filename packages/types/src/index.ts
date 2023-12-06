@@ -30,6 +30,7 @@ export enum EmulatorActions {
 }
 
 export enum EmulatorEvents {
+    onMissingClient = "onMissingClient",
     onClient = "onClient",
     onSession = "onSession",
     onLog = "log",

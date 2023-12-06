@@ -18,6 +18,11 @@ const WithStore = (props: RendererProps): React.ReactElement => {
     const networkLogs = useNetworkLogs();
 
     useEffect(() => {
+        if (!window.appetize) {
+            addons.getChannel().emit(EmulatorEvents.onMissingClient, null);
+            return;
+        }
+        if (!networkLogs) return;
         window.appetize.getClient("#appetize-iframe").then((client: Client) => {
             addons.getChannel().emit(EmulatorEvents.onClient, client);
 

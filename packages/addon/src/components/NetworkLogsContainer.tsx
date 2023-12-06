@@ -29,17 +29,24 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
         savedState
     );
 
+    const [isClientSetup, setClientSetup] = React.useState(true);
+
     useEffect(() => {
+        const onMissingClient = () => {
+            setClientSetup(false);
+        };
         const onLog = (log: Record<string, any>) => {
             addNetworkLog(dispatch, log);
         };
         const onRestLogs = () => {
             resetNetworkLogs(dispatch);
         };
+        api.on(EmulatorEvents.onMissingClient, onMissingClient);
         api.on(EmulatorEvents.onNetworkLog, onLog);
         api.on(EmulatorEvents.onRestNetworkLogs, onRestLogs);
 
         return () => {
+            api.off(EmulatorEvents.onMissingClient, onMissingClient);
             api.off(EmulatorEvents.onNetworkLog, onLog);
             api.off(EmulatorEvents.onRestNetworkLogs, onRestLogs);
         };
@@ -54,7 +61,28 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
 
     return (
         <AddonPanel key="network-logs-panel" active={Boolean(active)}>
-            {!state.networkLogs && (
+            {!isClientSetup && (
+                <div style={{ margin: "20px" }}>
+                    <h1>Preview Header Missing!</h1>
+                    <p>
+                        To use Network Logs in your storybook, you need to setup
+                        previewHeader
+                    </p>
+                    <p>
+                        Follow the steps
+                        <a
+                            href="https://github.com/storybookjs/native/tree/master/packages/addon#google-map-api-key"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            {" "}
+                            here{" "}
+                        </a>
+                        to obtain your key.
+                    </p>
+                </div>
+            )}
+            {isClientSetup && !state.networkLogs && (
                 <div
                     style={{
                         margin: "4px",
@@ -83,7 +111,7 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
                     </button>
                 </div>
             )}
-            {state.networkLogs && (
+            {isClientSetup && state.networkLogs && (
                 <NetworkLogsList onDisableNetwork={disableNetworkLogs} />
             )}
         </AddonPanel>
