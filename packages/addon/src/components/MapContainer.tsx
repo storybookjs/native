@@ -37,7 +37,8 @@ export default ({ api, active }: MapContainerProps) => {
                             target="_blank"
                         >
                             {" "}
-                            here{" "}
+                            here
+                            {" "}
                         </a>
                         to obtain your key.
                     </p>
