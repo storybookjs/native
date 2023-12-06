@@ -71,14 +71,13 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
                     <p>
                         Follow the steps
                         <a
-                            href="https://github.com/storybookjs/native/tree/master/packages/addon#google-map-api-key"
+                            href="https://github.com/storybookjs/native/tree/master/packages/addon#network-logs"
                             rel="noreferrer"
                             target="_blank"
                         >
                             {" "}
                             here{" "}
                         </a>
-                        to obtain your key.
                     </p>
                 </div>
             )}
