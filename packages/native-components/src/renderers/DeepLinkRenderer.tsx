@@ -62,6 +62,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             location: location.latlng.join(",")
         };
         if (networkLogs) {
+            // settings.debug = "true";
             settings.proxy = "intercept";
         }
         controller.updateConfig({

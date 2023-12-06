@@ -3,8 +3,6 @@ import type { AppDispatch } from "./store";
 
 export const addNetworkLog = (dispatch: AppDispatch, log: Record<string, any>) => {
     function formatMilliseconds(milliseconds: number) {
-        // Ensure the input is a positive number
-        milliseconds = Math.abs(milliseconds);
         if (milliseconds === 0) {
             return "0ms";
         } if (milliseconds < 1000) {
@@ -16,8 +14,8 @@ export const addNetworkLog = (dispatch: AppDispatch, log: Record<string, any>) =
             const minutes = milliseconds / 60000;
             return `${minutes.toFixed(1)}m`;
         }
-            const hours = milliseconds / 3600000;
-            return `${hours.toFixed(1)}h`;
+        const hours = milliseconds / 3600000;
+        return `${hours.toFixed(1)}h`;
     }
 
     function formatBytes(bytes: number) {

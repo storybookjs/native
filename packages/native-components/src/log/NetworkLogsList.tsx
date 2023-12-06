@@ -1,16 +1,16 @@
 import React from "react";
-import type {ReduxState} from "@storybook/native-controllers";
-import {EmulatorContext} from "@storybook/native-types";
+import type { ReduxState } from "@storybook/native-controllers";
+import { EmulatorContext } from "@storybook/native-types";
 
-import {connect} from "react-redux";
-import {useAppDispatch} from "@storybook/native-controllers";
+import { connect } from "react-redux";
+import { useAppDispatch } from "@storybook/native-controllers";
 import {
     filterNetWorkLogs,
     resetNetworkLogs
 } from "@storybook/native-controllers/dist/state/networkLogsSlice";
 
 const mapStateToProps = (state: ReduxState, props: NetWorkLogsListProps) => {
-    return {...state, ...props};
+    return { ...state, ...props };
 };
 
 export interface NetWorkLogsListProps {
@@ -18,8 +18,7 @@ export interface NetWorkLogsListProps {
     onDisableNetwork: () => void;
 }
 
-const NetworkLogsList = ({onDisableNetwork, context}: NetWorkLogsListProps) => {
-
+const NetworkLogsList = ({ onDisableNetwork, context }: NetWorkLogsListProps) => {
     const dispatch = useAppDispatch();
     React.useEffect(() => {
         resetNetworkLogs(dispatch);
@@ -30,8 +29,8 @@ const NetworkLogsList = ({onDisableNetwork, context}: NetWorkLogsListProps) => {
     };
 
     return (
-        <div style={{margin: "4px"}}>
-            <div style={{marginTop: "5px", marginBottom: "5px"}}>
+        <div style={{ margin: "4px" }}>
+            <div style={{ marginTop: "5px", marginBottom: "5px" }}>
                 <input
                     placeholder="Filter"
                     onChange={onFilterChange}
@@ -47,7 +46,7 @@ const NetworkLogsList = ({onDisableNetwork, context}: NetWorkLogsListProps) => {
                 />
                 <span>
                     <button
-                        type={"button"}
+                        type="button"
                         onClick={onDisableNetwork}
                         style={{
                             marginLeft: "20px",
@@ -66,17 +65,14 @@ const NetworkLogsList = ({onDisableNetwork, context}: NetWorkLogsListProps) => {
                     </button>
                 </span>
             </div>
-            <div style={{fontWeight: "bold", fontSize: "12px"}}>
-                <span style={{marginLeft: "2px"}}>METHOD</span>
-                <span style={{marginLeft: "6px"}}>STATUS</span>
-                <span style={{marginLeft: "10px"}}>URL</span>
-                <span style={{marginLeft: "185px"}}>TYPE</span>
-                <span style={{marginLeft: "87px"}}>SIZE</span>
-                <span style={{marginLeft: "9px"}}>TIME</span>
+            <div style={{ fontWeight: "bold", fontSize: "12px" }}>
+                <span style={{ marginLeft: "2px" }}>METHOD</span>
+                <span style={{ marginLeft: "6px" }}>STATUS</span>
+                <span style={{ marginLeft: "10px" }}>URL</span>
+                <span style={{ marginLeft: "185px" }}>TYPE</span>
+                <span style={{ marginLeft: "87px" }}>SIZE</span>
+                <span style={{ marginLeft: "9px" }}>TIME</span>
             </div>
-            {/*{(filteredNetworkLogs ?? networkLogs).map((log) => {*/}
-            {/*    return <NetworkLogDetails log={log}/>;*/}
-            {/*})}*/}
         </div>
     );
 };

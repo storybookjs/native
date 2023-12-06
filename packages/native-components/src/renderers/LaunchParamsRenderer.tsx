@@ -48,6 +48,7 @@ export default (props: RendererProps): React.ReactElement => {
         location: location.latlng.join(",")
     };
     if (networkLogs) {
+        // settings.debug = "true";
         settings.proxy = "intercept";
     }
     const url = getAppetizeUrl({

@@ -50,7 +50,7 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
                 commands: []
             };
 
-        case ActionTypes.ADD_NETWORK_LOG:
+        case ActionTypes.ADD_NETWORK_LOG: {
             if (!action.networkLog) {
                 throw new Error(`No networkLog for action: ${action.type}`);
             }
@@ -71,12 +71,12 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
                 filteredNetworkLogs: getFiltered(final, state.networkLogsFilterKeyword),
                 networkLogs: final
             };
+        }
         case ActionTypes.FILTER_NETWORK_LOG:
-            const list = getFiltered(state.networkLogs, action.networkLogsFilterKeyword);
             return {
                 ...state,
                 networkLogsFilterKeyword: action.networkLogsFilterKeyword,
-                filteredNetworkLogs: list
+                filteredNetworkLogs: getFiltered(state.networkLogs, action.networkLogsFilterKeyword)
             };
         case ActionTypes.RESET_NETWORK_LOGS:
             return {

@@ -3452,6 +3452,7 @@
     "@storybook/core-events" "^7.5.3"
     "@storybook/deep-link-logger" "link:packages/deep-link-logger"
     "@storybook/manager-api" "^7.5.3"
+    "@storybook/native-components" "link:packages/native-components"
     "@storybook/native-controllers" "link:packages/controllers"
     "@storybook/native-devices" "link:packages/devices"
     "@storybook/native-types" "link:packages/types"
@@ -3459,10 +3460,13 @@
     "@storybook/theming" "^7.5.3"
     react "^18.2.0"
     react-dom "^18.2.0"
+    react-redux "^7.2.2"
 
 "@storybook/native-components@link:packages/native-components":
   version "3.0.0"
   dependencies:
+    "@fortawesome/free-solid-svg-icons" "^6.4.2"
+    "@fortawesome/react-fontawesome" "^0.2.0"
     "@storybook/addons" "^7.5.3"
     "@storybook/components" "^7.5.3"
     "@storybook/native-controllers" "link:packages/controllers"
@@ -3480,7 +3484,6 @@
   dependencies:
     "@storybook/deep-link-logger" "link:packages/deep-link-logger"
     "@storybook/native-types" "link:packages/types"
-    "@types/appetize-sdk" "link:packages/appetize-sdk"
     "@types/lodash.debounce" "^4.0.6"
     add "^2.0.6"
     axios "^0.21.1"
@@ -3772,9 +3775,6 @@
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@swc/types/-/types-0.1.5.tgz#043b731d4f56a79b4897a3de1af35e75d56bc63a"
   integrity sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==
-
-"@types/appetize-sdk@link:packages/appetize-sdk":
-  version "0.0.1"
 
 "@types/babel__core@^7.0.0":
   version "7.20.3"

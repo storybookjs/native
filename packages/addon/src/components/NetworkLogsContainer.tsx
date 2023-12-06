@@ -1,20 +1,20 @@
-import React, {useEffect} from "react";
-import {API, useAddonState} from "@storybook/api";
-import {AddonPanel} from "@storybook/components";
-import {EmulatorEvents} from "@storybook/native-types";
-import {NetworkLogsList} from "@storybook/native-components";
+import React, { useEffect } from "react";
+import { API, useAddonState } from "@storybook/api";
+import { AddonPanel } from "@storybook/components";
+import { EmulatorEvents } from "@storybook/native-types";
+import { NetworkLogsList } from "@storybook/native-components";
 import { useAppDispatch } from "@storybook/native-controllers";
-import {addNetworkLog, resetNetworkLogs} from "@storybook/native-controllers/dist/state/networkLogsSlice";
-import {DeviceSelections} from "@storybook/native-devices";
-import {DEFAULT_STATE, restoreFromLocalStorage} from "../utils/localStorageUtils";
-import {ADDON_ID} from "../constants";
+import { addNetworkLog, resetNetworkLogs } from "@storybook/native-controllers/dist/state/networkLogsSlice";
+import { DeviceSelections } from "@storybook/native-devices";
+import { DEFAULT_STATE, restoreFromLocalStorage } from "../utils/localStorageUtils";
+import { ADDON_ID } from "../constants";
 
 export interface NetworkLogsContainerProps {
     api: API;
     active?: boolean;
 }
 
-export default ({api, active}: NetworkLogsContainerProps) => {
+export default ({ api, active }: NetworkLogsContainerProps) => {
     const dispatch = useAppDispatch();
     const savedState = restoreFromLocalStorage(DEFAULT_STATE);
 
@@ -40,16 +40,15 @@ export default ({api, active}: NetworkLogsContainerProps) => {
     }, []);
 
     const enableNetworkLogs = () => {
-        setState({...state, networkLogs: true});
+        setState({ ...state, networkLogs: true });
     };
     const disableNetworkLogs: () => void = () => {
-        setState({...state, networkLogs: false});
+        setState({ ...state, networkLogs: false });
     };
-
 
     return (
         <AddonPanel key="network-logs-panel" active={Boolean(active)}>
-            {!state.networkLogs &&
+            {!state.networkLogs && (
                 <div style={{
                     margin: "4px",
                     display: "flex",
@@ -58,6 +57,7 @@ export default ({api, active}: NetworkLogsContainerProps) => {
                 }}
                 >
                 <button
+                    type="button"
                     onClick={enableNetworkLogs}
                     style={{
                         marginTop: "40%",
@@ -74,7 +74,8 @@ export default ({api, active}: NetworkLogsContainerProps) => {
                 >
                     Enable Network Logs
                 </button>
-            </div>}
+                </div>
+              )}
             {state.networkLogs && <NetworkLogsList onDisableNetwork={disableNetworkLogs} />}
         </AddonPanel>
     );
