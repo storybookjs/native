@@ -22,3 +22,8 @@ export const useNetworkLogs = (): boolean => {
     const state = React.useContext(DeviceContext);
     return state.networkLogs ?? false;
 };
+
+export const useLogs = (): boolean => {
+    const state = React.useContext(DeviceContext);
+    return state.logs ?? false;
+};

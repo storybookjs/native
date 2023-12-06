@@ -3,31 +3,47 @@ import {
     ACTION_EVENT_NAME,
     getAppetizeUrl
 } from "@storybook/native-controllers";
-import { useDevice, useLocation, useNetworkLogs, useOsVersion } from "@storybook/native-devices";
+import {
+    useDevice,
+    useLocation,
+    useLogs,
+    useNetworkLogs,
+    useOsVersion
+} from "@storybook/native-devices";
 import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 import { ToastContainer, Slide } from "react-toastify";
 import { RendererProps } from "../types";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 export default (props: RendererProps): React.ReactElement => {
-    const { apiKey, platform, extraParams, storyParams, appetizeBaseUrl, applicationId } =
-        props;
+    const {
+        apiKey,
+        platform,
+        extraParams,
+        storyParams,
+        appetizeBaseUrl,
+        applicationId
+    } = props;
     const iframeRef = React.useRef<HTMLIFrameElement>(null);
     const device = useDevice(platform);
     const osVersion = useOsVersion(platform);
     const location = useLocation();
     const networkLogs = useNetworkLogs();
+    const logs = useLogs();
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions) => {
             switch (action) {
                 case EmulatorActions.stopApp:
-                    iframeRef.current?.contentWindow?.postMessage({
-                        type: 'adbShellCommand',
-                        value: `am force-stop ${applicationId}`
-                    }, "*");
+                    iframeRef.current?.contentWindow?.postMessage(
+                        {
+                            type: "adbShellCommand",
+                            value: `am force-stop ${applicationId}`
+                        },
+                        "*"
+                    );
                     break;
                 default:
                     iframeRef.current?.contentWindow?.postMessage(action, "*");
@@ -47,8 +63,10 @@ export default (props: RendererProps): React.ReactElement => {
         osVersion,
         location: location.latlng.join(",")
     };
+    if (logs) {
+        settings.debug = "true";
+    }
     if (networkLogs) {
-        // settings.debug = "true";
         settings.proxy = "intercept";
     }
     const url = getAppetizeUrl({
@@ -81,6 +99,5 @@ export default (props: RendererProps): React.ReactElement => {
                 theme="light"
             />
         </div>
-
     );
 };

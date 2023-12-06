@@ -27,6 +27,7 @@ import VersionSelector from "./components/VersionSelector";
 import CountrySelector from "./components/CountrySelector";
 import MapContainer from "./components/MapContainer";
 import NetworkLogsContainer from "./components/NetworkLogsContainer";
+import LogsContainer from "./components/LogsContainer";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -178,6 +179,17 @@ addons.register(ADDON_ID, (api) => {
             <DeepLinksContainer api={api} active={active} />
         ),
         paramKey: DEEP_LINKS_PARAM_KEY
+    });
+
+    addons.add(`${ADDON_ID}/logs/panel`, {
+        title: "Logs",
+        type: types.PANEL,
+        render: ({ active }) => (
+            <Provider store={store}>
+                <LogsContainer api={api} active={active} />
+            </Provider>
+        ),
+        paramKey: NETWORK_LOGS_PARAM_KEY
     });
 
     addons.add(`${ADDON_ID}/network-logs/panel`, {

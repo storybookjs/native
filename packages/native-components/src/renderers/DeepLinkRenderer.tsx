@@ -5,12 +5,18 @@ import {
     getAppetizeIframeId,
     getFullDeepLinkUrl
 } from "@storybook/native-controllers";
-import { useDevice, useLocation, useNetworkLogs, useOsVersion } from "@storybook/native-devices";
+import {
+    useDevice,
+    useLocation,
+    useLogs,
+    useNetworkLogs,
+    useOsVersion
+} from "@storybook/native-devices";
 import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
 
 import { Slide, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 import type { DeepLinkRendererProps } from "../types";
 import CommandsList from "../commands/CommandsList";
@@ -37,6 +43,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const osVersion = useOsVersion(platform);
     const location = useLocation();
     const networkLogs = useNetworkLogs();
+    const logs = useLogs();
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions, latLng?: number[]) => {
@@ -56,13 +63,15 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
 
     React.useEffect(() => {
         const controller = manager.getController(context);
-        const settings : EmulatorSettings = {
+        const settings: EmulatorSettings = {
             device,
             osVersion,
             location: location.latlng.join(",")
         };
+        if (logs) {
+            settings.debug = "true";
+        }
         if (networkLogs) {
-            // settings.debug = "true";
             settings.proxy = "intercept";
         }
         controller.updateConfig({
@@ -71,7 +80,16 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             platform,
             baseUrl: appetizeBaseUrl
         });
-    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl, networkLogs]);
+    }, [
+        device,
+        osVersion,
+        apiKey,
+        context,
+        platform,
+        appetizeBaseUrl,
+        networkLogs,
+        logs
+    ]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
@@ -119,21 +137,21 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     `;
 
     return (
-            <>
-                <style>{renderedIFrameCss}</style>
-                <CommandsList context={context} />
-                <ToastContainer
-                    newestOnTop
-                    closeOnClick
-                    draggable
-                    pauseOnHover
-                    limit={2}
-                    hideProgressBar={false}
-                    autoClose={3000}
-                    pauseOnFocusLoss
-                    transition={Slide}
-                    theme="light"
-                />
-            </>
+        <>
+            <style>{renderedIFrameCss}</style>
+            <CommandsList context={context} />
+            <ToastContainer
+                newestOnTop
+                closeOnClick
+                draggable
+                pauseOnHover
+                limit={2}
+                hideProgressBar={false}
+                autoClose={3000}
+                pauseOnFocusLoss
+                transition={Slide}
+                theme="light"
+            />
+        </>
     );
 };

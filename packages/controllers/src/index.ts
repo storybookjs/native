@@ -6,6 +6,7 @@ export * from "./types";
 export * from "./state/hooks";
 export * from "./state/commandsSlice";
 export * from "./state/networkLogsSlice";
+export * from "./state/logsSlice";
 export { default as store } from "./state/store";
 
 export { default as AppetizeEmulatorController } from "./controllers/AppetizeEmulatorController";

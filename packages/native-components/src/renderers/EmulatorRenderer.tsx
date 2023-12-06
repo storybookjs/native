@@ -4,11 +4,12 @@ import { addons } from "@storybook/addons";
 import { EmulatorEvents } from "@storybook/native-types";
 import {
     store,
+    addLog,
     addNetworkLog,
     resetNetworkLogs,
     useAppDispatch
 } from "@storybook/native-controllers";
-import { useNetworkLogs } from "@storybook/native-devices";
+import { useLogs, useNetworkLogs } from "@storybook/native-devices";
 import { RendererProps } from "../types";
 import LaunchParamsRenderer from "./LaunchParamsRenderer";
 import DeepLinkRenderer from "./DeepLinkRenderer";
@@ -16,13 +17,14 @@ import DeepLinkRenderer from "./DeepLinkRenderer";
 const WithStore = (props: RendererProps): React.ReactElement => {
     const dispatch = useAppDispatch();
     const networkLogs = useNetworkLogs();
+    const logs = useLogs();
 
     useEffect(() => {
         if (!window.appetize) {
             addons.getChannel().emit(EmulatorEvents.onMissingClient, null);
             return;
         }
-        if (!networkLogs) return;
+        if (!networkLogs && !logs) return;
         window.appetize.getClient("#appetize-iframe").then((client: Client) => {
             addons.getChannel().emit(EmulatorEvents.onClient, client);
 
@@ -39,14 +41,17 @@ const WithStore = (props: RendererProps): React.ReactElement => {
                     });
                 }
 
-                // session.on("log", (log: Log) => {
-                //     addons.getChannel().emit(EmulatorEvents.onLog, log);
-                // });
+                if (logs) {
+                    session.on("log", (log: Log) => {
+                        addons.getChannel().emit(EmulatorEvents.onLog, log);
+                        addLog(dispatch, log);
+                    });
+                }
 
                 addons.getChannel().emit(EmulatorEvents.onSession, session);
             });
         });
-    });
+    }, [networkLogs, logs]);
 
     return (
         <>

@@ -7,4 +7,5 @@ export interface DeviceSelections {
     androidVersion: string;
     location: Location;
     networkLogs: boolean;
+    logs: boolean;
 }

@@ -9,5 +9,9 @@ export enum ActionTypes {
 
     ADD_NETWORK_LOG = "add-network-log",
     FILTER_NETWORK_LOG = "filter-network-log",
-    RESET_NETWORK_LOGS = "reset-network-logs"
+    RESET_NETWORK_LOGS = "reset-network-logs",
+
+    ADD_LOG = "add-log",
+    FILTER_LOG = "filter-log",
+    RESET_LOGS = "reset-logs"
 }

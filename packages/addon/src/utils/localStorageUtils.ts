@@ -18,7 +18,8 @@ export const DEFAULT_STATE: DeviceSelections = {
     iosVersion: getDefaultOsVersion("ios"),
     androidVersion: getDefaultOsVersion("android"),
     location: getDefaultLocation(),
-    networkLogs: false
+    networkLogs: false,
+    logs: false
 };
 
 export const saveToLocalStorage = (data: DeviceSelections) => {
@@ -44,6 +45,7 @@ export const restoreFromLocalStorage = (
     const locationCodes = getLocationsCodes();
     const storedSelections = JSON.parse(data) as DeviceSelections;
     storedSelections.networkLogs = false;
+    storedSelections.logs = false;
 
     if (!androidDevices.includes(storedSelections.androidSelection)) {
         storedSelections.androidSelection = getDefaultDevice("android");
