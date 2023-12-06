@@ -76,7 +76,8 @@ export default ({ api, active }: LogsContainerProps) => {
                             target="_blank"
                         >
                             {" "}
-                            here{" "}
+                            here
+                            {" "}
                         </a>
                     </p>
                 </div>
