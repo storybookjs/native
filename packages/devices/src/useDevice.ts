@@ -1,8 +1,7 @@
-import { Platform } from "@storybook/native-types";
+import { Platform, Location } from "@storybook/native-types";
 import React from "react";
 
 import { DeviceContext } from "./DeviceContext";
-import { Location } from "./types";
 
 export const useDevice = (platform: Platform): string => {
     const state = React.useContext(DeviceContext);

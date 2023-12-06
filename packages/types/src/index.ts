@@ -51,6 +51,22 @@ export const RotationsList = [
     EmulatorRotation.invertedHorizontal
 ] as readonly EmulatorRotation[];
 
+export interface Location {
+    name: string;
+    city: string;
+    code2: string;
+    code3: string;
+    latlng: number[];
+    flag: string;
+}
+
+export interface GlobalLocation {
+    defaultCode?: string;
+    locations?: Location[];
+    filterCodes?: string[];
+    googleMapsApiKey?: string;
+}
+
 /**
  * For full api reference check
  * https://docs.appetize.io/javascript-sdk/api-reference
@@ -63,7 +79,10 @@ declare global {
     }
 
     interface Client {
-        on: (event: string, data: string | Session | Record<string, any> | any) => void;
+        on: (
+            event: string,
+            data: string | Session | Record<string, any> | any
+        ) => void;
     }
 
     interface Session {
@@ -71,6 +90,6 @@ declare global {
     }
 
     interface Log {
-        message: string
+        message: string;
     }
 }

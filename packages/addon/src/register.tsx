@@ -1,4 +1,5 @@
 import React from "react";
+import { Provider } from "react-redux";
 import { addons, types } from "@storybook/addons";
 import { Icons, IconButton } from "@storybook/components";
 import { ACTION_EVENT_NAME, store } from "@storybook/native-controllers";
@@ -15,9 +16,12 @@ import {
     faMobile
 } from "@fortawesome/free-solid-svg-icons";
 
-import { Provider } from "react-redux";
-
-import { ADDON_ID, DEEP_LINKS_PARAM_KEY, MAP_PARAM_KEY, NETWORK_LOGS_PARAM_KEY } from "./constants";
+import {
+    ADDON_ID,
+    DEEP_LINKS_PARAM_KEY,
+    MAP_PARAM_KEY,
+    NETWORK_LOGS_PARAM_KEY
+} from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
 import VersionSelector from "./components/VersionSelector";
 import CountrySelector from "./components/CountrySelector";
@@ -38,7 +42,10 @@ addons.register(ADDON_ID, (api) => {
     };
 
     const clickHomeButton = () => {
-        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.clickHomeButton);
+        api?.getChannel()?.emit(
+            ACTION_EVENT_NAME,
+            EmulatorActions.clickHomeButton
+        );
     };
 
     const stopApp = () => {
@@ -46,7 +53,10 @@ addons.register(ADDON_ID, (api) => {
     };
 
     const toggleFirebaseDebugView = () => {
-        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.toggleFirebaseDebugView);
+        api?.getChannel()?.emit(
+            ACTION_EVENT_NAME,
+            EmulatorActions.toggleFirebaseDebugView
+        );
     };
 
     const shakeDevice = () => {
@@ -104,7 +114,10 @@ addons.register(ADDON_ID, (api) => {
         type: types.TOOL,
         title: "Enable Firebase Debug View",
         render: () => (
-            <IconButton title="Enable Firebase Debug View" onClick={toggleFirebaseDebugView}>
+            <IconButton
+                title="Enable Firebase Debug View"
+                onClick={toggleFirebaseDebugView}
+            >
                 <FontAwesomeIcon size="sm" icon={faMagnifyingGlassChart} />
             </IconButton>
         )
@@ -172,9 +185,8 @@ addons.register(ADDON_ID, (api) => {
         type: types.PANEL,
         render: ({ active }) => (
             <Provider store={store}>
-            <NetworkLogsContainer api={api} active={active} />
+                <NetworkLogsContainer api={api} active={active} />
             </Provider>
-
         ),
         paramKey: NETWORK_LOGS_PARAM_KEY
     });
@@ -182,9 +194,7 @@ addons.register(ADDON_ID, (api) => {
     addons.add(`${ADDON_ID}/map/panel`, {
         title: "Map",
         type: types.PANEL,
-        render: ({ active }) => (
-            <MapContainer api={api} active={active} />
-        ),
+        render: ({ active }) => <MapContainer api={api} active={active} />,
         paramKey: MAP_PARAM_KEY
     });
 });

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { API, useAddonState } from "@storybook/api";
-import { useGlobals } from '@storybook/manager-api';
+import { useGlobals } from "@storybook/manager-api";
 import { AddonPanel } from "@storybook/components";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { DeviceSelections } from "@storybook/native-devices";
 import { ACTION_EVENT_NAME } from "@storybook/native-controllers";
-import { EmulatorActions } from "@storybook/native-types";
-import { GlobalLocation } from "@storybook/native-devices/dist/types";
+import { EmulatorActions, GlobalLocation } from "@storybook/native-types";
 import { ADDON_ID } from "../constants";
 
 export interface MapContainerProps {
@@ -18,15 +17,28 @@ export default ({ api, active }: MapContainerProps) => {
     const [{ location }] = useGlobals();
 
     const globalLocation = JSON.parse(location ?? "{}") as GlobalLocation;
-    if (!globalLocation.googleMapsApiKey || globalLocation.googleMapsApiKey === "") {
+    if (
+        !globalLocation.googleMapsApiKey ||
+        globalLocation.googleMapsApiKey === ""
+    ) {
         return (
             <AddonPanel key="map-panel" active={Boolean(active)}>
                 <div style={{ margin: "20px" }}>
                     <h1>Google Maps API Key Missing!</h1>
-                    <p>To use Google Maps in your storybook, you need an API key.</p>
+                    <p>
+                        To use Google Maps in your storybook, you need an API
+                        key.
+                    </p>
                     <p>
                         Follow the steps
-                        <a href="https://github.com/storybookjs/native/tree/master/packages/addon#google-map-api-key" rel="noreferrer" target="_blank"> here </a>
+                        <a
+                            href="https://github.com/storybookjs/native/tree/master/packages/addon#google-map-api-key"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            {" "}
+                            here{" "}
+                        </a>
                         to obtain your key.
                     </p>
                 </div>
@@ -64,9 +76,11 @@ export default ({ api, active }: MapContainerProps) => {
         if (event.latLng && map) {
             currentMarker?.setMap(map);
             currentMarker?.setPosition(event.latLng);
-            api?.getChannel()?.emit(ACTION_EVENT_NAME,
+            api?.getChannel()?.emit(
+                ACTION_EVENT_NAME,
                 EmulatorActions.location,
-                [event.latLng.lat(), event.latLng.lng()]);
+                [event.latLng.lat(), event.latLng.lng()]
+            );
         }
     };
 
@@ -77,7 +91,11 @@ export default ({ api, active }: MapContainerProps) => {
                     <h1>Loading...</h1>
                 ) : (
                     <GoogleMap
-                        mapContainerStyle={{ height: "100%", width: "100%", position: "absolute" }}
+                        mapContainerStyle={{
+                            height: "100%",
+                            width: "100%",
+                            position: "absolute"
+                        }}
                         mapContainerClassName="map-container"
                         center={center}
                         zoom={12}

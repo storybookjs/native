@@ -14,15 +14,20 @@ export interface ReduxAction {
     networkLogsFilterKeyword?: string;
 }
 
-function getFiltered(logs: NetworkLog[], key?: string): NetworkLog[] | undefined {
+function getFiltered(
+    logs: NetworkLog[],
+    key?: string
+): NetworkLog[] | undefined {
     let filtered;
     if (key && key.length > 0) {
-filtered = logs.filter((log) => {
-            return log.method.toLowerCase().includes(key)
-                || log.url.toLowerCase().includes(key)
-                || log.content.toLowerCase().includes(key);
+        filtered = logs.filter((log) => {
+            return (
+                log.method.toLowerCase().includes(key) ||
+                log.url.toLowerCase().includes(key) ||
+                log.content.toLowerCase().includes(key)
+            );
         });
-}
+    }
     return filtered;
 }
 
@@ -68,7 +73,10 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
 
             return {
                 ...state,
-                filteredNetworkLogs: getFiltered(final, state.networkLogsFilterKeyword),
+                filteredNetworkLogs: getFiltered(
+                    final,
+                    state.networkLogsFilterKeyword
+                ),
                 networkLogs: final
             };
         }
@@ -76,12 +84,15 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
             return {
                 ...state,
                 networkLogsFilterKeyword: action.networkLogsFilterKeyword,
-                filteredNetworkLogs: getFiltered(state.networkLogs, action.networkLogsFilterKeyword)
+                filteredNetworkLogs: getFiltered(
+                    state.networkLogs,
+                    action.networkLogsFilterKeyword
+                )
             };
         case ActionTypes.RESET_NETWORK_LOGS:
             return {
                 ...state,
-                filteredNetworkLogs: [],
+                filteredNetworkLogs: undefined,
                 networkLogs: []
             };
         default:

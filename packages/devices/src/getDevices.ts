@@ -1,5 +1,4 @@
-import { Platform } from "@storybook/native-types";
-import { GlobalLocation } from "./types";
+import { Platform, GlobalLocation } from "@storybook/native-types";
 
 export const getDefaultDevice = (platform: Platform): string => {
     if (platform === "android") {
@@ -94,10 +93,7 @@ export const getLocations = () => {
             city: "Kabul",
             code2: "AF",
             code3: "AFG",
-            latlng: [
-                34.5260109,
-                69.1776838
-            ],
+            latlng: [34.5260109, 69.1776838],
             flag: "🇦🇫"
         },
         {
@@ -105,10 +101,7 @@ export const getLocations = () => {
             city: "Mariehamn",
             code2: "AX",
             code3: "ALA",
-            latlng: [
-                60.102423,
-                19.94126
-            ],
+            latlng: [60.102423, 19.94126],
             flag: "🇦🇽"
         },
         {
@@ -116,10 +109,7 @@ export const getLocations = () => {
             city: "Tirana",
             code2: "AL",
             code3: "ALB",
-            latlng: [
-                41.3305141,
-                19.825562857582966
-            ],
+            latlng: [41.3305141, 19.825562857582966],
             flag: "🇦🇱"
         },
         {
@@ -127,10 +117,7 @@ export const getLocations = () => {
             city: "Algiers",
             code2: "DZ",
             code3: "DZA",
-            latlng: [
-                36.7753606,
-                3.0601882
-            ],
+            latlng: [36.7753606, 3.0601882],
             flag: "🇩🇿"
         },
         {
@@ -138,10 +125,7 @@ export const getLocations = () => {
             city: "Pago Pago",
             code2: "AS",
             code3: "ASM",
-            latlng: [
-                -14.2754786,
-                -170.7048298
-            ],
+            latlng: [-14.2754786, -170.7048298],
             flag: "🇦🇸"
         },
         {
@@ -149,10 +133,7 @@ export const getLocations = () => {
             city: "Andorra la Vella",
             code2: "AD",
             code3: "AND",
-            latlng: [
-                42.5069391,
-                1.5212467
-            ],
+            latlng: [42.5069391, 1.5212467],
             flag: "🇦🇩"
         },
         {
@@ -160,10 +141,7 @@ export const getLocations = () => {
             city: "Luanda",
             code2: "AO",
             code3: "AGO",
-            latlng: [
-                -8.8272699,
-                13.2439512
-            ],
+            latlng: [-8.8272699, 13.2439512],
             flag: "🇦🇴"
         },
         {
@@ -171,10 +149,7 @@ export const getLocations = () => {
             city: "The Valley",
             code2: "AI",
             code3: "AIA",
-            latlng: [
-                18.2145861,
-                -63.0517759
-            ],
+            latlng: [18.2145861, -63.0517759],
             flag: "🇦🇮"
         },
         {
@@ -182,10 +157,7 @@ export const getLocations = () => {
             city: "Saint John's",
             code2: "AG",
             code3: "ATG",
-            latlng: [
-                17.1184569,
-                -61.8448509
-            ],
+            latlng: [17.1184569, -61.8448509],
             flag: "🇦🇬"
         },
         {
@@ -193,10 +165,7 @@ export const getLocations = () => {
             city: "Buenos Aires",
             code2: "AR",
             code3: "ARG",
-            latlng: [
-                -34.6075682,
-                -58.4370894
-            ],
+            latlng: [-34.6075682, -58.4370894],
             flag: "🇦🇷"
         },
         {
@@ -204,10 +173,7 @@ export const getLocations = () => {
             city: "Yerevan",
             code2: "AM",
             code3: "ARM",
-            latlng: [
-                40.1776245,
-                44.5126174
-            ],
+            latlng: [40.1776245, 44.5126174],
             flag: "🇦🇲"
         },
         {
@@ -215,10 +181,7 @@ export const getLocations = () => {
             city: "Oranjestad",
             code2: "AW",
             code3: "ABW",
-            latlng: [
-                12.5268736,
-                -70.0356845
-            ],
+            latlng: [12.5268736, -70.0356845],
             flag: "🇦🇼"
         },
         {
@@ -226,10 +189,7 @@ export const getLocations = () => {
             city: "Canberra",
             code2: "AU",
             code3: "AUS",
-            latlng: [
-                -35.2975906,
-                149.1012676
-            ],
+            latlng: [-35.2975906, 149.1012676],
             flag: "🇦🇺"
         },
         {
@@ -237,10 +197,7 @@ export const getLocations = () => {
             city: "Vienna",
             code2: "AT",
             code3: "AUT",
-            latlng: [
-                48.2083537,
-                16.3725042
-            ],
+            latlng: [48.2083537, 16.3725042],
             flag: "🇦🇹"
         },
         {
@@ -248,10 +205,7 @@ export const getLocations = () => {
             city: "Baku",
             code2: "AZ",
             code3: "AZE",
-            latlng: [
-                40.3755885,
-                49.8328009
-            ],
+            latlng: [40.3755885, 49.8328009],
             flag: "🇦🇿"
         },
         {
@@ -259,10 +213,7 @@ export const getLocations = () => {
             city: "Nassau",
             code2: "BS",
             code3: "BHS",
-            latlng: [
-                25.0783456,
-                -77.3383331
-            ],
+            latlng: [25.0783456, -77.3383331],
             flag: "🇧🇸"
         },
         {
@@ -270,10 +221,7 @@ export const getLocations = () => {
             city: "Manama",
             code2: "BH",
             code3: "BHR",
-            latlng: [
-                26.2235041,
-                50.5822436
-            ],
+            latlng: [26.2235041, 50.5822436],
             flag: "🇧🇭"
         },
         {
@@ -281,10 +229,7 @@ export const getLocations = () => {
             city: "Dhaka",
             code2: "BD",
             code3: "BGD",
-            latlng: [
-                23.7644025,
-                90.389015
-            ],
+            latlng: [23.7644025, 90.389015],
             flag: "🇧🇩"
         },
         {
@@ -292,10 +237,7 @@ export const getLocations = () => {
             city: "Bridgetown",
             code2: "BB",
             code3: "BRB",
-            latlng: [
-                13.0977832,
-                -59.6184184
-            ],
+            latlng: [13.0977832, -59.6184184],
             flag: "🇧🇧"
         },
         {
@@ -303,10 +245,7 @@ export const getLocations = () => {
             city: "Minsk",
             code2: "BY",
             code3: "BLR",
-            latlng: [
-                53.9024716,
-                27.5618225
-            ],
+            latlng: [53.9024716, 27.5618225],
             flag: "🇧🇾"
         },
         {
@@ -314,10 +253,7 @@ export const getLocations = () => {
             city: "Brussels",
             code2: "BE",
             code3: "BEL",
-            latlng: [
-                50.8465573,
-                4.351697
-            ],
+            latlng: [50.8465573, 4.351697],
             flag: "🇧🇪"
         },
         {
@@ -325,10 +261,7 @@ export const getLocations = () => {
             city: "Belmopan",
             code2: "BZ",
             code3: "BLZ",
-            latlng: [
-                17.250199,
-                -88.770018
-            ],
+            latlng: [17.250199, -88.770018],
             flag: "🇧🇿"
         },
         {
@@ -336,10 +269,7 @@ export const getLocations = () => {
             city: "Porto-Novo",
             code2: "BJ",
             code3: "BEN",
-            latlng: [
-                6.4990718,
-                2.6253361
-            ],
+            latlng: [6.4990718, 2.6253361],
             flag: "🇧🇯"
         },
         {
@@ -347,10 +277,7 @@ export const getLocations = () => {
             city: "Hamilton",
             code2: "BM",
             code3: "BMU",
-            latlng: [
-                43.2560802,
-                -79.8728583
-            ],
+            latlng: [43.2560802, -79.8728583],
             flag: "🇧🇲"
         },
         {
@@ -358,10 +285,7 @@ export const getLocations = () => {
             city: "Thimphu",
             code2: "BT",
             code3: "BTN",
-            latlng: [
-                27.4713546,
-                89.6336729
-            ],
+            latlng: [27.4713546, 89.6336729],
             flag: "🇧🇹"
         },
         {
@@ -369,10 +293,7 @@ export const getLocations = () => {
             city: "Sucre",
             code2: "BO",
             code3: "BOL",
-            latlng: [
-                -19.0477251,
-                -65.2594306
-            ],
+            latlng: [-19.0477251, -65.2594306],
             flag: "🇧🇴"
         },
         {
@@ -380,10 +301,7 @@ export const getLocations = () => {
             city: "Kralendijk",
             code2: "BQ",
             code3: "BES",
-            latlng: [
-                12.1472869,
-                -68.2740206
-            ],
+            latlng: [12.1472869, -68.2740206],
             flag: "🇧🇶"
         },
         {
@@ -391,10 +309,7 @@ export const getLocations = () => {
             city: "Sarajevo",
             code2: "BA",
             code3: "BIH",
-            latlng: [
-                43.8519774,
-                18.3866868
-            ],
+            latlng: [43.8519774, 18.3866868],
             flag: "🇧🇦"
         },
         {
@@ -402,10 +317,7 @@ export const getLocations = () => {
             city: "Gaborone",
             code2: "BW",
             code3: "BWA",
-            latlng: [
-                -24.6581357,
-                25.9088474
-            ],
+            latlng: [-24.6581357, 25.9088474],
             flag: "🇧🇼"
         },
         {
@@ -413,10 +325,7 @@ export const getLocations = () => {
             city: "Brasília",
             code2: "BR",
             code3: "BRA",
-            latlng: [
-                -15.7934036,
-                -47.8823172
-            ],
+            latlng: [-15.7934036, -47.8823172],
             flag: "🇧🇷"
         },
         {
@@ -424,10 +333,7 @@ export const getLocations = () => {
             city: "Diego Garcia",
             code2: "IO",
             code3: "IOT",
-            latlng: [
-                -7.338358449999999,
-                72.47181546315355
-            ],
+            latlng: [-7.338358449999999, 72.47181546315355],
             flag: "🇮🇴"
         },
         {
@@ -435,10 +341,7 @@ export const getLocations = () => {
             city: "Road Town",
             code2: "VG",
             code3: "VGB",
-            latlng: [
-                18.4257128,
-                -64.6232227
-            ],
+            latlng: [18.4257128, -64.6232227],
             flag: "🇻🇬"
         },
         {
@@ -446,10 +349,7 @@ export const getLocations = () => {
             city: "Charlotte Amalie",
             code2: "VI",
             code3: "VIR",
-            latlng: [
-                18.341137,
-                -64.932789
-            ],
+            latlng: [18.341137, -64.932789],
             flag: "🇻🇮"
         },
         {
@@ -457,10 +357,7 @@ export const getLocations = () => {
             city: "Bandar Seri Begawan",
             code2: "BN",
             code3: "BRN",
-            latlng: [
-                4.8895453,
-                114.9417574
-            ],
+            latlng: [4.8895453, 114.9417574],
             flag: "🇧🇳"
         },
         {
@@ -468,10 +365,7 @@ export const getLocations = () => {
             city: "Sofia",
             code2: "BG",
             code3: "BGR",
-            latlng: [
-                42.6977028,
-                23.3217359
-            ],
+            latlng: [42.6977028, 23.3217359],
             flag: "🇧🇬"
         },
         {
@@ -479,10 +373,7 @@ export const getLocations = () => {
             city: "Ouagadougou",
             code2: "BF",
             code3: "BFA",
-            latlng: [
-                12.3681873,
-                -1.5270944
-            ],
+            latlng: [12.3681873, -1.5270944],
             flag: "🇧🇫"
         },
         {
@@ -490,10 +381,7 @@ export const getLocations = () => {
             city: "Gitega",
             code2: "BI",
             code3: "BDI",
-            latlng: [
-                -3.4284953,
-                29.9249718
-            ],
+            latlng: [-3.4284953, 29.9249718],
             flag: "🇧🇮"
         },
         {
@@ -501,10 +389,7 @@ export const getLocations = () => {
             city: "Phnom Penh",
             code2: "KH",
             code3: "KHM",
-            latlng: [
-                11.568271,
-                104.9224426
-            ],
+            latlng: [11.568271, 104.9224426],
             flag: "🇰🇭"
         },
         {
@@ -512,10 +397,7 @@ export const getLocations = () => {
             city: "Yaoundé",
             code2: "CM",
             code3: "CMR",
-            latlng: [
-                3.8689867,
-                11.5213344
-            ],
+            latlng: [3.8689867, 11.5213344],
             flag: "🇨🇲"
         },
         {
@@ -523,10 +405,7 @@ export const getLocations = () => {
             city: "Ottawa",
             code2: "CA",
             code3: "CAN",
-            latlng: [
-                45.4208777,
-                -75.6901106
-            ],
+            latlng: [45.4208777, -75.6901106],
             flag: "🇨🇦"
         },
         {
@@ -534,10 +413,7 @@ export const getLocations = () => {
             city: "Praia",
             code2: "CV",
             code3: "CPV",
-            latlng: [
-                14.9162811,
-                -23.5095095
-            ],
+            latlng: [14.9162811, -23.5095095],
             flag: "🇨🇻"
         },
         {
@@ -545,10 +421,7 @@ export const getLocations = () => {
             city: "George Town",
             code2: "KY",
             code3: "CYM",
-            latlng: [
-                5.4141619,
-                100.3287352
-            ],
+            latlng: [5.4141619, 100.3287352],
             flag: "🇰🇾"
         },
         {
@@ -556,10 +429,7 @@ export const getLocations = () => {
             city: "Bangui",
             code2: "CF",
             code3: "CAF",
-            latlng: [
-                4.3907153,
-                18.5509126
-            ],
+            latlng: [4.3907153, 18.5509126],
             flag: "🇨🇫"
         },
         {
@@ -567,10 +437,7 @@ export const getLocations = () => {
             city: "N'Djamena",
             code2: "TD",
             code3: "TCD",
-            latlng: [
-                12.1191543,
-                15.0502758
-            ],
+            latlng: [12.1191543, 15.0502758],
             flag: "🇹🇩"
         },
         {
@@ -578,10 +445,7 @@ export const getLocations = () => {
             city: "Santiago",
             code2: "CL",
             code3: "CHL",
-            latlng: [
-                9.8694792,
-                -83.7980749
-            ],
+            latlng: [9.8694792, -83.7980749],
             flag: "🇨🇱"
         },
         {
@@ -589,10 +453,7 @@ export const getLocations = () => {
             city: "Beijing",
             code2: "CN",
             code3: "CHN",
-            latlng: [
-                39.906217,
-                116.3912757
-            ],
+            latlng: [39.906217, 116.3912757],
             flag: "🇨🇳"
         },
         {
@@ -600,10 +461,7 @@ export const getLocations = () => {
             city: "Flying Fish Cove",
             code2: "CX",
             code3: "CXR",
-            latlng: [
-                -10.4213344,
-                105.674413
-            ],
+            latlng: [-10.4213344, 105.674413],
             flag: "🇨🇽"
         },
         {
@@ -611,10 +469,7 @@ export const getLocations = () => {
             city: "West Island",
             code2: "CC",
             code3: "CCK",
-            latlng: [
-                -12.145866,
-                96.84227540282865
-            ],
+            latlng: [-12.145866, 96.84227540282865],
             flag: "🇨🇨"
         },
         {
@@ -622,10 +477,7 @@ export const getLocations = () => {
             city: "Bogotá",
             code2: "CO",
             code3: "COL",
-            latlng: [
-                4.6534649,
-                -74.0836453
-            ],
+            latlng: [4.6534649, -74.0836453],
             flag: "🇨🇴"
         },
         {
@@ -633,10 +485,7 @@ export const getLocations = () => {
             city: "Moroni",
             code2: "KM",
             code3: "COM",
-            latlng: [
-                -11.6931255,
-                43.2543044
-            ],
+            latlng: [-11.6931255, 43.2543044],
             flag: "🇰🇲"
         },
         {
@@ -644,10 +493,7 @@ export const getLocations = () => {
             city: "Brazzaville",
             code2: "CG",
             code3: "COG",
-            latlng: [
-                -4.2694407,
-                15.2712256
-            ],
+            latlng: [-4.2694407, 15.2712256],
             flag: "🇨🇬"
         },
         {
@@ -655,10 +501,7 @@ export const getLocations = () => {
             city: "Kinshasa",
             code2: "CD",
             code3: "COD",
-            latlng: [
-                -4.3217055,
-                15.3125974
-            ],
+            latlng: [-4.3217055, 15.3125974],
             flag: "🇨🇩"
         },
         {
@@ -666,10 +509,7 @@ export const getLocations = () => {
             city: "Avarua",
             code2: "CK",
             code3: "COK",
-            latlng: [
-                -21.2074736,
-                -159.7708145
-            ],
+            latlng: [-21.2074736, -159.7708145],
             flag: "🇨🇰"
         },
         {
@@ -677,10 +517,7 @@ export const getLocations = () => {
             city: "San José",
             code2: "CR",
             code3: "CRI",
-            latlng: [
-                9.9325427,
-                -84.0795782
-            ],
+            latlng: [9.9325427, -84.0795782],
             flag: "🇨🇷"
         },
         {
@@ -688,10 +525,7 @@ export const getLocations = () => {
             city: "Zagreb",
             code2: "HR",
             code3: "HRV",
-            latlng: [
-                45.84264135,
-                15.962231476593626
-            ],
+            latlng: [45.84264135, 15.962231476593626],
             flag: "🇭🇷"
         },
         {
@@ -699,10 +533,7 @@ export const getLocations = () => {
             city: "Havana",
             code2: "CU",
             code3: "CUB",
-            latlng: [
-                23.135305,
-                -82.3589631
-            ],
+            latlng: [23.135305, -82.3589631],
             flag: "🇨🇺"
         },
         {
@@ -710,10 +541,7 @@ export const getLocations = () => {
             city: "Willemstad",
             code2: "CW",
             code3: "CUW",
-            latlng: [
-                12.1066695,
-                -68.9351307
-            ],
+            latlng: [12.1066695, -68.9351307],
             flag: "🇨🇼"
         },
         {
@@ -721,10 +549,7 @@ export const getLocations = () => {
             city: "Nicosia",
             code2: "CY",
             code3: "CYP",
-            latlng: [
-                35.1748976,
-                33.3638568
-            ],
+            latlng: [35.1748976, 33.3638568],
             flag: "🇨🇾"
         },
         {
@@ -732,10 +557,7 @@ export const getLocations = () => {
             city: "Prague",
             code2: "CZ",
             code3: "CZE",
-            latlng: [
-                50.0874654,
-                14.4212535
-            ],
+            latlng: [50.0874654, 14.4212535],
             flag: "🇨🇿"
         },
         {
@@ -743,10 +565,7 @@ export const getLocations = () => {
             city: "Copenhagen",
             code2: "DK",
             code3: "DNK",
-            latlng: [
-                55.6867243,
-                12.5700724
-            ],
+            latlng: [55.6867243, 12.5700724],
             flag: "🇩🇰"
         },
         {
@@ -754,10 +573,7 @@ export const getLocations = () => {
             city: "Djibouti",
             code2: "DJ",
             code3: "DJI",
-            latlng: [
-                11.5936903,
-                43.1472724
-            ],
+            latlng: [11.5936903, 43.1472724],
             flag: "🇩🇯"
         },
         {
@@ -765,10 +581,7 @@ export const getLocations = () => {
             city: "Roseau",
             code2: "DM",
             code3: "DMA",
-            latlng: [
-                15.2991923,
-                -61.3872868
-            ],
+            latlng: [15.2991923, -61.3872868],
             flag: "🇩🇲"
         },
         {
@@ -776,10 +589,7 @@ export const getLocations = () => {
             city: "Santo Domingo",
             code2: "DO",
             code3: "DOM",
-            latlng: [
-                18.4801972,
-                -69.942111
-            ],
+            latlng: [18.4801972, -69.942111],
             flag: "🇩🇴"
         },
         {
@@ -787,10 +597,7 @@ export const getLocations = () => {
             city: "Quito",
             code2: "EC",
             code3: "ECU",
-            latlng: [
-                -0.2201641,
-                -78.5123274
-            ],
+            latlng: [-0.2201641, -78.5123274],
             flag: "🇪🇨"
         },
         {
@@ -798,10 +605,7 @@ export const getLocations = () => {
             city: "Cairo",
             code2: "EG",
             code3: "EGY",
-            latlng: [
-                30.0443879,
-                31.2357257
-            ],
+            latlng: [30.0443879, 31.2357257],
             flag: "🇪🇬"
         },
         {
@@ -809,10 +613,7 @@ export const getLocations = () => {
             city: "San Salvador",
             code2: "SV",
             code3: "SLV",
-            latlng: [
-                13.6989939,
-                -89.1914249
-            ],
+            latlng: [13.6989939, -89.1914249],
             flag: "🇸🇻"
         },
         {
@@ -820,10 +621,7 @@ export const getLocations = () => {
             city: "Malabo",
             code2: "GQ",
             code3: "GNQ",
-            latlng: [
-                3.752828,
-                8.780061
-            ],
+            latlng: [3.752828, 8.780061],
             flag: "🇬🇶"
         },
         {
@@ -831,10 +629,7 @@ export const getLocations = () => {
             city: "Asmara",
             code2: "ER",
             code3: "ERI",
-            latlng: [
-                15.3389667,
-                38.9326763
-            ],
+            latlng: [15.3389667, 38.9326763],
             flag: "🇪🇷"
         },
         {
@@ -842,10 +637,7 @@ export const getLocations = () => {
             city: "Tallinn",
             code2: "EE",
             code3: "EST",
-            latlng: [
-                59.4372155,
-                24.7453688
-            ],
+            latlng: [59.4372155, 24.7453688],
             flag: "🇪🇪"
         },
         {
@@ -853,10 +645,7 @@ export const getLocations = () => {
             city: "Addis Ababa",
             code2: "ET",
             code3: "ETH",
-            latlng: [
-                9.0107934,
-                38.7612525
-            ],
+            latlng: [9.0107934, 38.7612525],
             flag: "🇪🇹"
         },
         {
@@ -864,10 +653,7 @@ export const getLocations = () => {
             city: "Stanley",
             code2: "FK",
             code3: "FLK",
-            latlng: [
-                -51.6950575,
-                -57.8491693
-            ],
+            latlng: [-51.6950575, -57.8491693],
             flag: "🇫🇰"
         },
         {
@@ -875,10 +661,7 @@ export const getLocations = () => {
             city: "Tórshavn",
             code2: "FO",
             code3: "FRO",
-            latlng: [
-                62.012,
-                -6.768
-            ],
+            latlng: [62.012, -6.768],
             flag: "🇫🇴"
         },
         {
@@ -886,10 +669,7 @@ export const getLocations = () => {
             city: "Suva",
             code2: "FJ",
             code3: "FJI",
-            latlng: [
-                -18.1415884,
-                178.4421662
-            ],
+            latlng: [-18.1415884, 178.4421662],
             flag: "🇫🇯"
         },
         {
@@ -897,10 +677,7 @@ export const getLocations = () => {
             city: "Helsinki",
             code2: "FI",
             code3: "FIN",
-            latlng: [
-                60.1674881,
-                24.9427473
-            ],
+            latlng: [60.1674881, 24.9427473],
             flag: "🇫🇮"
         },
         {
@@ -908,10 +685,7 @@ export const getLocations = () => {
             city: "Paris",
             code2: "FR",
             code3: "FRA",
-            latlng: [
-                48.8588897,
-                2.3200410217200766
-            ],
+            latlng: [48.8588897, 2.3200410217200766],
             flag: "🇫🇷"
         },
         {
@@ -919,10 +693,7 @@ export const getLocations = () => {
             city: "Cayenne",
             code2: "GF",
             code3: "GUF",
-            latlng: [
-                4.9371143,
-                -52.3258307
-            ],
+            latlng: [4.9371143, -52.3258307],
             flag: "🇬🇫"
         },
         {
@@ -930,10 +701,7 @@ export const getLocations = () => {
             city: "Papeetē",
             code2: "PF",
             code3: "PYF",
-            latlng: [
-                -17.5373835,
-                -149.5659964
-            ],
+            latlng: [-17.5373835, -149.5659964],
             flag: "🇵🇫"
         },
         {
@@ -941,10 +709,7 @@ export const getLocations = () => {
             city: "Port-aux-Français",
             code2: "TF",
             code3: "ATF",
-            latlng: [
-                -49.3497607,
-                70.2199565
-            ],
+            latlng: [-49.3497607, 70.2199565],
             flag: "🇹🇫"
         },
         {
@@ -952,10 +717,7 @@ export const getLocations = () => {
             city: "Libreville",
             code2: "GA",
             code3: "GAB",
-            latlng: [
-                0.390002,
-                9.454001
-            ],
+            latlng: [0.390002, 9.454001],
             flag: "🇬🇦"
         },
         {
@@ -963,10 +725,7 @@ export const getLocations = () => {
             city: "Banjul",
             code2: "GM",
             code3: "GMB",
-            latlng: [
-                13.4410165,
-                -16.56275092072591
-            ],
+            latlng: [13.4410165, -16.56275092072591],
             flag: "🇬🇲"
         },
         {
@@ -974,10 +733,7 @@ export const getLocations = () => {
             city: "Tbilisi",
             code2: "GE",
             code3: "GEO",
-            latlng: [
-                41.6934591,
-                44.8014495
-            ],
+            latlng: [41.6934591, 44.8014495],
             flag: "🇬🇪"
         },
         {
@@ -985,10 +741,7 @@ export const getLocations = () => {
             city: "Berlin",
             code2: "DE",
             code3: "DEU",
-            latlng: [
-                52.5170365,
-                13.3888599
-            ],
+            latlng: [52.5170365, 13.3888599],
             flag: "🇩🇪"
         },
         {
@@ -996,10 +749,7 @@ export const getLocations = () => {
             city: "Accra",
             code2: "GH",
             code3: "GHA",
-            latlng: [
-                5.5571096,
-                -0.2012376
-            ],
+            latlng: [5.5571096, -0.2012376],
             flag: "🇬🇭"
         },
         {
@@ -1007,10 +757,7 @@ export const getLocations = () => {
             city: "Gibraltar",
             code2: "GI",
             code3: "GIB",
-            latlng: [
-                36.140807,
-                -5.3541295
-            ],
+            latlng: [36.140807, -5.3541295],
             flag: "🇬🇮"
         },
         {
@@ -1018,10 +765,7 @@ export const getLocations = () => {
             city: "Athens",
             code2: "GR",
             code3: "GRC",
-            latlng: [
-                37.9839412,
-                23.7283052
-            ],
+            latlng: [37.9839412, 23.7283052],
             flag: "🇬🇷"
         },
         {
@@ -1029,10 +773,7 @@ export const getLocations = () => {
             city: "Nuuk",
             code2: "GL",
             code3: "GRL",
-            latlng: [
-                64.175029,
-                -51.7355386
-            ],
+            latlng: [64.175029, -51.7355386],
             flag: "🇬🇱"
         },
         {
@@ -1040,10 +781,7 @@ export const getLocations = () => {
             city: "St. George's",
             code2: "GD",
             code3: "GRD",
-            latlng: [
-                12.0535331,
-                -61.751805
-            ],
+            latlng: [12.0535331, -61.751805],
             flag: "🇬🇩"
         },
         {
@@ -1051,10 +789,7 @@ export const getLocations = () => {
             city: "Basse-Terre",
             code2: "GP",
             code3: "GLP",
-            latlng: [
-                16.0000778,
-                -61.7333373
-            ],
+            latlng: [16.0000778, -61.7333373],
             flag: "🇬🇵"
         },
         {
@@ -1062,10 +797,7 @@ export const getLocations = () => {
             city: "Hagåtña",
             code2: "GU",
             code3: "GUM",
-            latlng: [
-                13.4773442,
-                144.7521907
-            ],
+            latlng: [13.4773442, 144.7521907],
             flag: "🇬🇺"
         },
         {
@@ -1073,10 +805,7 @@ export const getLocations = () => {
             city: "Guatemala City",
             code2: "GT",
             code3: "GTM",
-            latlng: [
-                14.6222328,
-                -90.5185188
-            ],
+            latlng: [14.6222328, -90.5185188],
             flag: "🇬🇹"
         },
         {
@@ -1084,10 +813,7 @@ export const getLocations = () => {
             city: "St. Peter Port",
             code2: "GG",
             code3: "GGY",
-            latlng: [
-                49.4568142,
-                -2.5389979
-            ],
+            latlng: [49.4568142, -2.5389979],
             flag: "🇬🇬"
         },
         {
@@ -1095,10 +821,7 @@ export const getLocations = () => {
             city: "Conakry",
             code2: "GN",
             code3: "GIN",
-            latlng: [
-                9.5170602,
-                -13.6998434
-            ],
+            latlng: [9.5170602, -13.6998434],
             flag: "🇬🇳"
         },
         {
@@ -1106,10 +829,7 @@ export const getLocations = () => {
             city: "Bissau",
             code2: "GW",
             code3: "GNB",
-            latlng: [
-                11.861324,
-                -15.583055
-            ],
+            latlng: [11.861324, -15.583055],
             flag: "🇬🇼"
         },
         {
@@ -1117,10 +837,7 @@ export const getLocations = () => {
             city: "Georgetown",
             code2: "GY",
             code3: "GUY",
-            latlng: [
-                6.8137426,
-                -58.1624465
-            ],
+            latlng: [6.8137426, -58.1624465],
             flag: "🇬🇾"
         },
         {
@@ -1128,10 +845,7 @@ export const getLocations = () => {
             city: "Port-au-Prince",
             code2: "HT",
             code3: "HTI",
-            latlng: [
-                18.547327,
-                -72.3395928
-            ],
+            latlng: [18.547327, -72.3395928],
             flag: "🇭🇹"
         },
         {
@@ -1139,10 +853,7 @@ export const getLocations = () => {
             city: "Vatican City",
             code2: "VA",
             code3: "VAT",
-            latlng: [
-                41.9034912,
-                12.4528349
-            ],
+            latlng: [41.9034912, 12.4528349],
             flag: "🇻🇦"
         },
         {
@@ -1150,10 +861,7 @@ export const getLocations = () => {
             city: "Tegucigalpa",
             code2: "HN",
             code3: "HND",
-            latlng: [
-                14.1057433,
-                -87.2040052
-            ],
+            latlng: [14.1057433, -87.2040052],
             flag: "🇭🇳"
         },
         {
@@ -1161,10 +869,7 @@ export const getLocations = () => {
             city: "City of Victoria",
             code2: "HK",
             code3: "HKG",
-            latlng: [
-                22.2793278,
-                114.1628131
-            ],
+            latlng: [22.2793278, 114.1628131],
             flag: "🇭🇰"
         },
         {
@@ -1172,10 +877,7 @@ export const getLocations = () => {
             city: "Budapest",
             code2: "HU",
             code3: "HUN",
-            latlng: [
-                47.4979937,
-                19.0403594
-            ],
+            latlng: [47.4979937, 19.0403594],
             flag: "🇭🇺"
         },
         {
@@ -1183,10 +885,7 @@ export const getLocations = () => {
             city: "Reykjavík",
             code2: "IS",
             code3: "ISL",
-            latlng: [
-                64.145981,
-                -21.9422367
-            ],
+            latlng: [64.145981, -21.9422367],
             flag: "🇮🇸"
         },
         {
@@ -1194,10 +893,7 @@ export const getLocations = () => {
             city: "New Delhi",
             code2: "IN",
             code3: "IND",
-            latlng: [
-                28.6138954,
-                77.2090057
-            ],
+            latlng: [28.6138954, 77.2090057],
             flag: "🇮🇳"
         },
         {
@@ -1205,10 +901,7 @@ export const getLocations = () => {
             city: "Jakarta",
             code2: "ID",
             code3: "IDN",
-            latlng: [
-                -6.1753942,
-                106.827183
-            ],
+            latlng: [-6.1753942, 106.827183],
             flag: "🇮🇩"
         },
         {
@@ -1216,10 +909,7 @@ export const getLocations = () => {
             city: "Yamoussoukro",
             code2: "CI",
             code3: "CIV",
-            latlng: [
-                6.809107,
-                -5.273263
-            ],
+            latlng: [6.809107, -5.273263],
             flag: "🇨🇮"
         },
         {
@@ -1227,10 +917,7 @@ export const getLocations = () => {
             city: "Tehran",
             code2: "IR",
             code3: "IRN",
-            latlng: [
-                35.6892523,
-                51.3896004
-            ],
+            latlng: [35.6892523, 51.3896004],
             flag: "🇮🇷"
         },
         {
@@ -1238,10 +925,7 @@ export const getLocations = () => {
             city: "Baghdad",
             code2: "IQ",
             code3: "IRQ",
-            latlng: [
-                33.3061701,
-                44.3872213
-            ],
+            latlng: [33.3061701, 44.3872213],
             flag: "🇮🇶"
         },
         {
@@ -1249,10 +933,7 @@ export const getLocations = () => {
             city: "Dublin",
             code2: "IE",
             code3: "IRL",
-            latlng: [
-                53.3498006,
-                -6.2602964
-            ],
+            latlng: [53.3498006, -6.2602964],
             flag: "🇮🇪"
         },
         {
@@ -1260,10 +941,7 @@ export const getLocations = () => {
             city: "Douglas",
             code2: "IM",
             code3: "IMN",
-            latlng: [
-                54.149774,
-                -4.4779021
-            ],
+            latlng: [54.149774, -4.4779021],
             flag: "🇮🇲"
         },
         {
@@ -1271,10 +949,7 @@ export const getLocations = () => {
             city: "Jerusalem",
             code2: "IL",
             code3: "ISR",
-            latlng: [
-                31.79592425,
-                35.21198075969497
-            ],
+            latlng: [31.79592425, 35.21198075969497],
             flag: "🇮🇱"
         },
         {
@@ -1282,10 +957,7 @@ export const getLocations = () => {
             city: "Rome",
             code2: "IT",
             code3: "ITA",
-            latlng: [
-                41.8933203,
-                12.4829321
-            ],
+            latlng: [41.8933203, 12.4829321],
             flag: "🇮🇹"
         },
         {
@@ -1293,10 +965,7 @@ export const getLocations = () => {
             city: "Kingston",
             code2: "JM",
             code3: "JAM",
-            latlng: [
-                17.9712148,
-                -76.7928128
-            ],
+            latlng: [17.9712148, -76.7928128],
             flag: "🇯🇲"
         },
         {
@@ -1304,10 +973,7 @@ export const getLocations = () => {
             city: "Tokyo",
             code2: "JP",
             code3: "JPN",
-            latlng: [
-                35.6828387,
-                139.7594549
-            ],
+            latlng: [35.6828387, 139.7594549],
             flag: "🇯🇵"
         },
         {
@@ -1315,10 +981,7 @@ export const getLocations = () => {
             city: "Saint Helier",
             code2: "JE",
             code3: "JEY",
-            latlng: [
-                47.3843871,
-                4.6833254
-            ],
+            latlng: [47.3843871, 4.6833254],
             flag: "🇯🇪"
         },
         {
@@ -1326,10 +989,7 @@ export const getLocations = () => {
             city: "Amman",
             code2: "JO",
             code3: "JOR",
-            latlng: [
-                31.9515694,
-                35.9239625
-            ],
+            latlng: [31.9515694, 35.9239625],
             flag: "🇯🇴"
         },
         {
@@ -1337,10 +997,7 @@ export const getLocations = () => {
             city: "Nur-Sultan",
             code2: "KZ",
             code3: "KAZ",
-            latlng: [
-                51.1282205,
-                71.4306682
-            ],
+            latlng: [51.1282205, 71.4306682],
             flag: "🇰🇿"
         },
         {
@@ -1348,10 +1005,7 @@ export const getLocations = () => {
             city: "Nairobi",
             code2: "KE",
             code3: "KEN",
-            latlng: [
-                -1.30326415,
-                36.826384099341595
-            ],
+            latlng: [-1.30326415, 36.826384099341595],
             flag: "🇰🇪"
         },
         {
@@ -1359,10 +1013,7 @@ export const getLocations = () => {
             city: "South Tarawa",
             code2: "KI",
             code3: "KIR",
-            latlng: [
-                1.3490778,
-                173.0386512
-            ],
+            latlng: [1.3490778, 173.0386512],
             flag: "🇰🇮"
         },
         {
@@ -1370,10 +1021,7 @@ export const getLocations = () => {
             city: "Kuwait City",
             code2: "KW",
             code3: "KWT",
-            latlng: [
-                29.3796532,
-                47.9734174
-            ],
+            latlng: [29.3796532, 47.9734174],
             flag: "🇰🇼"
         },
         {
@@ -1381,10 +1029,7 @@ export const getLocations = () => {
             city: "Bishkek",
             code2: "KG",
             code3: "KGZ",
-            latlng: [
-                42.8765615,
-                74.6070079
-            ],
+            latlng: [42.8765615, 74.6070079],
             flag: "🇰🇬"
         },
         {
@@ -1392,10 +1037,7 @@ export const getLocations = () => {
             city: "Vientiane",
             code2: "LA",
             code3: "LAO",
-            latlng: [
-                17.9640988,
-                102.6133707
-            ],
+            latlng: [17.9640988, 102.6133707],
             flag: "🇱🇦"
         },
         {
@@ -1403,10 +1045,7 @@ export const getLocations = () => {
             city: "Riga",
             code2: "LV",
             code3: "LVA",
-            latlng: [
-                56.9493977,
-                24.1051846
-            ],
+            latlng: [56.9493977, 24.1051846],
             flag: "🇱🇻"
         },
         {
@@ -1414,10 +1053,7 @@ export const getLocations = () => {
             city: "Beirut",
             code2: "LB",
             code3: "LBN",
-            latlng: [
-                33.8959203,
-                35.47843
-            ],
+            latlng: [33.8959203, 35.47843],
             flag: "🇱🇧"
         },
         {
@@ -1425,10 +1061,7 @@ export const getLocations = () => {
             city: "Maseru",
             code2: "LS",
             code3: "LSO",
-            latlng: [
-                -29.310054,
-                27.478222
-            ],
+            latlng: [-29.310054, 27.478222],
             flag: "🇱🇸"
         },
         {
@@ -1436,10 +1069,7 @@ export const getLocations = () => {
             city: "Monrovia",
             code2: "LR",
             code3: "LBR",
-            latlng: [
-                6.328034,
-                -10.797788
-            ],
+            latlng: [6.328034, -10.797788],
             flag: "🇱🇷"
         },
         {
@@ -1447,10 +1077,7 @@ export const getLocations = () => {
             city: "Tripoli",
             code2: "LY",
             code3: "LBY",
-            latlng: [
-                32.896672,
-                13.1777923
-            ],
+            latlng: [32.896672, 13.1777923],
             flag: "🇱🇾"
         },
         {
@@ -1458,10 +1085,7 @@ export const getLocations = () => {
             city: "Vaduz",
             code2: "LI",
             code3: "LIE",
-            latlng: [
-                47.1392862,
-                9.5227962
-            ],
+            latlng: [47.1392862, 9.5227962],
             flag: "🇱🇮"
         },
         {
@@ -1469,10 +1093,7 @@ export const getLocations = () => {
             city: "Vilnius",
             code2: "LT",
             code3: "LTU",
-            latlng: [
-                54.6870458,
-                25.2829111
-            ],
+            latlng: [54.6870458, 25.2829111],
             flag: "🇱🇹"
         },
         {
@@ -1480,10 +1101,7 @@ export const getLocations = () => {
             city: "Luxembourg",
             code2: "LU",
             code3: "LUX",
-            latlng: [
-                49.6112768,
-                6.129799
-            ],
+            latlng: [49.6112768, 6.129799],
             flag: "🇱🇺"
         },
         {
@@ -1491,10 +1109,7 @@ export const getLocations = () => {
             city: "",
             code2: "MO",
             code3: "MAC",
-            latlng: [
-                22.1899448,
-                113.5380454
-            ],
+            latlng: [22.1899448, 113.5380454],
             flag: "🇲🇴"
         },
         {
@@ -1502,10 +1117,7 @@ export const getLocations = () => {
             city: "Skopje",
             code2: "MK",
             code3: "MKD",
-            latlng: [
-                41.9960924,
-                21.4316495
-            ],
+            latlng: [41.9960924, 21.4316495],
             flag: "🇲🇰"
         },
         {
@@ -1513,10 +1125,7 @@ export const getLocations = () => {
             city: "Antananarivo",
             code2: "MG",
             code3: "MDG",
-            latlng: [
-                -18.9100122,
-                47.5255809
-            ],
+            latlng: [-18.9100122, 47.5255809],
             flag: "🇲🇬"
         },
         {
@@ -1524,10 +1133,7 @@ export const getLocations = () => {
             city: "Lilongwe",
             code2: "MW",
             code3: "MWI",
-            latlng: [
-                -13.9875107,
-                33.768144
-            ],
+            latlng: [-13.9875107, 33.768144],
             flag: "🇲🇼"
         },
         {
@@ -1535,10 +1141,7 @@ export const getLocations = () => {
             city: "Kuala Lumpur",
             code2: "MY",
             code3: "MYS",
-            latlng: [
-                3.1516964,
-                101.6942371
-            ],
+            latlng: [3.1516964, 101.6942371],
             flag: "🇲🇾"
         },
         {
@@ -1546,10 +1149,7 @@ export const getLocations = () => {
             city: "Malé",
             code2: "MV",
             code3: "MDV",
-            latlng: [
-                4.1779879,
-                73.5107387
-            ],
+            latlng: [4.1779879, 73.5107387],
             flag: "🇲🇻"
         },
         {
@@ -1557,10 +1157,7 @@ export const getLocations = () => {
             city: "Bamako",
             code2: "ML",
             code3: "MLI",
-            latlng: [
-                12.649319,
-                -8.000337
-            ],
+            latlng: [12.649319, -8.000337],
             flag: "🇲🇱"
         },
         {
@@ -1568,10 +1165,7 @@ export const getLocations = () => {
             city: "Valletta",
             code2: "MT",
             code3: "MLT",
-            latlng: [
-                35.8989818,
-                14.5136759
-            ],
+            latlng: [35.8989818, 14.5136759],
             flag: "🇲🇹"
         },
         {
@@ -1579,10 +1173,7 @@ export const getLocations = () => {
             city: "Majuro",
             code2: "MH",
             code3: "MHL",
-            latlng: [
-                7.0909924,
-                171.3816354
-            ],
+            latlng: [7.0909924, 171.3816354],
             flag: "🇲🇭"
         },
         {
@@ -1590,10 +1181,7 @@ export const getLocations = () => {
             city: "Fort-de-France",
             code2: "MQ",
             code3: "MTQ",
-            latlng: [
-                14.6027962,
-                -61.0676724
-            ],
+            latlng: [14.6027962, -61.0676724],
             flag: "🇲🇶"
         },
         {
@@ -1601,10 +1189,7 @@ export const getLocations = () => {
             city: "Nouakchott",
             code2: "MR",
             code3: "MRT",
-            latlng: [
-                18.0792379,
-                -15.9780071
-            ],
+            latlng: [18.0792379, -15.9780071],
             flag: "🇲🇷"
         },
         {
@@ -1612,10 +1197,7 @@ export const getLocations = () => {
             city: "Port Louis",
             code2: "MU",
             code3: "MUS",
-            latlng: [
-                -20.1624522,
-                57.5028044
-            ],
+            latlng: [-20.1624522, 57.5028044],
             flag: "🇲🇺"
         },
         {
@@ -1623,10 +1205,7 @@ export const getLocations = () => {
             city: "Mamoudzou",
             code2: "YT",
             code3: "MYT",
-            latlng: [
-                -12.7804136,
-                45.2279761
-            ],
+            latlng: [-12.7804136, 45.2279761],
             flag: "🇾🇹"
         },
         {
@@ -1634,10 +1213,7 @@ export const getLocations = () => {
             city: "Mexico City",
             code2: "MX",
             code3: "MEX",
-            latlng: [
-                19.4326296,
-                -99.1331785
-            ],
+            latlng: [19.4326296, -99.1331785],
             flag: "🇲🇽"
         },
         {
@@ -1645,10 +1221,7 @@ export const getLocations = () => {
             city: "Palikir",
             code2: "FM",
             code3: "FSM",
-            latlng: [
-                6.920744,
-                158.1627143
-            ],
+            latlng: [6.920744, 158.1627143],
             flag: "🇫🇲"
         },
         {
@@ -1656,10 +1229,7 @@ export const getLocations = () => {
             city: "Chișinău",
             code2: "MD",
             code3: "MDA",
-            latlng: [
-                47.0245117,
-                28.8322923
-            ],
+            latlng: [47.0245117, 28.8322923],
             flag: "🇲🇩"
         },
         {
@@ -1667,10 +1237,7 @@ export const getLocations = () => {
             city: "Monaco",
             code2: "MC",
             code3: "MCO",
-            latlng: [
-                43.7311424,
-                7.4197576
-            ],
+            latlng: [43.7311424, 7.4197576],
             flag: "🇲🇨"
         },
         {
@@ -1678,10 +1245,7 @@ export const getLocations = () => {
             city: "Ulan Bator",
             code2: "MN",
             code3: "MNG",
-            latlng: [
-                47.9184676,
-                106.9177016
-            ],
+            latlng: [47.9184676, 106.9177016],
             flag: "🇲🇳"
         },
         {
@@ -1689,10 +1253,7 @@ export const getLocations = () => {
             city: "Plymouth",
             code2: "MS",
             code3: "MSR",
-            latlng: [
-                50.3712659,
-                -4.1425658
-            ],
+            latlng: [50.3712659, -4.1425658],
             flag: "🇲🇸"
         },
         {
@@ -1700,10 +1261,7 @@ export const getLocations = () => {
             city: "Rabat",
             code2: "MA",
             code3: "MAR",
-            latlng: [
-                34.022405,
-                -6.834543
-            ],
+            latlng: [34.022405, -6.834543],
             flag: "🇲🇦"
         },
         {
@@ -1711,10 +1269,7 @@ export const getLocations = () => {
             city: "Maputo",
             code2: "MZ",
             code3: "MOZ",
-            latlng: [
-                -25.966213,
-                32.56745
-            ],
+            latlng: [-25.966213, 32.56745],
             flag: "🇲🇿"
         },
         {
@@ -1722,10 +1277,7 @@ export const getLocations = () => {
             city: "Naypyidaw",
             code2: "MM",
             code3: "MMR",
-            latlng: [
-                19.7540045,
-                96.1344976
-            ],
+            latlng: [19.7540045, 96.1344976],
             flag: "🇲🇲"
         },
         {
@@ -1733,10 +1285,7 @@ export const getLocations = () => {
             city: "Windhoek",
             code2: "NA",
             code3: "NAM",
-            latlng: [
-                -22.5776104,
-                17.0772739
-            ],
+            latlng: [-22.5776104, 17.0772739],
             flag: "🇳🇦"
         },
         {
@@ -1744,10 +1293,7 @@ export const getLocations = () => {
             city: "Yaren",
             code2: "NR",
             code3: "NRU",
-            latlng: [
-                -0.5471014,
-                166.9164002
-            ],
+            latlng: [-0.5471014, 166.9164002],
             flag: "🇳🇷"
         },
         {
@@ -1755,10 +1301,7 @@ export const getLocations = () => {
             city: "Kathmandu",
             code2: "NP",
             code3: "NPL",
-            latlng: [
-                27.708317,
-                85.3205817
-            ],
+            latlng: [27.708317, 85.3205817],
             flag: "🇳🇵"
         },
         {
@@ -1766,10 +1309,7 @@ export const getLocations = () => {
             city: "Amsterdam",
             code2: "NL",
             code3: "NLD",
-            latlng: [
-                52.3727598,
-                4.8936041
-            ],
+            latlng: [52.3727598, 4.8936041],
             flag: "🇳🇱"
         },
         {
@@ -1777,10 +1317,7 @@ export const getLocations = () => {
             city: "Nouméa",
             code2: "NC",
             code3: "NCL",
-            latlng: [
-                -22.2745264,
-                166.442419
-            ],
+            latlng: [-22.2745264, 166.442419],
             flag: "🇳🇨"
         },
         {
@@ -1788,10 +1325,7 @@ export const getLocations = () => {
             city: "Wellington",
             code2: "NZ",
             code3: "NZL",
-            latlng: [
-                -41.2887953,
-                174.7772114
-            ],
+            latlng: [-41.2887953, 174.7772114],
             flag: "🇳🇿"
         },
         {
@@ -1799,10 +1333,7 @@ export const getLocations = () => {
             city: "Managua",
             code2: "NI",
             code3: "NIC",
-            latlng: [
-                12.1544035,
-                -86.2737642
-            ],
+            latlng: [12.1544035, -86.2737642],
             flag: "🇳🇮"
         },
         {
@@ -1810,10 +1341,7 @@ export const getLocations = () => {
             city: "Niamey",
             code2: "NE",
             code3: "NER",
-            latlng: [
-                13.524834,
-                2.109823
-            ],
+            latlng: [13.524834, 2.109823],
             flag: "🇳🇪"
         },
         {
@@ -1821,10 +1349,7 @@ export const getLocations = () => {
             city: "Abuja",
             code2: "NG",
             code3: "NGA",
-            latlng: [
-                9.0643305,
-                7.4892974
-            ],
+            latlng: [9.0643305, 7.4892974],
             flag: "🇳🇬"
         },
         {
@@ -1832,10 +1357,7 @@ export const getLocations = () => {
             city: "Alofi",
             code2: "NU",
             code3: "NIU",
-            latlng: [
-                -19.0534159,
-                -169.919199
-            ],
+            latlng: [-19.0534159, -169.919199],
             flag: "🇳🇺"
         },
         {
@@ -1843,10 +1365,7 @@ export const getLocations = () => {
             city: "Kingston",
             code2: "NF",
             code3: "NFK",
-            latlng: [
-                17.9712148,
-                -76.7928128
-            ],
+            latlng: [17.9712148, -76.7928128],
             flag: "🇳🇫"
         },
         {
@@ -1854,10 +1373,7 @@ export const getLocations = () => {
             city: "Pyongyang",
             code2: "KP",
             code3: "PRK",
-            latlng: [
-                39.0167979,
-                125.7473609
-            ],
+            latlng: [39.0167979, 125.7473609],
             flag: "🇰🇵"
         },
         {
@@ -1865,10 +1381,7 @@ export const getLocations = () => {
             city: "Saipan",
             code2: "MP",
             code3: "MNP",
-            latlng: [
-                15.1909825,
-                145.746743003024
-            ],
+            latlng: [15.1909825, 145.746743003024],
             flag: "🇲🇵"
         },
         {
@@ -1876,10 +1389,7 @@ export const getLocations = () => {
             city: "Oslo",
             code2: "NO",
             code3: "NOR",
-            latlng: [
-                59.9133301,
-                10.7389701
-            ],
+            latlng: [59.9133301, 10.7389701],
             flag: "🇳🇴"
         },
         {
@@ -1887,10 +1397,7 @@ export const getLocations = () => {
             city: "Muscat",
             code2: "OM",
             code3: "OMN",
-            latlng: [
-                23.61515,
-                58.5912467
-            ],
+            latlng: [23.61515, 58.5912467],
             flag: "🇴🇲"
         },
         {
@@ -1898,10 +1405,7 @@ export const getLocations = () => {
             city: "Islamabad",
             code2: "PK",
             code3: "PAK",
-            latlng: [
-                33.6938118,
-                73.0651511
-            ],
+            latlng: [33.6938118, 73.0651511],
             flag: "🇵🇰"
         },
         {
@@ -1909,10 +1413,7 @@ export const getLocations = () => {
             city: "Ngerulmud",
             code2: "PW",
             code3: "PLW",
-            latlng: [
-                7.5006446,
-                134.6242864
-            ],
+            latlng: [7.5006446, 134.6242864],
             flag: "🇵🇼"
         },
         {
@@ -1920,10 +1421,7 @@ export const getLocations = () => {
             city: "Ramallah",
             code2: "PS",
             code3: "PSE",
-            latlng: [
-                31.9030543,
-                35.1952255
-            ],
+            latlng: [31.9030543, 35.1952255],
             flag: "🇵🇸"
         },
         {
@@ -1931,10 +1429,7 @@ export const getLocations = () => {
             city: "Panama City",
             code2: "PA",
             code3: "PAN",
-            latlng: [
-                30.1600827,
-                -85.6545729
-            ],
+            latlng: [30.1600827, -85.6545729],
             flag: "🇵🇦"
         },
         {
@@ -1942,10 +1437,7 @@ export const getLocations = () => {
             city: "Port Moresby",
             code2: "PG",
             code3: "PNG",
-            latlng: [
-                -9.4743301,
-                147.1599504
-            ],
+            latlng: [-9.4743301, 147.1599504],
             flag: "🇵🇬"
         },
         {
@@ -1953,10 +1445,7 @@ export const getLocations = () => {
             city: "Asunción",
             code2: "PY",
             code3: "PRY",
-            latlng: [
-                -25.2800459,
-                -57.6343814
-            ],
+            latlng: [-25.2800459, -57.6343814],
             flag: "🇵🇾"
         },
         {
@@ -1964,10 +1453,7 @@ export const getLocations = () => {
             city: "Lima",
             code2: "PE",
             code3: "PER",
-            latlng: [
-                -12.0621065,
-                -77.0365256
-            ],
+            latlng: [-12.0621065, -77.0365256],
             flag: "🇵🇪"
         },
         {
@@ -1975,10 +1461,7 @@ export const getLocations = () => {
             city: "Manila",
             code2: "PH",
             code3: "PHL",
-            latlng: [
-                14.5948914,
-                120.9782618
-            ],
+            latlng: [14.5948914, 120.9782618],
             flag: "🇵🇭"
         },
         {
@@ -1986,10 +1469,7 @@ export const getLocations = () => {
             city: "Adamstown",
             code2: "PN",
             code3: "PCN",
-            latlng: [
-                -25.066667,
-                -130.100205
-            ],
+            latlng: [-25.066667, -130.100205],
             flag: "🇵🇳"
         },
         {
@@ -1997,10 +1477,7 @@ export const getLocations = () => {
             city: "Warsaw",
             code2: "PL",
             code3: "POL",
-            latlng: [
-                52.2319581,
-                21.0067249
-            ],
+            latlng: [52.2319581, 21.0067249],
             flag: "🇵🇱"
         },
         {
@@ -2008,10 +1485,7 @@ export const getLocations = () => {
             city: "Lisbon",
             code2: "PT",
             code3: "PRT",
-            latlng: [
-                38.7077507,
-                -9.1365919
-            ],
+            latlng: [38.7077507, -9.1365919],
             flag: "🇵🇹"
         },
         {
@@ -2019,10 +1493,7 @@ export const getLocations = () => {
             city: "San Juan",
             code2: "PR",
             code3: "PRI",
-            latlng: [
-                18.465299,
-                -66.116666
-            ],
+            latlng: [18.465299, -66.116666],
             flag: "🇵🇷"
         },
         {
@@ -2030,10 +1501,7 @@ export const getLocations = () => {
             city: "Doha",
             code2: "QA",
             code3: "QAT",
-            latlng: [
-                25.2856329,
-                51.5264162
-            ],
+            latlng: [25.2856329, 51.5264162],
             flag: "🇶🇦"
         },
         {
@@ -2041,10 +1509,7 @@ export const getLocations = () => {
             city: "Pristina",
             code2: "XK",
             code3: "UNK",
-            latlng: [
-                42.6638771,
-                21.1640849
-            ],
+            latlng: [42.6638771, 21.1640849],
             flag: "🇽🇰"
         },
         {
@@ -2052,10 +1517,7 @@ export const getLocations = () => {
             city: "Saint-Denis",
             code2: "RE",
             code3: "REU",
-            latlng: [
-                48.935773,
-                2.3580232
-            ],
+            latlng: [48.935773, 2.3580232],
             flag: "🇷🇪"
         },
         {
@@ -2063,10 +1525,7 @@ export const getLocations = () => {
             city: "Bucharest",
             code2: "RO",
             code3: "ROU",
-            latlng: [
-                44.4361414,
-                26.1027202
-            ],
+            latlng: [44.4361414, 26.1027202],
             flag: "🇷🇴"
         },
         {
@@ -2074,10 +1533,7 @@ export const getLocations = () => {
             city: "Moscow",
             code2: "RU",
             code3: "RUS",
-            latlng: [
-                55.7504461,
-                37.6174943
-            ],
+            latlng: [55.7504461, 37.6174943],
             flag: "🇷🇺"
         },
         {
@@ -2085,10 +1541,7 @@ export const getLocations = () => {
             city: "Kigali",
             code2: "RW",
             code3: "RWA",
-            latlng: [
-                -1.950851,
-                30.061507
-            ],
+            latlng: [-1.950851, 30.061507],
             flag: "🇷🇼"
         },
         {
@@ -2096,10 +1549,7 @@ export const getLocations = () => {
             city: "Gustavia",
             code2: "BL",
             code3: "BLM",
-            latlng: [
-                17.8957043,
-                -62.8508372
-            ],
+            latlng: [17.8957043, -62.8508372],
             flag: "🇧🇱"
         },
         {
@@ -2107,10 +1557,7 @@ export const getLocations = () => {
             city: "Jamestown",
             code2: "SH",
             code3: "SHN",
-            latlng: [
-                -15.9277296,
-                -5.7160872
-            ],
+            latlng: [-15.9277296, -5.7160872],
             flag: "🇸🇭"
         },
         {
@@ -2118,10 +1565,7 @@ export const getLocations = () => {
             city: "Basseterre",
             code2: "KN",
             code3: "KNA",
-            latlng: [
-                17.2960919,
-                -62.722301
-            ],
+            latlng: [17.2960919, -62.722301],
             flag: "🇰🇳"
         },
         {
@@ -2129,10 +1573,7 @@ export const getLocations = () => {
             city: "Castries",
             code2: "LC",
             code3: "LCA",
-            latlng: [
-                43.6779101,
-                3.9868904
-            ],
+            latlng: [43.6779101, 3.9868904],
             flag: "🇱🇨"
         },
         {
@@ -2140,10 +1581,7 @@ export const getLocations = () => {
             city: "Marigot",
             code2: "MF",
             code3: "MAF",
-            latlng: [
-                18.0668544,
-                -63.0848869
-            ],
+            latlng: [18.0668544, -63.0848869],
             flag: "🇲🇫"
         },
         {
@@ -2151,10 +1589,7 @@ export const getLocations = () => {
             city: "Saint-Pierre",
             code2: "PM",
             code3: "SPM",
-            latlng: [
-                48.3832725,
-                7.4718731
-            ],
+            latlng: [48.3832725, 7.4718731],
             flag: "🇵🇲"
         },
         {
@@ -2162,10 +1597,7 @@ export const getLocations = () => {
             city: "Kingstown",
             code2: "VC",
             code3: "VCT",
-            latlng: [
-                13.1561864,
-                -61.2279621
-            ],
+            latlng: [13.1561864, -61.2279621],
             flag: "🇻🇨"
         },
         {
@@ -2173,10 +1605,7 @@ export const getLocations = () => {
             city: "Apia",
             code2: "WS",
             code3: "WSM",
-            latlng: [
-                -13.8343691,
-                -171.7692793
-            ],
+            latlng: [-13.8343691, -171.7692793],
             flag: "🇼🇸"
         },
         {
@@ -2184,10 +1613,7 @@ export const getLocations = () => {
             city: "City of San Marino",
             code2: "SM",
             code3: "SMR",
-            latlng: [
-                43.9363996,
-                12.4466991
-            ],
+            latlng: [43.9363996, 12.4466991],
             flag: "🇸🇲"
         },
         {
@@ -2195,10 +1621,7 @@ export const getLocations = () => {
             city: "São Tomé",
             code2: "ST",
             code3: "STP",
-            latlng: [
-                0.3389242,
-                6.7313031
-            ],
+            latlng: [0.3389242, 6.7313031],
             flag: "🇸🇹"
         },
         {
@@ -2206,10 +1629,7 @@ export const getLocations = () => {
             city: "Riyadh",
             code2: "SA",
             code3: "SAU",
-            latlng: [
-                24.638916,
-                46.7160104
-            ],
+            latlng: [24.638916, 46.7160104],
             flag: "🇸🇦"
         },
         {
@@ -2217,10 +1637,7 @@ export const getLocations = () => {
             city: "Dakar",
             code2: "SN",
             code3: "SEN",
-            latlng: [
-                14.693425,
-                -17.447938
-            ],
+            latlng: [14.693425, -17.447938],
             flag: "🇸🇳"
         },
         {
@@ -2228,10 +1645,7 @@ export const getLocations = () => {
             city: "Belgrade",
             code2: "RS",
             code3: "SRB",
-            latlng: [
-                44.8178131,
-                20.4568974
-            ],
+            latlng: [44.8178131, 20.4568974],
             flag: "🇷🇸"
         },
         {
@@ -2239,10 +1653,7 @@ export const getLocations = () => {
             city: "Victoria",
             code2: "SC",
             code3: "SYC",
-            latlng: [
-                48.4283182,
-                -123.3649533
-            ],
+            latlng: [48.4283182, -123.3649533],
             flag: "🇸🇨"
         },
         {
@@ -2250,10 +1661,7 @@ export const getLocations = () => {
             city: "Freetown",
             code2: "SL",
             code3: "SLE",
-            latlng: [
-                8.479004,
-                -13.26795
-            ],
+            latlng: [8.479004, -13.26795],
             flag: "🇸🇱"
         },
         {
@@ -2261,10 +1669,7 @@ export const getLocations = () => {
             city: "Singapore",
             code2: "SG",
             code3: "SGP",
-            latlng: [
-                1.2899175,
-                103.8519072
-            ],
+            latlng: [1.2899175, 103.8519072],
             flag: "🇸🇬"
         },
         {
@@ -2272,10 +1677,7 @@ export const getLocations = () => {
             city: "Philipsburg",
             code2: "SX",
             code3: "SXM",
-            latlng: [
-                18.0250713,
-                -63.0483073
-            ],
+            latlng: [18.0250713, -63.0483073],
             flag: "🇸🇽"
         },
         {
@@ -2283,10 +1685,7 @@ export const getLocations = () => {
             city: "Bratislava",
             code2: "SK",
             code3: "SVK",
-            latlng: [
-                48.1435149,
-                17.108279
-            ],
+            latlng: [48.1435149, 17.108279],
             flag: "🇸🇰"
         },
         {
@@ -2294,10 +1693,7 @@ export const getLocations = () => {
             city: "Ljubljana",
             code2: "SI",
             code3: "SVN",
-            latlng: [
-                46.0500268,
-                14.5069289
-            ],
+            latlng: [46.0500268, 14.5069289],
             flag: "🇸🇮"
         },
         {
@@ -2305,10 +1701,7 @@ export const getLocations = () => {
             city: "Honiara",
             code2: "SB",
             code3: "SLB",
-            latlng: [
-                -9.4310769,
-                159.9552552
-            ],
+            latlng: [-9.4310769, 159.9552552],
             flag: "🇸🇧"
         },
         {
@@ -2316,10 +1709,7 @@ export const getLocations = () => {
             city: "Mogadishu",
             code2: "SO",
             code3: "SOM",
-            latlng: [
-                2.0349312,
-                45.3419183
-            ],
+            latlng: [2.0349312, 45.3419183],
             flag: "🇸🇴"
         },
         {
@@ -2327,10 +1717,7 @@ export const getLocations = () => {
             city: "Pretoria",
             code2: "ZA",
             code3: "ZAF",
-            latlng: [
-                -25.7459277,
-                28.1879101
-            ],
+            latlng: [-25.7459277, 28.1879101],
             flag: "🇿🇦"
         },
         {
@@ -2338,10 +1725,7 @@ export const getLocations = () => {
             city: "King Edward Point",
             code2: "GS",
             code3: "SGS",
-            latlng: [
-                -54.283545,
-                -36.4946355
-            ],
+            latlng: [-54.283545, -36.4946355],
             flag: "🇬🇸"
         },
         {
@@ -2349,10 +1733,7 @@ export const getLocations = () => {
             city: "Seoul",
             code2: "KR",
             code3: "KOR",
-            latlng: [
-                37.5666791,
-                126.9782914
-            ],
+            latlng: [37.5666791, 126.9782914],
             flag: "🇰🇷"
         },
         {
@@ -2360,10 +1741,7 @@ export const getLocations = () => {
             city: "Juba",
             code2: "SS",
             code3: "SSD",
-            latlng: [
-                4.8459246,
-                31.5959173
-            ],
+            latlng: [4.8459246, 31.5959173],
             flag: "🇸🇸"
         },
         {
@@ -2371,10 +1749,7 @@ export const getLocations = () => {
             city: "Madrid",
             code2: "ES",
             code3: "ESP",
-            latlng: [
-                40.4167047,
-                -3.7035825
-            ],
+            latlng: [40.4167047, -3.7035825],
             flag: "🇪🇸"
         },
         {
@@ -2382,10 +1757,7 @@ export const getLocations = () => {
             city: "Sri Jayawardenepura Kotte",
             code2: "LK",
             code3: "LKA",
-            latlng: [
-                6.8883219,
-                79.9187415
-            ],
+            latlng: [6.8883219, 79.9187415],
             flag: "🇱🇰"
         },
         {
@@ -2393,10 +1765,7 @@ export const getLocations = () => {
             city: "Khartoum",
             code2: "SD",
             code3: "SDN",
-            latlng: [
-                15.5635972,
-                32.5349123
-            ],
+            latlng: [15.5635972, 32.5349123],
             flag: "🇸🇩"
         },
         {
@@ -2404,10 +1773,7 @@ export const getLocations = () => {
             city: "Paramaribo",
             code2: "SR",
             code3: "SUR",
-            latlng: [
-                5.8247628,
-                -55.1703941
-            ],
+            latlng: [5.8247628, -55.1703941],
             flag: "🇸🇷"
         },
         {
@@ -2415,10 +1781,7 @@ export const getLocations = () => {
             city: "Longyearbyen",
             code2: "SJ",
             code3: "SJM",
-            latlng: [
-                78.2231558,
-                15.6463656
-            ],
+            latlng: [78.2231558, 15.6463656],
             flag: "🇸🇯"
         },
         {
@@ -2426,10 +1789,7 @@ export const getLocations = () => {
             city: "Mbabane",
             code2: "SZ",
             code3: "SWZ",
-            latlng: [
-                -26.325745,
-                31.144663
-            ],
+            latlng: [-26.325745, 31.144663],
             flag: "🇸🇿"
         },
         {
@@ -2437,10 +1797,7 @@ export const getLocations = () => {
             city: "Stockholm",
             code2: "SE",
             code3: "SWE",
-            latlng: [
-                59.3251172,
-                18.0710935
-            ],
+            latlng: [59.3251172, 18.0710935],
             flag: "🇸🇪"
         },
         {
@@ -2448,10 +1805,7 @@ export const getLocations = () => {
             city: "Bern",
             code2: "CH",
             code3: "CHE",
-            latlng: [
-                46.9482713,
-                7.4514512
-            ],
+            latlng: [46.9482713, 7.4514512],
             flag: "🇨🇭"
         },
         {
@@ -2459,10 +1813,7 @@ export const getLocations = () => {
             city: "Damascus",
             code2: "SY",
             code3: "SYR",
-            latlng: [
-                33.5130695,
-                36.3095814
-            ],
+            latlng: [33.5130695, 36.3095814],
             flag: "🇸🇾"
         },
         {
@@ -2470,10 +1821,7 @@ export const getLocations = () => {
             city: "Taipei",
             code2: "TW",
             code3: "TWN",
-            latlng: [
-                25.0375198,
-                121.5636796
-            ],
+            latlng: [25.0375198, 121.5636796],
             flag: "🇹🇼"
         },
         {
@@ -2481,10 +1829,7 @@ export const getLocations = () => {
             city: "Dushanbe",
             code2: "TJ",
             code3: "TJK",
-            latlng: [
-                38.5425835,
-                68.81521423589763
-            ],
+            latlng: [38.5425835, 68.81521423589763],
             flag: "🇹🇯"
         },
         {
@@ -2492,10 +1837,7 @@ export const getLocations = () => {
             city: "Dodoma",
             code2: "TZ",
             code3: "TZA",
-            latlng: [
-                -6.1791181,
-                35.7468174
-            ],
+            latlng: [-6.1791181, 35.7468174],
             flag: "🇹🇿"
         },
         {
@@ -2503,10 +1845,7 @@ export const getLocations = () => {
             city: "Bangkok",
             code2: "TH",
             code3: "THA",
-            latlng: [
-                13.7524938,
-                100.4935089
-            ],
+            latlng: [13.7524938, 100.4935089],
             flag: "🇹🇭"
         },
         {
@@ -2514,10 +1853,7 @@ export const getLocations = () => {
             city: "Dili",
             code2: "TL",
             code3: "TLS",
-            latlng: [
-                28.6517178,
-                77.2219388
-            ],
+            latlng: [28.6517178, 77.2219388],
             flag: "🇹🇱"
         },
         {
@@ -2525,10 +1861,7 @@ export const getLocations = () => {
             city: "Lomé",
             code2: "TG",
             code3: "TGO",
-            latlng: [
-                6.130419,
-                1.215829
-            ],
+            latlng: [6.130419, 1.215829],
             flag: "🇹🇬"
         },
         {
@@ -2536,10 +1869,7 @@ export const getLocations = () => {
             city: "Fakaofo",
             code2: "TK",
             code3: "TKL",
-            latlng: [
-                -9.3743046,
-                -171.2645365
-            ],
+            latlng: [-9.3743046, -171.2645365],
             flag: "🇹🇰"
         },
         {
@@ -2547,10 +1877,7 @@ export const getLocations = () => {
             city: "Nuku'alofa",
             code2: "TO",
             code3: "TON",
-            latlng: [
-                -21.1343401,
-                -175.201808
-            ],
+            latlng: [-21.1343401, -175.201808],
             flag: "🇹🇴"
         },
         {
@@ -2558,10 +1885,7 @@ export const getLocations = () => {
             city: "Port of Spain",
             code2: "TT",
             code3: "TTO",
-            latlng: [
-                10.6572678,
-                -61.5180173
-            ],
+            latlng: [10.6572678, -61.5180173],
             flag: "🇹🇹"
         },
         {
@@ -2569,10 +1893,7 @@ export const getLocations = () => {
             city: "Tunis",
             code2: "TN",
             code3: "TUN",
-            latlng: [
-                36.8002068,
-                10.1857757
-            ],
+            latlng: [36.8002068, 10.1857757],
             flag: "🇹🇳"
         },
         {
@@ -2580,10 +1901,7 @@ export const getLocations = () => {
             city: "Ankara",
             code2: "TR",
             code3: "TUR",
-            latlng: [
-                39.9207886,
-                32.8540482
-            ],
+            latlng: [39.9207886, 32.8540482],
             flag: "🇹🇷"
         },
         {
@@ -2591,10 +1909,7 @@ export const getLocations = () => {
             city: "Ashgabat",
             code2: "TM",
             code3: "TKM",
-            latlng: [
-                37.9404648,
-                58.3823487
-            ],
+            latlng: [37.9404648, 58.3823487],
             flag: "🇹🇲"
         },
         {
@@ -2602,10 +1917,7 @@ export const getLocations = () => {
             city: "Cockburn Town",
             code2: "TC",
             code3: "TCA",
-            latlng: [
-                21.4607723,
-                -71.1399956
-            ],
+            latlng: [21.4607723, -71.1399956],
             flag: "🇹🇨"
         },
         {
@@ -2613,10 +1925,7 @@ export const getLocations = () => {
             city: "Funafuti",
             code2: "TV",
             code3: "TUV",
-            latlng: [
-                -8.5199633,
-                179.1982548
-            ],
+            latlng: [-8.5199633, 179.1982548],
             flag: "🇹🇻"
         },
         {
@@ -2624,10 +1933,7 @@ export const getLocations = () => {
             city: "Kampala",
             code2: "UG",
             code3: "UGA",
-            latlng: [
-                0.3177137,
-                32.5813539
-            ],
+            latlng: [0.3177137, 32.5813539],
             flag: "🇺🇬"
         },
         {
@@ -2635,10 +1941,7 @@ export const getLocations = () => {
             city: "Kyiv",
             code2: "UA",
             code3: "UKR",
-            latlng: [
-                50.4500336,
-                30.5241361
-            ],
+            latlng: [50.4500336, 30.5241361],
             flag: "🇺🇦"
         },
         {
@@ -2646,10 +1949,7 @@ export const getLocations = () => {
             city: "Abu Dhabi",
             code2: "AE",
             code3: "ARE",
-            latlng: [
-                24.4538352,
-                54.3774014
-            ],
+            latlng: [24.4538352, 54.3774014],
             flag: "🇦🇪"
         },
         {
@@ -2657,10 +1957,7 @@ export const getLocations = () => {
             city: "London",
             code2: "GB",
             code3: "GBR",
-            latlng: [
-                51.5073219,
-                -0.1276474
-            ],
+            latlng: [51.5073219, -0.1276474],
             flag: "🇬🇧"
         },
         {
@@ -2668,10 +1965,7 @@ export const getLocations = () => {
             city: "Washington, D.C.",
             code2: "US",
             code3: "USA",
-            latlng: [
-                38.8950368,
-                -77.0365427
-            ],
+            latlng: [38.8950368, -77.0365427],
             flag: "🇺🇸"
         },
         {
@@ -2679,10 +1973,7 @@ export const getLocations = () => {
             city: "Montevideo",
             code2: "UY",
             code3: "URY",
-            latlng: [
-                -34.9058916,
-                -56.1913095
-            ],
+            latlng: [-34.9058916, -56.1913095],
             flag: "🇺🇾"
         },
         {
@@ -2690,10 +1981,7 @@ export const getLocations = () => {
             city: "Tashkent",
             code2: "UZ",
             code3: "UZB",
-            latlng: [
-                41.3123363,
-                69.2787079
-            ],
+            latlng: [41.3123363, 69.2787079],
             flag: "🇺🇿"
         },
         {
@@ -2701,10 +1989,7 @@ export const getLocations = () => {
             city: "Port Vila",
             code2: "VU",
             code3: "VUT",
-            latlng: [
-                -17.7414972,
-                168.3150163
-            ],
+            latlng: [-17.7414972, 168.3150163],
             flag: "🇻🇺"
         },
         {
@@ -2712,10 +1997,7 @@ export const getLocations = () => {
             city: "Caracas",
             code2: "VE",
             code3: "VEN",
-            latlng: [
-                10.5060934,
-                -66.9146008
-            ],
+            latlng: [10.5060934, -66.9146008],
             flag: "🇻🇪"
         },
         {
@@ -2723,10 +2005,7 @@ export const getLocations = () => {
             city: "Hanoi",
             code2: "VN",
             code3: "VNM",
-            latlng: [
-                21.0294498,
-                105.8544441
-            ],
+            latlng: [21.0294498, 105.8544441],
             flag: "🇻🇳"
         },
         {
@@ -2734,10 +2013,7 @@ export const getLocations = () => {
             city: "Mata-Utu",
             code2: "WF",
             code3: "WLF",
-            latlng: [
-                -13.2820419,
-                -176.1740224
-            ],
+            latlng: [-13.2820419, -176.1740224],
             flag: "🇼🇫"
         },
         {
@@ -2745,10 +2021,7 @@ export const getLocations = () => {
             city: "El Aaiún",
             code2: "EH",
             code3: "ESH",
-            latlng: [
-                27.154512,
-                -13.1953921
-            ],
+            latlng: [27.154512, -13.1953921],
             flag: "🇪🇭"
         },
         {
@@ -2756,10 +2029,7 @@ export const getLocations = () => {
             city: "Sana'a",
             code2: "YE",
             code3: "YEM",
-            latlng: [
-                15.3538569,
-                44.2058841
-            ],
+            latlng: [15.3538569, 44.2058841],
             flag: "🇾🇪"
         },
         {
@@ -2767,10 +2037,7 @@ export const getLocations = () => {
             city: "Lusaka",
             code2: "ZM",
             code3: "ZMB",
-            latlng: [
-                -15.4164124,
-                28.2824793
-            ],
+            latlng: [-15.4164124, 28.2824793],
             flag: "🇿🇲"
         },
         {
@@ -2778,10 +2045,7 @@ export const getLocations = () => {
             city: "Harare",
             code2: "ZW",
             code3: "ZWE",
-            latlng: [
-                -17.831773,
-                31.045686
-            ],
+            latlng: [-17.831773, 31.045686],
             flag: "🇿🇼"
         }
     ];
@@ -2803,9 +2067,13 @@ export const getFilteredLocations = (onlyCodes2: string[]) => {
     const filteredList = getLocations().filter((e) => {
         return onlyCodes2.includes(e.code2);
     });
-    return filteredList.sort((a, b) => onlyCodes2.indexOf(a.code2) - onlyCodes2.indexOf(b.code2));
+    return filteredList.sort(
+        (a, b) => onlyCodes2.indexOf(a.code2) - onlyCodes2.indexOf(b.code2)
+    );
 };
 
-export const getGlobalLocationJson = (globalLocation: GlobalLocation): string => {
+export const getGlobalLocationJson = (
+    globalLocation: GlobalLocation
+): string => {
     return JSON.stringify(globalLocation);
 };

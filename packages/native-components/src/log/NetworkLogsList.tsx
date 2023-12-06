@@ -1,28 +1,27 @@
 import React from "react";
-import type { ReduxState } from "@storybook/native-controllers";
-import { EmulatorContext } from "@storybook/native-types";
-
 import { connect } from "react-redux";
-import { useAppDispatch } from "@storybook/native-controllers";
 import {
+    ReduxState,
     filterNetWorkLogs,
-    resetNetworkLogs
-} from "@storybook/native-controllers/dist/state/networkLogsSlice";
+    resetNetworkLogs,
+    useAppDispatch
+} from "@storybook/native-controllers";
+import NetworkLogDetails from "./NetworkLogDetails";
 
 const mapStateToProps = (state: ReduxState, props: NetWorkLogsListProps) => {
-    return { ...state, ...props };
+    return { state, props };
 };
 
 export interface NetWorkLogsListProps {
-    context?: EmulatorContext;
+    state?: ReduxState;
     onDisableNetwork: () => void;
 }
 
-const NetworkLogsList = ({ onDisableNetwork, context }: NetWorkLogsListProps) => {
+const NetworkLogsList = ({ state, onDisableNetwork }: NetWorkLogsListProps) => {
     const dispatch = useAppDispatch();
     React.useEffect(() => {
         resetNetworkLogs(dispatch);
-    }, [context, dispatch]);
+    }, [dispatch]);
 
     const onFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         filterNetWorkLogs(dispatch, event.target?.value ?? "");
@@ -61,7 +60,7 @@ const NetworkLogsList = ({ onDisableNetwork, context }: NetWorkLogsListProps) =>
                             fontSize: "13px"
                         }}
                     >
-                    Disable
+                        Disable
                     </button>
                 </span>
             </div>
@@ -73,6 +72,11 @@ const NetworkLogsList = ({ onDisableNetwork, context }: NetWorkLogsListProps) =>
                 <span style={{ marginLeft: "87px" }}>SIZE</span>
                 <span style={{ marginLeft: "9px" }}>TIME</span>
             </div>
+            {(state?.filteredNetworkLogs ?? state?.networkLogs ?? []).map(
+                (log) => {
+                    return <NetworkLogDetails key={log.id} log={log} />;
+                }
+            )}
         </div>
     );
 };

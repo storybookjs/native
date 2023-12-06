@@ -3,10 +3,16 @@ import { API, useAddonState } from "@storybook/api";
 import { AddonPanel } from "@storybook/components";
 import { EmulatorEvents } from "@storybook/native-types";
 import { NetworkLogsList } from "@storybook/native-components";
-import { useAppDispatch } from "@storybook/native-controllers";
-import { addNetworkLog, resetNetworkLogs } from "@storybook/native-controllers/dist/state/networkLogsSlice";
+import {
+    addNetworkLog,
+    resetNetworkLogs,
+    useAppDispatch
+} from "@storybook/native-controllers";
 import { DeviceSelections } from "@storybook/native-devices";
-import { DEFAULT_STATE, restoreFromLocalStorage } from "../utils/localStorageUtils";
+import {
+    DEFAULT_STATE,
+    restoreFromLocalStorage
+} from "../utils/localStorageUtils";
 import { ADDON_ID } from "../constants";
 
 export interface NetworkLogsContainerProps {
@@ -49,34 +55,37 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
     return (
         <AddonPanel key="network-logs-panel" active={Boolean(active)}>
             {!state.networkLogs && (
-                <div style={{
-                    margin: "4px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}
-                >
-                <button
-                    type="button"
-                    onClick={enableNetworkLogs}
+                <div
                     style={{
-                        marginTop: "40%",
-                        backgroundColor: "#65e5a6",
-                        fill: "#090909",
-                        color: "#090909",
-                        borderRadius: "1rem",
-                        borderWidth: "0px",
-                        padding: "5px",
-                        paddingLeft: "15px",
-                        paddingRight: "15px",
-                        fontSize: "16px"
+                        margin: "4px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
                     }}
                 >
-                    Enable Network Logs
-                </button>
+                    <button
+                        type="button"
+                        onClick={enableNetworkLogs}
+                        style={{
+                            marginTop: "40%",
+                            backgroundColor: "#65e5a6",
+                            fill: "#090909",
+                            color: "#090909",
+                            borderRadius: "1rem",
+                            borderWidth: "0px",
+                            padding: "5px",
+                            paddingLeft: "15px",
+                            paddingRight: "15px",
+                            fontSize: "16px"
+                        }}
+                    >
+                        Enable Network Logs
+                    </button>
                 </div>
-              )}
-            {state.networkLogs && <NetworkLogsList onDisableNetwork={disableNetworkLogs} />}
+            )}
+            {state.networkLogs && (
+                <NetworkLogsList onDisableNetwork={disableNetworkLogs} />
+            )}
         </AddonPanel>
     );
 };

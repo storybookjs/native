@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { API, useAddonState } from "@storybook/api";
-import { useGlobals } from '@storybook/manager-api';
+import { useGlobals } from "@storybook/manager-api";
 import {
     IconButton,
     WithTooltip,
@@ -16,11 +16,14 @@ import {
     getLocations
 } from "@storybook/native-devices";
 
-import { GlobalLocation } from "@storybook/native-devices/dist/types";
 import { ACTION_EVENT_NAME } from "@storybook/native-controllers";
-import { EmulatorActions } from "@storybook/native-types";
+import { EmulatorActions, GlobalLocation } from "@storybook/native-types";
 import { ADDON_ID } from "../constants";
-import { DEFAULT_STATE, restoreFromLocalStorage, saveToLocalStorage } from "../utils/localStorageUtils";
+import {
+    DEFAULT_STATE,
+    restoreFromLocalStorage,
+    saveToLocalStorage
+} from "../utils/localStorageUtils";
 
 export interface CountrySelectorProps {
     api: API;
@@ -28,7 +31,9 @@ export interface CountrySelectorProps {
 
 let userHasSelected = false;
 
-const getGlobalLocationsOrDefault = (globalLocationJson?: any) :GlobalLocation => {
+const getGlobalLocationsOrDefault = (
+    globalLocationJson?: any
+): GlobalLocation => {
     if (!globalLocationJson) {
         return {
             locations: getLocations()
@@ -36,7 +41,9 @@ const getGlobalLocationsOrDefault = (globalLocationJson?: any) :GlobalLocation =
     }
     const globalLocation = JSON.parse(globalLocationJson) as GlobalLocation;
     if (globalLocation.filterCodes) {
-        globalLocation.locations = getFilteredLocations(globalLocation.filterCodes);
+        globalLocation.locations = getFilteredLocations(
+            globalLocation.filterCodes
+        );
     }
     if ((globalLocation.locations ?? []).length === 0) {
         globalLocation.locations = getLocations();
@@ -57,16 +64,22 @@ export default ({ api }: CountrySelectorProps) => {
     const saveState = (s: DeviceSelections) => {
         setState(s);
         saveToLocalStorage(s);
-        api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.location, s.location.latlng);
+        api?.getChannel()?.emit(
+            ACTION_EVENT_NAME,
+            EmulatorActions.location,
+            s.location.latlng
+        );
     };
 
     const globalLocation = getGlobalLocationsOrDefault(location);
 
     useEffect(() => {
-        if (globalLocation.defaultCode
-            && !userHasSelected
-            && state.location
-            && state.location.code2 !== globalLocation.defaultCode) {
+        if (
+            globalLocation.defaultCode &&
+            !userHasSelected &&
+            state.location &&
+            state.location.code2 !== globalLocation.defaultCode
+        ) {
             saveState({
                 ...state,
                 location: getDefaultLocation(globalLocation.defaultCode)
@@ -81,25 +94,24 @@ export default ({ api }: CountrySelectorProps) => {
             trigger="click"
             tooltip={(props) => (
                 <TooltipLinkList
-                    links={globalLocation.locations!
-                        .map((loc) => {
-                            const onClick = () => {
-                                userHasSelected = true;
-                                saveState({
-                                    ...state,
-                                    location: loc
-                                });
-                                props.onHide();
-                            };
-                            return {
-                                id: loc.code2,
-                                title: `${loc.name} (${loc.city})`,
-                                onClick,
-                                right: loc.flag,
-                                value: loc,
-                                active: state.location.code2 === loc.code2
-                            };
-                        })}
+                    links={globalLocation.locations!.map((loc) => {
+                        const onClick = () => {
+                            userHasSelected = true;
+                            saveState({
+                                ...state,
+                                location: loc
+                            });
+                            props.onHide();
+                        };
+                        return {
+                            id: loc.code2,
+                            title: `${loc.name} (${loc.city})`,
+                            onClick,
+                            right: loc.flag,
+                            value: loc,
+                            active: state.location.code2 === loc.code2
+                        };
+                    })}
                 />
             )}
         >
