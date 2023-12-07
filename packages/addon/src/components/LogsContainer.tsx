@@ -11,7 +11,7 @@ import { DeviceSelections } from "@storybook/native-devices";
 import { LogsList } from "@storybook/native-components";
 import {
     DEFAULT_STATE,
-    restoreFromLocalStorage
+    restoreFromLocalStorage, saveToLocalStorage
 } from "../utils/localStorageUtils";
 import { ADDON_ID } from "../constants";
 
@@ -28,6 +28,11 @@ export default ({ api, active }: LogsContainerProps) => {
         ADDON_ID,
         savedState
     );
+
+    const saveState = (s: DeviceSelections) => {
+        setState(s);
+        saveToLocalStorage(s);
+    };
 
     const [isClientSetup, setClientSetup] = React.useState(true);
 
@@ -53,10 +58,10 @@ export default ({ api, active }: LogsContainerProps) => {
     }, []);
 
     const enableLogs = () => {
-        setState({ ...state, logs: true });
+        saveState({ ...state, logs: true });
     };
     const disableLogs: () => void = () => {
-        setState({ ...state, logs: false });
+        saveState({ ...state, logs: false });
     };
 
     return (

@@ -44,8 +44,8 @@ export const restoreFromLocalStorage = (
     const iosVersions = getOsVersions("ios");
     const locationCodes = getLocationsCodes();
     const storedSelections = JSON.parse(data) as DeviceSelections;
-    storedSelections.networkLogs = false;
-    storedSelections.logs = false;
+    storedSelections.networkLogs = storedSelections.networkLogs ?? false;
+    storedSelections.logs = storedSelections.logs ?? false;
 
     if (!androidDevices.includes(storedSelections.androidSelection)) {
         storedSelections.androidSelection = getDefaultDevice("android");

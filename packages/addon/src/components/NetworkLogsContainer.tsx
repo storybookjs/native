@@ -11,7 +11,7 @@ import {
 import { DeviceSelections } from "@storybook/native-devices";
 import {
     DEFAULT_STATE,
-    restoreFromLocalStorage
+    restoreFromLocalStorage, saveToLocalStorage
 } from "../utils/localStorageUtils";
 import { ADDON_ID } from "../constants";
 
@@ -52,11 +52,16 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
         };
     }, []);
 
+    const saveState = (s: DeviceSelections) => {
+        setState(s);
+        saveToLocalStorage(s);
+    };
+
     const enableNetworkLogs = () => {
-        setState({ ...state, networkLogs: true });
+        saveState({ ...state, networkLogs: true });
     };
     const disableNetworkLogs: () => void = () => {
-        setState({ ...state, networkLogs: false });
+        saveState({ ...state, networkLogs: false });
     };
 
     return (
