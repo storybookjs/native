@@ -132,7 +132,7 @@ export default (state = defaultState, action: ReduxAction): ReduxState => {
         case ActionTypes.RESET_LOGS:
             return {
                 ...state,
-                logsFilterKeyword: undefined,
+                filteredLogs: undefined,
                 logs: []
             };
         default:

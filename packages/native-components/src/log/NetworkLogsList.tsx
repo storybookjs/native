@@ -27,6 +27,10 @@ const NetworkLogsList = ({ state, onDisableNetwork }: NetWorkLogsListProps) => {
         filterNetWorkLogs(dispatch, event.target?.value ?? "");
     };
 
+    const clearLogs = () => {
+        resetNetworkLogs(dispatch);
+    };
+
     return (
         <div style={{ margin: "4px" }}>
             <div style={{ marginTop: "5px", marginBottom: "5px" }}>
@@ -43,6 +47,26 @@ const NetworkLogsList = ({ state, onDisableNetwork }: NetWorkLogsListProps) => {
                         height: "2rem"
                     }}
                 />
+                <span>
+                    <button
+                        type="button"
+                        onClick={clearLogs}
+                        style={{
+                            marginLeft: "20px",
+                            backgroundColor: "#65e5a6",
+                            fill: "#090909",
+                            color: "#090909",
+                            borderRadius: "1rem",
+                            borderWidth: "0px",
+                            padding: "5px",
+                            paddingLeft: "15px",
+                            paddingRight: "15px",
+                            fontSize: "13px"
+                        }}
+                    >
+                        Clear
+                    </button>
+                </span>
                 <span>
                     <button
                         type="button"
