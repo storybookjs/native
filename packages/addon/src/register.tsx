@@ -28,6 +28,7 @@ import CountrySelector from "./components/CountrySelector";
 import MapContainer from "./components/MapContainer";
 import NetworkLogsContainer from "./components/NetworkLogsContainer";
 import LogsContainer from "./components/LogsContainer";
+import FontSelector from "./components/FontSelector";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -164,6 +165,12 @@ addons.register(ADDON_ID, (api) => {
         type: types.TOOL,
         title: "Select device",
         render: () => <VersionSelector />
+    });
+
+    addons.add(`${ADDON_ID}/fontPicker`, {
+        type: types.TOOL,
+        title: "Select Font",
+        render: () => <FontSelector />
     });
 
     addons.add(`${ADDON_ID}/countryPicker`, {

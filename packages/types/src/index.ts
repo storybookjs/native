@@ -69,6 +69,11 @@ export interface GlobalLocation {
     googleMapsApiKey?: string;
 }
 
+export interface Font {
+    name: string;
+    value: string;
+}
+
 /**
  * For full api reference check
  * https://docs.appetize.io/javascript-sdk/api-reference

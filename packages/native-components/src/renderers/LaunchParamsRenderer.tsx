@@ -5,6 +5,7 @@ import {
 } from "@storybook/native-controllers";
 import {
     useDevice,
+    useFont,
     useLocation,
     useLogs,
     useNetworkLogs,
@@ -29,6 +30,7 @@ export default (props: RendererProps): React.ReactElement => {
     const iframeRef = React.useRef<HTMLIFrameElement>(null);
     const device = useDevice(platform);
     const osVersion = useOsVersion(platform);
+    const font = useFont(platform);
     const location = useLocation();
     const networkLogs = useNetworkLogs();
     const logs = useLogs();
@@ -63,12 +65,21 @@ export default (props: RendererProps): React.ReactElement => {
         osVersion,
         location: location.latlng.join(",")
     };
+
+    if (platform === "android") {
+        settings.adbShellCommand = `settings put system font_scale ${font.value}`;
+    } else {
+        settings.launchArgs = `["-UIPreferredContentSizeCategoryName","${font.value}"]`;
+    }
+
     if (logs) {
         settings.debug = "true";
     }
+
     if (networkLogs) {
         settings.proxy = "intercept";
     }
+
     const url = getAppetizeUrl({
         apiKey,
         settings,

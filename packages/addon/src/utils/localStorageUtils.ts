@@ -7,7 +7,9 @@ import {
     getDefaultOsVersion,
     getOsVersions,
     getDefaultLocation,
-    getLocationsCodes
+    getLocationsCodes,
+    getFonts,
+    getDefaultFont
 } from "@storybook/native-devices";
 
 import { LOCAL_STORAGE_KEY } from "../constants";
@@ -15,8 +17,13 @@ import { LOCAL_STORAGE_KEY } from "../constants";
 export const DEFAULT_STATE: DeviceSelections = {
     androidSelection: getDefaultDevice("android"),
     iosSelection: getDefaultDevice("ios"),
+
     iosVersion: getDefaultOsVersion("ios"),
     androidVersion: getDefaultOsVersion("android"),
+
+    iosFont: getDefaultFont("ios"),
+    androidFont: getDefaultFont("android"),
+
     location: getDefaultLocation(),
     networkLogs: false,
     logs: false
@@ -40,8 +47,13 @@ export const restoreFromLocalStorage = (
 
     const androidDevices = getDevices("android");
     const iosDevices = getDevices("ios");
+
     const androidVersions = getOsVersions("android");
     const iosVersions = getOsVersions("ios");
+
+    const androidFonts = getFonts("android");
+    const iosFonts = getFonts("ios");
+
     const locationCodes = getLocationsCodes();
     const storedSelections = JSON.parse(data) as DeviceSelections;
     storedSelections.networkLogs = storedSelections.networkLogs ?? false;
@@ -61,6 +73,14 @@ export const restoreFromLocalStorage = (
 
     if (!iosVersions.includes(storedSelections.iosVersion)) {
         storedSelections.iosVersion = getDefaultOsVersion("ios");
+    }
+
+    if (!androidFonts.includes(storedSelections.androidFont)) {
+        storedSelections.androidFont = getDefaultFont("android");
+    }
+
+    if (!iosFonts.includes(storedSelections.iosFont)) {
+        storedSelections.iosFont = getDefaultFont("ios");
     }
 
     if (!locationCodes.includes(storedSelections.location.code2)) {
