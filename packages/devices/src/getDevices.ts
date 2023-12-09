@@ -95,7 +95,7 @@ export const getFonts = (platform: Platform): Font[] => {
             },
             {
                 name: "Accessibility Double Extra Large",
-                value: "UICTContentSizeCategoryAccessibilityXL"
+                value: "UICTContentSizeCategoryAccessibilityXXL"
             },
             {
                 name: "Accessibility Triple Extra Large",

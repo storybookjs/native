@@ -42,7 +42,7 @@ export default () => {
                     links={[
                         {
                             id: "android",
-                            title: "------------ Android ------------",
+                            title: "------------- Android -------------",
                             onClick: () => {},
                             value: "",
                             disabled: true,
@@ -71,7 +71,7 @@ export default () => {
                         )
                         .concat({
                             id: "ios",
-                            title: "-------------- iOS --------------",
+                            title: "---------------- iOS ---------------",
                             onClick: () => {},
                             value: "",
                             disabled: true,

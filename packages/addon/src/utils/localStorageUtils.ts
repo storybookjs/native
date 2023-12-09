@@ -51,8 +51,8 @@ export const restoreFromLocalStorage = (
     const androidVersions = getOsVersions("android");
     const iosVersions = getOsVersions("ios");
 
-    const androidFonts = getFonts("android");
-    const iosFonts = getFonts("ios");
+    const androidFonts = getFonts("android").map((font) => font.value);
+    const iosFonts = getFonts("ios").map((font) => font.value);
 
     const locationCodes = getLocationsCodes();
     const storedSelections = JSON.parse(data) as DeviceSelections;
@@ -75,11 +75,11 @@ export const restoreFromLocalStorage = (
         storedSelections.iosVersion = getDefaultOsVersion("ios");
     }
 
-    if (!androidFonts.includes(storedSelections.androidFont)) {
+    if (!androidFonts.includes(storedSelections.androidFont?.value)) {
         storedSelections.androidFont = getDefaultFont("android");
     }
 
-    if (!iosFonts.includes(storedSelections.iosFont)) {
+    if (!iosFonts.includes(storedSelections.iosFont?.value)) {
         storedSelections.iosFont = getDefaultFont("ios");
     }
 
