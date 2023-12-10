@@ -32,3 +32,8 @@ export const useLogs = (): boolean => {
     const state = React.useContext(DeviceContext);
     return state.logs ?? false;
 };
+
+export const useTheme = (): boolean => {
+    const state = React.useContext(DeviceContext);
+    return state.isDarkTheme ?? false;
+};

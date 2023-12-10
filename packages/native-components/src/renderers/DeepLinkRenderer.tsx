@@ -11,7 +11,8 @@ import {
     useLocation,
     useLogs,
     useNetworkLogs,
-    useOsVersion
+    useOsVersion,
+    useTheme
 } from "@storybook/native-devices";
 import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
@@ -46,6 +47,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const location = useLocation();
     const networkLogs = useNetworkLogs();
     const logs = useLogs();
+    const isDarkMode = useTheme();
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions, latLng?: number[]) => {
@@ -68,7 +70,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         const settings: EmulatorSettings = {
             device,
             osVersion,
-            location: location.latlng.join(",")
+            location: location.latlng.join(","),
+            appearance: isDarkMode ? "dark" : "light"
         };
 
         if (platform === "android") {
@@ -118,7 +121,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         deepLinkBaseUrl,
         apiKey,
         context,
-        appetizeBaseUrl
+        appetizeBaseUrl,
+        isDarkMode
     ]);
 
     React.useEffect(() => {

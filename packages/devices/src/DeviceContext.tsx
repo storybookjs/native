@@ -19,5 +19,6 @@ export const DeviceContext = React.createContext<DeviceSelections>({
 
     location: getDefaultLocation(),
     networkLogs: false,
-    logs: false
+    logs: false,
+    isDarkTheme: false
 });

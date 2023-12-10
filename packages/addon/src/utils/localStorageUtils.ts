@@ -26,7 +26,8 @@ export const DEFAULT_STATE: DeviceSelections = {
 
     location: getDefaultLocation(),
     networkLogs: false,
-    logs: false
+    logs: false,
+    isDarkTheme: false
 };
 
 export const saveToLocalStorage = (data: DeviceSelections) => {
@@ -58,6 +59,7 @@ export const restoreFromLocalStorage = (
     const storedSelections = JSON.parse(data) as DeviceSelections;
     storedSelections.networkLogs = storedSelections.networkLogs ?? false;
     storedSelections.logs = storedSelections.logs ?? false;
+    storedSelections.isDarkTheme = storedSelections.isDarkTheme ?? false;
 
     if (!androidDevices.includes(storedSelections.androidSelection)) {
         storedSelections.androidSelection = getDefaultDevice("android");

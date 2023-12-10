@@ -29,6 +29,7 @@ import MapContainer from "./components/MapContainer";
 import NetworkLogsContainer from "./components/NetworkLogsContainer";
 import LogsContainer from "./components/LogsContainer";
 import FontSelector from "./components/FontSelector";
+import ThemeSelector from "./components/ThemeSelector";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -165,6 +166,12 @@ addons.register(ADDON_ID, (api) => {
         type: types.TOOL,
         title: "Select device",
         render: () => <VersionSelector />
+    });
+
+    addons.add(`${ADDON_ID}/themePicker`, {
+        type: types.TOOL,
+        title: "Toggle Theme",
+        render: () => <ThemeSelector />
     });
 
     addons.add(`${ADDON_ID}/fontPicker`, {

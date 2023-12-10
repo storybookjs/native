@@ -13,4 +13,5 @@ export interface DeviceSelections {
     location: Location;
     networkLogs: boolean;
     logs: boolean;
+    isDarkTheme: boolean;
 }

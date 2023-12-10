@@ -9,7 +9,8 @@ import {
     useLocation,
     useLogs,
     useNetworkLogs,
-    useOsVersion
+    useOsVersion,
+    useTheme
 } from "@storybook/native-devices";
 import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
@@ -34,6 +35,7 @@ export default (props: RendererProps): React.ReactElement => {
     const location = useLocation();
     const networkLogs = useNetworkLogs();
     const logs = useLogs();
+    const isDarkMode = useTheme();
 
     React.useEffect(() => {
         const onAction = (action: EmulatorActions) => {
@@ -63,7 +65,8 @@ export default (props: RendererProps): React.ReactElement => {
     const settings: EmulatorSettings = {
         device,
         osVersion,
-        location: location.latlng.join(",")
+        location: location.latlng.join(","),
+        appearance: isDarkMode ? "dark" : "light"
     };
 
     if (platform === "android") {
