@@ -19,21 +19,22 @@ const WithStore = (props: RendererProps): React.ReactElement => {
     const networkLogs = useNetworkLogs();
     const logs = useLogs();
 
+    const [session, setSession] = React.useState<Session>();
+
     useEffect(() => {
         if (!window.appetize) {
             addons.getChannel().emit(EmulatorEvents.onMissingClient, null);
             return;
         }
-        if (!networkLogs && !logs) return;
         window.appetize.getClient("#appetize-iframe").then((client: Client) => {
             addons.getChannel().emit(EmulatorEvents.onClient, client);
 
-            client.on("session", (session: Session) => {
+            client.on("session", (newSession: Session) => {
+                setSession(newSession);
                 resetNetworkLogs(dispatch);
                 addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
-
                 if (networkLogs) {
-                    session.on("network", (log: Record<string, any>) => {
+                    newSession.on("network", (log: Record<string, any>) => {
                         addons
                             .getChannel()
                             .emit(EmulatorEvents.onNetworkLog, log);
@@ -42,7 +43,7 @@ const WithStore = (props: RendererProps): React.ReactElement => {
                 }
 
                 if (logs) {
-                    session.on("log", (log: Log) => {
+                    newSession.on("log", (log: Log) => {
                         addons.getChannel().emit(EmulatorEvents.onLog, log);
                         addLog(dispatch, log);
                     });
@@ -55,7 +56,9 @@ const WithStore = (props: RendererProps): React.ReactElement => {
 
     return (
         <>
-            {props.deepLinkBaseUrl && <DeepLinkRenderer {...props} />}
+            {props.deepLinkBaseUrl && (
+                <DeepLinkRenderer {...props} session={session} />
+            )}
             {!props.deepLinkBaseUrl && <LaunchParamsRenderer {...props} />}
         </>
     );

@@ -10,6 +10,7 @@ import {
     faUndo,
     faRedo,
     faCircleStop,
+    faHandPointer,
     faHome,
     faRefresh,
     faMagnifyingGlassChart,
@@ -53,6 +54,13 @@ addons.register(ADDON_ID, (api) => {
 
     const stopApp = () => {
         api?.getChannel()?.emit(ACTION_EVENT_NAME, EmulatorActions.stopApp);
+    };
+
+    const overviewApps = () => {
+        api?.getChannel()?.emit(
+            ACTION_EVENT_NAME,
+            EmulatorActions.overviewApps
+        );
     };
 
     const toggleFirebaseDebugView = () => {
@@ -99,6 +107,16 @@ addons.register(ADDON_ID, (api) => {
         render: () => (
             <IconButton title="Stop App" onClick={stopApp}>
                 <FontAwesomeIcon size="sm" icon={faCircleStop} />
+            </IconButton>
+        )
+    });
+
+    addons.add(`${ADDON_ID}/overviewApps`, {
+        type: types.TOOL,
+        title: "Overview Apps",
+        render: () => (
+            <IconButton title="Overview Apps" onClick={overviewApps}>
+                <FontAwesomeIcon size="sm" icon={faHandPointer} />
             </IconButton>
         )
     });

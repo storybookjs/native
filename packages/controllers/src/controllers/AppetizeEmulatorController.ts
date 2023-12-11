@@ -50,7 +50,13 @@ export default class AppetizeEmulatorController implements EmulatorController {
         }
     };
 
-    public sendMessage({ message, requireConnection, latLng, applicationId }: SendMessageOptions) {
+    public sendMessage({
+        message,
+        requireConnection,
+        latLng,
+        applicationId,
+        session
+    }: SendMessageOptions) {
         const appetizeFrame = getAppetizeIframe(this.emulatorContext);
         if (typeof message === "object" && message.type === "url") {
             this.lastUrlMessage = message;
@@ -79,36 +85,66 @@ export default class AppetizeEmulatorController implements EmulatorController {
             case EmulatorActions.stopApp:
                 if (handleMissingApplicationId()) return;
 
-                appetizeFrame.contentWindow.postMessage({
-                    type: 'adbShellCommand',
-                    value: `am force-stop ${applicationId}`
-                }, "*");
+                appetizeFrame.contentWindow.postMessage(
+                    {
+                        type: "adbShellCommand",
+                        value: `am force-stop ${applicationId}`
+                    },
+                    "*"
+                );
                 toast.success(`Stopped app ${applicationId} (Android only)`, {
                     position: "bottom-center",
                     autoClose: 1500
                 });
                 break;
 
+            case EmulatorActions.overviewApps:
+                if (session?.app?.platform === "android") {
+                    session?.keypress("ANDROID_KEYCODE_MENU");
+                } else {
+                    session?.swipe({
+                        position: { x: "50%", y: "99%" },
+                        gesture: (g: { to: (x: string, y: string) => any }) =>
+                            g.to("0%", "-15%")
+                    });
+                }
+
+                break;
+
             case EmulatorActions.toggleFirebaseDebugView:
                 if (handleMissingApplicationId()) return;
 
                 this.fireBaseDebugViewEnabled = !this.fireBaseDebugViewEnabled;
-                appetizeFrame.contentWindow.postMessage({
-                    type: 'adbShellCommand',
-                    value: `setprop debug.firebase.analytics.app ${this.fireBaseDebugViewEnabled ? applicationId : ".none."}`
-                }, "*");
-                toast.success(`${this.fireBaseDebugViewEnabled ?
-                    "Enabled" : "Disabled"} firebase  debug view! (Android only) for app ${applicationId}`, {
-                    position: "bottom-center",
-                    autoClose: 1500
-                });
+                appetizeFrame.contentWindow.postMessage(
+                    {
+                        type: "adbShellCommand",
+                        value: `setprop debug.firebase.analytics.app ${
+                            this.fireBaseDebugViewEnabled
+                                ? applicationId
+                                : ".none."
+                        }`
+                    },
+                    "*"
+                );
+                toast.success(
+                    `${
+                        this.fireBaseDebugViewEnabled ? "Enabled" : "Disabled"
+                    } firebase  debug view! (Android only) for app ${applicationId}`,
+                    {
+                        position: "bottom-center",
+                        autoClose: 1500
+                    }
+                );
                 break;
 
             case EmulatorActions.location:
-                appetizeFrame.contentWindow.postMessage({
-                    type: EmulatorActions.location,
-                    value: latLng
-                }, "*");
+                appetizeFrame.contentWindow.postMessage(
+                    {
+                        type: EmulatorActions.location,
+                        value: latLng
+                    },
+                    "*"
+                );
                 break;
             default:
                 appetizeFrame.contentWindow.postMessage(message, "*");

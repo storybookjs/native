@@ -21,6 +21,7 @@ export enum EmulatorActions {
     clickHomeButton = "emitHomeButton",
     restartApp = "restartApp",
     stopApp = "stopApp",
+    overviewApps = "overviewApps",
     toggleFirebaseDebugView = "toggleFirebaseDebugView",
     shakeDevice = "shakeDevice",
     rotateLeft = "rotateLeft",
@@ -93,7 +94,45 @@ declare global {
     }
 
     interface Session {
+        app: App;
         on: (event: string, data: Log | Record<string, any> | any) => void;
+        swipe: (target: Target) => void;
+        keypress: (character: string, options?: Options) => void;
+    }
+
+    interface App {
+        bundle: string;
+        name: string;
+        platform: string;
+    }
+
+    interface Options {
+        shift?: boolean;
+    }
+
+    interface Target {
+        gesture: string | any;
+        coordinates?: Coordinates;
+        position?: Position;
+        duration?: number;
+    }
+
+    // interface Gesture {
+    //     up: (value: string) => Gesture;
+    //     down: (value: string) => Gesture;
+    //     left: (value: string) => Gesture;
+    //     right: (value: string) => Gesture;
+    //     to: (x: string, y: string) => Gesture;
+    // }
+
+    interface Coordinates {
+        x: number;
+        y: number;
+    }
+
+    interface Position {
+        x: string;
+        y: string;
     }
 
     interface Log {

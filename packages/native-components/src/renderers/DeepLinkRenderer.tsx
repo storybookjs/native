@@ -34,7 +34,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         deepLinkBaseUrl,
         appetizeBaseUrl,
         context,
-        applicationId
+        applicationId,
+        session
     } = props;
 
     if (!deepLinkBaseUrl) {
@@ -55,7 +56,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
             controller.sendMessage({
                 message: action,
                 latLng,
-                applicationId
+                applicationId,
+                session
             });
         };
 
@@ -63,7 +65,7 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         return () => {
             addons.getChannel().off(ACTION_EVENT_NAME, onAction);
         };
-    }, [context]);
+    }, [context, session]);
 
     React.useEffect(() => {
         const controller = manager.getController(context);

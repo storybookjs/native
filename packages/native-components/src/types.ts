@@ -40,4 +40,5 @@ export interface DeepLinkRendererProps extends RendererProps {
      * at once with deep linking.
      */
     context?: EmulatorContext;
+    session?: Session;
 }
