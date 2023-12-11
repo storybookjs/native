@@ -116,11 +116,7 @@ addons.register(ADDON_ID, (api) => {
         title: "Overview Apps",
         render: () => (
             <IconButton title="Overview Apps" onClick={overviewApps}>
-                <FontAwesomeIcon
-                    size="sm"
-                    style={{ transform: "rotate(90deg)" }}
-                    icon={faBars}
-                />
+                <FontAwesomeIcon size="sm" style={{ transform: "rotate(90deg)" }} icon={faBars} />
             </IconButton>
         )
     });
