@@ -55,7 +55,8 @@ export default class AppetizeEmulatorController implements EmulatorController {
         requireConnection,
         latLng,
         applicationId,
-        session
+        session,
+        enabled
     }: SendMessageOptions) {
         const appetizeFrame = getAppetizeIframe(this.emulatorContext);
         if (typeof message === "object" && message.type === "url") {
@@ -104,7 +105,8 @@ export default class AppetizeEmulatorController implements EmulatorController {
                 } else {
                     session?.swipe({
                         position: { x: "50%", y: "99%" },
-                        gesture: (g: { to: (x: string, y: string) => any }) => g.to("0%", "-15%")
+                        gesture: (g: { to: (x: string, y: string) => any }) =>
+                            g.to("0%", "-15%")
                     });
                 }
 
@@ -144,6 +146,64 @@ export default class AppetizeEmulatorController implements EmulatorController {
                     },
                     "*"
                 );
+                break;
+            case EmulatorActions.showLayoutBounds:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `setprop debug.layout ${enabled ? "true" : "false"}`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            case EmulatorActions.profileGpuRendering:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `setprop debug.hwui.profile  ${
+                                enabled ? "visual_bars" : "false"
+                            }`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            case EmulatorActions.showOverdraw:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `setprop debug.hwui.overdraw  ${
+                                enabled ? "show" : "false"
+                            }`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            case EmulatorActions.dontKeepActivities:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `settings put global always_finish_activities ${
+                                enabled ? "1" : "0"
+                            }`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
                 break;
             default:
                 appetizeFrame.contentWindow.postMessage(message, "*");

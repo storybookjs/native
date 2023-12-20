@@ -31,6 +31,7 @@ import NetworkLogsContainer from "./components/NetworkLogsContainer";
 import LogsContainer from "./components/LogsContainer";
 import FontSelector from "./components/FontSelector";
 import ThemeSelector from "./components/ThemeSelector";
+import DeveloperOptionsSelector from "./components/DeveloperOptionsSelector";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -116,7 +117,11 @@ addons.register(ADDON_ID, (api) => {
         title: "Overview Apps",
         render: () => (
             <IconButton title="Overview Apps" onClick={overviewApps}>
-                <FontAwesomeIcon size="sm" style={{ transform: "rotate(90deg)" }} icon={faBars} />
+                <FontAwesomeIcon
+                    size="sm"
+                    style={{ transform: "rotate(90deg)" }}
+                    icon={faBars}
+                />
             </IconButton>
         )
     });
@@ -202,6 +207,12 @@ addons.register(ADDON_ID, (api) => {
         type: types.TOOL,
         title: "Select country",
         render: () => <CountrySelector api={api} />
+    });
+
+    addons.add(`${ADDON_ID}/developerOptions`, {
+        type: types.TOOL,
+        title: "Developer Options",
+        render: () => <DeveloperOptionsSelector api={api} />
     });
 
     addons.add(`${ADDON_ID}/deepLinks/panel`, {

@@ -51,13 +51,18 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     const isDarkMode = useTheme();
 
     React.useEffect(() => {
-        const onAction = (action: EmulatorActions, latLng?: number[]) => {
+        const onAction = (
+            action: EmulatorActions,
+            latLng?: number[],
+            enabled?: boolean
+        ) => {
             const controller = manager.getController(context);
             controller.sendMessage({
                 message: action,
                 latLng,
                 applicationId,
-                session
+                session,
+                enabled
             });
         };
 

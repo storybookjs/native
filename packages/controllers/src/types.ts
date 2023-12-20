@@ -16,6 +16,7 @@ export interface SendMessageOptions {
     latLng?: number[];
     applicationId?: string;
     session?: Session;
+    enabled?: boolean;
 }
 
 export interface HandledMessageResponse {

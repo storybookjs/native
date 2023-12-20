@@ -27,7 +27,11 @@ export enum EmulatorActions {
     rotateLeft = "rotateLeft",
     rotateRight = "rotateRight",
     location = "location",
-    saveScreenshot = "saveScreenshot"
+    saveScreenshot = "saveScreenshot",
+    showLayoutBounds = "showLayoutBounds",
+    profileGpuRendering = "profileGpuRendering",
+    showOverdraw = "showOverdraw",
+    dontKeepActivities = "dontKeepActivities"
 }
 
 export enum EmulatorEvents {
@@ -98,6 +102,7 @@ declare global {
         on: (event: string, data: Log | Record<string, any> | any) => void;
         swipe: (target: Target) => void;
         keypress: (character: string, options?: Options) => void;
+        adbShellCommand: (command: string) => Promise<any>;
     }
 
     interface App {
