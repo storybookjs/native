@@ -105,8 +105,7 @@ export default class AppetizeEmulatorController implements EmulatorController {
                 } else {
                     session?.swipe({
                         position: { x: "50%", y: "99%" },
-                        gesture: (g: { to: (x: string, y: string) => any }) =>
-                            g.to("0%", "-15%")
+                        gesture: (g: { to: (x: string, y: string) => any }) => g.to("0%", "-15%")
                     });
                 }
 
