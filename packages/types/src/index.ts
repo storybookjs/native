@@ -122,14 +122,6 @@ declare global {
         duration?: number;
     }
 
-    // interface Gesture {
-    //     up: (value: string) => Gesture;
-    //     down: (value: string) => Gesture;
-    //     left: (value: string) => Gesture;
-    //     right: (value: string) => Gesture;
-    //     to: (x: string, y: string) => Gesture;
-    // }
-
     interface Coordinates {
         x: number;
         y: number;

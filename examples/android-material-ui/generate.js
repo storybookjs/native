@@ -77,6 +77,7 @@ const promises = components.map(async (component) => {
     return generateStories({
         category: pascalCase(component.name),
         filePath: `./stories/${component.name}.stories.jsx`,
+        // uncomment this line and set your own app id to enable some storybook addons
         // applicationId: "com.example.app",
         apiKey: "zv034bdme9je7c9d43chzmc2yg",
         platform: "android",
