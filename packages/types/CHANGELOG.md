@@ -1,3 +1,16 @@
+# v3.0.1 (Thu Jan 11 2024)
+
+#### 🐛 Bug Fix
+
+- [FEAT] Support Developer Options [#87](https://github.com/storybookjs/native/pull/87) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- Ahmed Alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v2.2.1 (Wed Dec 01 2021)
 
 :tada: This release contains work from a new contributor! :tada:

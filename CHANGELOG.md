@@ -1,3 +1,17 @@
+# v3.0.1 (Thu Jan 11 2024)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-addon`, `@storybook/native-controllers`, `@storybook/native-dev-middleware`, `@storybook/native-devices`, `@storybook/native-components`, `@storybook/native`, `@storybook/native-types`
+  - [FEAT] Support Developer Options [#87](https://github.com/storybookjs/native/pull/87) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- Ahmed Alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v3.0.0 (Wed Nov 29 2023)
 
 #### 💥 Breaking Change
