@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "start": "yarn build:stories && storybook dev -p 53743",
+    "start:local": "export STORYBOOK_NATIVE_LOCAL_EMULATOR=true && yarn build:stories &&  storybook dev -p 53743",
     "build:storybook": "yarn build:stories && storybook build",
     "build:stories": "node ./generate.js"
   },

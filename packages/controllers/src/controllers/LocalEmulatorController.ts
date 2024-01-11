@@ -36,6 +36,14 @@ export default class LocalEmulatorController implements EmulatorController {
         dispatchThunk(thunk);
     }
 
+    private stopApp(applicationId?: string) {
+        const thunk = performCommand("/stopApp", {
+            platform: this.config?.platform,
+            applicationId
+        });
+        dispatchThunk(thunk);
+    }
+
     private saveScreenshot() {
         const thunk = performCommand("/screenshot", {
             platform: this.config?.platform
@@ -43,7 +51,7 @@ export default class LocalEmulatorController implements EmulatorController {
         dispatchThunk(thunk);
     }
 
-    sendMessage({ message }: SendMessageOptions) {
+    sendMessage({ message, applicationId }: SendMessageOptions) {
         if (!this.config) {
             throw new Error(
                 `No config was set for emulator: ${this.emulatorContext}`
@@ -56,6 +64,8 @@ export default class LocalEmulatorController implements EmulatorController {
         } else if (message === EmulatorActions.rotateRight) {
             const newRotation = getNextRotation(this.rotationMode);
             this.updateRotation(newRotation);
+        } else if (message === EmulatorActions.stopApp) {
+            this.stopApp(applicationId);
         } else if (message === EmulatorActions.saveScreenshot) {
             this.saveScreenshot();
         }

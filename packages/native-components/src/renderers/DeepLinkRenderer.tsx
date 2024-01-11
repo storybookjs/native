@@ -2,14 +2,23 @@ import React from "react";
 import {
     ControllerManager,
     ACTION_EVENT_NAME,
-    store,
     getAppetizeIframeId,
     getFullDeepLinkUrl
 } from "@storybook/native-controllers";
-import { useDevice, useOsVersion } from "@storybook/native-devices";
-import { EmulatorActions } from "@storybook/native-types";
+import {
+    useDevice,
+    useFont,
+    useLocation,
+    useLogs,
+    useNetworkLogs,
+    useOsVersion,
+    useTheme
+} from "@storybook/native-devices";
+import { EmulatorActions, EmulatorSettings } from "@storybook/native-types";
 import { addons } from "@storybook/addons";
-import { Provider } from "react-redux";
+
+import { Slide, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import type { DeepLinkRendererProps } from "../types";
 import CommandsList from "../commands/CommandsList";
@@ -24,7 +33,9 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         storyParams,
         deepLinkBaseUrl,
         appetizeBaseUrl,
-        context
+        context,
+        applicationId,
+        session
     } = props;
 
     if (!deepLinkBaseUrl) {
@@ -33,11 +44,25 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
 
     const device = useDevice(platform);
     const osVersion = useOsVersion(platform);
+    const font = useFont(platform);
+    const location = useLocation();
+    const networkLogs = useNetworkLogs();
+    const logs = useLogs();
+    const isDarkMode = useTheme();
+
     React.useEffect(() => {
-        const onAction = (action: EmulatorActions) => {
+        const onAction = (
+            action: EmulatorActions,
+            latLng?: number[],
+            enabled?: boolean
+        ) => {
             const controller = manager.getController(context);
             controller.sendMessage({
-                message: action
+                message: action,
+                latLng,
+                applicationId,
+                session,
+                enabled
             });
         };
 
@@ -45,20 +70,48 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         return () => {
             addons.getChannel().off(ACTION_EVENT_NAME, onAction);
         };
-    }, [context]);
+    }, [context, session]);
 
     React.useEffect(() => {
         const controller = manager.getController(context);
+        const settings: EmulatorSettings = {
+            device,
+            osVersion,
+            location: location.latlng.join(","),
+            appearance: isDarkMode ? "dark" : "light"
+        };
+
+        if (platform === "android") {
+            settings.adbShellCommand = `settings put system font_scale ${font.value}`;
+        } else {
+            settings.launchArgs = `["-UIPreferredContentSizeCategoryName","${font.value}"]`;
+        }
+
+        if (logs) {
+            settings.debug = "true";
+        }
+
+        if (networkLogs) {
+            settings.proxy = "intercept";
+        }
+
         controller.updateConfig({
             apiKey,
-            settings: {
-                device,
-                osVersion
-            },
+            settings,
             platform,
             baseUrl: appetizeBaseUrl
         });
-    }, [device, osVersion, apiKey, context, platform, appetizeBaseUrl]);
+    }, [
+        device,
+        osVersion,
+        font,
+        apiKey,
+        context,
+        platform,
+        appetizeBaseUrl,
+        networkLogs,
+        logs
+    ]);
 
     const storyParamsWithExtras = { ...storyParams, ...extraParams };
     React.useEffect(() => {
@@ -75,7 +128,8 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
         deepLinkBaseUrl,
         apiKey,
         context,
-        appetizeBaseUrl
+        appetizeBaseUrl,
+        isDarkMode
     ]);
 
     React.useEffect(() => {
@@ -106,11 +160,21 @@ export default (props: DeepLinkRendererProps): React.ReactElement => {
     `;
 
     return (
-        <Provider store={store}>
-            <>
-                <style>{renderedIFrameCss}</style>
-                <CommandsList context={context} />
-            </>
-        </Provider>
+        <>
+            <style>{renderedIFrameCss}</style>
+            <CommandsList context={context} />
+            <ToastContainer
+                newestOnTop
+                closeOnClick
+                draggable
+                pauseOnHover
+                limit={2}
+                hideProgressBar={false}
+                autoClose={3000}
+                pauseOnFocusLoss
+                transition={Slide}
+                theme="light"
+            />
+        </>
     );
 };

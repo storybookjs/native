@@ -29,6 +29,9 @@ export interface RendererProps {
      * Example: "https://mycompany.appetize.io"
      */
     appetizeBaseUrl?: string;
+
+    /** Your application id (for iOS it's bundle id) */
+    applicationId?: string;
 }
 
 export interface DeepLinkRendererProps extends RendererProps {
@@ -37,4 +40,5 @@ export interface DeepLinkRendererProps extends RendererProps {
      * at once with deep linking.
      */
     context?: EmulatorContext;
+    session?: Session;
 }

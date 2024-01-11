@@ -43,10 +43,8 @@ export default () => {
                         .map((version) => {
                             const onClick = () => {
                                 saveState({
-                                    androidSelection: state.androidSelection,
-                                    iosSelection: state.iosSelection,
-                                    androidVersion: version,
-                                    iosVersion: state.iosVersion
+                                    ...state,
+                                    androidVersion: version
                                 });
                                 props.onHide();
                             };
@@ -62,11 +60,8 @@ export default () => {
                             iosVersions.map((version) => {
                                 const onClick = () => {
                                     saveState({
-                                        androidSelection:
-                                            state.androidSelection,
-                                        iosSelection: state.iosSelection,
-                                        iosVersion: version,
-                                        androidVersion: state.androidVersion
+                                        ...state,
+                                        iosVersion: version
                                     });
                                     props.onHide();
                                 };

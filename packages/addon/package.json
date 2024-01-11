@@ -19,6 +19,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-google-maps/api": "^2.19.2",
     "@storybook/addons": "^7.5.3",
     "@storybook/api": "^7.5.3",
     "@storybook/client-api": "^7.5.3",
@@ -26,13 +27,15 @@
     "@storybook/core-events": "^7.5.3",
     "@storybook/deep-link-logger": "link:../deep-link-logger",
     "@storybook/manager-api": "^7.5.3",
+    "@storybook/native-components": "link:../native-components",
     "@storybook/native-controllers": "link:../controllers",
     "@storybook/native-devices": "link:../devices",
     "@storybook/native-types": "link:../types",
     "@storybook/react": "^7.5.3",
     "@storybook/theming": "^7.5.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^7.2.2"
   },
   "gitHead": "fbc105e027161ddd733378b77cb64c28d776a371",
   "publishConfig": {

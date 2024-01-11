@@ -1,8 +1,10 @@
 /* eslint-disable class-methods-use-this */
 import type { EmulatorContext, EmulatorConfig } from "@storybook/native-types";
 import { debounce } from "lodash";
+import { toast } from "react-toastify";
 import { logDeepLink } from "@storybook/deep-link-logger";
 
+import { EmulatorActions } from "@storybook/native-types";
 import EmulatorController from "./EmulatorController";
 import {
     createAppetizeIframe,
@@ -25,6 +27,8 @@ export default class AppetizeEmulatorController implements EmulatorController {
 
     private config: EmulatorConfig | undefined = undefined;
 
+    private fireBaseDebugViewEnabled = false;
+
     constructor(context?: EmulatorContext) {
         this.emulatorContext = context;
     }
@@ -46,7 +50,14 @@ export default class AppetizeEmulatorController implements EmulatorController {
         }
     };
 
-    public sendMessage({ message, requireConnection }: SendMessageOptions) {
+    public sendMessage({
+        message,
+        requireConnection,
+        latLng,
+        applicationId,
+        session,
+        enabled
+    }: SendMessageOptions) {
         const appetizeFrame = getAppetizeIframe(this.emulatorContext);
         if (typeof message === "object" && message.type === "url") {
             this.lastUrlMessage = message;
@@ -60,7 +71,143 @@ export default class AppetizeEmulatorController implements EmulatorController {
             return;
         }
 
-        appetizeFrame.contentWindow.postMessage(message, "*");
+        const handleMissingApplicationId = () => {
+            if (!applicationId || applicationId === "") {
+                toast.error(`applicationId is not set!`, {
+                    position: "bottom-center",
+                    autoClose: 1500
+                });
+                return true;
+            }
+            return false;
+        };
+
+        switch (message) {
+            case EmulatorActions.stopApp:
+                if (handleMissingApplicationId()) return;
+
+                appetizeFrame.contentWindow.postMessage(
+                    {
+                        type: "adbShellCommand",
+                        value: `am force-stop ${applicationId}`
+                    },
+                    "*"
+                );
+                toast.success(`Stopped app ${applicationId} (Android only)`, {
+                    position: "bottom-center",
+                    autoClose: 1500
+                });
+                break;
+
+            case EmulatorActions.overviewApps:
+                if (session?.app?.platform === "android") {
+                    session?.keypress("ANDROID_KEYCODE_MENU");
+                } else {
+                    session?.swipe({
+                        position: { x: "50%", y: "99%" },
+                        gesture: (g: { to: (x: string, y: string) => any }) => g.to("0%", "-15%")
+                    });
+                }
+
+                break;
+
+            case EmulatorActions.toggleFirebaseDebugView:
+                if (handleMissingApplicationId()) return;
+
+                this.fireBaseDebugViewEnabled = !this.fireBaseDebugViewEnabled;
+                appetizeFrame.contentWindow.postMessage(
+                    {
+                        type: "adbShellCommand",
+                        value: `setprop debug.firebase.analytics.app ${
+                            this.fireBaseDebugViewEnabled
+                                ? applicationId
+                                : ".none."
+                        }`
+                    },
+                    "*"
+                );
+                toast.success(
+                    `${
+                        this.fireBaseDebugViewEnabled ? "Enabled" : "Disabled"
+                    } firebase  debug view! (Android only) for app ${applicationId}`,
+                    {
+                        position: "bottom-center",
+                        autoClose: 1500
+                    }
+                );
+                break;
+
+            case EmulatorActions.location:
+                appetizeFrame.contentWindow.postMessage(
+                    {
+                        type: EmulatorActions.location,
+                        value: latLng
+                    },
+                    "*"
+                );
+                break;
+            case EmulatorActions.showLayoutBounds:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `setprop debug.layout ${enabled ? "true" : "false"}`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            case EmulatorActions.profileGpuRendering:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `setprop debug.hwui.profile  ${
+                                enabled ? "visual_bars" : "false"
+                            }`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            case EmulatorActions.showOverdraw:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `setprop debug.hwui.overdraw  ${
+                                enabled ? "show" : "false"
+                            }`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            case EmulatorActions.dontKeepActivities:
+                if (session?.app?.platform === "android") {
+                    session
+                        ?.adbShellCommand(
+                            `settings put global always_finish_activities ${
+                                enabled ? "1" : "0"
+                            }`
+                        )
+                        .then(() => {
+                            session?.adbShellCommand(
+                                `service call activity 1599295570`
+                            );
+                        });
+                }
+                break;
+            default:
+                appetizeFrame.contentWindow.postMessage(message, "*");
+                break;
+        }
     }
 
     public createEmulator() {

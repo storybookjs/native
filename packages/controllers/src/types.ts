@@ -13,6 +13,10 @@ export interface OpenDeepLinkOptions {
 export interface SendMessageOptions {
     message: Message;
     requireConnection?: boolean;
+    latLng?: number[];
+    applicationId?: string;
+    session?: Session;
+    enabled?: boolean;
 }
 
 export interface HandledMessageResponse {
@@ -21,7 +25,28 @@ export interface HandledMessageResponse {
     successful: boolean;
 }
 
+export interface NetworkLog {
+    id: string;
+    method: string;
+    status: string;
+    url: string;
+    type: string;
+    size: string;
+    time: string;
+    requestHeaders: { name: string; value: string }[];
+    responseHeaders: { name: string; value: string }[];
+    content: string;
+}
+
 export interface ReduxState {
     loading: boolean;
     commands: HandledMessageResponse[];
+
+    networkLogs: NetworkLog[];
+    networkLogsFilterKeyword?: string;
+    filteredNetworkLogs?: NetworkLog[];
+
+    logs: Log[];
+    logsFilterKeyword?: string;
+    filteredLogs?: Log[];
 }
