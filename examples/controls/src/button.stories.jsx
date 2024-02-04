@@ -19,5 +19,11 @@ export const Example = (props) => {
 };
 
 Example.args = {
-    label: "Default button label"
+    label: "Default button label",
+    object: {
+        key1: "value1",
+        key2: {
+            key3: "value3"
+        }
+    }
 };

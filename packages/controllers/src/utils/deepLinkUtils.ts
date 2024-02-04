@@ -1,9 +1,12 @@
 const getQueryString = (data: Record<string, any>) => {
     return Object.keys(data)
         .map((key) => {
-            return `${encodeURIComponent(key)}=${encodeURIComponent(
-                data[key]
-            )}`;
+            const value = data[key];
+            return `${encodeURIComponent(key)}=${
+                typeof value === "object" || Array.isArray(value)
+                    ? btoa(JSON.stringify(value))
+                    : encodeURIComponent(value)
+            }`;
         })
         .join("&");
 };

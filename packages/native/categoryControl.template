@@ -6,7 +6,7 @@ export default {
     title: '<%= category %>',
     argTypes: {
         <% _.each(controls, function(control){ %>
-        <% if (control[1].type == 'date') { %>
+        <% if (control[1].type == 'date' || control[1].type == 'object') { %>
         <%= control[0] %>: {
             control: '<%= control[1].type %>'
         },
