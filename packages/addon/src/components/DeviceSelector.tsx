@@ -12,13 +12,12 @@ import { getDevices, DeviceSelections } from "@storybook/native-devices";
 
 import { ADDON_ID } from "../constants";
 import {
-    DEFAULT_STATE,
     restoreFromLocalStorage,
     saveToLocalStorage
 } from "../utils/localStorageUtils";
 
 export default () => {
-    const savedState = restoreFromLocalStorage(DEFAULT_STATE);
+    const savedState = restoreFromLocalStorage();
 
     const [state, setState] = useAddonState<DeviceSelections>(
         ADDON_ID,

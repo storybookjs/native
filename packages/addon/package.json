@@ -27,6 +27,7 @@
     "@storybook/core-events": "^7.5.3",
     "@storybook/deep-link-logger": "link:../deep-link-logger",
     "@storybook/manager-api": "^7.5.3",
+    "@storybook/types": "^7.5.3",
     "@storybook/native-components": "link:../native-components",
     "@storybook/native-controllers": "link:../controllers",
     "@storybook/native-devices": "link:../devices",
