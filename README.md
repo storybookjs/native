@@ -69,7 +69,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/daisyduong-acc"><img src="https://avatars.githubusercontent.com/u/85589819?v=4?s=100" width="100px;" alt=""/><br /><sub><b>daisyduong-acc</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=daisyduong-acc" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/ahna92"><img src="https://avatars.githubusercontent.com/u/22000308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmed na</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=ahna92" title="Documentation">📖</a> <a href="https://github.com/storybookjs/native/commits?author=ahna92" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ahna92"><img src="https://avatars.githubusercontent.com/u/22000308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmed na</b></sub></a><br /><a href="https://github.com/storybookjs/native/commits?author=ahna92" title="Documentation">📖</a> <a href="https://github.com/storybookjs/native/commits?author=ahna92" title="Code">💻</a> <a href="#example-ahna92" title="Examples">💡</a></td>
   </tr>
 </table>
 
