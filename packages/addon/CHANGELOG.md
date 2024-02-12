@@ -1,3 +1,15 @@
+# v3.1.0 (Mon Feb 12 2024)
+
+#### 🚀 Enhancement
+
+- feat: use parameters for native addon [#90](https://github.com/storybookjs/native/pull/90) (adil_malik@intuit.com)
+
+#### Authors: 1
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+
+---
+
 # v3.0.1 (Thu Jan 11 2024)
 
 #### 🐛 Bug Fix

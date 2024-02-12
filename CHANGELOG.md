@@ -1,3 +1,23 @@
+# v3.1.0 (Mon Feb 12 2024)
+
+#### 🚀 Enhancement
+
+- `@storybook/native-ios-example-deep-link`, `@storybook/native-addon`
+  - feat: use parameters for native addon [#90](https://github.com/storybookjs/native/pull/90) (adil_malik@intuit.com)
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-android-material-deep-link-example`, `@storybook/native-controls-example`, `@storybook/native-controllers`, `@storybook/native`
+  - [FIX] send objects as base64 in deeplinks [#91](https://github.com/storybookjs/native/pull/91) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 3
+
+- Adil Malik ([@amalik2](https://github.com/amalik2))
+- Ahmed Alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v3.0.1 (Thu Jan 11 2024)
 
 #### 🐛 Bug Fix
