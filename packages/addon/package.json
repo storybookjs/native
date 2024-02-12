@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-addon",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -27,13 +27,13 @@
     "@storybook/core-events": "^7.5.3",
     "@storybook/deep-link-logger": "link:../deep-link-logger",
     "@storybook/manager-api": "^7.5.3",
-    "@storybook/types": "^7.5.3",
     "@storybook/native-components": "link:../native-components",
     "@storybook/native-controllers": "link:../controllers",
     "@storybook/native-devices": "link:../devices",
     "@storybook/native-types": "link:../types",
     "@storybook/react": "^7.5.3",
     "@storybook/theming": "^7.5.3",
+    "@storybook/types": "^7.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^7.2.2"

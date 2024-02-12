@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-cross-platform-example",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "private": true,
   "description": "material-ui Web, Android, and iOS components in the same storybook",
   "repository": "",
