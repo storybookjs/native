@@ -25,7 +25,17 @@ const components = [
                 presetColors: ["red", "green"]
             },
             date: {
-                type: "date"
+                type: "date",
+                preset: 1607012565000
+            },
+            object: {
+                type: "object",
+                preset: {
+                    key1: "value1",
+                    key2: {
+                        key3: "value3"
+                    }
+                }
             }
         },
         docs: "https://raw.githubusercontent.com/material-components/material-components-android/master/docs/components/Button.md"
