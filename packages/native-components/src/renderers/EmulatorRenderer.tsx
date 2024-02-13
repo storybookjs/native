@@ -56,7 +56,7 @@ const WithStore = (props: DeepLinkRendererProps): React.ReactElement => {
                     addons.getChannel().emit(EmulatorEvents.onSession, session);
                 });
             });
-    }, [networkLogs, logs]);
+    }, [networkLogs, logs, props.context]);
 
     return (
         <>
