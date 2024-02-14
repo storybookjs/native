@@ -10,26 +10,46 @@ import {
     useAppDispatch
 } from "@storybook/native-controllers";
 import { useLogs, useNetworkLogs } from "@storybook/native-devices";
-import { RendererProps } from "../types";
+import { DeepLinkRendererProps } from "../types";
 import LaunchParamsRenderer from "./LaunchParamsRenderer";
 import DeepLinkRenderer from "./DeepLinkRenderer";
 
-const WithStore = (props: RendererProps): React.ReactElement => {
+const appetizeSessionMap = new Map<string, Session>();
+
+const WithStore = (props: DeepLinkRendererProps): React.ReactElement => {
     const dispatch = useAppDispatch();
     const networkLogs = useNetworkLogs();
     const logs = useLogs();
 
     const [session, setSession] = React.useState<Session>();
 
+    const sessionKey = props.context ?? props.platform;
     useEffect(() => {
         if (!window.appetize) {
             addons.getChannel().emit(EmulatorEvents.onMissingClient, null);
             return;
         }
-        window.appetize.getClient("#appetize-iframe").then((client: Client) => {
+
+        if (sessionKey && appetizeSessionMap.has(sessionKey)) {
+            setSession(appetizeSessionMap.get(sessionKey));
+            resetNetworkLogs(dispatch);
+            addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
+            return;
+        }
+
+        const frameId = `#appetize-iframe${
+            props.context ? `-${props.context}` : ""
+        }`;
+        window.appetize.getClient(frameId).then((client: Client) => {
             addons.getChannel().emit(EmulatorEvents.onClient, client);
 
+            client.on("error", (error: string) => {
+                console.error(error);
+                appetizeSessionMap.delete(sessionKey);
+            });
+
             client.on("session", (newSession: Session) => {
+                if (sessionKey) appetizeSessionMap.set(sessionKey, newSession);
                 setSession(newSession);
                 resetNetworkLogs(dispatch);
                 addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
@@ -52,7 +72,7 @@ const WithStore = (props: RendererProps): React.ReactElement => {
                 addons.getChannel().emit(EmulatorEvents.onSession, session);
             });
         });
-    }, [networkLogs, logs]);
+    }, [networkLogs, logs, props.context]);
 
     return (
         <>
@@ -64,7 +84,7 @@ const WithStore = (props: RendererProps): React.ReactElement => {
     );
 };
 
-export default (props: RendererProps): React.ReactElement => {
+export default (props: DeepLinkRendererProps): React.ReactElement => {
     return (
         <Provider store={store}>
             <WithStore {...props} />

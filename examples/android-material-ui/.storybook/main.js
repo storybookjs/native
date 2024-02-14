@@ -1,10 +1,10 @@
-import { nativePreviewHead } from "@storybook/native/dist/previewHeader";
+import { nativePreviewHead } from "@storybook/native";
 
-const  config = {
+const config = {
     stories: ["../stories/*.stories.jsx"],
     framework: {
         name: "@storybook/react-webpack5",
-        options: {},
+        options: {}
     },
     addons: [
         "@storybook/addon-docs",
@@ -14,8 +14,7 @@ const  config = {
     docs: {
         autodocs: true
     },
-    previewHead: nativePreviewHead,
-
+    previewHead: nativePreviewHead
 };
 
 export default config;
