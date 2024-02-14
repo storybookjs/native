@@ -14,6 +14,8 @@ import { DeepLinkRendererProps } from "../types";
 import LaunchParamsRenderer from "./LaunchParamsRenderer";
 import DeepLinkRenderer from "./DeepLinkRenderer";
 
+const appetizeSessionMap = new Map<string, Session>();
+
 const WithStore = (props: DeepLinkRendererProps): React.ReactElement => {
     const dispatch = useAppDispatch();
     const networkLogs = useNetworkLogs();
@@ -21,41 +23,55 @@ const WithStore = (props: DeepLinkRendererProps): React.ReactElement => {
 
     const [session, setSession] = React.useState<Session>();
 
+    const sessionKey = props.context ?? props.platform;
     useEffect(() => {
         if (!window.appetize) {
             addons.getChannel().emit(EmulatorEvents.onMissingClient, null);
             return;
         }
-        window.appetize
-            .getClient(
-                `#appetize-iframe${props.context ? `-${props.context}` : ""}`
-            )
-            .then((client: Client) => {
-                addons.getChannel().emit(EmulatorEvents.onClient, client);
 
-                client.on("session", (newSession: Session) => {
-                    setSession(newSession);
-                    resetNetworkLogs(dispatch);
-                    addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
-                    if (networkLogs) {
-                        newSession.on("network", (log: Record<string, any>) => {
-                            addons
-                                .getChannel()
-                                .emit(EmulatorEvents.onNetworkLog, log);
-                            addNetworkLog(dispatch, log);
-                        });
-                    }
+        if (sessionKey && appetizeSessionMap.has(sessionKey)) {
+            setSession(appetizeSessionMap.get(sessionKey));
+            resetNetworkLogs(dispatch);
+            addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
+            return;
+        }
 
-                    if (logs) {
-                        newSession.on("log", (log: Log) => {
-                            addons.getChannel().emit(EmulatorEvents.onLog, log);
-                            addLog(dispatch, log);
-                        });
-                    }
+        const frameId = `#appetize-iframe${
+            props.context ? `-${props.context}` : ""
+        }`;
+        window.appetize.getClient(frameId).then((client: Client) => {
+            addons.getChannel().emit(EmulatorEvents.onClient, client);
 
-                    addons.getChannel().emit(EmulatorEvents.onSession, session);
-                });
+            client.on("error", (error: string) => {
+                console.error(error);
+                appetizeSessionMap.delete(sessionKey);
             });
+
+            client.on("session", (newSession: Session) => {
+                if (sessionKey) appetizeSessionMap.set(sessionKey, newSession);
+                setSession(newSession);
+                resetNetworkLogs(dispatch);
+                addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
+                if (networkLogs) {
+                    newSession.on("network", (log: Record<string, any>) => {
+                        addons
+                            .getChannel()
+                            .emit(EmulatorEvents.onNetworkLog, log);
+                        addNetworkLog(dispatch, log);
+                    });
+                }
+
+                if (logs) {
+                    newSession.on("log", (log: Log) => {
+                        addons.getChannel().emit(EmulatorEvents.onLog, log);
+                        addLog(dispatch, log);
+                    });
+                }
+
+                addons.getChannel().emit(EmulatorEvents.onSession, session);
+            });
+        });
     }, [networkLogs, logs, props.context]);
 
     return (

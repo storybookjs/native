@@ -1,8 +1,12 @@
-const  config = {
-    stories: [{ directory: '../src', files: '**/*.stories.@(mdx|tsx|ts|jsx|js)' }],
+import { nativePreviewHead } from "@storybook/native";
+
+const config = {
+    stories: [
+        { directory: "../src", files: "**/*.stories.@(mdx|tsx|ts|jsx|js)" }
+    ],
     framework: {
         name: "@storybook/react-webpack5",
-        options: {},
+        options: {}
     },
     addons: [
         "@storybook/addon-docs",
@@ -11,7 +15,8 @@ const  config = {
     ],
     docs: {
         autodocs: true
-    }
+    },
+    previewHead: nativePreviewHead
 };
 
 export default config;

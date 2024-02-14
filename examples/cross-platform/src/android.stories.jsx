@@ -1,10 +1,10 @@
 import React from "react";
 import rgbHex from "rgb-hex";
-import { DeepLinkRenderer } from "@storybook/native-components";
+import { EmulatorRenderer } from "@storybook/native-components";
 
 const AndroidRenderer = ({ extraParams, component }) => {
     return (
-        <DeepLinkRenderer
+        <EmulatorRenderer
             apiKey="zv034bdme9je7c9d43chzmc2yg"
             platform="android"
             storyParams={{ component }}
