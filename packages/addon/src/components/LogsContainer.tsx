@@ -81,8 +81,7 @@ export default ({ api, active }: LogsContainerProps) => {
                             rel="noreferrer"
                             target="_blank"
                         >
-                            {" "}
-                            here{" "}
+                            {" here "}
                         </a>
                     </p>
                 </div>

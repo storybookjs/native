@@ -28,8 +28,8 @@ export default ({ api, active }: MapContainerProps) => {
         const currentSession = api.getChannel()?.last(EmulatorEvents.onSession);
         setSession(currentSession);
 
-        const onSession = (session: Session) => {
-            setSession(session);
+        const onSession = (newSession: Session) => {
+            setSession(newSession);
         };
         api.on(EmulatorEvents.onSession, onSession);
         return () => {
@@ -69,7 +69,7 @@ export default ({ api, active }: MapContainerProps) => {
                 setUploading(false);
             };
             const reader = new FileReader();
-            reader.onload = function () {
+            reader.onload = () => {
                 xhr.send(reader.result);
             };
 
@@ -101,11 +101,7 @@ export default ({ api, active }: MapContainerProps) => {
             color: "#fff",
             border: "none",
             borderRadius: "4px",
-            cursor: uploading
-                ? "not-allowed"
-                : selectedFile
-                ? "not-allowed"
-                : "pointer"
+            cursor: uploading ? "not-allowed" : "pointer"
         },
         buttonText: {
             marginRight: "8px"
@@ -164,16 +160,15 @@ export default ({ api, active }: MapContainerProps) => {
                         style={styles.fileInput}
                     />
                     <span style={styles.buttonText}>
-                        {uploading
-                            ? "Uploading..."
-                            : selectedFile
-                            ? "Upload"
-                            : ""}
+                        {uploading ? "Uploading..." : ""}
                     </span>
                 </label>
                 {selectedFile && (
                     <div>
-                        <p>Selected file: {selectedFile.name}</p>
+                        <p>
+                            Selected file:
+                            {selectedFile.name}
+                        </p>
                     </div>
                 )}
             </div>
