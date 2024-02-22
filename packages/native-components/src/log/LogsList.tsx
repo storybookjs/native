@@ -54,8 +54,8 @@ const LogsList = ({ state, onDisableLogs }: LogsListProps) => {
                         style={{
                             marginLeft: "20px",
                             backgroundColor: "#65e5a6",
-                            fill: "#090909",
-                            color: "#090909",
+                            fill: "#fff",
+                            color: "#fff",
                             borderRadius: "1rem",
                             borderWidth: "0px",
                             padding: "5px",
@@ -74,8 +74,8 @@ const LogsList = ({ state, onDisableLogs }: LogsListProps) => {
                         style={{
                             marginLeft: "20px",
                             backgroundColor: "#65e5a6",
-                            fill: "#090909",
-                            color: "#090909",
+                            fill: "#fff",
+                            color: "#fff",
                             borderRadius: "1rem",
                             borderWidth: "0px",
                             padding: "5px",

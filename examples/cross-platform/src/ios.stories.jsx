@@ -1,9 +1,9 @@
 import React from "react";
-import { DeepLinkRenderer } from "@storybook/native-components";
+import { EmulatorRenderer } from "@storybook/native-components";
 
 const IosRenderer = ({ extraParams, component }) => {
     return (
-        <DeepLinkRenderer
+        <EmulatorRenderer
             apiKey="yc0e33432655wbjnnnemyghhxm"
             platform="ios"
             storyParams={{ component }}

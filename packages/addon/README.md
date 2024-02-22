@@ -28,7 +28,7 @@ it will make sure that the [Appetize SDK](https://docs.appetize.io/javascript-sd
 Update your `main.js` file with the following code:
 
 ```js
-import { nativePreviewHead } from "@storybook/native/dist/previewHeader";
+import { nativePreviewHead } from "@storybook/native";
 
 const  config = {
     stories: ["../stories/*.stories.jsx"],

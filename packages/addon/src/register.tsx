@@ -21,6 +21,7 @@ import {
     ADDON_ID,
     DEEP_LINKS_PARAM_KEY,
     MAP_PARAM_KEY,
+    MEDIA_PARAM_KEY,
     NETWORK_LOGS_PARAM_KEY
 } from "./constants";
 import DeviceSelector from "./components/DeviceSelector";
@@ -32,6 +33,7 @@ import LogsContainer from "./components/LogsContainer";
 import FontSelector from "./components/FontSelector";
 import ThemeSelector from "./components/ThemeSelector";
 import DeveloperOptionsSelector from "./components/DeveloperOptionsSelector";
+import MediaContainer from "./components/MediaContainer";
 
 addons.register(ADDON_ID, (api) => {
     const rotateLeft = () => {
@@ -251,5 +253,12 @@ addons.register(ADDON_ID, (api) => {
         type: types.PANEL,
         render: ({ active }) => <MapContainer api={api} active={active} />,
         paramKey: MAP_PARAM_KEY
+    });
+
+    addons.add(`${ADDON_ID}/media/panel`, {
+        title: "Media",
+        type: types.PANEL,
+        render: ({ active }) => <MediaContainer api={api} active={active} />,
+        paramKey: MEDIA_PARAM_KEY
     });
 });
