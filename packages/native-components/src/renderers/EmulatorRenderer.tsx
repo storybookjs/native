@@ -31,9 +31,11 @@ const WithStore = (props: DeepLinkRendererProps): React.ReactElement => {
         }
 
         if (sessionKey && appetizeSessionMap.has(sessionKey)) {
-            setSession(appetizeSessionMap.get(sessionKey));
+            const currentSession = appetizeSessionMap.get(sessionKey);
+            setSession(currentSession);
             resetNetworkLogs(dispatch);
             addons.getChannel().emit(EmulatorEvents.onRestNetworkLogs);
+            addons.getChannel().emit(EmulatorEvents.onSession, currentSession);
             return;
         }
 
@@ -68,8 +70,7 @@ const WithStore = (props: DeepLinkRendererProps): React.ReactElement => {
                         addLog(dispatch, log);
                     });
                 }
-
-                addons.getChannel().emit(EmulatorEvents.onSession, session);
+                addons.getChannel().emit(EmulatorEvents.onSession, newSession);
             });
         });
     }, [networkLogs, logs, props.context]);

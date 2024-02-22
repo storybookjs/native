@@ -11,7 +11,8 @@ import {
 import { DeviceSelections } from "@storybook/native-devices";
 import {
     DEFAULT_STATE,
-    restoreFromLocalStorage, saveToLocalStorage
+    restoreFromLocalStorage,
+    saveToLocalStorage
 } from "../utils/localStorageUtils";
 import { ADDON_ID } from "../constants";
 
@@ -81,8 +82,7 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
                             target="_blank"
                         >
                             {" "}
-                            here
-                            {" "}
+                            here{" "}
                         </a>
                     </p>
                 </div>
@@ -102,8 +102,8 @@ export default ({ api, active }: NetworkLogsContainerProps) => {
                         style={{
                             marginTop: "40%",
                             backgroundColor: "#65e5a6",
-                            fill: "#090909",
-                            color: "#090909",
+                            fill: "#fff",
+                            color: "#fff",
                             borderRadius: "1rem",
                             borderWidth: "0px",
                             padding: "5px",
