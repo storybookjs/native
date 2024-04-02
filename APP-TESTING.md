@@ -1,4 +1,4 @@
-## Debugging/testing your mobile application
+## Debugging/testing your mobile app
 
 There are a few ways to test your application's support for deep linking and controls without uploading new versions of your application to appetize.
 
