@@ -1,6 +1,6 @@
 {
   "name": "@storybook/native-controls-example",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "private": true,
   "description": "An Android demo app showing how to use controls",
   "repository": "",
