@@ -1,3 +1,16 @@
+# v3.1.1 (Fri Apr 19 2024)
+
+#### 🐛 Bug Fix
+
+- [FEAT] Support adding media [#93](https://github.com/storybookjs/native/pull/93) (ahmedalnaami@airasia.com [@ahna92](https://github.com/ahna92))
+
+#### Authors: 2
+
+- Ahmed Alnaami (ahmedalnaami@airasia.com)
+- Ahmed na ([@ahna92](https://github.com/ahna92))
+
+---
+
 # v3.0.1 (Thu Jan 11 2024)
 
 #### 🐛 Bug Fix
