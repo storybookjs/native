@@ -99,6 +99,8 @@ declare global {
 
     interface Session {
         app: App;
+        path: string;
+        token: string;
         on: (event: string, data: Log | Record<string, any> | any) => void;
         swipe: (target: Target) => void;
         keypress: (character: string, options?: Options) => void;
