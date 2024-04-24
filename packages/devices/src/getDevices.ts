@@ -2,7 +2,7 @@ import { Platform } from "@storybook/native-types";
 
 export const getDefaultDevice = (platform: Platform): string => {
     if (platform === "android") {
-        return "nexus5";
+        return "pixel4";
     }
     if (platform === "ios") {
         return "iphone15pro";
@@ -51,7 +51,7 @@ export const getDevices = (platform: Platform): string[] => {
 
 export const getDefaultOsVersion = (platform: Platform): string => {
     if (platform === "android") {
-        return "11.0";
+        return "13.0";
     }
     if (platform === "ios") {
         return "17.0";
