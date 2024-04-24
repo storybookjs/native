@@ -1,3 +1,21 @@
+# v3.1.2 (Wed Apr 24 2024)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@osquitoOfTheNorth](https://github.com/osquitoOfTheNorth), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@storybook/native-devices`
+  - Update android defaults to more modern device/os [#95](https://github.com/storybookjs/native/pull/95) (oscar_menjivar@intuit.com [@osquitoOfTheNorth](https://github.com/osquitoOfTheNorth))
+
+#### Authors: 2
+
+- [@osquitoOfTheNorth](https://github.com/osquitoOfTheNorth)
+- Oscar (oscar_menjivar@intuit.com)
+
+---
+
 # v3.1.1 (Fri Apr 19 2024)
 
 #### 🐛 Bug Fix
