@@ -96,6 +96,15 @@
         "code",
         "example"
       ]
+    },
+    {
+      "login": "osquitoOfTheNorth",
+      "name": "osquitoOfTheNorth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5479429?v=4",
+      "profile": "https://osquitoofthenorth.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
